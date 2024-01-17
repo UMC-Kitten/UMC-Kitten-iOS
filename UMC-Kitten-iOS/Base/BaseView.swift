@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 protocol BaseViewProtocol {
-    func setContent()
     func setStyle()
     func setHierarchy()
     func setLayout()
@@ -24,13 +23,10 @@ class BaseView: UIView, BaseViewProtocol {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setContent()
         setStyle()
         setHierarchy()
         setLayout()
     }
-    
-    func setContent() { }
     
     func setStyle() { }
     

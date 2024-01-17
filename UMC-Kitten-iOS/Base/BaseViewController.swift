@@ -11,7 +11,6 @@ import UIKit
 import RxSwift
 
 protocol BaseViewControllerProtocol: AnyObject {
-    func setContent()
     func setStyle()
     func setDelegate()
     func setHierarchy()
@@ -27,7 +26,6 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
         
         view.backgroundColor = .white
         
-        setContent()
         setStyle()
         setDelegate()
         setHierarchy()
@@ -35,7 +33,6 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
         setBind()
     }
     
-    func setContent() { }
 
     func setStyle() { }
     
