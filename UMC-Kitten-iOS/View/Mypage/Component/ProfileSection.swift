@@ -17,13 +17,22 @@ class ProfileSection: BaseView {
         }
     }
     
+    // MARK: UI Container
+    private let myPetsScrollView: UIScrollView = .init()
+    private let myPetsContainer: UIStackView = .init()
+    
     // MARK: UI Component
     
     private let profileImageView: UIImageView = .init(imageName: "cat-sample")
     private let ownerNameLabel: UILabel = .init(text: "임시 닉네임")
     private let ownerRoleLabel: UILabel = .init(text: "반려인")
+    
     private let myPetsInfoTitleLabel: UILabel = .init(text: "내 반려동물 정보")
     private let managementButton: UILabel = .init(text: "관리")
+    private let myPetCells: [MyPetCell] = [
+        MyPetCell(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷"),
+        MyPetCell(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷")
+    ]
     
     // MARK: Set Methods
     
@@ -38,15 +47,25 @@ class ProfileSection: BaseView {
         myPetsInfoTitleLabel.setDefaultFont(size: 14)
         myPetsInfoTitleLabel.textColor = .grayScale700
         
-        managementButton.setDefaultFont(size: 16)
-        managementButton.textColor = .grayScale800
+        managementButton.setDefaultFont(size: 16, weight: .semiBold)
+        managementButton.textColor = .mainDeep
+        
+        myPetsScrollView.showsHorizontalScrollIndicator = false
+        
+        myPetsContainer.axis = .horizontal
+        myPetsContainer.spacing = 16
         
     }
     
     override func setHierarchy() {
         [profileImageView, ownerNameLabel, ownerRoleLabel,
-         myPetsInfoTitleLabel, managementButton]
+         myPetsInfoTitleLabel, managementButton, myPetsScrollView]
             .forEach { addSubview($0)}
+        
+        [myPetsContainer]
+            .forEach { myPetsScrollView.addSubview($0) }
+        
+        myPetCells.forEach { myPetsContainer.addArrangedSubview($0) }
     }
     
     override func setLayout() { 
@@ -74,6 +93,22 @@ class ProfileSection: BaseView {
         managementButton.snp.makeConstraints {
             $0.top.equalTo(profileImageView.snp.bottom).offset(20)
             $0.trailing.equalToSuperview()
+        }
+        
+        myPetsScrollView.snp.makeConstraints {
+            $0.top.equalTo(myPetsInfoTitleLabel.snp.bottom).offset(15)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(120) // MyPetCell's height is 120
+            $0.bottom.equalToSuperview()
+        }
+        
+        myPetsContainer.snp.makeConstraints {
+            if (myPetCells.count < 3) {
+                $0.centerX.equalToSuperview()
+            } else {
+                $0.edges.equalToSuperview()
+            }
+            $0.height.equalToSuperview()
         }
     }
     

@@ -43,6 +43,8 @@
 		BC93BA392B56CEDE00775C5F /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BC93BA2F2B56CD8C00775C5F /* Pretendard-SemiBold.otf */; };
 		BC93BA3A2B56CEDE00775C5F /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BC93BA2B2B56CD8C00775C5F /* Pretendard-Thin.otf */; };
 		BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94315F2B56DB4400273DD7 /* UILabel+Extension.swift */; };
+		BCC91D7D2B58D77900D02BF0 /* MyPetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC91D7C2B58D77900D02BF0 /* MyPetCell.swift */; };
+		BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC91D7E2B58EC5700D02BF0 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		BC93BA302B56CD8C00775C5F /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		BC93BA312B56CD8C00775C5F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		BC94315F2B56DB4400273DD7 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		BCC91D7C2B58D77900D02BF0 /* MyPetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetCell.swift; sourceTree = "<group>"; };
+		BCC91D7E2B58EC5700D02BF0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				BC8F51012B57BB2B00F56C90 /* MenuRow.swift */,
+				BCC91D7C2B58D77900D02BF0 /* MyPetCell.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			children = (
 				BC94315F2B56DB4400273DD7 /* UILabel+Extension.swift */,
 				BC8F50FD2B579F7000F56C90 /* UIImageView+Extension.swift */,
+				BCC91D7E2B58EC5700D02BF0 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -303,6 +309,7 @@
 				BC3CECCC2B4FACC300546377 /* ViewController.swift in Sources */,
 				BC8F50FB2B57947F00F56C90 /* ProfileSection.swift in Sources */,
 				BC6E40C22B552A9400BA2CE1 /* MypageViewRactor.swift in Sources */,
+				BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */,
 				BC8F51002B57BA1A00F56C90 /* MypageMenuSection.swift in Sources */,
 				BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */,
 				BC6E40CC2B552BC600BA2CE1 /* BaseCollectionViewCell.swift in Sources */,
@@ -313,6 +320,7 @@
 				BC6E40CD2B552BC600BA2CE1 /* BaseView.swift in Sources */,
 				BC6E40CA2B552BC600BA2CE1 /* BaseViewController.swift in Sources */,
 				BC6E40C02B55291800BA2CE1 /* MypageViewController.swift in Sources */,
+				BCC91D7D2B58D77900D02BF0 /* MyPetCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

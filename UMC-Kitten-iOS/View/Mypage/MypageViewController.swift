@@ -18,17 +18,21 @@ class MypageViewController: BaseViewController {
     // MARK: UI Component
     let profileSection = ProfileSection()
     let mypageMenuSection = MypageMenuSection()
-
+    let versionLabel: UILabel = .init(text: "앱버전 1.0.0")
+    
     // MARK: Set Properties
-
-    override func setStyle() { 
+    
+    override func setStyle() {
         scrollView.backgroundColor = .white
         
         contentView.backgroundColor = .white
+        
+        versionLabel.setDefaultFont(size: 11)
+        versionLabel.textColor = .grayScale500
     }
     
     override func setDelegate() {
-
+        
     }
     
     override func setHierarchy() {
@@ -36,36 +40,40 @@ class MypageViewController: BaseViewController {
         
         scrollView.addSubview(contentView)
         
-        [profileSection, mypageMenuSection]
+        [profileSection, mypageMenuSection, versionLabel]
             .forEach { contentView.addSubview($0) }
         
     }
     
-    override func setLayout() { 
-        scrollView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-
-        contentView.snp.makeConstraints { make in
-            make.edges.width.equalTo(scrollView)
-            make.height.equalTo(2000) // Set your desired content height
+    override func setLayout() {
+        scrollView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
         
-        profileSection.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.trailing.leading.equalToSuperview().inset(20)
-            make.height.equalTo(200)
+        contentView.snp.makeConstraints {
+            $0.edges.width.equalTo(scrollView)
+            $0.height.equalTo(900) // Set your desired content height
         }
         
-        mypageMenuSection.snp.makeConstraints { make in
-            make.top.equalTo(profileSection.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview()
+        profileSection.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.trailing.leading.equalToSuperview().inset(20)
         }
-
+        
+        mypageMenuSection.snp.makeConstraints {
+            $0.top.equalTo(profileSection.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview()
+        }
+        
+        versionLabel.snp.makeConstraints {
+            $0.top.equalTo(mypageMenuSection.snp.bottom).offset(30)
+            $0.leading.equalToSuperview().inset(20)
+        }
+        
     }
     
-    override func setBind() { 
+    override func setBind() {
         
     }
-
+    
 }

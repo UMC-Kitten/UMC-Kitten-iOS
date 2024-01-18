@@ -19,6 +19,8 @@ class MenuRow: BaseView {
     private let menuTitleLabel: UILabel = .init()
     private let arrowImage: UIImageView = .init(imageName: "arrow-right-gray")
     
+    // MARK: Constructor
+    
     convenience init(_ menuTitle: String) {
         self.init()
         self.menuTitleLabel.text = menuTitle

@@ -34,3 +34,15 @@ class BaseView: UIView, BaseViewProtocol {
     
     func setLayout() { }
 }
+
+
+/// 복붙용 예시입니다
+class sampleView: BaseView {
+    
+    override func setStyle() { }
+    
+    override func setHierarchy() { }
+    
+    override func setLayout() { }
+    
+}

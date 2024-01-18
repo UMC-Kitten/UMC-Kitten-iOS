@@ -26,9 +26,6 @@ class MypageMenuSection: BaseView {
     private let inquiry: MenuRow = .init("서비스 문의")
     private let terms: MenuRow = .init("서비스 이용약관")
     
-
-
-    
     
     // MARK: Set Methods
     
