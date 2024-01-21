@@ -17,14 +17,14 @@ class MypageMenuSection: BaseView {
     // MARK: UI Component
     
     private let firstSectionBorder: UIView = .init()
-    let editMyProfile: MenuRow = .init("내정보 관리")
-    let editMyArticle: MenuRow = .init("내 게시물 관리")
-    let faq: MenuRow = .init("FAQ")
-    let notice: MenuRow = .init("공지사항")
+    let editMyProfile: NavigationMenuRow = .init("내정보 관리")
+    let editMyArticle: NavigationMenuRow = .init("내 게시물 관리")
+    let faq: NavigationMenuRow = .init("FAQ")
+    let notice: NavigationMenuRow = .init("공지사항")
     
     private let secondSectionBorder: UIView = .init()
-    let inquiry: MenuRow = .init("서비스 문의")
-    let terms: MenuRow = .init("서비스 이용약관")
+    let inquiry: NavigationMenuRow = .init("서비스 문의")
+    let terms: NavigationMenuRow = .init("서비스 이용약관")
     
     
     // MARK: Set Methods
