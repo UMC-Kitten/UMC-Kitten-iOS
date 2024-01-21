@@ -14,7 +14,7 @@ class MyPetCell: BaseView {
     
     // MARK: UI Component
     
-    private let petImageView: UIImageView = .init(imageName: "")
+    private let petImageView: UIImageView = .init(imageName: "cat-sample") // FIXME: loading 이미지로 바꾸기
     private let petNameLabel: UILabel = .init()
     private let petInfoLabel: UILabel = .init()
     

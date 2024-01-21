@@ -8,17 +8,29 @@
 import UIKit
 
 import SnapKit
+import RxSwift
+import RxGesture
+import ReactorKit
 
 class MypageViewController: BaseViewController {
     
+    // MARK: Dependency
+    
+    private let reactor = MypageReactor()
+    
     // MARK: UI Container
-    let scrollView = UIScrollView()
-    let contentView = UIView()
+    private let scrollView = UIScrollView()
+    private let contentView = UIView()
     
     // MARK: UI Component
-    let profileSection = ProfileSection()
-    let mypageMenuSection = MypageMenuSection()
-    let versionLabel: UILabel = .init(text: "앱버전 1.0.0")
+    private let profileSection = ProfileSection()
+    private let mypageMenuSection = MypageMenuSection()
+    private let versionLabel: UILabel = .init(text: "앱버전 1.0.0")
+    
+    // MARK: Constructor
+    override func viewDidLoad() {
+         super.viewDidLoad()
+     }
     
     // MARK: Set Properties
     
@@ -52,11 +64,11 @@ class MypageViewController: BaseViewController {
         
         contentView.snp.makeConstraints {
             $0.edges.width.equalTo(scrollView)
-            $0.height.equalTo(900) // Set your desired content height
+            $0.height.equalTo(900)
         }
         
         profileSection.snp.makeConstraints {
-            $0.top.equalToSuperview()
+            $0.top.equalToSuperview().offset(-35) // For ignore navgationBar height
             $0.trailing.leading.equalToSuperview().inset(20)
         }
         
@@ -73,7 +85,17 @@ class MypageViewController: BaseViewController {
     }
     
     override func setBind() {
+        profileSection.managementButton.rx.tapGesture()
+            .map { _ in .tapMyPetManagementButton }
+            .bind(to: reactor.action)
+            .disposed(by: self.disposeBag)
         
+        mypageMenuSection.editMyProfile.rx.tapGesture()
+            .skip(1)
+            .subscribe { _ in
+                self.navigationController?.pushViewController(MyInfoViewController(), animated: true)
+            }
+            .disposed(by: self.disposeBag)
     }
     
 }

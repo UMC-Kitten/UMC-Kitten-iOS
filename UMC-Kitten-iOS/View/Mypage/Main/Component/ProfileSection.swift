@@ -23,18 +23,18 @@ class ProfileSection: BaseView {
     
     // MARK: UI Component
     
-    private let profileImageView: UIImageView = .init(imageName: "cat-sample")
-    private let ownerNameLabel: UILabel = .init(text: "임시 닉네임")
-    private let ownerRoleLabel: UILabel = .init(text: "반려인")
+    let profileImageView: UIImageView = .init(imageName: "cat-sample")
+    let ownerNameLabel: UILabel = .init(text: "임시 닉네임")
+    let ownerRoleLabel: UILabel = .init(text: "반려인")
     
     private let myPetsInfoTitleLabel: UILabel = .init(text: "내 반려동물 정보")
-    private let managementButton: UILabel = .init(text: "관리")
+    let managementButton: UILabel = .init(text: "관리")
     private let myPetCells: [MyPetCell] = [
         MyPetCell(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷"),
         MyPetCell(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷")
     ]
     
-    // MARK: Set Methods
+    // MARK: Set Method
     
     override func setStyle() {
         profileImageView.layer.cornerRadius = 30

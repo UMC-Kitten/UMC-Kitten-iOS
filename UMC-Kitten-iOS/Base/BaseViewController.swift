@@ -44,3 +44,19 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
     
     func setBind() { }
 }
+
+
+/// 복붙용 예시입니다
+class sampleViewController: BaseViewController {
+    
+    override func setStyle() { }
+    
+    override func setDelegate() { }
+    
+    override func setHierarchy() { }
+    
+    override func setLayout() { }
+    
+    override func setBind() { }
+    
+}

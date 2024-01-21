@@ -1,14 +1,14 @@
 //
-//  MypageMenuSection.swift
+//  MyInfoMenuSection.swift
 //  UMC-Kitten-iOS
 //
-//  Created by DOYEON LEE on 1/17/24.
+//  Created by DOYEON LEE on 1/21/24.
 //
 
 import Foundation
 import UIKit
 
-class MypageMenuSection: BaseView {
+class MyInfoMenuSection: BaseView {
     
     // MARK: UI Containers
     
@@ -17,14 +17,9 @@ class MypageMenuSection: BaseView {
     // MARK: UI Component
     
     private let firstSectionBorder: UIView = .init()
-    private let editMyProfile: MenuRow = .init("내정보 관리")
-    private let editMyArticle: MenuRow = .init("내 게시물 관리")
-    private let faq: MenuRow = .init("FAQ")
-    private let notice: MenuRow = .init("공지사항")
-    
-    private let secondSectionBorder: UIView = .init()
-    private let inquiry: MenuRow = .init("서비스 문의")
-    private let terms: MenuRow = .init("서비스 이용약관")
+    let editNickName: MenuRow = .init("닉네임 설정")
+    let editOwner: MenuRow = .init("반려인 설정")
+    let marketingConsent: MenuRow = .init("마케팅 수신 동의")
     
     
     // MARK: Set Methods
@@ -34,16 +29,13 @@ class MypageMenuSection: BaseView {
         
         firstSectionBorder.backgroundColor = .grayScale50
         
-        secondSectionBorder.backgroundColor = .grayScale50
-        
     }
     
     override func setHierarchy() {
         [menuStackView]
             .forEach { addSubview($0)}
         
-        [firstSectionBorder, editMyProfile, editMyArticle, faq, notice, 
-         secondSectionBorder, inquiry, terms]
+        [firstSectionBorder, editNickName, editOwner, marketingConsent]
             .forEach { menuStackView.addArrangedSubview($0) }
         
     }
@@ -54,10 +46,6 @@ class MypageMenuSection: BaseView {
         }
         
         firstSectionBorder.snp.makeConstraints{
-            $0.height.equalTo(10)
-        }
-        
-        secondSectionBorder.snp.makeConstraints{
             $0.height.equalTo(10)
         }
     }
