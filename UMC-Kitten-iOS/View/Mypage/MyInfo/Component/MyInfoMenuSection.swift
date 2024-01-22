@@ -17,9 +17,9 @@ class MyInfoMenuSection: BaseView {
     // MARK: UI Component
     
     private let firstSectionBorder: UIView = .init()
-    let editNickName: NavigationMenuRow = .init("닉네임 설정")
-    let editOwner: NavigationMenuRow = .init("반려인 설정")
-    let marketingConsent: ToggleMenuRow = .init("마케팅 수신 동의")
+    let nicknameSettingMenu: NavigationMenuRow = .init("닉네임 설정")
+    let ownerSettingMenu: NavigationMenuRow = .init("반려인 설정")
+    let marketingConsentMenu: ToggleMenuRow = .init("마케팅 수신 동의")
     
     
     // MARK: Set Methods
@@ -35,7 +35,7 @@ class MyInfoMenuSection: BaseView {
         [menuStackView]
             .forEach { addSubview($0)}
         
-        [firstSectionBorder, editNickName, editOwner, marketingConsent]
+        [firstSectionBorder, nicknameSettingMenu, ownerSettingMenu, marketingConsentMenu]
             .forEach { menuStackView.addArrangedSubview($0) }
         
     }

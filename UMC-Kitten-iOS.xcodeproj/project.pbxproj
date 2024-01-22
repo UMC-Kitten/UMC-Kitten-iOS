@@ -52,6 +52,8 @@
 		BCF1E58E2B5D5852000F5960 /* MyInfoReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF1E58D2B5D5852000F5960 /* MyInfoReactor.swift */; };
 		BCF1E5902B5D5BE3000F5960 /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF1E58F2B5D5BE3000F5960 /* Observable+Extension.swift */; };
 		BCF1E5922B5D750E000F5960 /* ToggleMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF1E5912B5D750E000F5960 /* ToggleMenuRow.swift */; };
+		BCF1E5952B5D7792000F5960 /* NicknameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF1E5942B5D7792000F5960 /* NicknameSettingViewController.swift */; };
+		BCF1E5982B5D7943000F5960 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF1E5972B5D7943000F5960 /* TextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		BCF1E58D2B5D5852000F5960 /* MyInfoReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoReactor.swift; sourceTree = "<group>"; };
 		BCF1E58F2B5D5BE3000F5960 /* Observable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
 		BCF1E5912B5D750E000F5960 /* ToggleMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleMenuRow.swift; sourceTree = "<group>"; };
+		BCF1E5942B5D7792000F5960 /* NicknameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingViewController.swift; sourceTree = "<group>"; };
+		BCF1E5972B5D7943000F5960 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,13 +138,11 @@
 		BC3CECC62B4FACC300546377 /* UMC-Kitten-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				BC94315E2B56DB4400273DD7 /* Extension */,
-				BC93BA282B56CD7800775C5F /* Font */,
-				BC6E40C52B552BC600BA2CE1 /* Base */,
-				BC6E40BD2B5528EF00BA2CE1 /* View */,
 				BC3CECC72B4FACC300546377 /* AppDelegate.swift */,
 				BC3CECC92B4FACC300546377 /* SceneDelegate.swift */,
 				BC3CECCB2B4FACC300546377 /* ViewController.swift */,
+				BC6E40C52B552BC600BA2CE1 /* Base */,
+				BC6E40BD2B5528EF00BA2CE1 /* View */,
 				BC3CECCD2B4FACC300546377 /* Main.storyboard */,
 				BC3CECD02B4FACC400546377 /* Assets.xcassets */,
 				BC3CECD22B4FACC400546377 /* LaunchScreen.storyboard */,
@@ -154,6 +156,8 @@
 			children = (
 				BCF1E5872B5D4D60000F5960 /* Common */,
 				BC6E40BE2B5528FA00BA2CE1 /* Mypage */,
+				BC94315E2B56DB4400273DD7 /* Extension */,
+				BC93BA282B56CD7800775C5F /* Font */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +165,7 @@
 		BC6E40BE2B5528FA00BA2CE1 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				BCF1E5932B5D7771000F5960 /* NicknameSetting */,
 				BCC91D812B58F7EA00D02BF0 /* MyInfo */,
 				BCC91D802B58F7D800D02BF0 /* Main */,
 			);
@@ -192,6 +197,7 @@
 				BC8F51012B57BB2B00F56C90 /* NavigationMenuRow.swift */,
 				BCC91D7C2B58D77900D02BF0 /* MyPetCell.swift */,
 				BCF1E5912B5D750E000F5960 /* ToggleMenuRow.swift */,
+				BCF1E5972B5D7943000F5960 /* TextField.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -258,6 +264,14 @@
 				BCF1E58B2B5D54E3000F5960 /* MyInfoMenuSection.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		BCF1E5932B5D7771000F5960 /* NicknameSetting */ = {
+			isa = PBXGroup;
+			children = (
+				BCF1E5942B5D7792000F5960 /* NicknameSettingViewController.swift */,
+			);
+			path = NicknameSetting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +376,8 @@
 			files = (
 				BC3CECCC2B4FACC300546377 /* ViewController.swift in Sources */,
 				BCF1E5922B5D750E000F5960 /* ToggleMenuRow.swift in Sources */,
+				BCF1E5982B5D7943000F5960 /* TextField.swift in Sources */,
+				BCF1E5952B5D7792000F5960 /* NicknameSettingViewController.swift in Sources */,
 				BC8F50FB2B57947F00F56C90 /* ProfileSection.swift in Sources */,
 				BCF1E5902B5D5BE3000F5960 /* Observable+Extension.swift in Sources */,
 				BC6E40C22B552A9400BA2CE1 /* MypageReactor.swift in Sources */,

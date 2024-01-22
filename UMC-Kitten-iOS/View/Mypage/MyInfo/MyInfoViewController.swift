@@ -41,18 +41,18 @@ class MyInfoViewController: BaseViewController{
         
     }
     
-    override func setDelegate() { 
+    override func setDelegate() {
         self.reactor.viewController = self
         self.imagePicker.delegate = self
     }
     
-    override func setHierarchy() { 
-        [profileImageSection, myInfoMenuSection, 
+    override func setHierarchy() {
+        [profileImageSection, myInfoMenuSection,
          logoutButton, deleteAccountButton]
             .forEach { view.addSubview($0) }
     }
     
-    override func setLayout() { 
+    override func setLayout() {
         profileImageSection.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             $0.leading.trailing.equalToSuperview()
@@ -74,7 +74,7 @@ class MyInfoViewController: BaseViewController{
         
     }
     
-    override func setBind() { 
+    override func setBind() {
         Observable.merge(
             profileImageSection.profileImage.rx.tapGesture().map { $0 },
             profileImageSection.editButton.rx.tapGesture().map { $0 }
@@ -88,6 +88,13 @@ class MyInfoViewController: BaseViewController{
             }
         }
         .disposed(by: disposeBag)
+        
+        myInfoMenuSection.nicknameSettingMenu.rx.tapGesture()
+            .skip(1)
+            .subscribe { _ in
+                self.navigationController?.pushViewController(NicknameSettingViewController(), animated: true)
+            }
+            .disposed(by: self.disposeBag)
         
         reactor.state.map { $0.profileImage }
             .distinctUntilChanged()

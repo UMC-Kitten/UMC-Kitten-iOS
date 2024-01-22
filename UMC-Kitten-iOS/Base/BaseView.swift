@@ -46,3 +46,4 @@ class sampleView: BaseView {
     override func setLayout() { }
     
 }
+
