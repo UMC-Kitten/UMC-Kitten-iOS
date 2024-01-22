@@ -30,9 +30,10 @@ class TextField: BaseView {
 
     
     // MARK: Constructor
-    convenience init(title: String) {
+    convenience init(title: String, placeholder: String) {
         self.init()
         self.titleLabel.text = title
+        self.textField.placeholder = placeholder
     }
     
     // MARK: Set Methods
@@ -41,8 +42,9 @@ class TextField: BaseView {
         titleLabel.setDefaultFont(size: 14)
         titleLabel.textColor = .grayScale600
         
-        textField.placeholder = "변경할 닉네임을 입력해주세요"
         textField.delegate = self
+        textField.layer.shadowPath = UIBezierPath(rect: layer.bounds).cgPath
+//        textField.font = UIFont(name: "Pretendard-Regular", size: 16)
         
         underLine.backgroundColor = .grayScale50
 

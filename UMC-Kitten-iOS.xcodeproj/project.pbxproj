@@ -54,6 +54,7 @@
 		BCF1E5922B5D750E000F5960 /* ToggleMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF1E5912B5D750E000F5960 /* ToggleMenuRow.swift */; };
 		BCF1E5952B5D7792000F5960 /* NicknameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF1E5942B5D7792000F5960 /* NicknameSettingViewController.swift */; };
 		BCF1E5982B5D7943000F5960 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF1E5972B5D7943000F5960 /* TextField.swift */; };
+		BCF1E59C2B5E8E80000F5960 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF1E59B2B5E8E80000F5960 /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		BCF1E5912B5D750E000F5960 /* ToggleMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleMenuRow.swift; sourceTree = "<group>"; };
 		BCF1E5942B5D7792000F5960 /* NicknameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingViewController.swift; sourceTree = "<group>"; };
 		BCF1E5972B5D7943000F5960 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		BCF1E59B2B5E8E80000F5960 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 				BC8F50FD2B579F7000F56C90 /* UIImageView+Extension.swift */,
 				BCC91D7E2B58EC5700D02BF0 /* UIView+Extension.swift */,
 				BCF1E58F2B5D5BE3000F5960 /* Observable+Extension.swift */,
+				BCF1E59B2B5E8E80000F5960 /* UIButton+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				BCF1E5982B5D7943000F5960 /* TextField.swift in Sources */,
 				BCF1E5952B5D7792000F5960 /* NicknameSettingViewController.swift in Sources */,
 				BC8F50FB2B57947F00F56C90 /* ProfileSection.swift in Sources */,
+				BCF1E59C2B5E8E80000F5960 /* UIButton+Extension.swift in Sources */,
 				BCF1E5902B5D5BE3000F5960 /* Observable+Extension.swift in Sources */,
 				BC6E40C22B552A9400BA2CE1 /* MypageReactor.swift in Sources */,
 				BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */,
