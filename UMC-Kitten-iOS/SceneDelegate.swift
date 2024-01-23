@@ -13,10 +13,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        window = UIWindow(windowScene: windowScene)
+
+        // Tab Bar 컨트롤러 생성
+        let tabBarVC = UITabBarController()
+        
+        // (1) VC 생성
+        // let exampleVC = ExampleViewController()
+        
+        // (2) Tab Bar 이름 설정
+        // exampleVC.title = "커뮤니티"
+        
+        // (3) Tab Bar로 사용하기 위한 뷰 컨트롤러들 설정
+        // tabBarVC.setViewControllers([exampleVC, vc2, vc3, vc4, vc5], animated: false)
+        tabBarVC.modalPresentationStyle = .fullScreen
+        tabBarVC.tabBar.backgroundColor = .white
+        
+        // (4) Tab Bar 이미지 설정
+        guard let items = tabBarVC.tabBar.items else { return }
+        // items[0].image = UIImage(systemName: "trash")
+        // items[1].image = UIImage(systemName: "folder")
+        // items[2].image = UIImage(systemName: "paperplane")
+        // items[3].image = UIImage(systemName: "doc")
+        // items[4].image = UIImage(systemName: "note")
+        
+        // 기본 루트뷰를 탭바컨트롤러로 설정
+        window?.rootViewController = tabBarVC
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
