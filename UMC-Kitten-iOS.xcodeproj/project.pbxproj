@@ -167,6 +167,7 @@
 		BC6E40BE2B5528FA00BA2CE1 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				BCF1E59D2B5E9429000F5960 /* OwnerSetting */,
 				BCF1E5932B5D7771000F5960 /* NicknameSetting */,
 				BCC91D812B58F7EA00D02BF0 /* MyInfo */,
 				BCC91D802B58F7D800D02BF0 /* Main */,
@@ -275,6 +276,13 @@
 				BCF1E5942B5D7792000F5960 /* NicknameSettingViewController.swift */,
 			);
 			path = NicknameSetting;
+			sourceTree = "<group>";
+		};
+		BCF1E59D2B5E9429000F5960 /* OwnerSetting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OwnerSetting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
