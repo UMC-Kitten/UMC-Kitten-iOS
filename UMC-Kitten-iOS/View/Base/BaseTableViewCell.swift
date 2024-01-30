@@ -1,23 +1,21 @@
 //
-//  BaseCollectionViewCell.swift
-//  HumanscapeShoppingMall
+//  BaseTableViewCell.swift
+//  UMC-Kitten-iOS
 //
-//  Created by DOYEON LEE on 2023/05/30.
+//  Created by DOYEON LEE on 1/30/24.
 //
 
-import Foundation
 import UIKit
 
-
-class BaseCollectionViewCell: UICollectionViewCell, BaseViewProtocol {
+class BaseTableViewCell: UITableViewCell, BaseViewProtocol {
     
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setStyle()
         setHierarchy()

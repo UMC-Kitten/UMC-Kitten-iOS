@@ -51,6 +51,14 @@
 		BCC107CA2B68CD120043EC7D /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107C92B68CD120043EC7D /* BaseCollectionView.swift */; };
 		BCC107CD2B68D5550043EC7D /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107CC2B68D5550043EC7D /* PetModel.swift */; };
 		BCC107CF2B68E1390043EC7D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107CE2B68E1390043EC7D /* UIImage+Extension.swift */; };
+		BCC107D22B68E3630043EC7D /* MyArticleSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107D12B68E3630043EC7D /* MyArticleSettingViewController.swift */; };
+		BCC107D62B68E7590043EC7D /* PageViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107D52B68E7590043EC7D /* PageViewControllerDelegate.swift */; };
+		BCC107D92B68E9610043EC7D /* MyArticlePageTapBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107D82B68E9610043EC7D /* MyArticlePageTapBar.swift */; };
+		BCC107DC2B68E9830043EC7D /* PageTapBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107DB2B68E9830043EC7D /* PageTapBarItem.swift */; };
+		BCC107DE2B68FF200043EC7D /* MyArticlePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107DD2B68FF200043EC7D /* MyArticlePage.swift */; };
+		BCC107E02B6901A80043EC7D /* MyArticlePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107DF2B6901A80043EC7D /* MyArticlePageTableViewCell.swift */; };
+		BCC107E42B690BFF0043EC7D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107E32B690BFF0043EC7D /* BaseTableViewCell.swift */; };
+		BCC107E62B69138E0043EC7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107E52B69138E0043EC7D /* MainViewController.swift */; };
 		BCC91D7D2B58D77900D02BF0 /* MyPetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC91D7C2B58D77900D02BF0 /* MyPetCard.swift */; };
 		BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC91D7E2B58EC5700D02BF0 /* UIView+Extension.swift */; };
 		BCC91D842B58FE5400D02BF0 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = BCC91D832B58FE5400D02BF0 /* RxGesture */; };
@@ -101,6 +109,14 @@
 		BCC107C92B68CD120043EC7D /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		BCC107CC2B68D5550043EC7D /* PetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
 		BCC107CE2B68E1390043EC7D /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		BCC107D12B68E3630043EC7D /* MyArticleSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArticleSettingViewController.swift; sourceTree = "<group>"; };
+		BCC107D52B68E7590043EC7D /* PageViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewControllerDelegate.swift; sourceTree = "<group>"; };
+		BCC107D82B68E9610043EC7D /* MyArticlePageTapBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArticlePageTapBar.swift; sourceTree = "<group>"; };
+		BCC107DB2B68E9830043EC7D /* PageTapBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTapBarItem.swift; sourceTree = "<group>"; };
+		BCC107DD2B68FF200043EC7D /* MyArticlePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArticlePage.swift; sourceTree = "<group>"; };
+		BCC107DF2B6901A80043EC7D /* MyArticlePageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArticlePageTableViewCell.swift; sourceTree = "<group>"; };
+		BCC107E32B690BFF0043EC7D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		BCC107E52B69138E0043EC7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = View/MainViewController.swift; sourceTree = "<group>"; };
 		BCC91D7C2B58D77900D02BF0 /* MyPetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetCard.swift; sourceTree = "<group>"; };
 		BCC91D7E2B58EC5700D02BF0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BCF1E5852B5D496E000F5960 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +181,7 @@
 				BC3CECD02B4FACC400546377 /* Assets.xcassets */,
 				BC3CECD22B4FACC400546377 /* LaunchScreen.storyboard */,
 				BC3CECD52B4FACC400546377 /* Info.plist */,
+				BCC107E52B69138E0043EC7D /* MainViewController.swift */,
 			);
 			path = "UMC-Kitten-iOS";
 			sourceTree = "<group>";
@@ -184,6 +201,7 @@
 		BC6E40BE2B5528FA00BA2CE1 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				BCC107D02B68E34E0043EC7D /* MyArticleSetting */,
 				BCC107BB2B68A1B40043EC7D /* MyPetSetting */,
 				BCF1E59D2B5E9429000F5960 /* OwnerSetting */,
 				BCF1E5932B5D7771000F5960 /* NicknameSetting */,
@@ -200,6 +218,7 @@
 				BC6E40C82B552BC600BA2CE1 /* BaseCollectionViewCell.swift */,
 				BC6E40C92B552BC600BA2CE1 /* BaseView.swift */,
 				BCC107C92B68CD120043EC7D /* BaseCollectionView.swift */,
+				BCC107E32B690BFF0043EC7D /* BaseTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -293,6 +312,59 @@
 				BCC107CC2B68D5550043EC7D /* PetModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BCC107D02B68E34E0043EC7D /* MyArticleSetting */ = {
+			isa = PBXGroup;
+			children = (
+				BCC107DA2B68E9690043EC7D /* Reusable */,
+				BCC107D72B68E8B70043EC7D /* Component */,
+				BCC107D42B68E7450043EC7D /* Delegate */,
+				BCC107D12B68E3630043EC7D /* MyArticleSettingViewController.swift */,
+			);
+			path = MyArticleSetting;
+			sourceTree = "<group>";
+		};
+		BCC107D42B68E7450043EC7D /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BCC107D52B68E7590043EC7D /* PageViewControllerDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		BCC107D72B68E8B70043EC7D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				BCC107E12B6903200043EC7D /* MyArticlePage */,
+				BCC107D82B68E9610043EC7D /* MyArticlePageTapBar.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		BCC107DA2B68E9690043EC7D /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				BCC107DB2B68E9830043EC7D /* PageTapBarItem.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		BCC107E12B6903200043EC7D /* MyArticlePage */ = {
+			isa = PBXGroup;
+			children = (
+				BCC107E22B6903300043EC7D /* Reusable */,
+				BCC107DD2B68FF200043EC7D /* MyArticlePage.swift */,
+			);
+			path = MyArticlePage;
+			sourceTree = "<group>";
+		};
+		BCC107E22B6903300043EC7D /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				BCC107DF2B6901A80043EC7D /* MyArticlePageTableViewCell.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 		BCC91D802B58F7D800D02BF0 /* Main */ = {
@@ -454,6 +526,9 @@
 				BCF1E5982B5D7943000F5960 /* TextField.swift in Sources */,
 				BCF1E5952B5D7792000F5960 /* NicknameSettingViewController.swift in Sources */,
 				BC8F50FB2B57947F00F56C90 /* ProfileSection.swift in Sources */,
+				BCC107D92B68E9610043EC7D /* MyArticlePageTapBar.swift in Sources */,
+				BCC107DE2B68FF200043EC7D /* MyArticlePage.swift in Sources */,
+				BCC107D22B68E3630043EC7D /* MyArticleSettingViewController.swift in Sources */,
 				BCF1E59C2B5E8E80000F5960 /* UIButton+Extension.swift in Sources */,
 				BCC107CD2B68D5550043EC7D /* PetModel.swift in Sources */,
 				BCF1E5902B5D5BE3000F5960 /* Observable+Extension.swift in Sources */,
@@ -464,15 +539,19 @@
 				BCC107C52B68C8C20043EC7D /* MyPetCardCell.swift in Sources */,
 				BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */,
 				BC6E40CC2B552BC600BA2CE1 /* BaseCollectionViewCell.swift in Sources */,
+				BCC107D62B68E7590043EC7D /* PageViewControllerDelegate.swift in Sources */,
 				BCF1E58A2B5D4D8F000F5960 /* ProfileImageSection.swift in Sources */,
 				BC8F51022B57BB2B00F56C90 /* NavigationMenuRow.swift in Sources */,
+				BCC107DC2B68E9830043EC7D /* PageTapBarItem.swift in Sources */,
 				BCF1E5862B5D496E000F5960 /* MyInfoViewController.swift in Sources */,
 				BC3CECC82B4FACC300546377 /* AppDelegate.swift in Sources */,
 				BC3CECCA2B4FACC300546377 /* SceneDelegate.swift in Sources */,
 				BCF1E58E2B5D5852000F5960 /* MyInfoReactor.swift in Sources */,
 				BCC107BD2B68A1CA0043EC7D /* MyPetSettingViewController.swift in Sources */,
 				BC8F50FE2B579F7000F56C90 /* UIImageView+Extension.swift in Sources */,
+				BCC107E02B6901A80043EC7D /* MyArticlePageTableViewCell.swift in Sources */,
 				BCC107BF2B68A9CD0043EC7D /* OwnerSettingViewController.swift in Sources */,
+				BCC107E62B69138E0043EC7D /* MainViewController.swift in Sources */,
 				BC6E40CD2B552BC600BA2CE1 /* BaseView.swift in Sources */,
 				BCF1E58C2B5D54E3000F5960 /* MyInfoMenuSection.swift in Sources */,
 				BC6E40CA2B552BC600BA2CE1 /* BaseViewController.swift in Sources */,
@@ -480,6 +559,7 @@
 				BC6E40C02B55291800BA2CE1 /* MypageViewController.swift in Sources */,
 				BCC107C82B68C90A0043EC7D /* CollectionViewDelegate.swift in Sources */,
 				BCC91D7D2B58D77900D02BF0 /* MyPetCard.swift in Sources */,
+				BCC107E42B690BFF0043EC7D /* BaseTableViewCell.swift in Sources */,
 				BCC107CA2B68CD120043EC7D /* BaseCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

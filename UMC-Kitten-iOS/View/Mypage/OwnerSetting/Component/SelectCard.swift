@@ -62,4 +62,6 @@ class SelectCard: BaseView {
             $0.height.equalTo(100)
         }
     }
+    
+    
 }

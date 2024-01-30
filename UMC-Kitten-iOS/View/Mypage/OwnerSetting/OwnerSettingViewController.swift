@@ -23,6 +23,8 @@ class OwnerSettingViewController: BaseViewController {
         ),
     ]
     
+    private var isSelected: Bool = true
+    
     // MARK: Set Method
     override func setStyle() {
         self.title = "반려인 설정"
@@ -60,6 +62,31 @@ class OwnerSettingViewController: BaseViewController {
         }
     }
     
-    override func setBind() { }
+    override func setBind() {
+        
+        // FIXME: 내부 함수로 분리
+        // 첫번째꺼가 선택된 액션
+        selectCards[0].rx.tapGesture()
+            .subscribe { _ in
+                self.isSelected = true
+                self.isSelected = false
+                
+                self.selectCards[0].backgroundColor = .mainDeep
+                self.selectCards[1].backgroundColor = .white
+                
+            }
+            .disposed(by: disposeBag)
+        
+        selectCards[1].rx.tapGesture()
+            .subscribe { _ in
+                self.isSelected = true
+                self.isSelected = false
+                
+                self.selectCards[1].backgroundColor = .mainDeep
+                self.selectCards[0].backgroundColor = .white
+            }
+            .disposed(by: disposeBag)
+        
+    }
     
 }

@@ -5,7 +5,6 @@
 //  Created by DOYEON LEE on 1/17/24.
 //
 
-import Foundation
 import UIKit
 
 class NavigationMenuRow: BaseView {

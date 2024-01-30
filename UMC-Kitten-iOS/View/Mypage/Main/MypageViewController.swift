@@ -87,21 +87,32 @@ class MypageViewController: BaseViewController {
     
     override func setBind() {
         profileSection.managementButton.rx.tapGesture()
+            .withUnretained(self)
             .map { _ in .tapMyPetManagementButton }
             .bind(to: reactor.action)
             .disposed(by: self.disposeBag)
         
-        mypageMenuSection.editMyProfile.rx.tapGesture()
+        profileSection.managementButton.rx.tapGesture()
+            .withUnretained(self)
+            .skip(1)
+            .subscribe { _ in
+                self.pushView(vc: MyPetSettingViewController())
+            }
+            .disposed(by: self.disposeBag)
+        
+        mypageMenuSection.myInfoSetting.rx.tapGesture()
+            .withUnretained(self)
             .skip(1)
             .subscribe { _ in
                 self.pushView(vc: MyInfoViewController())
             }
             .disposed(by: self.disposeBag)
         
-        profileSection.managementButton.rx.tapGesture()
+        mypageMenuSection.myArticleSetting.rx.tapGesture()
+            .withUnretained(self)
             .skip(1)
             .subscribe { _ in
-                self.pushView(vc: MyPetSettingViewController())
+                self.pushView(vc: MyArticleSettingViewController())
             }
             .disposed(by: self.disposeBag)
     }

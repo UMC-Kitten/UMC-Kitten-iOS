@@ -10,7 +10,6 @@ import UIKit
 class ProfileSection: BaseView {
     
     // MARK: Data
-    
     var ownerName: String = "임시 닉네임" {
         didSet {
             ownerNameLabel.text = ownerName
