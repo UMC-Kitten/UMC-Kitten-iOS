@@ -10,7 +10,7 @@ import UIKit
 
 import SnapKit
 
-class MyPetCell: BaseView {
+class MyPetCard: BaseView {
     
     // MARK: UI Component
     

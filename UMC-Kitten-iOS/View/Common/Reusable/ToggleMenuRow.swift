@@ -13,7 +13,6 @@ import UIKit
 class ToggleMenuRow: BaseView {
     
     // MARK: UI Containers
-    
     private let rowContainer: UIStackView = .init()
     
     // MARK: UI Component
@@ -22,14 +21,12 @@ class ToggleMenuRow: BaseView {
     private let toggleSwitch: UISwitch = .init()
     
     // MARK: Constructor
-    
     convenience init(_ menuTitle: String) {
         self.init()
         self.menuTitleLabel.text = menuTitle
     }
     
     // MARK: Set Methods
-    
     override func setStyle() {
         border.backgroundColor = .grayScale50
         
@@ -63,7 +60,6 @@ class ToggleMenuRow: BaseView {
         
         toggleSwitch.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().inset(10)
         }
     }
 }

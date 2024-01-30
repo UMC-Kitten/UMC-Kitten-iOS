@@ -45,6 +45,12 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
     func setBind() { }
 }
 
+extension BaseViewController {
+    func pushView(vc: UIViewController, animated: Bool = true) {
+        self.navigationController?.pushViewController(vc, animated: animated)
+    }
+}
+
 
 /// 복붙용 예시입니다
 class sampleViewController: BaseViewController {

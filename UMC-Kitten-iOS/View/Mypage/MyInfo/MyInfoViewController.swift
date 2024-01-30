@@ -91,8 +91,17 @@ class MyInfoViewController: BaseViewController{
         
         myInfoMenuSection.nicknameSettingMenu.rx.tapGesture()
             .skip(1)
+            .withUnretained(self)
             .subscribe { _ in
-                self.navigationController?.pushViewController(NicknameSettingViewController(), animated: true)
+                self.pushView(vc: NicknameSettingViewController())
+            }
+            .disposed(by: self.disposeBag)
+        
+        myInfoMenuSection.ownerSettingMenu.rx.tapGesture()
+            .skip(1)
+            .withUnretained(self)
+            .subscribe { _ in
+                self.pushView(vc: OwnerSettingViewController())
             }
             .disposed(by: self.disposeBag)
         

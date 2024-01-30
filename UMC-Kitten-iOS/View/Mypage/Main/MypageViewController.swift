@@ -15,7 +15,6 @@ import ReactorKit
 class MypageViewController: BaseViewController {
     
     // MARK: Dependency
-    
     private let reactor = MypageReactor()
     
     // MARK: UI Container
@@ -33,7 +32,6 @@ class MypageViewController: BaseViewController {
      }
     
     // MARK: Set Properties
-    
     override func setStyle() {
         scrollView.backgroundColor = .white
         
@@ -93,7 +91,14 @@ class MypageViewController: BaseViewController {
         mypageMenuSection.editMyProfile.rx.tapGesture()
             .skip(1)
             .subscribe { _ in
-                self.navigationController?.pushViewController(MyInfoViewController(), animated: true)
+                self.pushView(vc: MyInfoViewController())
+            }
+            .disposed(by: self.disposeBag)
+        
+        profileSection.managementButton.rx.tapGesture()
+            .skip(1)
+            .subscribe { _ in
+                self.pushView(vc: MyPetSettingViewController())
             }
             .disposed(by: self.disposeBag)
     }

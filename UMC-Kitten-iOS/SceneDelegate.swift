@@ -19,7 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
 
         // Tab Bar 컨트롤러 생성
-        let tabBarVC = UITabBarController()
+        let mypageVC = MypageViewController()
+        let tabBarVC = UINavigationController()
+        tabBarVC.viewControllers = [mypageVC]
         
         // (1) VC 생성
         // let exampleVC = ExampleViewController()
@@ -29,11 +31,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // (3) Tab Bar로 사용하기 위한 뷰 컨트롤러들 설정
         // tabBarVC.setViewControllers([exampleVC, vc2, vc3, vc4, vc5], animated: false)
-        tabBarVC.modalPresentationStyle = .fullScreen
-        tabBarVC.tabBar.backgroundColor = .white
+//        tabBarVC.modalPresentationStyle = .fullScreen
+//        tabBarVC.tabBar.backgroundColor = .white
         
         // (4) Tab Bar 이미지 설정
-        guard let items = tabBarVC.tabBar.items else { return }
+//        guard let items = tabBarVC.tabBar.items else { return }
         // items[0].image = UIImage(systemName: "trash")
         // items[1].image = UIImage(systemName: "folder")
         // items[2].image = UIImage(systemName: "paperplane")

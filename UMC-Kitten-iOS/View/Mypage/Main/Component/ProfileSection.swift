@@ -29,9 +29,9 @@ class ProfileSection: BaseView {
     
     private let myPetsInfoTitleLabel: UILabel = .init(text: "내 반려동물 정보")
     let managementButton: UILabel = .init(text: "관리")
-    private let myPetCells: [MyPetCell] = [
-        MyPetCell(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷"),
-        MyPetCell(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷")
+    private let myPetCells: [MyPetCard] = [
+        .init(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷"),
+        .init(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷")
     ]
     
     // MARK: Set Method
