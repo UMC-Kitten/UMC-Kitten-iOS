@@ -33,6 +33,9 @@ class MypageViewController: BaseViewController {
     
     // MARK: Set Properties
     override func setStyle() {
+        
+        navigationController?.navigationBar.tintColor = .black
+        
         scrollView.backgroundColor = .white
         
         contentView.backgroundColor = .white

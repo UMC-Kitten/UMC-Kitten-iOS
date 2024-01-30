@@ -11,11 +11,16 @@ import SnapKit
 class MyPetSettingViewController: BaseViewController {
     
     // MARK: UI Component
-    private let titleLabel: UILabel = .init()
-    private let petCards: [MyPetCard] = [
-        .init(petName: "무냥이", petInfo: "고양이 / 수컷/ 4살"),
-        .init(petName: "무냥이", petInfo: "고양이 / 수컷/ 4살"),
-        .init(petName: "무냥이", petInfo: "고양이 / 수컷/ 4살"),
+    private let collectionView: BaseCollectionView = .init()
+    
+    let pets: [PetModel] = [
+        .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
+        .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
+        .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
+        .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
+        .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
+        .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
+        .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
     ]
     
     
@@ -23,21 +28,24 @@ class MyPetSettingViewController: BaseViewController {
     override func setStyle() {
         self.title = "내 반려동물 관리"
         
-        titleLabel.text = "내 반려동물"
-        titleLabel.setDefaultFont(size: 24, weight: .bold)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(MyPetCardCell.self, forCellWithReuseIdentifier: "myPetCardCell")
     }
     
     override func setDelegate() { }
     
     override func setHierarchy() {
-        [titleLabel]
+        [collectionView]
             .forEach { view.addSubview($0) }
     }
     
-    override func setLayout() { 
-        titleLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(20)
-            $0.leading.equalToSuperview().inset(15)
+    override func setLayout() {
+        
+        collectionView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.bottom.equalTo(view.snp.bottom)
+            $0.leading.trailing.equalToSuperview().inset(20)
         }
     }
     

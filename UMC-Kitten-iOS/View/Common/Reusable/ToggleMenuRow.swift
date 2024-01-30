@@ -54,7 +54,7 @@ class ToggleMenuRow: BaseView {
         }
         
         rowContainer.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview().inset(15)
+            $0.top.bottom.equalToSuperview().inset(10)
             $0.leading.trailing.equalToSuperview().inset(20)
         }
         

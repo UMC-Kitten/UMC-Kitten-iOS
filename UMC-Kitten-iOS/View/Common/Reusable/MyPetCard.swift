@@ -75,7 +75,4 @@ class MyPetCard: BaseView {
         super.layoutSubviews()
         petImageView.addOverlayGradientLayer()
     }
-    
-    
-    
 }
