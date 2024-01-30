@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		986D31342B67D3C300B9E029 /* PetInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986D31332B67D3C300B9E029 /* PetInformation.storyboard */; };
+		986D31362B67D3DC00B9E029 /* PetInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D31352B67D3DC00B9E029 /* PetInformationViewController.swift */; };
+		986D31452B67E14500B9E029 /* PetTypeSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986D31442B67E14500B9E029 /* PetTypeSelect.storyboard */; };
+		986D31472B67E15300B9E029 /* PetTypeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D31462B67E15300B9E029 /* PetTypeSelectViewController.swift */; };
+		986D31492B68046E00B9E029 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986D31482B68046E00B9E029 /* Welcome.storyboard */; };
+		986D314B2B68047900B9E029 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D314A2B68047900B9E029 /* WelcomeViewController.swift */; };
+		98C1990F2B66AC6F00FE79B3 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C1990E2B66AC6F00FE79B3 /* CheckBox.swift */; };
+		98C199122B66C0CA00FE79B3 /* imageChangingCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C199112B66C0CA00FE79B3 /* imageChangingCheckBox.swift */; };
+		98E51F3E2B64E79900C411D0 /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E51F3D2B64E79900C411D0 /* StartScreen.storyboard */; };
+		98E51F402B64E7A300C411D0 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E51F3F2B64E7A300C411D0 /* StartScreenViewController.swift */; };
+		98E51F422B64E7AD00C411D0 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E51F412B64E7AD00C411D0 /* SignUp.storyboard */; };
+		98E51F462B64E7C100C411D0 /* SignUpProfileImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E51F452B64E7C100C411D0 /* SignUpProfileImage.storyboard */; };
+		98E51F4A2B64E7E000C411D0 /* TermsOfUse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E51F492B64E7E000C411D0 /* TermsOfUse.storyboard */; };
+		98E51F4C2B64E7EC00C411D0 /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E51F4B2B64E7EC00C411D0 /* TermsOfUseViewController.swift */; };
+		98E51F4E2B64E7F900C411D0 /* OwnerSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E51F4D2B64E7F900C411D0 /* OwnerSelect.storyboard */; };
+		98E51F502B64E80200C411D0 /* OwnerSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E51F4F2B64E80200C411D0 /* OwnerSelectViewController.swift */; };
+		98E51F522B64E80C00C411D0 /* PetSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E51F512B64E80C00C411D0 /* PetSelect.storyboard */; };
+		98E51F542B64E81600C411D0 /* PetSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E51F532B64E81600C411D0 /* PetSelectViewController.swift */; };
+		98E51F562B64E82600C411D0 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E51F552B64E82600C411D0 /* UIView+Extensions.swift */; };
+		98E51F582B64F4D300C411D0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E51F572B64F4D300C411D0 /* SignUpViewController.swift */; };
+		98E51F5A2B64F4E800C411D0 /* SignUpProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E51F592B64F4E800C411D0 /* SignUpProfileImageViewController.swift */; };
 		BC3CECC82B4FACC300546377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CECC72B4FACC300546377 /* AppDelegate.swift */; };
 		BC3CECCA2B4FACC300546377 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CECC92B4FACC300546377 /* SceneDelegate.swift */; };
 		BC3CECCC2B4FACC300546377 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CECCB2B4FACC300546377 /* ViewController.swift */; };
@@ -16,6 +37,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		986D31332B67D3C300B9E029 /* PetInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PetInformation.storyboard; sourceTree = "<group>"; };
+		986D31352B67D3DC00B9E029 /* PetInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetInformationViewController.swift; sourceTree = "<group>"; };
+		986D31442B67E14500B9E029 /* PetTypeSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PetTypeSelect.storyboard; sourceTree = "<group>"; };
+		986D31462B67E15300B9E029 /* PetTypeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTypeSelectViewController.swift; sourceTree = "<group>"; };
+		986D31482B68046E00B9E029 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		986D314A2B68047900B9E029 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		98C1990E2B66AC6F00FE79B3 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		98C199112B66C0CA00FE79B3 /* imageChangingCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageChangingCheckBox.swift; sourceTree = "<group>"; };
+		98E51F3D2B64E79900C411D0 /* StartScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
+		98E51F3F2B64E7A300C411D0 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		98E51F412B64E7AD00C411D0 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		98E51F452B64E7C100C411D0 /* SignUpProfileImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpProfileImage.storyboard; sourceTree = "<group>"; };
+		98E51F492B64E7E000C411D0 /* TermsOfUse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsOfUse.storyboard; sourceTree = "<group>"; };
+		98E51F4B2B64E7EC00C411D0 /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
+		98E51F4D2B64E7F900C411D0 /* OwnerSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OwnerSelect.storyboard; sourceTree = "<group>"; };
+		98E51F4F2B64E80200C411D0 /* OwnerSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSelectViewController.swift; sourceTree = "<group>"; };
+		98E51F512B64E80C00C411D0 /* PetSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PetSelect.storyboard; sourceTree = "<group>"; };
+		98E51F532B64E81600C411D0 /* PetSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSelectViewController.swift; sourceTree = "<group>"; };
+		98E51F552B64E82600C411D0 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		98E51F572B64F4D300C411D0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		98E51F592B64F4E800C411D0 /* SignUpProfileImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProfileImageViewController.swift; sourceTree = "<group>"; };
 		BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-Kitten-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3CECC72B4FACC300546377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC3CECC92B4FACC300546377 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +79,112 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		986D31322B67D3A200B9E029 /* PetInformation */ = {
+			isa = PBXGroup;
+			children = (
+				986D31332B67D3C300B9E029 /* PetInformation.storyboard */,
+				986D31352B67D3DC00B9E029 /* PetInformationViewController.swift */,
+			);
+			path = PetInformation;
+			sourceTree = "<group>";
+		};
+		986D31372B67D3F100B9E029 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				986D31482B68046E00B9E029 /* Welcome.storyboard */,
+				986D314A2B68047900B9E029 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		986D31432B67E13500B9E029 /* PetTypeSelect */ = {
+			isa = PBXGroup;
+			children = (
+				986D31442B67E14500B9E029 /* PetTypeSelect.storyboard */,
+				986D31462B67E15300B9E029 /* PetTypeSelectViewController.swift */,
+			);
+			path = PetTypeSelect;
+			sourceTree = "<group>";
+		};
+		98C199102B66AC7700FE79B3 /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				98C199132B66CCBC00FE79B3 /* imageChangingCheckBox */,
+				98C1990E2B66AC6F00FE79B3 /* CheckBox.swift */,
+			);
+			path = CheckBox;
+			sourceTree = "<group>";
+		};
+		98C199132B66CCBC00FE79B3 /* imageChangingCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				98C199112B66C0CA00FE79B3 /* imageChangingCheckBox.swift */,
+			);
+			path = imageChangingCheckBox;
+			sourceTree = "<group>";
+		};
+		98E51F362B64E73E00C411D0 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				98E51F412B64E7AD00C411D0 /* SignUp.storyboard */,
+				98E51F572B64F4D300C411D0 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		98E51F372B64E74900C411D0 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				98E51F3D2B64E79900C411D0 /* StartScreen.storyboard */,
+				98E51F3F2B64E7A300C411D0 /* StartScreenViewController.swift */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		98E51F382B64E75C00C411D0 /* SignUpProfileImage */ = {
+			isa = PBXGroup;
+			children = (
+				98E51F452B64E7C100C411D0 /* SignUpProfileImage.storyboard */,
+				98E51F592B64F4E800C411D0 /* SignUpProfileImageViewController.swift */,
+			);
+			path = SignUpProfileImage;
+			sourceTree = "<group>";
+		};
+		98E51F392B64E76700C411D0 /* TermsOfUse */ = {
+			isa = PBXGroup;
+			children = (
+				98E51F492B64E7E000C411D0 /* TermsOfUse.storyboard */,
+				98E51F4B2B64E7EC00C411D0 /* TermsOfUseViewController.swift */,
+			);
+			path = TermsOfUse;
+			sourceTree = "<group>";
+		};
+		98E51F3A2B64E77100C411D0 /* OwnerSelect */ = {
+			isa = PBXGroup;
+			children = (
+				98E51F4D2B64E7F900C411D0 /* OwnerSelect.storyboard */,
+				98E51F4F2B64E80200C411D0 /* OwnerSelectViewController.swift */,
+			);
+			path = OwnerSelect;
+			sourceTree = "<group>";
+		};
+		98E51F3B2B64E77900C411D0 /* PetSelect */ = {
+			isa = PBXGroup;
+			children = (
+				98E51F512B64E80C00C411D0 /* PetSelect.storyboard */,
+				98E51F532B64E81600C411D0 /* PetSelectViewController.swift */,
+			);
+			path = PetSelect;
+			sourceTree = "<group>";
+		};
+		98E51F3C2B64E78500C411D0 /* UIView+Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				98E51F552B64E82600C411D0 /* UIView+Extensions.swift */,
+			);
+			path = "UIView+Extentions";
+			sourceTree = "<group>";
+		};
 		BC3CECBB2B4FACC300546377 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +204,17 @@
 		BC3CECC62B4FACC300546377 /* UMC-Kitten-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				98E51F3C2B64E78500C411D0 /* UIView+Extentions */,
+				98C199102B66AC7700FE79B3 /* CheckBox */,
+				986D31372B67D3F100B9E029 /* Welcome */,
+				986D31322B67D3A200B9E029 /* PetInformation */,
+				986D31432B67E13500B9E029 /* PetTypeSelect */,
+				98E51F3B2B64E77900C411D0 /* PetSelect */,
+				98E51F3A2B64E77100C411D0 /* OwnerSelect */,
+				98E51F392B64E76700C411D0 /* TermsOfUse */,
+				98E51F382B64E75C00C411D0 /* SignUpProfileImage */,
+				98E51F362B64E73E00C411D0 /* SignUp */,
+				98E51F372B64E74900C411D0 /* StartScreen */,
 				BC3CECC72B4FACC300546377 /* AppDelegate.swift */,
 				BC3CECC92B4FACC300546377 /* SceneDelegate.swift */,
 				BC3CECCB2B4FACC300546377 /* ViewController.swift */,
@@ -125,9 +284,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E51F4E2B64E7F900C411D0 /* OwnerSelect.storyboard in Resources */,
 				BC3CECD42B4FACC400546377 /* LaunchScreen.storyboard in Resources */,
 				BC3CECD12B4FACC400546377 /* Assets.xcassets in Resources */,
+				986D31342B67D3C300B9E029 /* PetInformation.storyboard in Resources */,
 				BC3CECCF2B4FACC300546377 /* Main.storyboard in Resources */,
+				986D31492B68046E00B9E029 /* Welcome.storyboard in Resources */,
+				98E51F3E2B64E79900C411D0 /* StartScreen.storyboard in Resources */,
+				98E51F462B64E7C100C411D0 /* SignUpProfileImage.storyboard in Resources */,
+				98E51F4A2B64E7E000C411D0 /* TermsOfUse.storyboard in Resources */,
+				98E51F422B64E7AD00C411D0 /* SignUp.storyboard in Resources */,
+				986D31452B67E14500B9E029 /* PetTypeSelect.storyboard in Resources */,
+				98E51F522B64E80C00C411D0 /* PetSelect.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +307,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC3CECCC2B4FACC300546377 /* ViewController.swift in Sources */,
+				98E51F562B64E82600C411D0 /* UIView+Extensions.swift in Sources */,
+				986D31472B67E15300B9E029 /* PetTypeSelectViewController.swift in Sources */,
+				98E51F542B64E81600C411D0 /* PetSelectViewController.swift in Sources */,
+				98C1990F2B66AC6F00FE79B3 /* CheckBox.swift in Sources */,
+				986D31362B67D3DC00B9E029 /* PetInformationViewController.swift in Sources */,
+				986D314B2B68047900B9E029 /* WelcomeViewController.swift in Sources */,
+				98E51F582B64F4D300C411D0 /* SignUpViewController.swift in Sources */,
 				BC3CECC82B4FACC300546377 /* AppDelegate.swift in Sources */,
+				98E51F502B64E80200C411D0 /* OwnerSelectViewController.swift in Sources */,
 				BC3CECCA2B4FACC300546377 /* SceneDelegate.swift in Sources */,
+				98E51F402B64E7A300C411D0 /* StartScreenViewController.swift in Sources */,
+				98E51F5A2B64F4E800C411D0 /* SignUpProfileImageViewController.swift in Sources */,
+				98E51F4C2B64E7EC00C411D0 /* TermsOfUseViewController.swift in Sources */,
+				98C199122B66C0CA00FE79B3 /* imageChangingCheckBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
