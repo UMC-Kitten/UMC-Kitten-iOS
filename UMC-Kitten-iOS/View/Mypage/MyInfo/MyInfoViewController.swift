@@ -17,7 +17,7 @@ class MyInfoViewController: BaseViewController{
     
     // MARK: Dependency
     
-    private let reactor = MyInfoReactor()
+    let reactor = MyInfoReactor()
     private let imagePicker = UIImagePickerController()
     
     // MARK: UI Component
@@ -82,10 +82,7 @@ class MyInfoViewController: BaseViewController{
         .skip(2)
         .withUnretained(self)
         .subscribe{ _ in
-            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-                self.imagePicker.sourceType = .photoLibrary
-                self.present(self.imagePicker, animated: true, completion: nil)
-            }
+            self.showBottomSheet()
         }
         .disposed(by: disposeBag)
         
@@ -111,26 +108,31 @@ class MyInfoViewController: BaseViewController{
             .disposed(by: disposeBag)
     }
     
+    /// 카메라와 앨범 중 선택하는 bottom sheet입니다.
+    private func showBottomSheet() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let cameraAction = UIAlertAction(title: "사진 촬영", style: .default) { _ in
+                self.imagePicker.sourceType = .camera
+                self.present(self.imagePicker, animated: true, completion: nil)
+            }
+            alertController.addAction(cameraAction)
+        }
+
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let photoLibraryAction = UIAlertAction(title: "앨범", style: .default) { _ in
+                self.imagePicker.sourceType = .photoLibrary
+                self.present(self.imagePicker, animated: true, completion: nil)
+            }
+            alertController.addAction(photoLibraryAction)
+        }
+
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
 }
 
-extension MyInfoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(
-        _ picker: UIImagePickerController,
-        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
-    ) {
-        var newImage: UIImage? = nil
-        
-        if let possibleImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            newImage = possibleImage
-        } else if let possibleImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            newImage = possibleImage
-        }
-        
-        Observable.just(newImage!)
-            .map { .updateProfileImage($0) }
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-        picker.dismiss(animated: true, completion: nil) // picker를 닫아줌
-        
-    }
-}

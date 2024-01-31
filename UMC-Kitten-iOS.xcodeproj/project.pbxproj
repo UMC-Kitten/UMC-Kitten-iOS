@@ -60,6 +60,7 @@
 		BCC107E42B690BFF0043EC7D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107E32B690BFF0043EC7D /* BaseTableViewCell.swift */; };
 		BCC107E62B69138E0043EC7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107E52B69138E0043EC7D /* MainViewController.swift */; };
 		BCC107E92B6A62150043EC7D /* MyArticlePageTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107E82B6A62150043EC7D /* MyArticlePageTableViewDelegate.swift */; };
+		BCC107EC2B6A65780043EC7D /* MyInfoImagePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107EB2B6A65780043EC7D /* MyInfoImagePickerDelegate.swift */; };
 		BCC91D7D2B58D77900D02BF0 /* MyPetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC91D7C2B58D77900D02BF0 /* MyPetCard.swift */; };
 		BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC91D7E2B58EC5700D02BF0 /* UIView+Extension.swift */; };
 		BCC91D842B58FE5400D02BF0 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = BCC91D832B58FE5400D02BF0 /* RxGesture */; };
@@ -119,6 +120,7 @@
 		BCC107E32B690BFF0043EC7D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		BCC107E52B69138E0043EC7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = View/MainViewController.swift; sourceTree = "<group>"; };
 		BCC107E82B6A62150043EC7D /* MyArticlePageTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArticlePageTableViewDelegate.swift; sourceTree = "<group>"; };
+		BCC107EB2B6A65780043EC7D /* MyInfoImagePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoImagePickerDelegate.swift; sourceTree = "<group>"; };
 		BCC91D7C2B58D77900D02BF0 /* MyPetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetCard.swift; sourceTree = "<group>"; };
 		BCC91D7E2B58EC5700D02BF0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BCF1E5852B5D496E000F5960 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
@@ -378,6 +380,14 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		BCC107EA2B6A655E0043EC7D /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BCC107EB2B6A65780043EC7D /* MyInfoImagePickerDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		BCC91D802B58F7D800D02BF0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				BCF1E5882B5D4D75000F5960 /* Component */,
+				BCC107EA2B6A655E0043EC7D /* Delegate */,
 				BCF1E5852B5D496E000F5960 /* MyInfoViewController.swift */,
 				BCF1E58D2B5D5852000F5960 /* MyInfoReactor.swift */,
 			);
@@ -536,6 +547,7 @@
 				BCF1E5922B5D750E000F5960 /* ToggleMenuRow.swift in Sources */,
 				BCF1E5982B5D7943000F5960 /* TextField.swift in Sources */,
 				BCF1E5952B5D7792000F5960 /* NicknameSettingViewController.swift in Sources */,
+				BCC107EC2B6A65780043EC7D /* MyInfoImagePickerDelegate.swift in Sources */,
 				BC8F50FB2B57947F00F56C90 /* ProfileSection.swift in Sources */,
 				BCC107D92B68E9610043EC7D /* MyArticlePageTapBar.swift in Sources */,
 				BCC107DE2B68FF200043EC7D /* MyArticlePage.swift in Sources */,
