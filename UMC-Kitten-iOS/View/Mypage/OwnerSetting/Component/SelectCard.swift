@@ -9,6 +9,9 @@ import UIKit
 import SnapKit
 
 class SelectCard: BaseView {
+    
+    private var selectImage: UIImage = .init()
+    private var deselectImage: UIImage = .init()
 
     // MARK: UI Component
     private let stackView: UIStackView = .init()
@@ -17,11 +20,22 @@ class SelectCard: BaseView {
 
     // MARK: Initialization
     convenience init(
-        imageName: String = "cat-sample",
+        selectImageName: String,
+        deselectImageName: String,
         description: String
     ) {
         self.init()
-        self.imageView.image = UIImage(named: imageName)
+        
+        guard let selectImage = UIImage(named: selectImageName) else {
+            fatalError("Failed to load image for \(selectImageName)")
+        }
+        self.selectImage = selectImage
+        
+        guard let deselectImage = UIImage(named: deselectImageName) else {
+            fatalError("Failed to load image for \(deselectImageName)")
+        }
+        self.deselectImage = deselectImage
+        
         self.descriptionLabel.text = description
     }
 
@@ -61,6 +75,18 @@ class SelectCard: BaseView {
         imageView.snp.makeConstraints {
             $0.height.equalTo(100)
         }
+    }
+    
+    func configureUISelect() {
+        self.imageView.image = selectImage
+        self.descriptionLabel.textColor = .white
+        self.backgroundColor = .mainDeep
+    }
+    
+    func configureUIDeselect() {
+        self.imageView.image = deselectImage
+        self.descriptionLabel.textColor = .black
+        self.backgroundColor = .white
     }
     
     

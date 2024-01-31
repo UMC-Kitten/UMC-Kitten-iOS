@@ -29,6 +29,13 @@ extension MyArticleSettingViewController: UIPageViewControllerDataSource, UIPage
         guard completed, let index = pages.firstIndex(of: pageViewController.viewControllers?.first ?? UIViewController()) else {
             return
         }
+        
         pageTapBar.selectTapItem(index)
+        
+        let newPageIndex = index  // 변경할 페이지의 인덱스
+        let direction: UIPageViewController.NavigationDirection = (newPageIndex > currentPageIndex) ? .forward : .reverse
+        
+        let newViewController = pages[newPageIndex]  // 변경할 페이지의 뷰 컨트롤러
+        pageViewController.setViewControllers([newViewController], direction: direction, animated: true, completion: nil)
     }
 }

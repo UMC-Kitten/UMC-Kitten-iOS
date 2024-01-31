@@ -15,10 +15,12 @@ class OwnerSettingViewController: BaseViewController {
     private let stackView: UIStackView = .init()
     private let selectCards: [SelectCard] = [
         .init(
-            imageName: "dogncat-black",
+            selectImageName: "dogncat-white",
+            deselectImageName: "dogncat-black",
             description: "반려동물을 \n키우고 있어요"),
         .init(
-            imageName: "owner-black",
+            selectImageName: "owner-white",
+            deselectImageName: "owner-black",
             description: "아직 키우고 \n있지는 않아요"
         ),
     ]
@@ -71,8 +73,8 @@ class OwnerSettingViewController: BaseViewController {
                 self.isSelected = true
                 self.isSelected = false
                 
-                self.selectCards[0].backgroundColor = .mainDeep
-                self.selectCards[1].backgroundColor = .white
+                self.selectCards[0].configureUISelect()
+                self.selectCards[1].configureUIDeselect()
                 
             }
             .disposed(by: disposeBag)
@@ -82,8 +84,8 @@ class OwnerSettingViewController: BaseViewController {
                 self.isSelected = true
                 self.isSelected = false
                 
-                self.selectCards[1].backgroundColor = .mainDeep
-                self.selectCards[0].backgroundColor = .white
+                self.selectCards[1].configureUISelect()
+                self.selectCards[0].configureUIDeselect()
             }
             .disposed(by: disposeBag)
         

@@ -59,6 +59,7 @@
 		BCC107E02B6901A80043EC7D /* MyArticlePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107DF2B6901A80043EC7D /* MyArticlePageTableViewCell.swift */; };
 		BCC107E42B690BFF0043EC7D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107E32B690BFF0043EC7D /* BaseTableViewCell.swift */; };
 		BCC107E62B69138E0043EC7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107E52B69138E0043EC7D /* MainViewController.swift */; };
+		BCC107E92B6A62150043EC7D /* MyArticlePageTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107E82B6A62150043EC7D /* MyArticlePageTableViewDelegate.swift */; };
 		BCC91D7D2B58D77900D02BF0 /* MyPetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC91D7C2B58D77900D02BF0 /* MyPetCard.swift */; };
 		BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC91D7E2B58EC5700D02BF0 /* UIView+Extension.swift */; };
 		BCC91D842B58FE5400D02BF0 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = BCC91D832B58FE5400D02BF0 /* RxGesture */; };
@@ -117,6 +118,7 @@
 		BCC107DF2B6901A80043EC7D /* MyArticlePageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArticlePageTableViewCell.swift; sourceTree = "<group>"; };
 		BCC107E32B690BFF0043EC7D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		BCC107E52B69138E0043EC7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = View/MainViewController.swift; sourceTree = "<group>"; };
+		BCC107E82B6A62150043EC7D /* MyArticlePageTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArticlePageTableViewDelegate.swift; sourceTree = "<group>"; };
 		BCC91D7C2B58D77900D02BF0 /* MyPetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetCard.swift; sourceTree = "<group>"; };
 		BCC91D7E2B58EC5700D02BF0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BCF1E5852B5D496E000F5960 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		BC6E40BE2B5528FA00BA2CE1 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				BCC107E12B6903200043EC7D /* MyArticlePage */,
 				BCC107D02B68E34E0043EC7D /* MyArticleSetting */,
 				BCC107BB2B68A1B40043EC7D /* MyPetSetting */,
 				BCF1E59D2B5E9429000F5960 /* OwnerSetting */,
@@ -336,7 +339,6 @@
 		BCC107D72B68E8B70043EC7D /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				BCC107E12B6903200043EC7D /* MyArticlePage */,
 				BCC107D82B68E9610043EC7D /* MyArticlePageTapBar.swift */,
 			);
 			path = Component;
@@ -353,6 +355,7 @@
 		BCC107E12B6903200043EC7D /* MyArticlePage */ = {
 			isa = PBXGroup;
 			children = (
+				BCC107E72B6A61C00043EC7D /* Delegate */,
 				BCC107E22B6903300043EC7D /* Reusable */,
 				BCC107DD2B68FF200043EC7D /* MyArticlePage.swift */,
 			);
@@ -365,6 +368,14 @@
 				BCC107DF2B6901A80043EC7D /* MyArticlePageTableViewCell.swift */,
 			);
 			path = Reusable;
+			sourceTree = "<group>";
+		};
+		BCC107E72B6A61C00043EC7D /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BCC107E82B6A62150043EC7D /* MyArticlePageTableViewDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		BCC91D802B58F7D800D02BF0 /* Main */ = {
@@ -545,6 +556,7 @@
 				BCC107DC2B68E9830043EC7D /* PageTapBarItem.swift in Sources */,
 				BCF1E5862B5D496E000F5960 /* MyInfoViewController.swift in Sources */,
 				BC3CECC82B4FACC300546377 /* AppDelegate.swift in Sources */,
+				BCC107E92B6A62150043EC7D /* MyArticlePageTableViewDelegate.swift in Sources */,
 				BC3CECCA2B4FACC300546377 /* SceneDelegate.swift in Sources */,
 				BCF1E58E2B5D5852000F5960 /* MyInfoReactor.swift in Sources */,
 				BCC107BD2B68A1CA0043EC7D /* MyPetSettingViewController.swift in Sources */,
