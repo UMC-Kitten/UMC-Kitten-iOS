@@ -21,7 +21,7 @@ class PageTapBarItem: BaseView {
     
     // MARK: Set Methods
     override func setStyle() {
-        border.backgroundColor = .mainDeep
+        border.backgroundColor = .main
         
         titleLabel.setDefaultFont(size: 16)
         titleLabel.textColor = .grayScale900
@@ -46,7 +46,7 @@ class PageTapBarItem: BaseView {
     
     func configureUISelect() {
         titleLabel.textColor = .grayScale900
-        border.backgroundColor = .mainDeep
+        border.backgroundColor = .main
     }
     
     func configureUIDeselect() {

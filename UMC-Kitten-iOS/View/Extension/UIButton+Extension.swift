@@ -19,7 +19,7 @@ extension UIButton {
         setTitle(text, for: .normal)
         setTitleColor(.white, for: .normal)
         titleLabel?.setDefaultFont(size: 16, weight: .bold) // FIXME: 적용 안됨
-        tintColor = .mainDeep
+        tintColor = .main
         titleLabel?.textColor = .white
         layer.cornerRadius = 18
     }

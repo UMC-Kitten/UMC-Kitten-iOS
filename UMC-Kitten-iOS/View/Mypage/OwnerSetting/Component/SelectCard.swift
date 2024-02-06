@@ -80,7 +80,7 @@ class SelectCard: BaseView {
     func configureUISelect() {
         self.imageView.image = selectImage
         self.descriptionLabel.textColor = .white
-        self.backgroundColor = .mainDeep
+        self.backgroundColor = .main
     }
     
     func configureUIDeselect() {

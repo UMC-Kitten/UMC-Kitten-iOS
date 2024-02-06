@@ -39,7 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabBarVC.setViewControllers([homeVC, checkinVC, communityVC, mypageNavVC], animated: false)
         tabBarVC.modalPresentationStyle = .fullScreen
         tabBarVC.tabBar.backgroundColor = .white
-        tabBarVC.tabBar.tintColor = .mainDeep
+        tabBarVC.tabBar.tintColor = .main
         
         // (4) Tab Bar 이미지 설정
         guard let items = tabBarVC.tabBar.items else { return }

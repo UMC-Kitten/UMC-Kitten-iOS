@@ -24,7 +24,7 @@ class ProfileImageSection: BaseView {
         profileImage.layer.cornerRadius = profileImageSize / 2
         profileImage.layer.masksToBounds = true
         profileImage.layer.borderWidth = 2.0
-        profileImage.layer.borderColor = UIColor.secondary.withAlphaComponent(0.1).cgColor
+        profileImage.layer.borderColor = UIColor.main.withAlphaComponent(0.1).cgColor
     }
     
     override func setHierarchy() { 

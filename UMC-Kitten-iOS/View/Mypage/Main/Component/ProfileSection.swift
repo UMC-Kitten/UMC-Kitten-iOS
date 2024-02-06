@@ -47,7 +47,7 @@ class ProfileSection: BaseView {
         myPetsInfoTitleLabel.textColor = .grayScale700
         
         managementButton.setDefaultFont(size: 16, weight: .semiBold)
-        managementButton.textColor = .mainDeep
+        managementButton.textColor = .main
         
         myPetsScrollView.showsHorizontalScrollIndicator = false
         
