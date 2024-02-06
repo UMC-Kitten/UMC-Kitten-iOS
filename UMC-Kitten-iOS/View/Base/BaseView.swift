@@ -5,16 +5,19 @@
 //  Created by DOYEON LEE on 2023/05/30.
 //
 
-import Foundation
 import UIKit
+
+import RxSwift
 
 protocol BaseViewProtocol {
     func setStyle()
     func setHierarchy()
     func setLayout()
+    func setBind()
 }
 
 class BaseView: UIView, BaseViewProtocol {
+    var disposeBag = DisposeBag()
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -26,6 +29,7 @@ class BaseView: UIView, BaseViewProtocol {
         setStyle()
         setHierarchy()
         setLayout()
+        setBind()
     }
     
     func setStyle() { }
@@ -33,6 +37,8 @@ class BaseView: UIView, BaseViewProtocol {
     func setHierarchy() { }
     
     func setLayout() { }
+    
+    func setBind() { }
 }
 
 
@@ -44,6 +50,8 @@ class sampleView: BaseView {
     override func setHierarchy() { }
     
     override func setLayout() { }
+    
+    override func setBind() { }
     
 }
 

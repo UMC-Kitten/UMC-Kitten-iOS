@@ -20,6 +20,7 @@ class BaseTableViewCell: UITableViewCell, BaseViewProtocol {
         setStyle()
         setHierarchy()
         setLayout()
+        setBind()
     }
     
     override func prepareForReuse() {
@@ -31,4 +32,6 @@ class BaseTableViewCell: UITableViewCell, BaseViewProtocol {
     func setHierarchy() { }
     
     func setLayout() { }
+    
+    func setBind() { }
 }

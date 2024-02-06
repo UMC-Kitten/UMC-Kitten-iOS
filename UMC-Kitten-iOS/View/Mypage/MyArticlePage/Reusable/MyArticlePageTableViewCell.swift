@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyTableViewCell: BaseTableViewCell {
+class MyArticlePageTableViewCell: BaseTableViewCell {
     
     // MARK: Constant
     private let PROFILE_IMAGE_SIZE: CGFloat = 35

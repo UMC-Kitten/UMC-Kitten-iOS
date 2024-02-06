@@ -22,6 +22,7 @@ class BaseCollectionViewCell: UICollectionViewCell, BaseViewProtocol {
         setStyle()
         setHierarchy()
         setLayout()
+        setBind()
     }
     
     override func prepareForReuse() {
@@ -33,4 +34,6 @@ class BaseCollectionViewCell: UICollectionViewCell, BaseViewProtocol {
     func setHierarchy() { }
     
     func setLayout() { }
+    
+    func setBind() { }
 }

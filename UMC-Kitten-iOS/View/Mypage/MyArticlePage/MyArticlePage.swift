@@ -22,7 +22,7 @@ class MyArticlePage: BaseViewController {
     override func setDelegate() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(MyTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(MyArticlePageTableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     override func setHierarchy() {

@@ -43,6 +43,11 @@
 		BC93BA392B56CEDE00775C5F /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BC93BA2F2B56CD8C00775C5F /* Pretendard-SemiBold.otf */; };
 		BC93BA3A2B56CEDE00775C5F /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BC93BA2B2B56CD8C00775C5F /* Pretendard-Thin.otf */; };
 		BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94315F2B56DB4400273DD7 /* UILabel+Extension.swift */; };
+		BC9DC6482B722E3A00859EFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6472B722E3A00859EFE /* HomeViewController.swift */; };
+		BC9DC64C2B722FD400859EFE /* RegisteredPetsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64B2B722FD400859EFE /* RegisteredPetsSection.swift */; };
+		BC9DC64E2B7231C000859EFE /* RegisteredPetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64D2B7231C000859EFE /* RegisteredPetsCell.swift */; };
+		BC9DC6502B72359C00859EFE /* HomeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64F2B72359C00859EFE /* HomeReactor.swift */; };
+		BC9DC6532B72377300859EFE /* HomeConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6522B72377300859EFE /* HomeConstant.swift */; };
 		BCC107BD2B68A1CA0043EC7D /* MyPetSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107BC2B68A1CA0043EC7D /* MyPetSettingViewController.swift */; };
 		BCC107BF2B68A9CD0043EC7D /* OwnerSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107BE2B68A9CD0043EC7D /* OwnerSettingViewController.swift */; };
 		BCC107C22B68ACA10043EC7D /* SelectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107C12B68ACA10043EC7D /* SelectCard.swift */; };
@@ -104,6 +109,11 @@
 		BC93BA302B56CD8C00775C5F /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		BC93BA312B56CD8C00775C5F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		BC94315F2B56DB4400273DD7 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		BC9DC6472B722E3A00859EFE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BC9DC64B2B722FD400859EFE /* RegisteredPetsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsSection.swift; sourceTree = "<group>"; };
+		BC9DC64D2B7231C000859EFE /* RegisteredPetsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsCell.swift; sourceTree = "<group>"; };
+		BC9DC64F2B72359C00859EFE /* HomeReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReactor.swift; sourceTree = "<group>"; };
+		BC9DC6522B72377300859EFE /* HomeConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstant.swift; sourceTree = "<group>"; };
 		BCC107BC2B68A1CA0043EC7D /* MyPetSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetSettingViewController.swift; sourceTree = "<group>"; };
 		BCC107BE2B68A9CD0043EC7D /* OwnerSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSettingViewController.swift; sourceTree = "<group>"; };
 		BCC107C12B68ACA10043EC7D /* SelectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCard.swift; sourceTree = "<group>"; };
@@ -197,6 +207,7 @@
 			children = (
 				BC6E40C52B552BC600BA2CE1 /* Base */,
 				BCF1E5872B5D4D60000F5960 /* Common */,
+				BC9DC6462B722E2B00859EFE /* Home */,
 				BC6E40BE2B5528FA00BA2CE1 /* Mypage */,
 				BC94315E2B56DB4400273DD7 /* Extension */,
 				BC93BA282B56CD7800775C5F /* Font */,
@@ -277,6 +288,42 @@
 				BCC107CE2B68E1390043EC7D /* UIImage+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BC9DC6462B722E2B00859EFE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BC9DC6512B72376800859EFE /* Constant */,
+				BC9DC64A2B722FC800859EFE /* Resuable */,
+				BC9DC6492B722FC200859EFE /* Component */,
+				BC9DC6472B722E3A00859EFE /* HomeViewController.swift */,
+				BC9DC64F2B72359C00859EFE /* HomeReactor.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BC9DC6492B722FC200859EFE /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				BC9DC64B2B722FD400859EFE /* RegisteredPetsSection.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		BC9DC64A2B722FC800859EFE /* Resuable */ = {
+			isa = PBXGroup;
+			children = (
+				BC9DC64D2B7231C000859EFE /* RegisteredPetsCell.swift */,
+			);
+			path = Resuable;
+			sourceTree = "<group>";
+		};
+		BC9DC6512B72376800859EFE /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				BC9DC6522B72377300859EFE /* HomeConstant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		BCC107BB2B68A1B40043EC7D /* MyPetSetting */ = {
@@ -360,8 +407,8 @@
 		BCC107E12B6903200043EC7D /* MyArticlePage */ = {
 			isa = PBXGroup;
 			children = (
-				BCC107E72B6A61C00043EC7D /* Delegate */,
 				BCC107E22B6903300043EC7D /* Reusable */,
+				BCC107E72B6A61C00043EC7D /* Delegate */,
 				BCC107DD2B68FF200043EC7D /* MyArticlePage.swift */,
 			);
 			path = MyArticlePage;
@@ -553,6 +600,7 @@
 				BCC107EC2B6A65780043EC7D /* MyInfoImagePickerDelegate.swift in Sources */,
 				BCC107EE2B6A66800043EC7D /* MyPetSettingReactor.swift in Sources */,
 				BC8F50FB2B57947F00F56C90 /* ProfileSection.swift in Sources */,
+				BC9DC6482B722E3A00859EFE /* HomeViewController.swift in Sources */,
 				BCC107D92B68E9610043EC7D /* MyArticlePageTapBar.swift in Sources */,
 				BCC107DE2B68FF200043EC7D /* MyArticlePage.swift in Sources */,
 				BCC107D22B68E3630043EC7D /* MyArticleSettingViewController.swift in Sources */,
@@ -572,12 +620,15 @@
 				BCC107DC2B68E9830043EC7D /* PageTapBarItem.swift in Sources */,
 				BCF1E5862B5D496E000F5960 /* MyInfoViewController.swift in Sources */,
 				BC3CECC82B4FACC300546377 /* AppDelegate.swift in Sources */,
+				BC9DC64E2B7231C000859EFE /* RegisteredPetsCell.swift in Sources */,
 				BCC107E92B6A62150043EC7D /* MyArticlePageTableViewDelegate.swift in Sources */,
 				BC3CECCA2B4FACC300546377 /* SceneDelegate.swift in Sources */,
 				BCF1E58E2B5D5852000F5960 /* MyInfoReactor.swift in Sources */,
 				BCC107BD2B68A1CA0043EC7D /* MyPetSettingViewController.swift in Sources */,
+				BC9DC6532B72377300859EFE /* HomeConstant.swift in Sources */,
 				BC8F50FE2B579F7000F56C90 /* UIImageView+Extension.swift in Sources */,
 				BCC107E02B6901A80043EC7D /* MyArticlePageTableViewCell.swift in Sources */,
+				BC9DC64C2B722FD400859EFE /* RegisteredPetsSection.swift in Sources */,
 				BCC107BF2B68A9CD0043EC7D /* OwnerSettingViewController.swift in Sources */,
 				BCC107E62B69138E0043EC7D /* MainViewController.swift in Sources */,
 				BC6E40CD2B552BC600BA2CE1 /* BaseView.swift in Sources */,
@@ -589,6 +640,7 @@
 				BCC91D7D2B58D77900D02BF0 /* MyPetCard.swift in Sources */,
 				BCC107E42B690BFF0043EC7D /* BaseTableViewCell.swift in Sources */,
 				BCC107CA2B68CD120043EC7D /* BaseCollectionView.swift in Sources */,
+				BC9DC6502B72359C00859EFE /* HomeReactor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
