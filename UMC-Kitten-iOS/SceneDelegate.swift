@@ -19,28 +19,34 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
 
         // Tab Bar 컨트롤러 생성
-        let mypageVC = MypageViewController()
-        let tabBarVC = UINavigationController()
-        tabBarVC.viewControllers = [mypageVC]
+        let tabBarVC = UITabBarController()
         
         // (1) VC 생성
-        // let exampleVC = ExampleViewController()
+         let homeVC = UIViewController()
+         let checkinVC = UIViewController()
+         let communityVC = UIViewController()
+         let mypageVC = MypageViewController()
+         let mypageNavVC = UINavigationController()
+        mypageNavVC.viewControllers = [mypageVC]
         
         // (2) Tab Bar 이름 설정
-        // exampleVC.title = "커뮤니티"
+        homeVC.title = "홈"
+        checkinVC.title = "체크인"
+        communityVC.title = "커뮤니티"
+        mypageVC.title = "마이페이지"
         
         // (3) Tab Bar로 사용하기 위한 뷰 컨트롤러들 설정
-        // tabBarVC.setViewControllers([exampleVC, vc2, vc3, vc4, vc5], animated: false)
-//        tabBarVC.modalPresentationStyle = .fullScreen
-//        tabBarVC.tabBar.backgroundColor = .white
+        tabBarVC.setViewControllers([homeVC, checkinVC, communityVC, mypageNavVC], animated: false)
+        tabBarVC.modalPresentationStyle = .fullScreen
+        tabBarVC.tabBar.backgroundColor = .white
+        tabBarVC.tabBar.tintColor = .mainDeep
         
         // (4) Tab Bar 이미지 설정
-//        guard let items = tabBarVC.tabBar.items else { return }
-        // items[0].image = UIImage(systemName: "trash")
-        // items[1].image = UIImage(systemName: "folder")
-        // items[2].image = UIImage(systemName: "paperplane")
-        // items[3].image = UIImage(systemName: "doc")
-        // items[4].image = UIImage(systemName: "note")
+        guard let items = tabBarVC.tabBar.items else { return }
+         items[0].image = UIImage(named: "home-icon")
+         items[1].image = UIImage(named: "checkin-icon")
+         items[2].image = UIImage(named: "community-icon")
+         items[3].image = UIImage(named: "mypage-icon")
         
         // 기본 루트뷰를 탭바컨트롤러로 설정
         window?.rootViewController = tabBarVC
