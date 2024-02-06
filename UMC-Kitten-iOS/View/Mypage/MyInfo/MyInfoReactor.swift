@@ -5,7 +5,6 @@
 //  Created by DOYEON LEE on 1/21/24.
 //
 
-import Foundation
 import UIKit
 
 import ReactorKit
@@ -46,8 +45,4 @@ extension MyInfoReactor {
             return state
         }
     }
-}
-
-extension MyInfoReactor {
-    
 }
