@@ -16,6 +16,7 @@ class HomeViewController: BaseViewController {
     // MARK: UI Component
     private let titleLable: UILabel = .init(text: "나는 집사")
     private let registeredPetsSection: RegisteredPetsSection = .init()
+    private let popularPostsSection: PopularPostsSection = .init()
     
     // MARK: Set Method
     override func setStyle() { 
@@ -36,7 +37,7 @@ class HomeViewController: BaseViewController {
         
         scrollView.addSubview(contentView)
         
-        [titleLable, registeredPetsSection]
+        [titleLable, registeredPetsSection, popularPostsSection]
             .forEach { contentView.addSubview($0) }
     }
     
@@ -58,7 +59,11 @@ class HomeViewController: BaseViewController {
         registeredPetsSection.snp.makeConstraints {
             $0.top.equalTo(titleLable.snp.bottom).offset(10)
             $0.left.right.equalToSuperview()
-            $0.height.equalTo(100)
+        }
+        
+        popularPostsSection.snp.makeConstraints {
+            $0.top.equalTo(registeredPetsSection.snp.bottom).offset(0)
+            $0.left.right.equalToSuperview()
         }
     }
     

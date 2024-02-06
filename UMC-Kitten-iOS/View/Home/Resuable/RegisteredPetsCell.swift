@@ -22,7 +22,7 @@ class RegisteredPetsCell: BaseCollectionViewCell {
     // MARK: Set Methods
     override func setStyle() {
         addShadowWithRoundedCorners()
-        layer.borderColor = UIColor.grayScale100.cgColor
+        layer.borderColor = UIColor.grayScale200.cgColor
         layer.borderWidth = 1
         
         petImageView.layer.cornerRadius = IMAGE_SIZE / 2

@@ -48,6 +48,9 @@
 		BC9DC64E2B7231C000859EFE /* RegisteredPetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64D2B7231C000859EFE /* RegisteredPetsCell.swift */; };
 		BC9DC6502B72359C00859EFE /* HomeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64F2B72359C00859EFE /* HomeReactor.swift */; };
 		BC9DC6532B72377300859EFE /* HomeConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6522B72377300859EFE /* HomeConstant.swift */; };
+		BC9DC6552B723FB700859EFE /* PopularPostsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6542B723FB700859EFE /* PopularPostsSection.swift */; };
+		BC9DC6572B72408900859EFE /* PopularPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6562B72408900859EFE /* PopularPostCell.swift */; };
+		BC9DC6592B7247CF00859EFE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6582B7247CF00859EFE /* UIColor+Extension.swift */; };
 		BCC107BD2B68A1CA0043EC7D /* MyPetSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107BC2B68A1CA0043EC7D /* MyPetSettingViewController.swift */; };
 		BCC107BF2B68A9CD0043EC7D /* OwnerSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107BE2B68A9CD0043EC7D /* OwnerSettingViewController.swift */; };
 		BCC107C22B68ACA10043EC7D /* SelectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107C12B68ACA10043EC7D /* SelectCard.swift */; };
@@ -114,6 +117,9 @@
 		BC9DC64D2B7231C000859EFE /* RegisteredPetsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsCell.swift; sourceTree = "<group>"; };
 		BC9DC64F2B72359C00859EFE /* HomeReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReactor.swift; sourceTree = "<group>"; };
 		BC9DC6522B72377300859EFE /* HomeConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstant.swift; sourceTree = "<group>"; };
+		BC9DC6542B723FB700859EFE /* PopularPostsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPostsSection.swift; sourceTree = "<group>"; };
+		BC9DC6562B72408900859EFE /* PopularPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPostCell.swift; sourceTree = "<group>"; };
+		BC9DC6582B7247CF00859EFE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		BCC107BC2B68A1CA0043EC7D /* MyPetSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetSettingViewController.swift; sourceTree = "<group>"; };
 		BCC107BE2B68A9CD0043EC7D /* OwnerSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSettingViewController.swift; sourceTree = "<group>"; };
 		BCC107C12B68ACA10043EC7D /* SelectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCard.swift; sourceTree = "<group>"; };
@@ -286,6 +292,7 @@
 				BCF1E58F2B5D5BE3000F5960 /* Observable+Extension.swift */,
 				BCF1E59B2B5E8E80000F5960 /* UIButton+Extension.swift */,
 				BCC107CE2B68E1390043EC7D /* UIImage+Extension.swift */,
+				BC9DC6582B7247CF00859EFE /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -306,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				BC9DC64B2B722FD400859EFE /* RegisteredPetsSection.swift */,
+				BC9DC6542B723FB700859EFE /* PopularPostsSection.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -314,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				BC9DC64D2B7231C000859EFE /* RegisteredPetsCell.swift */,
+				BC9DC6562B72408900859EFE /* PopularPostCell.swift */,
 			);
 			path = Resuable;
 			sourceTree = "<group>";
@@ -611,8 +620,11 @@
 				BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */,
 				BC8F51002B57BA1A00F56C90 /* MypageMenuSection.swift in Sources */,
 				BCC107C22B68ACA10043EC7D /* SelectCard.swift in Sources */,
+				BC9DC6552B723FB700859EFE /* PopularPostsSection.swift in Sources */,
 				BCC107C52B68C8C20043EC7D /* MyPetCardCell.swift in Sources */,
 				BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */,
+				BC9DC6592B7247CF00859EFE /* UIColor+Extension.swift in Sources */,
+				BC9DC6572B72408900859EFE /* PopularPostCell.swift in Sources */,
 				BC6E40CC2B552BC600BA2CE1 /* BaseCollectionViewCell.swift in Sources */,
 				BCC107D62B68E7590043EC7D /* PageViewControllerDelegate.swift in Sources */,
 				BCF1E58A2B5D4D8F000F5960 /* ProfileImageSection.swift in Sources */,
