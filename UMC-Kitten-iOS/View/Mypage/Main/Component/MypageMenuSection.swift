@@ -17,8 +17,8 @@ class MypageMenuSection: BaseView {
     // MARK: UI Component
     
     private let firstSectionBorder: UIView = .init()
-    let editMyProfile: NavigationMenuRow = .init("내정보 관리")
-    let editMyArticle: NavigationMenuRow = .init("내 게시물 관리")
+    let myInfoSetting: NavigationMenuRow = .init("내정보 관리")
+    let myArticleSetting: NavigationMenuRow = .init("내 게시물 관리")
     let faq: NavigationMenuRow = .init("FAQ")
     let notice: NavigationMenuRow = .init("공지사항")
     
@@ -42,7 +42,7 @@ class MypageMenuSection: BaseView {
         [menuStackView]
             .forEach { addSubview($0)}
         
-        [firstSectionBorder, editMyProfile, editMyArticle, faq, notice, 
+        [firstSectionBorder, myInfoSetting, myArticleSetting, faq, notice, 
          secondSectionBorder, inquiry, terms]
             .forEach { menuStackView.addArrangedSubview($0) }
         

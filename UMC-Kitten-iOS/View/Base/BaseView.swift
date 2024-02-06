@@ -1,42 +1,38 @@
 //
-//  BaseViewController.swift
+//  BaseView.swift
 //  HumanscapeShoppingMall
 //
 //  Created by DOYEON LEE on 2023/05/30.
 //
 
-import Foundation
 import UIKit
 
 import RxSwift
 
-protocol BaseViewControllerProtocol: AnyObject {
+protocol BaseViewProtocol {
     func setStyle()
-    func setDelegate()
     func setHierarchy()
     func setLayout()
     func setBind()
 }
 
-class BaseViewController: UIViewController, BaseViewControllerProtocol {
+class BaseView: UIView, BaseViewProtocol {
     var disposeBag = DisposeBag()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .white
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         setStyle()
-        setDelegate()
         setHierarchy()
         setLayout()
         setBind()
     }
     
-
     func setStyle() { }
-    
-    func setDelegate() { }
     
     func setHierarchy() { }
     
@@ -47,11 +43,9 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
 
 
 /// 복붙용 예시입니다
-class sampleViewController: BaseViewController {
+class sampleView: BaseView {
     
     override func setStyle() { }
-    
-    override func setDelegate() { }
     
     override func setHierarchy() { }
     
@@ -60,3 +54,4 @@ class sampleViewController: BaseViewController {
     override func setBind() { }
     
 }
+

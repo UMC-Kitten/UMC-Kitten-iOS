@@ -15,7 +15,6 @@ import ReactorKit
 class MypageViewController: BaseViewController {
     
     // MARK: Dependency
-    
     private let reactor = MypageReactor()
     
     // MARK: UI Container
@@ -33,8 +32,11 @@ class MypageViewController: BaseViewController {
      }
     
     // MARK: Set Properties
-    
     override func setStyle() {
+        
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.topItem?.title = ""
+        
         scrollView.backgroundColor = .white
         
         contentView.backgroundColor = .white
@@ -86,14 +88,32 @@ class MypageViewController: BaseViewController {
     
     override func setBind() {
         profileSection.managementButton.rx.tapGesture()
+            .withUnretained(self)
             .map { _ in .tapMyPetManagementButton }
             .bind(to: reactor.action)
             .disposed(by: self.disposeBag)
         
-        mypageMenuSection.editMyProfile.rx.tapGesture()
+        profileSection.managementButton.rx.tapGesture()
+            .withUnretained(self)
             .skip(1)
             .subscribe { _ in
-                self.navigationController?.pushViewController(MyInfoViewController(), animated: true)
+                self.pushView(vc: MyPetSettingViewController())
+            }
+            .disposed(by: self.disposeBag)
+        
+        mypageMenuSection.myInfoSetting.rx.tapGesture()
+            .withUnretained(self)
+            .skip(1)
+            .subscribe { _ in
+                self.pushView(vc: MyInfoViewController())
+            }
+            .disposed(by: self.disposeBag)
+        
+        mypageMenuSection.myArticleSetting.rx.tapGesture()
+            .withUnretained(self)
+            .skip(1)
+            .subscribe { _ in
+                self.pushView(vc: MyArticleSettingViewController())
             }
             .disposed(by: self.disposeBag)
     }

@@ -10,7 +10,6 @@ import UIKit
 class ProfileSection: BaseView {
     
     // MARK: Data
-    
     var ownerName: String = "임시 닉네임" {
         didSet {
             ownerNameLabel.text = ownerName
@@ -29,9 +28,9 @@ class ProfileSection: BaseView {
     
     private let myPetsInfoTitleLabel: UILabel = .init(text: "내 반려동물 정보")
     let managementButton: UILabel = .init(text: "관리")
-    private let myPetCells: [MyPetCell] = [
-        MyPetCell(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷"),
-        MyPetCell(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷")
+    private let myPetCells: [MyPetCard] = [
+        .init(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷"),
+        .init(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷")
     ]
     
     // MARK: Set Method
@@ -48,7 +47,7 @@ class ProfileSection: BaseView {
         myPetsInfoTitleLabel.textColor = .grayScale700
         
         managementButton.setDefaultFont(size: 16, weight: .semiBold)
-        managementButton.textColor = .mainDeep
+        managementButton.textColor = .main
         
         myPetsScrollView.showsHorizontalScrollIndicator = false
         
