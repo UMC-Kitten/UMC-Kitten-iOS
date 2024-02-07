@@ -48,9 +48,13 @@
 		BC9DC64E2B7231C000859EFE /* RegisteredPetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64D2B7231C000859EFE /* RegisteredPetsCell.swift */; };
 		BC9DC6502B72359C00859EFE /* HomeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64F2B72359C00859EFE /* HomeReactor.swift */; };
 		BC9DC6532B72377300859EFE /* HomeConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6522B72377300859EFE /* HomeConstant.swift */; };
-		BC9DC6552B723FB700859EFE /* PopularPostsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6542B723FB700859EFE /* PopularPostsSection.swift */; };
+		BC9DC6552B723FB700859EFE /* PopularPostSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6542B723FB700859EFE /* PopularPostSection.swift */; };
 		BC9DC6572B72408900859EFE /* PopularPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6562B72408900859EFE /* PopularPostCell.swift */; };
 		BC9DC6592B7247CF00859EFE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6582B7247CF00859EFE /* UIColor+Extension.swift */; };
+		BCB6CA3B2B73DA120096DEAD /* TodayFeedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6CA3A2B73DA120096DEAD /* TodayFeedSection.swift */; };
+		BCB6CA3D2B73DB3A0096DEAD /* TodayFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6CA3C2B73DB3A0096DEAD /* TodayFeedCell.swift */; };
+		BCB6CA3F2B73DEA60096DEAD /* MoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6CA3E2B73DEA60096DEAD /* MoreButton.swift */; };
+		BCB6CA412B73E2300096DEAD /* HomeBottomSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6CA402B73E2300096DEAD /* HomeBottomSection.swift */; };
 		BCC107BD2B68A1CA0043EC7D /* MyPetSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107BC2B68A1CA0043EC7D /* MyPetSettingViewController.swift */; };
 		BCC107BF2B68A9CD0043EC7D /* OwnerSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107BE2B68A9CD0043EC7D /* OwnerSettingViewController.swift */; };
 		BCC107C22B68ACA10043EC7D /* SelectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107C12B68ACA10043EC7D /* SelectCard.swift */; };
@@ -117,9 +121,13 @@
 		BC9DC64D2B7231C000859EFE /* RegisteredPetsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsCell.swift; sourceTree = "<group>"; };
 		BC9DC64F2B72359C00859EFE /* HomeReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReactor.swift; sourceTree = "<group>"; };
 		BC9DC6522B72377300859EFE /* HomeConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstant.swift; sourceTree = "<group>"; };
-		BC9DC6542B723FB700859EFE /* PopularPostsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPostsSection.swift; sourceTree = "<group>"; };
+		BC9DC6542B723FB700859EFE /* PopularPostSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPostSection.swift; sourceTree = "<group>"; };
 		BC9DC6562B72408900859EFE /* PopularPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPostCell.swift; sourceTree = "<group>"; };
 		BC9DC6582B7247CF00859EFE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		BCB6CA3A2B73DA120096DEAD /* TodayFeedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFeedSection.swift; sourceTree = "<group>"; };
+		BCB6CA3C2B73DB3A0096DEAD /* TodayFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFeedCell.swift; sourceTree = "<group>"; };
+		BCB6CA3E2B73DEA60096DEAD /* MoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreButton.swift; sourceTree = "<group>"; };
+		BCB6CA402B73E2300096DEAD /* HomeBottomSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomSection.swift; sourceTree = "<group>"; };
 		BCC107BC2B68A1CA0043EC7D /* MyPetSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetSettingViewController.swift; sourceTree = "<group>"; };
 		BCC107BE2B68A9CD0043EC7D /* OwnerSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSettingViewController.swift; sourceTree = "<group>"; };
 		BCC107C12B68ACA10043EC7D /* SelectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCard.swift; sourceTree = "<group>"; };
@@ -263,6 +271,7 @@
 				BCC91D7C2B58D77900D02BF0 /* MyPetCard.swift */,
 				BCF1E5912B5D750E000F5960 /* ToggleMenuRow.swift */,
 				BCF1E5972B5D7943000F5960 /* TextField.swift */,
+				BCB6CA3E2B73DEA60096DEAD /* MoreButton.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -313,7 +322,9 @@
 			isa = PBXGroup;
 			children = (
 				BC9DC64B2B722FD400859EFE /* RegisteredPetsSection.swift */,
-				BC9DC6542B723FB700859EFE /* PopularPostsSection.swift */,
+				BC9DC6542B723FB700859EFE /* PopularPostSection.swift */,
+				BCB6CA3A2B73DA120096DEAD /* TodayFeedSection.swift */,
+				BCB6CA402B73E2300096DEAD /* HomeBottomSection.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -323,6 +334,7 @@
 			children = (
 				BC9DC64D2B7231C000859EFE /* RegisteredPetsCell.swift */,
 				BC9DC6562B72408900859EFE /* PopularPostCell.swift */,
+				BCB6CA3C2B73DB3A0096DEAD /* TodayFeedCell.swift */,
 			);
 			path = Resuable;
 			sourceTree = "<group>";
@@ -617,10 +629,11 @@
 				BCC107CD2B68D5550043EC7D /* PetModel.swift in Sources */,
 				BCF1E5902B5D5BE3000F5960 /* Observable+Extension.swift in Sources */,
 				BC6E40C22B552A9400BA2CE1 /* MypageReactor.swift in Sources */,
+				BCB6CA3B2B73DA120096DEAD /* TodayFeedSection.swift in Sources */,
 				BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */,
 				BC8F51002B57BA1A00F56C90 /* MypageMenuSection.swift in Sources */,
 				BCC107C22B68ACA10043EC7D /* SelectCard.swift in Sources */,
-				BC9DC6552B723FB700859EFE /* PopularPostsSection.swift in Sources */,
+				BC9DC6552B723FB700859EFE /* PopularPostSection.swift in Sources */,
 				BCC107C52B68C8C20043EC7D /* MyPetCardCell.swift in Sources */,
 				BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */,
 				BC9DC6592B7247CF00859EFE /* UIColor+Extension.swift in Sources */,
@@ -635,9 +648,11 @@
 				BC9DC64E2B7231C000859EFE /* RegisteredPetsCell.swift in Sources */,
 				BCC107E92B6A62150043EC7D /* MyArticlePageTableViewDelegate.swift in Sources */,
 				BC3CECCA2B4FACC300546377 /* SceneDelegate.swift in Sources */,
+				BCB6CA3F2B73DEA60096DEAD /* MoreButton.swift in Sources */,
 				BCF1E58E2B5D5852000F5960 /* MyInfoReactor.swift in Sources */,
 				BCC107BD2B68A1CA0043EC7D /* MyPetSettingViewController.swift in Sources */,
 				BC9DC6532B72377300859EFE /* HomeConstant.swift in Sources */,
+				BCB6CA3D2B73DB3A0096DEAD /* TodayFeedCell.swift in Sources */,
 				BC8F50FE2B579F7000F56C90 /* UIImageView+Extension.swift in Sources */,
 				BCC107E02B6901A80043EC7D /* MyArticlePageTableViewCell.swift in Sources */,
 				BC9DC64C2B722FD400859EFE /* RegisteredPetsSection.swift in Sources */,
@@ -653,6 +668,7 @@
 				BCC107E42B690BFF0043EC7D /* BaseTableViewCell.swift in Sources */,
 				BCC107CA2B68CD120043EC7D /* BaseCollectionView.swift in Sources */,
 				BC9DC6502B72359C00859EFE /* HomeReactor.swift in Sources */,
+				BCB6CA412B73E2300096DEAD /* HomeBottomSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

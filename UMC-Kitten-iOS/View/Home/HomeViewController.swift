@@ -16,14 +16,20 @@ class HomeViewController: BaseViewController {
     // MARK: UI Component
     private let titleLable: UILabel = .init(text: "나는 집사")
     private let registeredPetsSection: RegisteredPetsSection = .init()
-    private let popularPostsSection: PopularPostsSection = .init()
+    private let popularPostSection: PopularPostSection = .init()
+    private let todayFeedSection: TodayFeedSection = .init()
+    private let homeBottomSection: HomeBottomSection = .init()
     
     // MARK: Set Method
-    override func setStyle() { 
+    override func setStyle() {
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.topItem?.title = ""
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.standardAppearance.backgroundColor = .white
+        navigationController?.navigationBar.standardAppearance.shadowColor = .clear
         
         scrollView.backgroundColor = .white
+        scrollView.showsVerticalScrollIndicator = false
         
         contentView.backgroundColor = .white
         
@@ -37,7 +43,8 @@ class HomeViewController: BaseViewController {
         
         scrollView.addSubview(contentView)
         
-        [titleLable, registeredPetsSection, popularPostsSection]
+        [titleLable, registeredPetsSection, popularPostSection, 
+         todayFeedSection, homeBottomSection]
             .forEach { contentView.addSubview($0) }
     }
     
@@ -48,7 +55,7 @@ class HomeViewController: BaseViewController {
         
         contentView.snp.makeConstraints {
             $0.edges.width.equalTo(scrollView)
-            $0.height.equalTo(900)
+            $0.height.equalTo(1250)
         }
         
         titleLable.snp.makeConstraints {
@@ -61,8 +68,18 @@ class HomeViewController: BaseViewController {
             $0.left.right.equalToSuperview()
         }
         
-        popularPostsSection.snp.makeConstraints {
+        popularPostSection.snp.makeConstraints {
             $0.top.equalTo(registeredPetsSection.snp.bottom).offset(0)
+            $0.left.right.equalToSuperview()
+        }
+        
+        todayFeedSection.snp.makeConstraints {
+            $0.top.equalTo(popularPostSection.snp.bottom).offset(0)
+            $0.left.right.equalToSuperview()
+        }
+        
+        homeBottomSection.snp.makeConstraints {
+            $0.top.equalTo(todayFeedSection.snp.bottom).offset(0)
             $0.left.right.equalToSuperview()
         }
     }
