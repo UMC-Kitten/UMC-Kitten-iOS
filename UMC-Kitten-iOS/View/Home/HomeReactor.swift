@@ -20,6 +20,7 @@ class HomeReactor: Reactor {
     
     struct State {
         var pets: [PetModel] = []
+        var popularPosts: [PostModel] = []
     }
     
     let initialState: State = State(

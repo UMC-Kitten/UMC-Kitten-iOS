@@ -13,6 +13,14 @@
 		BC3CECCF2B4FACC300546377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3CECCD2B4FACC300546377 /* Main.storyboard */; };
 		BC3CECD12B4FACC400546377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC3CECD02B4FACC400546377 /* Assets.xcassets */; };
 		BC3CECD42B4FACC400546377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3CECD22B4FACC400546377 /* LaunchScreen.storyboard */; };
+		BC6932092B765806002C7A9F /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6932082B765806002C7A9F /* PostModel.swift */; };
+		BC6932102B7677DD002C7A9F /* MypageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69320F2B7677DD002C7A9F /* MypageService.swift */; };
+		BC6932142B7679B6002C7A9F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = BC6932132B7679B6002C7A9F /* Moya */; };
+		BC69321B2B7683A4002C7A9F /* ChangeNicknameRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69321A2B7683A4002C7A9F /* ChangeNicknameRequestDto.swift */; };
+		BC69321E2B76845E002C7A9F /* AuthTokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69321D2B76845E002C7A9F /* AuthTokenPlugin.swift */; };
+		BC6932202B7684C4002C7A9F /* BaseMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69321F2B7684C4002C7A9F /* BaseMoyaProvider.swift */; };
+		BC6932232B768751002C7A9F /* ChangeHasPetRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6932222B768751002C7A9F /* ChangeHasPetRequestDto.swift */; };
+		BC6932252B76879B002C7A9F /* ChangeProfileImageRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6932242B76879B002C7A9F /* ChangeProfileImageRequestDto.swift */; };
 		BC6E40BC2B5528A900BA2CE1 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC6E40BB2B5528A900BA2CE1 /* ReactorKit */; };
 		BC6E40C02B55291800BA2CE1 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6E40BF2B55291800BA2CE1 /* MypageViewController.swift */; };
 		BC6E40C22B552A9400BA2CE1 /* MypageReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6E40C12B552A9400BA2CE1 /* MypageReactor.swift */; };
@@ -97,6 +105,14 @@
 		BC3CECD02B4FACC400546377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC3CECD32B4FACC400546377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC3CECD52B4FACC400546377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC6932082B765806002C7A9F /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		BC69320F2B7677DD002C7A9F /* MypageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageService.swift; sourceTree = "<group>"; };
+		BC6932112B767809002C7A9F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		BC69321A2B7683A4002C7A9F /* ChangeNicknameRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNicknameRequestDto.swift; sourceTree = "<group>"; };
+		BC69321D2B76845E002C7A9F /* AuthTokenPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenPlugin.swift; sourceTree = "<group>"; };
+		BC69321F2B7684C4002C7A9F /* BaseMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMoyaProvider.swift; sourceTree = "<group>"; };
+		BC6932222B768751002C7A9F /* ChangeHasPetRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeHasPetRequestDto.swift; sourceTree = "<group>"; };
+		BC6932242B76879B002C7A9F /* ChangeProfileImageRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileImageRequestDto.swift; sourceTree = "<group>"; };
 		BC6E40BF2B55291800BA2CE1 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		BC6E40C12B552A9400BA2CE1 /* MypageReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageReactor.swift; sourceTree = "<group>"; };
 		BC6E40C62B552BC600BA2CE1 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +187,7 @@
 				BC6E40D62B552C7500BA2CE1 /* RxCocoa-Dynamic in Frameworks */,
 				BC6E40E72B552CB400BA2CE1 /* SnapKit-Dynamic in Frameworks */,
 				BC6E40BC2B5528A900BA2CE1 /* ReactorKit in Frameworks */,
+				BC6932142B7679B6002C7A9F /* Moya in Frameworks */,
 				BC6E40D42B552C7500BA2CE1 /* RxCocoa in Frameworks */,
 				BC6E40DA2B552C7500BA2CE1 /* RxRelay-Dynamic in Frameworks */,
 				BC6E40DC2B552C7500BA2CE1 /* RxSwift in Frameworks */,
@@ -205,15 +222,78 @@
 				BC3CECC72B4FACC300546377 /* AppDelegate.swift */,
 				BC3CECC92B4FACC300546377 /* SceneDelegate.swift */,
 				BC3CECCB2B4FACC300546377 /* ViewController.swift */,
-				BCC107CB2B68D5440043EC7D /* Model */,
+				BC69320A2B7676CC002C7A9F /* Data */,
+				BC69320D2B767703002C7A9F /* Domain */,
 				BC6E40BD2B5528EF00BA2CE1 /* View */,
 				BC3CECCD2B4FACC300546377 /* Main.storyboard */,
 				BC3CECD02B4FACC400546377 /* Assets.xcassets */,
 				BC3CECD22B4FACC400546377 /* LaunchScreen.storyboard */,
 				BC3CECD52B4FACC400546377 /* Info.plist */,
 				BCC107E52B69138E0043EC7D /* MainViewController.swift */,
+				BC6932112B767809002C7A9F /* Config.xcconfig */,
 			);
 			path = "UMC-Kitten-iOS";
+			sourceTree = "<group>";
+		};
+		BC69320A2B7676CC002C7A9F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BC69321C2B768449002C7A9F /* Provider */,
+				BC69320C2B7676DC002C7A9F /* Dto */,
+				BC69320B2B7676D7002C7A9F /* Service */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BC69320B2B7676D7002C7A9F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BC69320F2B7677DD002C7A9F /* MypageService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BC69320C2B7676DC002C7A9F /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				BC6932192B768392002C7A9F /* Mypage */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		BC69320D2B767703002C7A9F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BCC107CB2B68D5440043EC7D /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BC6932192B768392002C7A9F /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				BC69321A2B7683A4002C7A9F /* ChangeNicknameRequestDto.swift */,
+				BC6932222B768751002C7A9F /* ChangeHasPetRequestDto.swift */,
+				BC6932242B76879B002C7A9F /* ChangeProfileImageRequestDto.swift */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
+		BC69321C2B768449002C7A9F /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				BC6932212B768718002C7A9F /* Plugin */,
+				BC69321F2B7684C4002C7A9F /* BaseMoyaProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		BC6932212B768718002C7A9F /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				BC69321D2B76845E002C7A9F /* AuthTokenPlugin.swift */,
+			);
+			path = Plugin;
 			sourceTree = "<group>";
 		};
 		BC6E40BD2B5528EF00BA2CE1 /* View */ = {
@@ -386,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				BCC107CC2B68D5550043EC7D /* PetModel.swift */,
+				BC6932082B765806002C7A9F /* PostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -543,6 +624,7 @@
 				BC6E40E42B552CB400BA2CE1 /* SnapKit */,
 				BC6E40E62B552CB400BA2CE1 /* SnapKit-Dynamic */,
 				BCC91D832B58FE5400D02BF0 /* RxGesture */,
+				BC6932132B7679B6002C7A9F /* Moya */,
 			);
 			productName = "UMC-Kitten-iOS";
 			productReference = BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */;
@@ -577,6 +659,7 @@
 				BC6E40CE2B552C7500BA2CE1 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				BC6E40E32B552CB400BA2CE1 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				BCC91D822B58FE5400D02BF0 /* XCRemoteSwiftPackageReference "RxGesture" */,
+				BC6932122B7679B6002C7A9F /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = BC3CECC52B4FACC300546377 /* Products */;
 			projectDirPath = "";
@@ -623,7 +706,9 @@
 				BC8F50FB2B57947F00F56C90 /* ProfileSection.swift in Sources */,
 				BC9DC6482B722E3A00859EFE /* HomeViewController.swift in Sources */,
 				BCC107D92B68E9610043EC7D /* MyArticlePageTapBar.swift in Sources */,
+				BC69321B2B7683A4002C7A9F /* ChangeNicknameRequestDto.swift in Sources */,
 				BCC107DE2B68FF200043EC7D /* MyArticlePage.swift in Sources */,
+				BC6932252B76879B002C7A9F /* ChangeProfileImageRequestDto.swift in Sources */,
 				BCC107D22B68E3630043EC7D /* MyArticleSettingViewController.swift in Sources */,
 				BCF1E59C2B5E8E80000F5960 /* UIButton+Extension.swift in Sources */,
 				BCC107CD2B68D5550043EC7D /* PetModel.swift in Sources */,
@@ -631,6 +716,7 @@
 				BC6E40C22B552A9400BA2CE1 /* MypageReactor.swift in Sources */,
 				BCB6CA3B2B73DA120096DEAD /* TodayFeedSection.swift in Sources */,
 				BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */,
+				BC6932092B765806002C7A9F /* PostModel.swift in Sources */,
 				BC8F51002B57BA1A00F56C90 /* MypageMenuSection.swift in Sources */,
 				BCC107C22B68ACA10043EC7D /* SelectCard.swift in Sources */,
 				BC9DC6552B723FB700859EFE /* PopularPostSection.swift in Sources */,
@@ -644,6 +730,9 @@
 				BC8F51022B57BB2B00F56C90 /* NavigationMenuRow.swift in Sources */,
 				BCC107DC2B68E9830043EC7D /* PageTapBarItem.swift in Sources */,
 				BCF1E5862B5D496E000F5960 /* MyInfoViewController.swift in Sources */,
+				BC6932232B768751002C7A9F /* ChangeHasPetRequestDto.swift in Sources */,
+				BC6932102B7677DD002C7A9F /* MypageService.swift in Sources */,
+				BC6932202B7684C4002C7A9F /* BaseMoyaProvider.swift in Sources */,
 				BC3CECC82B4FACC300546377 /* AppDelegate.swift in Sources */,
 				BC9DC64E2B7231C000859EFE /* RegisteredPetsCell.swift in Sources */,
 				BCC107E92B6A62150043EC7D /* MyArticlePageTableViewDelegate.swift in Sources */,
@@ -666,6 +755,7 @@
 				BCC107C82B68C90A0043EC7D /* MyPetSetting+CollectionViewDelegate.swift in Sources */,
 				BCC91D7D2B58D77900D02BF0 /* MyPetCard.swift in Sources */,
 				BCC107E42B690BFF0043EC7D /* BaseTableViewCell.swift in Sources */,
+				BC69321E2B76845E002C7A9F /* AuthTokenPlugin.swift in Sources */,
 				BCC107CA2B68CD120043EC7D /* BaseCollectionView.swift in Sources */,
 				BC9DC6502B72359C00859EFE /* HomeReactor.swift in Sources */,
 				BCB6CA412B73E2300096DEAD /* HomeBottomSection.swift in Sources */,
@@ -696,6 +786,7 @@
 /* Begin XCBuildConfiguration section */
 		BC3CECD62B4FACC400546377 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC6932112B767809002C7A9F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -759,6 +850,7 @@
 		};
 		BC3CECD72B4FACC400546377 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC6932112B767809002C7A9F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -835,9 +927,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "doyeon.UMC-Kitten-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -863,9 +959,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "doyeon.UMC-Kitten-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -893,6 +993,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BC6932122B7679B6002C7A9F /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 		BC6E40BA2B5528A900BA2CE1 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
@@ -928,6 +1036,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BC6932132B7679B6002C7A9F /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC6932122B7679B6002C7A9F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
 		BC6E40BB2B5528A900BA2CE1 /* ReactorKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BC6E40BA2B5528A900BA2CE1 /* XCRemoteSwiftPackageReference "ReactorKit" */;
