@@ -1,5 +1,5 @@
 //
-//  RegisteredPetsSection.swift
+//  PopularPostsSection.swift
 //  UMC-Kitten-iOS
 //
 //  Created by DOYEON LEE on 2/6/24.
@@ -8,15 +8,15 @@
 import UIKit
 
 import RxSwift
-import RxCocoa
 
-class RegisteredPetsSection: BaseView {
+class PopularPostSection: BaseView {
     
     // MARK: Constant
-    /// 다음 셀이 살짝 보이게 하기 위한 마진
     private let CELL_RIGHT_MARGIN: CGFloat = 30
     
     // MARK: UI Component
+    private let sectionTitle: UILabel = .init(text: "인기 게시글")
+    private let moreButton: MoreButton = .init()
     private let collectionView: BaseCollectionView = .init()
     private let selectionLine: UIView = .init()
     
@@ -24,18 +24,18 @@ class RegisteredPetsSection: BaseView {
     override func setStyle() {
         super.setStyle()
         
+        sectionTitle.setDefaultFont(size: 20, weight: .bold)
+        
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.scrollDirection = .horizontal
+            layout.scrollDirection = .vertical
             layout.itemSize = CGSize(
-                width: UIScreen.main.bounds.width - HOME_PAGE_PADDING * 2 - CELL_RIGHT_MARGIN,
+                width: UIScreen.main.bounds.width - HOME_PAGE_PADDING * 2,
                 height: 100
             )
             layout.minimumLineSpacing = 10
         }
-
-        collectionView.isPagingEnabled = true
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(RegisteredPetsCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.register(PopularPostCell.self, forCellWithReuseIdentifier: "cell")
         
         selectionLine.backgroundColor = .grayScale100
     }
@@ -43,17 +43,28 @@ class RegisteredPetsSection: BaseView {
     override func setHierarchy() {
         super.setHierarchy()
         
-        [collectionView, selectionLine]
+        [sectionTitle, moreButton, collectionView, selectionLine]
             .forEach { addSubview($0) }
+
     }
     
     override func setLayout() {
         super.setLayout()
         
+        sectionTitle.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(25)
+            $0.left.equalToSuperview().inset(HOME_PAGE_PADDING)
+        }
+        
+        moreButton.snp.makeConstraints {
+            $0.centerY.equalTo(sectionTitle.snp.centerY)
+            $0.right.equalToSuperview().inset(HOME_PAGE_PADDING)
+        }
+        
         collectionView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(10)
+            $0.top.equalTo(sectionTitle.snp.bottom).offset(25)
             $0.left.right.equalToSuperview().inset(HOME_PAGE_PADDING)
-            $0.height.equalTo(100)
+            $0.height.equalTo(320)
         }
         
         selectionLine.snp.makeConstraints {
@@ -74,14 +85,15 @@ class RegisteredPetsSection: BaseView {
             PetModel(name: "무냥이", species: "고양이", gender: "수컷", age: 2),
         ])
 
-        // 데이터 바인딩
         pets.bind(to: collectionView.rx.items(
             cellIdentifier: "cell",
-            cellType: RegisteredPetsCell.self)) { index, model, cell in
+            cellType: PopularPostCell.self)) { index, model, cell in
                 cell.configure(
-                    petImageName: model.imageName,
-                    petName: model.name,
-                    petInfo: "\(model.species) / \(model.gender) / \(model.age)살"
+                    boardTitle: "자유 게시판",
+                    postTitle: "OO동물병원 추천하지 않아요...",
+                    heartCount: 10,
+                    commentCount: 12,
+                    postInfo: "| 1일전 | 제이지"
                 )
         }
         .disposed(by: disposeBag)
