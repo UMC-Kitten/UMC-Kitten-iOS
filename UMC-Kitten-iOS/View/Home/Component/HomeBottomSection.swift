@@ -28,6 +28,7 @@ class HomeBottomSection: BaseView {
         customerServiceArrow.contentMode = .scaleAspectFit
         
         customerServiceInfo.setDefaultFont(size: 14)
+        customerServiceInfo.textColor = .grayScale600
         customerServiceInfo.numberOfLines = 2
 
     }
@@ -51,13 +52,13 @@ class HomeBottomSection: BaseView {
         customerServiceArrow.snp.makeConstraints {
             $0.centerY.equalTo(customerServiceLabel.snp.centerY)
             $0.left.equalTo(customerServiceLabel.snp.right).offset(5)
-            $0.width.height.equalTo(15)
+            $0.width.height.equalTo(12)
         }
         
         customerServiceInfo.snp.makeConstraints {
             $0.top.equalTo(customerServiceLabel.snp.bottom).offset(5)
             $0.left.equalToSuperview().inset(HOME_PAGE_PADDING)
-            $0.bottom.equalToSuperview().inset(HOME_PAGE_PADDING)
+            $0.bottom.equalToSuperview().inset(HOME_PAGE_PADDING+10)
         }
         
 

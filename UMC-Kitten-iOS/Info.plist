@@ -33,5 +33,7 @@
 		<string>Pretendard-SemiBold.otf</string>
 		<string>Pretendard-Thin.otf</string>
 	</array>
+	<key>API_BASE_URL</key>
+	<string>$(API_BASE_URL)</string>
 </dict>
 </plist>
