@@ -11,8 +11,8 @@ import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
 
-/// 카카오 로그인 SDK 관련 서비스
-class KakaoAuthService {
+/// 카카오 로그인 SDK 관련 동작 모음
+class KakaoAuthHelper {
     /// 카카오 SDK 초기 설정
     static func initializeKakaoAuthSdk() {
         guard let kakaoAuthAppKey = Bundle.main.object(forInfoDictionaryKey: "KAKAO_AUTH_APP_KEY") as? String else {

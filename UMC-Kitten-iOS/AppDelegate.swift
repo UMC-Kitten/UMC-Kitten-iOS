@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Kakao auth setting
-        KakaoAuthService.initializeKakaoAuthSdk()
+        KakaoAuthHelper.initializeKakaoAuthSdk()
         
         // Naver auth setting
-        NaverAuthService.initializeNaverAuthSdk()
+        NaverAuthHelper.initializeNaverAuthSdk()
         
         return true
     }

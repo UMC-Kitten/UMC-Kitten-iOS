@@ -123,7 +123,7 @@ extension SceneDelegate: NaverThirdPartyLoginConnectionDelegate {
         
         // 서버에 로그인 요청
         if let accessToken = instance.accessToken {
-            MoyaProvider<UserService>().request(.naverLogin(accessToken: accessToken)) { result in
+            MoyaProvider<UserApiClient>().request(.naverLogin(accessToken: accessToken)) { result in
                 switch result {
                 case .success(let response):
                     print(response)

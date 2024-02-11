@@ -1,5 +1,5 @@
 //
-//  UserService.swift
+//  UserApiClient.swift
 //  UMC-Kitten-iOS
 //
 //  Created by DOYEON LEE on 2/11/24.
@@ -8,13 +8,13 @@
 import Foundation
 import Moya
 
-/// 로그인 관련 서비스
-enum UserService {
+/// 로그인 관련 API
+enum UserApiClient {
     case kakaoLogin(accessToken: String)
     case naverLogin(accessToken: String)
 }
 
-extension UserService: TargetType {
+extension UserApiClient: TargetType {
     
     var baseURLString: String {
         guard let apiBaseURLString = Bundle.main.object(forInfoDictionaryKey: "API_BASE_URL") as? String else {

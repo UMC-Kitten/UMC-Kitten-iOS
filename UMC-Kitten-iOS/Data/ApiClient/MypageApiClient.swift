@@ -1,5 +1,5 @@
 //
-//  MypageService.swift
+//  MypageApiClient.swift
 //  UMC-Kitten-iOS
 //
 //  Created by DOYEON LEE on 2/10/24.
@@ -8,15 +8,15 @@
 import Foundation
 import Moya
 
-/// 유저 개인정보 관련 서비스
-enum MypageService {
-    case info(id: Int64)
+/// 유저 개인정보 관련 API
+enum MypageApiClient {
+    case getInfo(id: Int64)
     case changeNickname(dto: ChangeNicknameRequestDto)
     case changeHasPet(dto: ChangeHasPetRequestDto)
     case changeProfileImage(dto: ChangeProfileImageRequestDto)
 }
 
-extension MypageService: TargetType {
+extension MypageApiClient: TargetType {
     
     var baseURLString: String {
         guard let apiBaseURLString = Bundle.main.object(forInfoDictionaryKey: "API_BASE_URL") as? String else {
@@ -36,7 +36,7 @@ extension MypageService: TargetType {
     
     var path: String {
         switch self {
-        case let .info( id):
+        case let .getInfo( id):
             return "/info/\(id)"
         case .changeNickname:
             return "/change/nickname"
@@ -49,7 +49,7 @@ extension MypageService: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .info:
+        case .getInfo:
             return .get
         case .changeNickname:
             return .post        
@@ -62,7 +62,7 @@ extension MypageService: TargetType {
     
     var task: Task {
         switch self {
-        case .info:
+        case .getInfo:
             return .requestPlain
         case let .changeNickname(dto):
             return .requestCustomJSONEncodable(dto, encoder: JSONEncoder())

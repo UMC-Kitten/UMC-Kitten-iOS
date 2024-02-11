@@ -30,7 +30,7 @@ class TodayFeedSection: BaseView {
             layout.scrollDirection = .vertical
             layout.minimumLineSpacing = 10
             layout.itemSize = CGSize(
-                width: UIScreen.main.bounds.width / 2 - HOME_PAGE_PADDING - layout.minimumLineSpacing,
+                width: UIScreen.main.bounds.width / 2 - HomeConstant.HOME_PAGE_PADDING - layout.minimumLineSpacing,
                 height: 220
             )
         }

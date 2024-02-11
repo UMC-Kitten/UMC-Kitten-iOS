@@ -8,8 +8,8 @@
 import Foundation
 import NaverThirdPartyLogin
 
-/// 네이버 로그인 SDK 관련 서비스
-class NaverAuthService {
+/// 네이버 로그인 SDK 관련 동작 모음
+class NaverAuthHelper{
     
     /// 네이버 로그인 SDK를 초기화합니다.
     static func initializeNaverAuthSdk() {

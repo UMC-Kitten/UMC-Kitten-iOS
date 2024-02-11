@@ -15,9 +15,9 @@ import NaverThirdPartyLogin
 
 class LoginTestViewController: BaseViewController {
     
-    private let kakaoAuthService = KakaoAuthService()
-    private let naverAuthService = NaverAuthService()
-    private let userService = MoyaProvider<UserService>()
+    private let kakaoAuthService = KakaoAuthHelper()
+    private let naverAuthService = NaverAuthHelper()
+    private let userService = MoyaProvider<UserApiClient>()
     
     private let kakaoLoginButton: UIButton = .init(text: "카카오 로그인")
     private let naverLoginButton: UIButton = .init(text: "네이버 로그인")

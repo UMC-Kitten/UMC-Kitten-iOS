@@ -12,16 +12,19 @@
 		BC037B892B773D6A0021721C /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = BC037B882B773D6A0021721C /* KakaoSDKCert */; };
 		BC037B8B2B773D6A0021721C /* KakaoSDKCertCore in Frameworks */ = {isa = PBXBuildFile; productRef = BC037B8A2B773D6A0021721C /* KakaoSDKCertCore */; };
 		BC037B8D2B773D6A0021721C /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = BC037B8C2B773D6A0021721C /* KakaoSDKCommon */; };
-		BC037B902B773F340021721C /* KakaoAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037B8F2B773F340021721C /* KakaoAuthService.swift */; };
-		BC037B932B77A0490021721C /* NaverAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037B922B77A0490021721C /* NaverAuthService.swift */; };
+		BC037B902B773F340021721C /* KakaoAuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037B8F2B773F340021721C /* KakaoAuthHelper.swift */; };
+		BC037B932B77A0490021721C /* NaverAuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037B922B77A0490021721C /* NaverAuthHelper.swift */; };
 		BC037B9D2B77AA150021721C /* NaverThirdPartyLogin.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC037B9C2B77AA150021721C /* NaverThirdPartyLogin.xcframework */; };
 		BC037B9E2B77AA150021721C /* NaverThirdPartyLogin.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC037B9C2B77AA150021721C /* NaverThirdPartyLogin.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC037BA02B78A1530021721C /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037B9F2B78A1530021721C /* FeedModel.swift */; };
 		BC037BA32B78A5580021721C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BA22B78A5580021721C /* Date+Extension.swift */; };
-		BC037BA52B78DF250021721C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BA42B78DF250021721C /* UserService.swift */; };
+		BC037BA52B78DF250021721C /* UserApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BA42B78DF250021721C /* UserApiClient.swift */; };
 		BC037BA82B78DFCE0021721C /* LoginTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BA72B78DFCE0021721C /* LoginTestViewController.swift */; };
 		BC037BAB2B78FD6A0021721C /* UserResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BAA2B78FD6A0021721C /* UserResponseDto.swift */; };
 		BC037BAD2B78FD850021721C /* ApiResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BAC2B78FD850021721C /* ApiResponseDto.swift */; };
+		BC087BEB2B7935B1001E34D4 /* MypageRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC087BEA2B7935B1001E34D4 /* MypageRemoteRepository.swift */; };
+		BC316B552B793BC50055FC0F /* UserDefaultsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */; };
+		BC316B572B793DF00055FC0F /* MypageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B562B793DF00055FC0F /* MypageRepository.swift */; };
 		BC3CECC82B4FACC300546377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CECC72B4FACC300546377 /* AppDelegate.swift */; };
 		BC3CECCA2B4FACC300546377 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CECC92B4FACC300546377 /* SceneDelegate.swift */; };
 		BC3CECCC2B4FACC300546377 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CECCB2B4FACC300546377 /* ViewController.swift */; };
@@ -29,7 +32,7 @@
 		BC3CECD12B4FACC400546377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC3CECD02B4FACC400546377 /* Assets.xcassets */; };
 		BC3CECD42B4FACC400546377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3CECD22B4FACC400546377 /* LaunchScreen.storyboard */; };
 		BC6932092B765806002C7A9F /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6932082B765806002C7A9F /* PostModel.swift */; };
-		BC6932102B7677DD002C7A9F /* MypageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69320F2B7677DD002C7A9F /* MypageService.swift */; };
+		BC6932102B7677DD002C7A9F /* MypageApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69320F2B7677DD002C7A9F /* MypageApiClient.swift */; };
 		BC6932142B7679B6002C7A9F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = BC6932132B7679B6002C7A9F /* Moya */; };
 		BC69321B2B7683A4002C7A9F /* ChangeNicknameRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69321A2B7683A4002C7A9F /* ChangeNicknameRequestDto.swift */; };
 		BC69321E2B76845E002C7A9F /* AuthTokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69321D2B76845E002C7A9F /* AuthTokenPlugin.swift */; };
@@ -120,15 +123,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BC037B8F2B773F340021721C /* KakaoAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthService.swift; sourceTree = "<group>"; };
-		BC037B922B77A0490021721C /* NaverAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverAuthService.swift; sourceTree = "<group>"; };
+		BC037B8F2B773F340021721C /* KakaoAuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthHelper.swift; sourceTree = "<group>"; };
+		BC037B922B77A0490021721C /* NaverAuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverAuthHelper.swift; sourceTree = "<group>"; };
 		BC037B9C2B77AA150021721C /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:N8MX74Y447:DOYEON LEE"; lastKnownFileType = wrapper.xcframework; name = NaverThirdPartyLogin.xcframework; path = ../NaverThirdPartyLogin.xcframework; sourceTree = "<group>"; };
 		BC037B9F2B78A1530021721C /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		BC037BA22B78A5580021721C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		BC037BA42B78DF250021721C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		BC037BA42B78DF250021721C /* UserApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiClient.swift; sourceTree = "<group>"; };
 		BC037BA72B78DFCE0021721C /* LoginTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestViewController.swift; sourceTree = "<group>"; };
 		BC037BAA2B78FD6A0021721C /* UserResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDto.swift; sourceTree = "<group>"; };
 		BC037BAC2B78FD850021721C /* ApiResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseDto.swift; sourceTree = "<group>"; };
+		BC087BEA2B7935B1001E34D4 /* MypageRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageRemoteRepository.swift; sourceTree = "<group>"; };
+		BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstant.swift; sourceTree = "<group>"; };
+		BC316B562B793DF00055FC0F /* MypageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageRepository.swift; sourceTree = "<group>"; };
 		BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-Kitten-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3CECC72B4FACC300546377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC3CECC92B4FACC300546377 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,7 +144,7 @@
 		BC3CECD32B4FACC400546377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC3CECD52B4FACC400546377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC6932082B765806002C7A9F /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
-		BC69320F2B7677DD002C7A9F /* MypageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageService.swift; sourceTree = "<group>"; };
+		BC69320F2B7677DD002C7A9F /* MypageApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageApiClient.swift; sourceTree = "<group>"; };
 		BC6932112B767809002C7A9F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		BC69321A2B7683A4002C7A9F /* ChangeNicknameRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNicknameRequestDto.swift; sourceTree = "<group>"; };
 		BC69321D2B76845E002C7A9F /* AuthTokenPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenPlugin.swift; sourceTree = "<group>"; };
@@ -232,15 +238,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC037B8E2B773F270021721C /* Social */ = {
-			isa = PBXGroup;
-			children = (
-				BC037B8F2B773F340021721C /* KakaoAuthService.swift */,
-				BC037B922B77A0490021721C /* NaverAuthService.swift */,
-			);
-			path = Social;
-			sourceTree = "<group>";
-		};
 		BC037B952B77A2CA0021721C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +260,41 @@
 				BC037BAA2B78FD6A0021721C /* UserResponseDto.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		BC087BE92B79355C001E34D4 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				BC69321C2B768449002C7A9F /* Provider */,
+				BC69320F2B7677DD002C7A9F /* MypageApiClient.swift */,
+				BC037BA42B78DF250021721C /* UserApiClient.swift */,
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		BC087BEC2B793681001E34D4 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BC316B522B793AE20055FC0F /* Protocol */,
+				BC087BEA2B7935B1001E34D4 /* MypageRemoteRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		BC316B522B793AE20055FC0F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BC316B562B793DF00055FC0F /* MypageRepository.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BC316B532B793BB00055FC0F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		BC3CECBB2B4FACC300546377 = {
@@ -288,9 +320,12 @@
 				BC3CECC72B4FACC300546377 /* AppDelegate.swift */,
 				BC3CECC92B4FACC300546377 /* SceneDelegate.swift */,
 				BC3CECCB2B4FACC300546377 /* ViewController.swift */,
+				BC69320B2B7676D7002C7A9F /* Helper */,
 				BC69320A2B7676CC002C7A9F /* Data */,
 				BC69320D2B767703002C7A9F /* Domain */,
 				BC6E40BD2B5528EF00BA2CE1 /* View */,
+				BC94315E2B56DB4400273DD7 /* Extension */,
+				BC316B532B793BB00055FC0F /* Util */,
 				BC3CECCD2B4FACC300546377 /* Main.storyboard */,
 				BC3CECD02B4FACC400546377 /* Assets.xcassets */,
 				BC3CECD22B4FACC400546377 /* LaunchScreen.storyboard */,
@@ -304,21 +339,20 @@
 		BC69320A2B7676CC002C7A9F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				BC69321C2B768449002C7A9F /* Provider */,
+				BC087BEC2B793681001E34D4 /* Repository */,
+				BC087BE92B79355C001E34D4 /* ApiClient */,
 				BC69320C2B7676DC002C7A9F /* Dto */,
-				BC69320B2B7676D7002C7A9F /* Service */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		BC69320B2B7676D7002C7A9F /* Service */ = {
+		BC69320B2B7676D7002C7A9F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				BC037B8E2B773F270021721C /* Social */,
-				BC69320F2B7677DD002C7A9F /* MypageService.swift */,
-				BC037BA42B78DF250021721C /* UserService.swift */,
+				BC037B8F2B773F340021721C /* KakaoAuthHelper.swift */,
+				BC037B922B77A0490021721C /* NaverAuthHelper.swift */,
 			);
-			path = Service;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		BC69320C2B7676DC002C7A9F /* Dto */ = {
@@ -370,12 +404,9 @@
 			isa = PBXGroup;
 			children = (
 				BC037BA62B78DFC30021721C /* LoginTest */,
-				BC6E40C52B552BC600BA2CE1 /* Base */,
 				BCF1E5872B5D4D60000F5960 /* Common */,
 				BC9DC6462B722E2B00859EFE /* Home */,
 				BC6E40BE2B5528FA00BA2CE1 /* Mypage */,
-				BC94315E2B56DB4400273DD7 /* Extension */,
-				BC93BA282B56CD7800775C5F /* Font */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -637,6 +668,8 @@
 		BCF1E5872B5D4D60000F5960 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BC93BA282B56CD7800775C5F /* Font */,
+				BC6E40C52B552BC600BA2CE1 /* Base */,
 				BC8F50FC2B57990C00F56C90 /* Reusable */,
 			);
 			path = Common;
@@ -778,7 +811,7 @@
 				BCC107EC2B6A65780043EC7D /* MyInfoImagePickerDelegate.swift in Sources */,
 				BCC107EE2B6A66800043EC7D /* MyPetSettingReactor.swift in Sources */,
 				BC8F50FB2B57947F00F56C90 /* ProfileSection.swift in Sources */,
-				BC037B902B773F340021721C /* KakaoAuthService.swift in Sources */,
+				BC037B902B773F340021721C /* KakaoAuthHelper.swift in Sources */,
 				BC9DC6482B722E3A00859EFE /* HomeViewController.swift in Sources */,
 				BCC107D92B68E9610043EC7D /* MyArticlePageTapBar.swift in Sources */,
 				BC69321B2B7683A4002C7A9F /* ChangeNicknameRequestDto.swift in Sources */,
@@ -787,7 +820,7 @@
 				BCC107D22B68E3630043EC7D /* MyArticleSettingViewController.swift in Sources */,
 				BCF1E59C2B5E8E80000F5960 /* UIButton+Extension.swift in Sources */,
 				BCC107CD2B68D5550043EC7D /* PetModel.swift in Sources */,
-				BC037B932B77A0490021721C /* NaverAuthService.swift in Sources */,
+				BC037B932B77A0490021721C /* NaverAuthHelper.swift in Sources */,
 				BCF1E5902B5D5BE3000F5960 /* Observable+Extension.swift in Sources */,
 				BC6E40C22B552A9400BA2CE1 /* MypageReactor.swift in Sources */,
 				BCB6CA3B2B73DA120096DEAD /* TodayFeedSection.swift in Sources */,
@@ -801,6 +834,7 @@
 				BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */,
 				BC9DC6592B7247CF00859EFE /* UIColor+Extension.swift in Sources */,
 				BC9DC6572B72408900859EFE /* PopularPostCell.swift in Sources */,
+				BC316B552B793BC50055FC0F /* UserDefaultsConstant.swift in Sources */,
 				BC6E40CC2B552BC600BA2CE1 /* BaseCollectionViewCell.swift in Sources */,
 				BCC107D62B68E7590043EC7D /* PageViewControllerDelegate.swift in Sources */,
 				BCF1E58A2B5D4D8F000F5960 /* ProfileImageSection.swift in Sources */,
@@ -808,7 +842,7 @@
 				BCC107DC2B68E9830043EC7D /* PageTapBarItem.swift in Sources */,
 				BCF1E5862B5D496E000F5960 /* MyInfoViewController.swift in Sources */,
 				BC6932232B768751002C7A9F /* ChangeHasPetRequestDto.swift in Sources */,
-				BC6932102B7677DD002C7A9F /* MypageService.swift in Sources */,
+				BC6932102B7677DD002C7A9F /* MypageApiClient.swift in Sources */,
 				BC6932202B7684C4002C7A9F /* BaseMoyaProvider.swift in Sources */,
 				BC3CECC82B4FACC300546377 /* AppDelegate.swift in Sources */,
 				BC9DC64E2B7231C000859EFE /* RegisteredPetCell.swift in Sources */,
@@ -825,6 +859,7 @@
 				BC9DC64C2B722FD400859EFE /* RegisteredPetsSection.swift in Sources */,
 				BCC107BF2B68A9CD0043EC7D /* OwnerSettingViewController.swift in Sources */,
 				BCC107E62B69138E0043EC7D /* MainViewController.swift in Sources */,
+				BC316B572B793DF00055FC0F /* MypageRepository.swift in Sources */,
 				BC6E40CD2B552BC600BA2CE1 /* BaseView.swift in Sources */,
 				BCF1E58C2B5D54E3000F5960 /* MyInfoMenuSection.swift in Sources */,
 				BC6E40CA2B552BC600BA2CE1 /* BaseViewController.swift in Sources */,
@@ -832,6 +867,7 @@
 				BC037BAB2B78FD6A0021721C /* UserResponseDto.swift in Sources */,
 				BC6E40C02B55291800BA2CE1 /* MypageViewController.swift in Sources */,
 				BCC107C82B68C90A0043EC7D /* MyPetSetting+CollectionViewDelegate.swift in Sources */,
+				BC087BEB2B7935B1001E34D4 /* MypageRemoteRepository.swift in Sources */,
 				BC037BA82B78DFCE0021721C /* LoginTestViewController.swift in Sources */,
 				BCC91D7D2B58D77900D02BF0 /* MyPetCard.swift in Sources */,
 				BC037BAD2B78FD850021721C /* ApiResponseDto.swift in Sources */,
@@ -839,7 +875,7 @@
 				BC69321E2B76845E002C7A9F /* AuthTokenPlugin.swift in Sources */,
 				BCC107CA2B68CD120043EC7D /* BaseCollectionView.swift in Sources */,
 				BC9DC6502B72359C00859EFE /* HomeReactor.swift in Sources */,
-				BC037BA52B78DF250021721C /* UserService.swift in Sources */,
+				BC037BA52B78DF250021721C /* UserApiClient.swift in Sources */,
 				BCB6CA412B73E2300096DEAD /* HomeBottomSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
