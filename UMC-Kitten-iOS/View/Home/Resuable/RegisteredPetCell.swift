@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class RegisteredPetsCell: BaseCollectionViewCell {
+class RegisteredPetCell: BaseCollectionViewCell {
     
     // MARK: Constant
     private let IMAGE_SIZE: CGFloat = 70

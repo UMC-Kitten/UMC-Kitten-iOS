@@ -17,7 +17,7 @@ class TodayFeedSection: BaseView {
     // MARK: UI Component
     private let sectionTitle: UILabel = .init(text: "오늘의 피드")
     private let moreButton: MoreButton = .init()
-    private let collectionView: BaseCollectionView = .init()
+    let collectionView: BaseCollectionView = .init()
     private let selectionLine: UIView = .init()
     
     // MARK: Set Method
@@ -73,25 +73,6 @@ class TodayFeedSection: BaseView {
             $0.height.equalTo(10)
             $0.bottom.equalToSuperview()
         }
-    }
-    
-    override func setBind() {
-        super.setBind()
-
-        // FIXME: 예시 데이터
-        let feeds = Observable.just([
-            1, 2, 3, 4
-        ])
-
-        feeds.bind(to: collectionView.rx.items(
-            cellIdentifier: "cell",
-            cellType: TodayFeedCell.self)) { index, model, cell in
-                cell.configure(
-                    feedImageName: "cat-sample",
-                    feedTitle: "오늘 저희 초코 OO샵에서 미용했어요!"
-                )
-        }
-        .disposed(by: disposeBag)
     }
 }
 

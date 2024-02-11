@@ -7,7 +7,17 @@
 
 import UIKit
 
+import RxSwift
+import ReactorKit
+
 class HomeViewController: BaseViewController {
+    
+    // MARK: Constant
+    private let POPULAR_POST_DISPLAY_NUMBER: Int = 3
+    private let TODAY_FEED_DISPLAY_NUMBER: Int = 4
+    
+    // MARK: Dependency
+    private let reactor = HomeReactor()
     
     // MARK: UI Container
     private let scrollView = UIScrollView()
@@ -38,12 +48,12 @@ class HomeViewController: BaseViewController {
     
     override func setDelegate() { }
     
-    override func setHierarchy() { 
+    override func setHierarchy() {
         view.addSubview(scrollView)
         
         scrollView.addSubview(contentView)
         
-        [titleLable, registeredPetsSection, popularPostSection, 
+        [titleLable, registeredPetsSection, popularPostSection,
          todayFeedSection, homeBottomSection]
             .forEach { contentView.addSubview($0) }
     }
@@ -61,7 +71,7 @@ class HomeViewController: BaseViewController {
         titleLable.snp.makeConstraints {
             $0.top.equalToSuperview().offset(-10)
             $0.left.equalToSuperview().offset(20)
-        }        
+        }
         
         registeredPetsSection.snp.makeConstraints {
             $0.top.equalTo(titleLable.snp.bottom).offset(10)
@@ -84,7 +94,56 @@ class HomeViewController: BaseViewController {
         }
     }
     
-    override func setBind() { }
+    override func setBind() {
+        reactor.state
+            .withUnretained(self)
+            .map { (self, state) in
+                state.registredPets
+            }
+            .bind(to: registeredPetsSection.collectionView.rx.items(
+                cellIdentifier: "cell",
+                cellType: RegisteredPetCell.self)){ (row, pet, cell) in
+                    cell.configure(
+                        petImageName: pet.imageName,
+                        petName: pet.name,
+                        petInfo: "\(pet.species) / \(pet.gender) / \(pet.age)살"
+                    )
+                }
+                .disposed(by: disposeBag)
+        
+        reactor.state
+            .withUnretained(self)
+            .map { (self, state) in
+                state.popularPosts.prefix(self.POPULAR_POST_DISPLAY_NUMBER)
+            }
+            .bind(to: popularPostSection.collectionView.rx.items(
+                cellIdentifier: "cell",
+                cellType: PopularPostCell.self)){ (row, post, cell) in
+                    cell.configure(
+                        boardTitle: post.boardTitle,
+                        postTitle: post.postTitle,
+                        heartCount: post.likeCount,
+                        commentCount: post.commentCount,
+                        postInfo: "\(post.date.timeAgoDisplay()) | \(post.writer)"
+                    )
+                }
+                .disposed(by: disposeBag)
+        
+        reactor.state
+            .withUnretained(self)
+            .map { (self, state) in
+                state.todayFeeds.prefix(self.TODAY_FEED_DISPLAY_NUMBER)
+            }
+            .bind(to: todayFeedSection.collectionView.rx.items(
+                cellIdentifier: "cell",
+                cellType: TodayFeedCell.self)){ (row, feed, cell) in
+                    cell.configure(
+                        feedImageName: feed.imageName,
+                        feedTitle: feed.body
+                    )
+                }
+                .disposed(by: disposeBag)
+    }
     
 }
 

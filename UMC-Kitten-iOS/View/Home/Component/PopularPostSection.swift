@@ -17,7 +17,7 @@ class PopularPostSection: BaseView {
     // MARK: UI Component
     private let sectionTitle: UILabel = .init(text: "인기 게시글")
     private let moreButton: MoreButton = .init()
-    private let collectionView: BaseCollectionView = .init()
+    let collectionView: BaseCollectionView = .init()
     private let selectionLine: UIView = .init()
     
     // MARK: Set Method
@@ -74,28 +74,5 @@ class PopularPostSection: BaseView {
             $0.bottom.equalToSuperview()
         }
     }
-    
-    override func setBind() {
-        super.setBind()
 
-        // FIXME: 예시 데이터
-        let pets = Observable.just([
-            PetModel(name: "무냥이", species: "고양이", gender: "수컷", age: 2),
-            PetModel(name: "무냥이", species: "고양이", gender: "수컷", age: 2),
-            PetModel(name: "무냥이", species: "고양이", gender: "수컷", age: 2),
-        ])
-
-        pets.bind(to: collectionView.rx.items(
-            cellIdentifier: "cell",
-            cellType: PopularPostCell.self)) { index, model, cell in
-                cell.configure(
-                    boardTitle: "자유 게시판",
-                    postTitle: "OO동물병원 추천하지 않아요...",
-                    heartCount: 10,
-                    commentCount: 12,
-                    postInfo: "| 1일전 | 제이지"
-                )
-        }
-        .disposed(by: disposeBag)
-    }
 }

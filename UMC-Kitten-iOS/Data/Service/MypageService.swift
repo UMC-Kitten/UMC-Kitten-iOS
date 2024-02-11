@@ -26,7 +26,7 @@ extension MypageService: TargetType {
     }
     
     var baseURL: URL {
-        let urlString = "\(baseURLString)/mypage"
+        let urlString = baseURLString + "/mypage"
         guard let url = URL(string: urlString) else {
             fatalError("Constructed URL is invalid: \(urlString)")
         }
