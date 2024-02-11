@@ -24,7 +24,7 @@ class MypageViewController: BaseViewController {
     // MARK: UI Component
     private let profileSection = ProfileSection()
     private let mypageMenuSection = MypageMenuSection()
-    private let versionLabel: UILabel = .init(text: "앱버전 1.0.0")
+    private let versionLabel: UILabel = .init(staticText: "앱버전 1.0.0")
     
     // MARK: Constructor
     override func viewDidLoad() {

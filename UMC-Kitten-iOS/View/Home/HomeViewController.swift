@@ -12,10 +12,6 @@ import ReactorKit
 
 class HomeViewController: BaseViewController {
     
-    // MARK: Constant
-    private let POPULAR_POST_DISPLAY_NUMBER: Int = 3
-    private let TODAY_FEED_DISPLAY_NUMBER: Int = 4
-    
     // MARK: Dependency
     private let reactor = HomeReactor()
     
@@ -24,7 +20,7 @@ class HomeViewController: BaseViewController {
     private let contentView = UIView()
     
     // MARK: UI Component
-    private let titleLable: UILabel = .init(text: "나는 집사")
+    private let titleLable: UILabel = .init(staticText: "나는 집사")
     private let registeredPetsSection: RegisteredPetsSection = .init()
     private let popularPostSection: PopularPostSection = .init()
     private let todayFeedSection: TodayFeedSection = .init()
@@ -96,9 +92,8 @@ class HomeViewController: BaseViewController {
     
     override func setBind() {
         reactor.state
-            .withUnretained(self)
-            .map { (self, state) in
-                state.registredPets
+            .map {
+                $0.registredPets
             }
             .bind(to: registeredPetsSection.collectionView.rx.items(
                 cellIdentifier: "cell",
@@ -112,9 +107,8 @@ class HomeViewController: BaseViewController {
                 .disposed(by: disposeBag)
         
         reactor.state
-            .withUnretained(self)
-            .map { (self, state) in
-                state.popularPosts.prefix(self.POPULAR_POST_DISPLAY_NUMBER)
+            .map {
+                $0.popularPosts.prefix(HomeConstant.POPULAR_POST_DISPLAY_NUMBER)
             }
             .bind(to: popularPostSection.collectionView.rx.items(
                 cellIdentifier: "cell",
@@ -130,9 +124,8 @@ class HomeViewController: BaseViewController {
                 .disposed(by: disposeBag)
         
         reactor.state
-            .withUnretained(self)
-            .map { (self, state) in
-                state.todayFeeds.prefix(self.TODAY_FEED_DISPLAY_NUMBER)
+            .map {
+                $0.todayFeeds.prefix(HomeConstant.TODAY_FEED_DISPLAY_NUMBER)
             }
             .bind(to: todayFeedSection.collectionView.rx.items(
                 cellIdentifier: "cell",

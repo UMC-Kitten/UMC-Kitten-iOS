@@ -16,11 +16,11 @@ class ProfileSection: BaseView {
     // MARK: UI Component
     
     let profileImageView: UIImageView = .init(imageName: "cat-sample")
-    let ownerNameLabel: UILabel = .init(text: "임시 닉네임")
-    private let ownerRoleLabel: UILabel = .init(text: "반려인")
+    let ownerNameLabel: UILabel = .init(staticText: "임시 닉네임")
+    private let ownerRoleLabel: UILabel = .init(staticText: "반려인")
     
-    private let myPetsInfoTitleLabel: UILabel = .init(text: "내 반려동물 정보")
-    let managementButton: UILabel = .init(text: "관리")
+    private let myPetsInfoTitleLabel: UILabel = .init(staticText: "내 반려동물 정보")
+    let managementButton: UILabel = .init(staticText: "관리")
     private let myPetCells: [MyPetCard] = [
         .init(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷"),
         .init(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷")

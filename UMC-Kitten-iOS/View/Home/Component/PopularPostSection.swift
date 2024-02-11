@@ -15,7 +15,7 @@ class PopularPostSection: BaseView {
     private let CELL_RIGHT_MARGIN: CGFloat = 30
     
     // MARK: UI Component
-    private let sectionTitle: UILabel = .init(text: "인기 게시글")
+    private let sectionTitle: UILabel = .init(staticText: "인기 게시글")
     private let moreButton: MoreButton = .init()
     let collectionView: BaseCollectionView = .init()
     private let selectionLine: UIView = .init()
@@ -29,7 +29,7 @@ class PopularPostSection: BaseView {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .vertical
             layout.itemSize = CGSize(
-                width: UIScreen.main.bounds.width - HOME_PAGE_PADDING * 2,
+                width: UIScreen.main.bounds.width - HomeConstant.HOME_PAGE_PADDING * 2,
                 height: 100
             )
             layout.minimumLineSpacing = 10
@@ -53,17 +53,17 @@ class PopularPostSection: BaseView {
         
         sectionTitle.snp.makeConstraints {
             $0.top.equalToSuperview().offset(25)
-            $0.left.equalToSuperview().inset(HOME_PAGE_PADDING)
+            $0.left.equalToSuperview().inset(HomeConstant.HOME_PAGE_PADDING)
         }
         
         moreButton.snp.makeConstraints {
             $0.centerY.equalTo(sectionTitle.snp.centerY)
-            $0.right.equalToSuperview().inset(HOME_PAGE_PADDING)
+            $0.right.equalToSuperview().inset(HomeConstant.HOME_PAGE_PADDING)
         }
         
         collectionView.snp.makeConstraints {
             $0.top.equalTo(sectionTitle.snp.bottom).offset(25)
-            $0.left.right.equalToSuperview().inset(HOME_PAGE_PADDING)
+            $0.left.right.equalToSuperview().inset(HomeConstant.HOME_PAGE_PADDING)
             $0.height.equalTo(320)
         }
         

@@ -41,9 +41,9 @@ extension UILabel {
         }
     }
     
-    convenience init(text: String) {
+    convenience init(staticText: String) {
         self.init()
-        self.text = text
+        self.text = staticText
     }
     
 }

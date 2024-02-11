@@ -18,8 +18,8 @@ class NicknameSettingViewController: BaseViewController {
         title: "닉네임",
         placeholder: "변경할 닉네임을 입력해주세요"
     )
-    private let noticeBlackLabel: UILabel = .init(text: "* 닉네임을 설정하면")
-    private let noticeColorLabel: UILabel = .init(text: " 10일간 변경할 수 없습니다")
+    private let noticeBlackLabel: UILabel = .init(staticText: "* 닉네임을 설정하면")
+    private let noticeColorLabel: UILabel = .init(staticText: " 10일간 변경할 수 없습니다")
     private let confirmButton: UIButton = .init(text: "수정")
     
     // MARK: View Life Cycle

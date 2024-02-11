@@ -7,10 +7,16 @@
 
 import Foundation
 
+/// 반려동물 정보
 struct PetModel {
-    let imageName: String = "cat-sample"
+    /// 반려동물 이미지 이름
+    let imageName: String = "cat-sample" //FIXME: URL로 변경
+    /// 반려동물 이름
     let name: String
+    /// 반려동물 종 - 고양이, 강아지
     let species: String
+    /// 반려동물 성별 - 암컷, 수컷
     let gender: String
+    /// 반려동물 나이
     let age: Int
 }

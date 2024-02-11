@@ -8,8 +8,10 @@
 import Foundation
 import NaverThirdPartyLogin
 
+/// 네이버 로그인 SDK 관련 서비스
 class NaverAuthService {
     
+    /// 네이버 로그인 SDK를 초기화합니다.
     static func initializeNaverAuthSdk() {
         // 네이버 앱으로 로그인 허용
         NaverThirdPartyLoginConnection.getSharedInstance()?.isNaverAppOauthEnable = true
@@ -26,7 +28,9 @@ class NaverAuthService {
         NaverThirdPartyLoginConnection.getSharedInstance().appName = kServiceAppName
     }
     
-    /// 로그인 완료 후 처리는 SeneDelegate에서 딥링크로 처리
+    /// 네이버 로그인을 위해 네이버앱으로 이동합니다.
+    ///
+    /// 참고) 로그인 완료 후 처리는 SeneDelegate에서 딥링크로 처리합니다.
     func openNaverLogin() {
         if NaverThirdPartyLoginConnection
             .getSharedInstance()

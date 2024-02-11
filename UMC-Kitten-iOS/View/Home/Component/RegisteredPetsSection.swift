@@ -27,7 +27,7 @@ class RegisteredPetsSection: BaseView {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
             layout.itemSize = CGSize(
-                width: UIScreen.main.bounds.width - HOME_PAGE_PADDING * 2 - CELL_RIGHT_MARGIN,
+                width: UIScreen.main.bounds.width - HomeConstant.HOME_PAGE_PADDING * 2 - CELL_RIGHT_MARGIN,
                 height: 100
             )
             layout.minimumLineSpacing = 10
@@ -52,7 +52,7 @@ class RegisteredPetsSection: BaseView {
         
         collectionView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
-            $0.left.right.equalToSuperview().inset(HOME_PAGE_PADDING)
+            $0.left.right.equalToSuperview().inset(HomeConstant.HOME_PAGE_PADDING)
             $0.height.equalTo(100)
         }
         

@@ -13,7 +13,7 @@ class MoreButton: BaseView {
     private let stackView: UIStackView = .init()
     
     // MARK: UI Component
-    private let moreLabel: UILabel = .init(text: "더보기")
+    private let moreLabel: UILabel = .init(staticText: "더보기")
     private let imageView: UIImageView = .init(imageName: "arrow-right-black")
     
     

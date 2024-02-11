@@ -8,6 +8,7 @@
 import Foundation
 import Moya
 
+/// 유저 개인정보 관련 서비스
 enum MypageService {
     case info(id: Int64)
     case changeNickname(dto: ChangeNicknameRequestDto)

@@ -8,6 +8,7 @@
 import Foundation
 import Moya
 
+/// 로그인 관련 서비스
 enum UserService {
     case kakaoLogin(accessToken: String)
     case naverLogin(accessToken: String)
@@ -16,11 +17,10 @@ enum UserService {
 extension UserService: TargetType {
     
     var baseURLString: String {
-//        guard let apiBaseURLString = Bundle.main.object(forInfoDictionaryKey: "API_BASE_URL") as? String else {
-//            fatalError("API_BASE_URL is not set in Info.plist")
-//        }
-//        return apiBaseURLString
-        return "http://localhost:8080/api/v1"
+        guard let apiBaseURLString = Bundle.main.object(forInfoDictionaryKey: "API_BASE_URL") as? String else {
+            fatalError("API_BASE_URL is not set in Info.plist")
+        }
+        return apiBaseURLString
     }
     
     var baseURL: URL {

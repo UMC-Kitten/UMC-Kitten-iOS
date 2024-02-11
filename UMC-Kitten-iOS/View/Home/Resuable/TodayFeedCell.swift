@@ -35,7 +35,7 @@ class TodayFeedCell: BaseCollectionViewCell {
         
         feedImageView.snp.makeConstraints {
             $0.top.equalToSuperview()
-            $0.width.height.equalTo(UIScreen.main.bounds.width / 2 - HOME_PAGE_PADDING * 2)
+            $0.width.height.equalTo(UIScreen.main.bounds.width / 2 - HomeConstant.HOME_PAGE_PADDING * 2)
             $0.centerX.equalToSuperview()
         }
         
