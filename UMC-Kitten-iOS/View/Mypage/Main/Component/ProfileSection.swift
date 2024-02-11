@@ -9,13 +9,6 @@ import UIKit
 
 class ProfileSection: BaseView {
     
-    // MARK: Data
-    var ownerName: String = "임시 닉네임" {
-        didSet {
-            ownerNameLabel.text = ownerName
-        }
-    }
-    
     // MARK: UI Container
     private let myPetsScrollView: UIScrollView = .init()
     private let myPetsContainer: UIStackView = .init()
@@ -24,7 +17,7 @@ class ProfileSection: BaseView {
     
     let profileImageView: UIImageView = .init(imageName: "cat-sample")
     let ownerNameLabel: UILabel = .init(text: "임시 닉네임")
-    let ownerRoleLabel: UILabel = .init(text: "반려인")
+    private let ownerRoleLabel: UILabel = .init(text: "반려인")
     
     private let myPetsInfoTitleLabel: UILabel = .init(text: "내 반려동물 정보")
     let managementButton: UILabel = .init(text: "관리")

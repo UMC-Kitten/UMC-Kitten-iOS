@@ -124,7 +124,7 @@ class HomeViewController: BaseViewController {
                         postTitle: post.postTitle,
                         heartCount: post.likeCount,
                         commentCount: post.commentCount,
-                        postInfo: "\(post.date.timeAgoDisplay()) | \(post.writer)"
+                        postInfo: "| \(post.date.timeAgoDisplay()) | \(post.writer)"
                     )
                 }
                 .disposed(by: disposeBag)

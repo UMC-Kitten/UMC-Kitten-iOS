@@ -18,6 +18,10 @@
 		BC037B9E2B77AA150021721C /* NaverThirdPartyLogin.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC037B9C2B77AA150021721C /* NaverThirdPartyLogin.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC037BA02B78A1530021721C /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037B9F2B78A1530021721C /* FeedModel.swift */; };
 		BC037BA32B78A5580021721C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BA22B78A5580021721C /* Date+Extension.swift */; };
+		BC037BA52B78DF250021721C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BA42B78DF250021721C /* UserService.swift */; };
+		BC037BA82B78DFCE0021721C /* LoginTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BA72B78DFCE0021721C /* LoginTestViewController.swift */; };
+		BC037BAB2B78FD6A0021721C /* UserResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BAA2B78FD6A0021721C /* UserResponseDto.swift */; };
+		BC037BAD2B78FD850021721C /* ApiResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BAC2B78FD850021721C /* ApiResponseDto.swift */; };
 		BC3CECC82B4FACC300546377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CECC72B4FACC300546377 /* AppDelegate.swift */; };
 		BC3CECCA2B4FACC300546377 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CECC92B4FACC300546377 /* SceneDelegate.swift */; };
 		BC3CECCC2B4FACC300546377 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CECCB2B4FACC300546377 /* ViewController.swift */; };
@@ -118,9 +122,13 @@
 /* Begin PBXFileReference section */
 		BC037B8F2B773F340021721C /* KakaoAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthService.swift; sourceTree = "<group>"; };
 		BC037B922B77A0490021721C /* NaverAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverAuthService.swift; sourceTree = "<group>"; };
-		BC037B9C2B77AA150021721C /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:U6VV7FMD97:NHN Corporation"; lastKnownFileType = wrapper.xcframework; name = NaverThirdPartyLogin.xcframework; path = ../NaverThirdPartyLogin.xcframework; sourceTree = "<group>"; };
+		BC037B9C2B77AA150021721C /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:N8MX74Y447:DOYEON LEE"; lastKnownFileType = wrapper.xcframework; name = NaverThirdPartyLogin.xcframework; path = ../NaverThirdPartyLogin.xcframework; sourceTree = "<group>"; };
 		BC037B9F2B78A1530021721C /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		BC037BA22B78A5580021721C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		BC037BA42B78DF250021721C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		BC037BA72B78DFCE0021721C /* LoginTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestViewController.swift; sourceTree = "<group>"; };
+		BC037BAA2B78FD6A0021721C /* UserResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDto.swift; sourceTree = "<group>"; };
+		BC037BAC2B78FD850021721C /* ApiResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseDto.swift; sourceTree = "<group>"; };
 		BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-Kitten-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3CECC72B4FACC300546377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC3CECC92B4FACC300546377 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -241,6 +249,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BC037BA62B78DFC30021721C /* LoginTest */ = {
+			isa = PBXGroup;
+			children = (
+				BC037BA72B78DFCE0021721C /* LoginTestViewController.swift */,
+			);
+			path = LoginTest;
+			sourceTree = "<group>";
+		};
+		BC037BA92B78FCD70021721C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				BC037BAA2B78FD6A0021721C /* UserResponseDto.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		BC3CECBB2B4FACC300546377 = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +316,7 @@
 			children = (
 				BC037B8E2B773F270021721C /* Social */,
 				BC69320F2B7677DD002C7A9F /* MypageService.swift */,
+				BC037BA42B78DF250021721C /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -299,7 +324,9 @@
 		BC69320C2B7676DC002C7A9F /* Dto */ = {
 			isa = PBXGroup;
 			children = (
+				BC037BA92B78FCD70021721C /* User */,
 				BC6932192B768392002C7A9F /* Mypage */,
+				BC037BAC2B78FD850021721C /* ApiResponseDto.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -342,6 +369,7 @@
 		BC6E40BD2B5528EF00BA2CE1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC037BA62B78DFC30021721C /* LoginTest */,
 				BC6E40C52B552BC600BA2CE1 /* Base */,
 				BCF1E5872B5D4D60000F5960 /* Common */,
 				BC9DC6462B722E2B00859EFE /* Home */,
@@ -801,13 +829,17 @@
 				BCF1E58C2B5D54E3000F5960 /* MyInfoMenuSection.swift in Sources */,
 				BC6E40CA2B552BC600BA2CE1 /* BaseViewController.swift in Sources */,
 				BCC107CF2B68E1390043EC7D /* UIImage+Extension.swift in Sources */,
+				BC037BAB2B78FD6A0021721C /* UserResponseDto.swift in Sources */,
 				BC6E40C02B55291800BA2CE1 /* MypageViewController.swift in Sources */,
 				BCC107C82B68C90A0043EC7D /* MyPetSetting+CollectionViewDelegate.swift in Sources */,
+				BC037BA82B78DFCE0021721C /* LoginTestViewController.swift in Sources */,
 				BCC91D7D2B58D77900D02BF0 /* MyPetCard.swift in Sources */,
+				BC037BAD2B78FD850021721C /* ApiResponseDto.swift in Sources */,
 				BCC107E42B690BFF0043EC7D /* BaseTableViewCell.swift in Sources */,
 				BC69321E2B76845E002C7A9F /* AuthTokenPlugin.swift in Sources */,
 				BCC107CA2B68CD120043EC7D /* BaseCollectionView.swift in Sources */,
 				BC9DC6502B72359C00859EFE /* HomeReactor.swift in Sources */,
+				BC037BA52B78DF250021721C /* UserService.swift in Sources */,
 				BCB6CA412B73E2300096DEAD /* HomeBottomSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -970,6 +1002,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1003,6 +1036,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

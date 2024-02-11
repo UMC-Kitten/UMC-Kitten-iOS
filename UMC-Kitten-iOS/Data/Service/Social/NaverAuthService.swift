@@ -10,8 +10,7 @@ import NaverThirdPartyLogin
 
 class NaverAuthService {
     
-    func initializeNaverAuthSdk() {
-        
+    static func initializeNaverAuthSdk() {
         // 네이버 앱으로 로그인 허용
         NaverThirdPartyLoginConnection.getSharedInstance()?.isNaverAppOauthEnable = true
         // 브라우저 로그인 허용
@@ -27,7 +26,8 @@ class NaverAuthService {
         NaverThirdPartyLoginConnection.getSharedInstance().appName = kServiceAppName
     }
     
-    func openNaverLogin(completion: @escaping (String) -> Void) {
+    /// 로그인 완료 후 처리는 SeneDelegate에서 딥링크로 처리
+    func openNaverLogin() {
         if NaverThirdPartyLoginConnection
             .getSharedInstance()
             .isPossibleToOpenNaverApp() // Naver App이 깔려있는지 확인

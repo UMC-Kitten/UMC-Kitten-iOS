@@ -8,7 +8,6 @@
 import Foundation
 import Moya
 
-
 enum MypageService {
     case info(id: Int64)
     case changeNickname(dto: ChangeNicknameRequestDto)

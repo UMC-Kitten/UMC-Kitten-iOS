@@ -7,7 +7,6 @@
 
 import UIKit
 
-import KakaoSDKCommon
 import KakaoSDKAuth
 import NaverThirdPartyLogin
 
@@ -18,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Kakao auth setting
-        KakaoSDK.initSDK(appKey: "3d7a5b06ee2f9845661bcb14ef6e3632")
+        KakaoAuthService.initializeKakaoAuthSdk()
         
         // Naver auth setting
-        NaverThirdPartyLoginConnection.getSharedInstance().delegate = self
+        NaverAuthService.initializeNaverAuthSdk()
         
         return true
     }
@@ -39,43 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    
-    // MARK: Kakao Login Deep Link
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        if (AuthApi.isKakaoTalkLoginUrl(url)) {
-            return AuthController.handleOpenUrl(url: url)
-        }
 
-        return false
-    }
-
-
-}
-
-
-// MARK: Naver login delegate
-
-extension AppDelegate: NaverThirdPartyLoginConnectionDelegate {
-    // 토큰 발급 성공시
-    func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
-        
-    }
-    
-    // 토큰 갱신시
-    func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
-        
-    }
-    
-    // 로그아웃(토큰 삭제)시
-    func oauth20ConnectionDidFinishDeleteToken() {
-        
-    }
-    
-    // Error 발생
-    func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
-        
-    }
 }
 
 
