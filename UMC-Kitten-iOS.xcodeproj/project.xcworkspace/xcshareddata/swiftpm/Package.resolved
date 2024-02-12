@@ -46,6 +46,15 @@
       }
     },
     {
+      "identity" : "rxappstate",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pixeldock/RxAppState.git",
+      "state" : {
+        "revision" : "733bfbd56661ff67b947eee28bfda0e62ae42cc6",
+        "version" : "1.7.2"
+      }
+    },
+    {
       "identity" : "rxgesture",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RxSwiftCommunity/RxGesture.git",

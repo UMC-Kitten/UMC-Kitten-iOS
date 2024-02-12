@@ -25,6 +25,7 @@
 		BC087BEB2B7935B1001E34D4 /* MypageRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC087BEA2B7935B1001E34D4 /* MypageRemoteRepository.swift */; };
 		BC316B552B793BC50055FC0F /* UserDefaultsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */; };
 		BC316B572B793DF00055FC0F /* MypageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B562B793DF00055FC0F /* MypageRepository.swift */; };
+		BC316B5A2B79451F0055FC0F /* RxAppState in Frameworks */ = {isa = PBXBuildFile; productRef = BC316B592B79451F0055FC0F /* RxAppState */; };
 		BC3CECC82B4FACC300546377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CECC72B4FACC300546377 /* AppDelegate.swift */; };
 		BC3CECCA2B4FACC300546377 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CECC92B4FACC300546377 /* SceneDelegate.swift */; };
 		BC3CECCC2B4FACC300546377 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CECCB2B4FACC300546377 /* ViewController.swift */; };
@@ -223,6 +224,7 @@
 				BC037B852B773D6A0021721C /* KakaoSDK in Frameworks */,
 				BC6E40BC2B5528A900BA2CE1 /* ReactorKit in Frameworks */,
 				BC6932142B7679B6002C7A9F /* Moya in Frameworks */,
+				BC316B5A2B79451F0055FC0F /* RxAppState in Frameworks */,
 				BC037B8D2B773D6A0021721C /* KakaoSDKCommon in Frameworks */,
 				BC6E40D42B552C7500BA2CE1 /* RxCocoa in Frameworks */,
 				BC6E40DC2B552C7500BA2CE1 /* RxSwift in Frameworks */,
@@ -731,6 +733,7 @@
 				BC037B882B773D6A0021721C /* KakaoSDKCert */,
 				BC037B8A2B773D6A0021721C /* KakaoSDKCertCore */,
 				BC037B8C2B773D6A0021721C /* KakaoSDKCommon */,
+				BC316B592B79451F0055FC0F /* RxAppState */,
 			);
 			productName = "UMC-Kitten-iOS";
 			productReference = BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */;
@@ -767,6 +770,7 @@
 				BCC91D822B58FE5400D02BF0 /* XCRemoteSwiftPackageReference "RxGesture" */,
 				BC6932122B7679B6002C7A9F /* XCRemoteSwiftPackageReference "Moya" */,
 				BC037B832B773D6A0021721C /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				BC316B582B79451F0055FC0F /* XCRemoteSwiftPackageReference "RxAppState" */,
 			);
 			productRefGroup = BC3CECC52B4FACC300546377 /* Products */;
 			projectDirPath = "";
@@ -1123,6 +1127,14 @@
 				minimumVersion = 2.20.0;
 			};
 		};
+		BC316B582B79451F0055FC0F /* XCRemoteSwiftPackageReference "RxAppState" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pixeldock/RxAppState.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.2;
+			};
+		};
 		BC6932122B7679B6002C7A9F /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -1190,6 +1202,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BC037B832B773D6A0021721C /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDKCommon;
+		};
+		BC316B592B79451F0055FC0F /* RxAppState */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC316B582B79451F0055FC0F /* XCRemoteSwiftPackageReference "RxAppState" */;
+			productName = RxAppState;
 		};
 		BC6932132B7679B6002C7A9F /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;

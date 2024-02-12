@@ -8,6 +8,7 @@
 import UIKit
 
 import RxSwift
+import RxAppState
 import ReactorKit
 
 class HomeViewController: BaseViewController {
@@ -20,7 +21,7 @@ class HomeViewController: BaseViewController {
     private let contentView = UIView()
     
     // MARK: UI Component
-    private let titleLable: UILabel = .init(staticText: "나는 집사")
+    private let titleLabel: UILabel = .init(staticText: "나는 집사")
     private let registeredPetsSection: RegisteredPetsSection = .init()
     private let popularPostSection: PopularPostSection = .init()
     private let todayFeedSection: TodayFeedSection = .init()
@@ -39,7 +40,7 @@ class HomeViewController: BaseViewController {
         
         contentView.backgroundColor = .white
         
-        titleLable.setDefaultFont(size: 24, weight: .bold)
+        titleLabel.setDefaultFont(size: 24, weight: .bold)
     }
     
     override func setDelegate() { }
@@ -49,7 +50,7 @@ class HomeViewController: BaseViewController {
         
         scrollView.addSubview(contentView)
         
-        [titleLable, registeredPetsSection, popularPostSection,
+        [titleLabel, registeredPetsSection, popularPostSection,
          todayFeedSection, homeBottomSection]
             .forEach { contentView.addSubview($0) }
     }
@@ -61,16 +62,16 @@ class HomeViewController: BaseViewController {
         
         contentView.snp.makeConstraints {
             $0.edges.width.equalTo(scrollView)
-            $0.height.equalTo(1250)
+//            $0.height.equalTo(1250)
         }
         
-        titleLable.snp.makeConstraints {
+        titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(-10)
             $0.left.equalToSuperview().offset(20)
         }
         
         registeredPetsSection.snp.makeConstraints {
-            $0.top.equalTo(titleLable.snp.bottom).offset(10)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(10)
             $0.left.right.equalToSuperview()
         }
         
@@ -87,13 +88,15 @@ class HomeViewController: BaseViewController {
         homeBottomSection.snp.makeConstraints {
             $0.top.equalTo(todayFeedSection.snp.bottom).offset(0)
             $0.left.right.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
     }
     
     override func setBind() {
+        // data binding
         reactor.state
             .map {
-                $0.registredPets
+                $0.registeredPets
             }
             .bind(to: registeredPetsSection.collectionView.rx.items(
                 cellIdentifier: "cell",
@@ -136,6 +139,13 @@ class HomeViewController: BaseViewController {
                     )
                 }
                 .disposed(by: disposeBag)
+        
+        // event binding
+        rx.viewWillAppear
+            .map { _ in .viewWillAppear }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
     }
     
 }
