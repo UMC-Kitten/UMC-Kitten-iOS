@@ -16,7 +16,7 @@ class SelectCard: BaseView {
     // MARK: UI Component
     private let stackView: UIStackView = .init()
     private let imageView: UIImageView = .init()
-    private let descriptionLabel: UILabel = .init(text: "샘플")
+    private let descriptionLabel: UILabel = .init(staticText: "샘플")
 
     // MARK: Initialization
     convenience init(

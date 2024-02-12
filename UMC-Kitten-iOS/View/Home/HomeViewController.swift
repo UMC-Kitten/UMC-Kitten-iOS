@@ -7,14 +7,21 @@
 
 import UIKit
 
+import RxSwift
+import RxAppState
+import ReactorKit
+
 class HomeViewController: BaseViewController {
+    
+    // MARK: Dependency
+    private let reactor = HomeReactor()
     
     // MARK: UI Container
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     
     // MARK: UI Component
-    private let titleLable: UILabel = .init(text: "나는 집사")
+    private let titleLabel: UILabel = .init(staticText: "나는 집사")
     private let registeredPetsSection: RegisteredPetsSection = .init()
     private let popularPostSection: PopularPostSection = .init()
     private let todayFeedSection: TodayFeedSection = .init()
@@ -33,17 +40,17 @@ class HomeViewController: BaseViewController {
         
         contentView.backgroundColor = .white
         
-        titleLable.setDefaultFont(size: 24, weight: .bold)
+        titleLabel.setDefaultFont(size: 24, weight: .bold)
     }
     
     override func setDelegate() { }
     
-    override func setHierarchy() { 
+    override func setHierarchy() {
         view.addSubview(scrollView)
         
         scrollView.addSubview(contentView)
         
-        [titleLable, registeredPetsSection, popularPostSection, 
+        [titleLabel, registeredPetsSection, popularPostSection,
          todayFeedSection, homeBottomSection]
             .forEach { contentView.addSubview($0) }
     }
@@ -55,16 +62,16 @@ class HomeViewController: BaseViewController {
         
         contentView.snp.makeConstraints {
             $0.edges.width.equalTo(scrollView)
-            $0.height.equalTo(1250)
+//            $0.height.equalTo(1250)
         }
         
-        titleLable.snp.makeConstraints {
+        titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(-10)
             $0.left.equalToSuperview().offset(20)
-        }        
+        }
         
         registeredPetsSection.snp.makeConstraints {
-            $0.top.equalTo(titleLable.snp.bottom).offset(10)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(10)
             $0.left.right.equalToSuperview()
         }
         
@@ -81,10 +88,65 @@ class HomeViewController: BaseViewController {
         homeBottomSection.snp.makeConstraints {
             $0.top.equalTo(todayFeedSection.snp.bottom).offset(0)
             $0.left.right.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
     }
     
-    override func setBind() { }
+    override func setBind() {
+        // data binding
+        reactor.state
+            .map {
+                $0.registeredPets
+            }
+            .bind(to: registeredPetsSection.collectionView.rx.items(
+                cellIdentifier: "cell",
+                cellType: RegisteredPetCell.self)){ (row, pet, cell) in
+                    cell.configure(
+                        petImageName: pet.imageName,
+                        petName: pet.name,
+                        petInfo: "\(pet.species) / \(pet.gender) / \(pet.age)살"
+                    )
+                }
+                .disposed(by: disposeBag)
+        
+        reactor.state
+            .map {
+                $0.popularPosts.prefix(HomeConstant.POPULAR_POST_DISPLAY_NUMBER)
+            }
+            .bind(to: popularPostSection.collectionView.rx.items(
+                cellIdentifier: "cell",
+                cellType: PopularPostCell.self)){ (row, post, cell) in
+                    cell.configure(
+                        boardTitle: post.boardTitle,
+                        postTitle: post.postTitle,
+                        heartCount: post.likeCount,
+                        commentCount: post.commentCount,
+                        postInfo: "| \(post.date.timeAgoDisplay()) | \(post.writer)"
+                    )
+                }
+                .disposed(by: disposeBag)
+        
+        reactor.state
+            .map {
+                $0.todayFeeds.prefix(HomeConstant.TODAY_FEED_DISPLAY_NUMBER)
+            }
+            .bind(to: todayFeedSection.collectionView.rx.items(
+                cellIdentifier: "cell",
+                cellType: TodayFeedCell.self)){ (row, feed, cell) in
+                    cell.configure(
+                        feedImageName: feed.imageName,
+                        feedTitle: feed.body
+                    )
+                }
+                .disposed(by: disposeBag)
+        
+        // event binding
+        rx.viewWillAppear
+            .map { _ in .viewWillAppear }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+    }
     
 }
 

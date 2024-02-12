@@ -15,9 +15,9 @@ class PopularPostSection: BaseView {
     private let CELL_RIGHT_MARGIN: CGFloat = 30
     
     // MARK: UI Component
-    private let sectionTitle: UILabel = .init(text: "인기 게시글")
+    private let sectionTitle: UILabel = .init(staticText: "인기 게시글")
     private let moreButton: MoreButton = .init()
-    private let collectionView: BaseCollectionView = .init()
+    let collectionView: BaseCollectionView = .init()
     private let selectionLine: UIView = .init()
     
     // MARK: Set Method
@@ -29,7 +29,7 @@ class PopularPostSection: BaseView {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .vertical
             layout.itemSize = CGSize(
-                width: UIScreen.main.bounds.width - HOME_PAGE_PADDING * 2,
+                width: UIScreen.main.bounds.width - HomeConstant.HOME_PAGE_PADDING * 2,
                 height: 100
             )
             layout.minimumLineSpacing = 10
@@ -53,17 +53,17 @@ class PopularPostSection: BaseView {
         
         sectionTitle.snp.makeConstraints {
             $0.top.equalToSuperview().offset(25)
-            $0.left.equalToSuperview().inset(HOME_PAGE_PADDING)
+            $0.left.equalToSuperview().inset(HomeConstant.HOME_PAGE_PADDING)
         }
         
         moreButton.snp.makeConstraints {
             $0.centerY.equalTo(sectionTitle.snp.centerY)
-            $0.right.equalToSuperview().inset(HOME_PAGE_PADDING)
+            $0.right.equalToSuperview().inset(HomeConstant.HOME_PAGE_PADDING)
         }
         
         collectionView.snp.makeConstraints {
             $0.top.equalTo(sectionTitle.snp.bottom).offset(25)
-            $0.left.right.equalToSuperview().inset(HOME_PAGE_PADDING)
+            $0.left.right.equalToSuperview().inset(HomeConstant.HOME_PAGE_PADDING)
             $0.height.equalTo(320)
         }
         
@@ -74,28 +74,5 @@ class PopularPostSection: BaseView {
             $0.bottom.equalToSuperview()
         }
     }
-    
-    override func setBind() {
-        super.setBind()
 
-        // FIXME: 예시 데이터
-        let pets = Observable.just([
-            PetModel(name: "무냥이", species: "고양이", gender: "수컷", age: 2),
-            PetModel(name: "무냥이", species: "고양이", gender: "수컷", age: 2),
-            PetModel(name: "무냥이", species: "고양이", gender: "수컷", age: 2),
-        ])
-
-        pets.bind(to: collectionView.rx.items(
-            cellIdentifier: "cell",
-            cellType: PopularPostCell.self)) { index, model, cell in
-                cell.configure(
-                    boardTitle: "자유 게시판",
-                    postTitle: "OO동물병원 추천하지 않아요...",
-                    heartCount: 10,
-                    commentCount: 12,
-                    postInfo: "| 1일전 | 제이지"
-                )
-        }
-        .disposed(by: disposeBag)
-    }
 }

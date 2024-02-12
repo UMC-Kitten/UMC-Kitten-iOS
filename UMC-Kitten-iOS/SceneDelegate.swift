@@ -7,6 +7,10 @@
 
 import UIKit
 
+import Moya
+import KakaoSDKAuth
+import NaverThirdPartyLogin
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
@@ -15,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        NaverThirdPartyLoginConnection.getSharedInstance().delegate = self
         
         window = UIWindow(windowScene: windowScene)
         
@@ -25,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let homeVC = HomeViewController()
         let homeNavVC = UINavigationController()
         homeNavVC.viewControllers = [homeVC]
-        let checkinVC = UIViewController()
+        let checkinVC = LoginTestViewController()
         let communityVC = UIViewController()
         let mypageVC = MypageViewController()
         let mypageNavVC = UINavigationController()
@@ -83,6 +89,69 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
     
+    // MARK: SNS Login Deep Link
     
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            // Kakao auth
+            if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                _ = AuthController.handleOpenUrl(url: url)
+            }
+            
+            // Naver auth
+            if url.absoluteString.hasPrefix("naverq4yYq9GqZvWRQnbf8S1h") {
+                NaverThirdPartyLoginConnection
+                    .getSharedInstance()
+                    .receiveAccessToken(url)
+            }
+        }
+    }
 }
 
+
+// MARK: Naver login delegate
+
+extension SceneDelegate: NaverThirdPartyLoginConnectionDelegate {
+    // 토큰 발급 성공시
+    func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
+        guard let instance = NaverThirdPartyLoginConnection.getSharedInstance() else { return }
+        
+        // 액세스 토큰 접근
+        let accessToken = instance.accessToken
+        let accessTokenExpireDate = instance.accessTokenExpireDate
+        print("Access Token is: \(accessToken), expire: \(accessTokenExpireDate)")
+        
+        // 서버에 로그인 요청
+        if let accessToken = instance.accessToken {
+            MoyaProvider<UserApiClient>().request(.naverLogin(accessToken: accessToken)) { result in
+                switch result {
+                case .success(let response):
+                    print(response)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    // 토큰 갱신시
+    func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
+        print("refresh token")
+        
+        guard let instance = NaverThirdPartyLoginConnection.getSharedInstance() else { return }
+        
+        let accessToken = instance.accessToken
+        let accessTokenExpireDate = instance.accessTokenExpireDate
+        print("Refreshed access token is: \(accessToken), expire: \(accessTokenExpireDate)")
+    }
+    
+    // 로그아웃(토큰 삭제)시
+    func oauth20ConnectionDidFinishDeleteToken() {
+        print("delete token")
+    }
+    
+    // Error 발생
+    func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
+        print("error")
+    }
+}

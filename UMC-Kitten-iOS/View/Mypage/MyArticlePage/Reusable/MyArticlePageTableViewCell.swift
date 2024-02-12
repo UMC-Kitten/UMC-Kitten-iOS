@@ -17,9 +17,9 @@ class MyArticlePageTableViewCell: BaseTableViewCell {
     
     // MARK: UI Component
     let userProfileImage: UIImageView = .init(imageName: "cat-sample")
-    let userNickname: UILabel = .init(text: "고먐미")
+    let userNickname: UILabel = .init(staticText: "고먐미")
     let detailIcon: UIImageView = .init(imageName: "detail-icon")
-    let articleBody: UILabel = .init(text: "예시 본문입니다")
+    let articleBody: UILabel = .init(staticText: "예시 본문입니다")
     let likeIcon: UIImageView = .init(imageName: "like-icon")
     let reactionCenterLine: UIView = .init()
     let chatIcon: UIImageView = .init(imageName: "chat-icon")

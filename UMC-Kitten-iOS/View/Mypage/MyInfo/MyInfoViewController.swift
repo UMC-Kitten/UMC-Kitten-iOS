@@ -24,8 +24,8 @@ class MyInfoViewController: BaseViewController{
     
     private let profileImageSection: ProfileImageSection = .init()
     private let myInfoMenuSection: MyInfoMenuSection = .init()
-    private let logoutButton: UILabel = .init(text: "로그아웃")
-    private let deleteAccountButton: UILabel = .init(text: "| 회원탈퇴")
+    private let logoutButton: UILabel = .init(staticText: "로그아웃")
+    private let deleteAccountButton: UILabel = .init(staticText: "| 회원탈퇴")
     
     
     // MARK: Set Method

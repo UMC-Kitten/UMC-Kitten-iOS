@@ -13,9 +13,9 @@ class HomeBottomSection: BaseView {
     private let CELL_RIGHT_MARGIN: CGFloat = 30
     
     // MARK: UI Component
-    private let customerServiceLabel: UILabel = .init(text: "고객센터")
+    private let customerServiceLabel: UILabel = .init(staticText: "고객센터")
     private let customerServiceArrow: UIImageView = .init(imageName: "arrow-right-black")
-    private let customerServiceInfo: UILabel = .init(text: "평일 09:00~18:00 \n토요일 , 공휴일 : 휴무")
+    private let customerServiceInfo: UILabel = .init(staticText: "평일 09:00~18:00 \n토요일 , 공휴일 : 휴무")
     
     // MARK: Set Method
     override func setStyle() {
@@ -45,8 +45,8 @@ class HomeBottomSection: BaseView {
         super.setLayout()
         
         customerServiceLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(HOME_PAGE_PADDING)
-            $0.left.equalToSuperview().inset(HOME_PAGE_PADDING)
+            $0.top.equalToSuperview().offset(HomeConstant.HOME_PAGE_PADDING)
+            $0.left.equalToSuperview().inset(HomeConstant.HOME_PAGE_PADDING)
         }
         
         customerServiceArrow.snp.makeConstraints {
@@ -57,8 +57,8 @@ class HomeBottomSection: BaseView {
         
         customerServiceInfo.snp.makeConstraints {
             $0.top.equalTo(customerServiceLabel.snp.bottom).offset(5)
-            $0.left.equalToSuperview().inset(HOME_PAGE_PADDING)
-            $0.bottom.equalToSuperview().inset(HOME_PAGE_PADDING+10)
+            $0.left.equalToSuperview().inset(HomeConstant.HOME_PAGE_PADDING)
+            $0.bottom.equalToSuperview().inset(HomeConstant.HOME_PAGE_PADDING+10)
         }
         
 

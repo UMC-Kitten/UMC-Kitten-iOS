@@ -19,10 +19,15 @@ class MypageReactor: Reactor {
     }
     
     struct State {
-        var isFollowing: Bool = false
+        var registredPets: [PetModel] = []
     }
     
-    let initialState: State = State()
+    let initialState: State = State(
+        registredPets: [
+            .init(name: "고등어", species: "고양이", gender: "수컷", age: 4),
+            .init(name: "치즈", species: "고양이", gender: "수컷", age: 2),
+        ]
+    )
 }
 
 extension MypageReactor {
@@ -38,8 +43,6 @@ extension MypageReactor {
         var state = state
         switch mutation {
         case let .setFollowing(isFollowing):
-            state.isFollowing = isFollowing
-            print(state)
             return state
         }
     }
