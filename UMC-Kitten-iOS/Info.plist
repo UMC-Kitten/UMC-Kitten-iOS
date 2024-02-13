@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>API_BASE_URL</key>
-	<string>$(API_BASE_URL)</string>
+	<string>http://$(API_BASE_URL)</string>
 	<key>KAKAO_AUTH_APP_KEY</key>
 	<string>$(KAKAO_AUTH_APP_KEY)</string>
 	<key>CFBundleURLTypes</key>

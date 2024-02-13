@@ -1,8 +1,8 @@
 //
-//  UserApiClient.swift
+//  PostApiClient.swift
 //  UMC-Kitten-iOS
 //
-//  Created by DOYEON LEE on 2/11/24.
+//  Created by DOYEON LEE on 2/13/24.
 //
 
 import Foundation
@@ -10,12 +10,12 @@ import Foundation
 import Moya
 
 /// 로그인 관련 API
-enum UserApiClient {
-    case kakaoLogin(accessToken: String)
-    case naverLogin(accessToken: String)
+enum PostApiClient {
+    /// 게시판 별로 전체 조회
+    case getPosts(postType: PostTypeDto, page: Int)
 }
 
-extension UserApiClient: TargetType {
+extension PostApiClient: TargetType {
     
     var baseURLString: String {
         guard let apiBaseURLString = Bundle.main.object(forInfoDictionaryKey: "API_BASE_URL") as? String else {
@@ -25,7 +25,7 @@ extension UserApiClient: TargetType {
     }
     
     var baseURL: URL {
-        let urlString = baseURLString + ""
+        let urlString = baseURLString + "/posts"
         guard let url = URL(string: urlString) else {
             fatalError("Constructed URL is invalid: \(urlString)")
         }
@@ -35,24 +35,25 @@ extension UserApiClient: TargetType {
     
     var path: String {
         switch self {
-        case let .kakaoLogin(accessToken):
-            return "/kakao?accessToken=\(accessToken)"
-        case let .naverLogin(accessToken):
-            return "/naver?accessToken=\(accessToken)"
+        case let .getPosts(postType, page):
+            return "/\(postType.rawValue)"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .kakaoLogin, .naverLogin:
+        case .getPosts:
             return .get
         }
     }
     
     var task: Task {
         switch self {
-        case .kakaoLogin, .naverLogin:
-            return .requestPlain
+        case let .getPosts(postType, page):
+            return .requestParameters(
+                parameters: ["page": page],
+                encoding: URLEncoding.queryString
+            )
         }
     }
     

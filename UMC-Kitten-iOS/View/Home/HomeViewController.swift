@@ -14,7 +14,7 @@ import ReactorKit
 class HomeViewController: BaseViewController {
     
     // MARK: Dependency
-    private let reactor = HomeReactor()
+    private let reactor = HomeReactor(postRepository: PostRemoteRepository())
     
     // MARK: UI Container
     private let scrollView = UIScrollView()

@@ -23,6 +23,20 @@
 		BC037BAB2B78FD6A0021721C /* UserResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BAA2B78FD6A0021721C /* UserResponseDto.swift */; };
 		BC037BAD2B78FD850021721C /* ApiResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BAC2B78FD850021721C /* ApiResponseDto.swift */; };
 		BC087BEB2B7935B1001E34D4 /* MypageRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC087BEA2B7935B1001E34D4 /* MypageRemoteRepository.swift */; };
+		BC1243A62B7B49A900BDFC13 /* PostResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243A52B7B49A900BDFC13 /* PostResponseDto.swift */; };
+		BC1243A82B7B4AC400BDFC13 /* CommentResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243A72B7B4AC400BDFC13 /* CommentResponseDto.swift */; };
+		BC1243AA2B7B4B1300BDFC13 /* HashtagResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243A92B7B4B1300BDFC13 /* HashtagResponseDto.swift */; };
+		BC1243AC2B7B4B4800BDFC13 /* PostApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243AB2B7B4B4800BDFC13 /* PostApiClient.swift */; };
+		BC1243AE2B7B4B9500BDFC13 /* PostTypeDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243AD2B7B4B9500BDFC13 /* PostTypeDto.swift */; };
+		BC1243B02B7B4CCB00BDFC13 /* PostRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243AF2B7B4CCB00BDFC13 /* PostRemoteRepository.swift */; };
+		BC1243B32B7B4D1800BDFC13 /* PostError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243B22B7B4D1800BDFC13 /* PostError.swift */; };
+		BC1243B52B7B4E6800BDFC13 /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243B42B7B4E6800BDFC13 /* CommonError.swift */; };
+		BC1243BD2B7B522000BDFC13 /* UMC_Kitten_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243BC2B7B522000BDFC13 /* UMC_Kitten_iOSTests.swift */; };
+		BC1243C62B7B524700BDFC13 /* ApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243C52B7B524700BDFC13 /* ApiTest.swift */; };
+		BC1243CB2B7B6DEF00BDFC13 /* LikeResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243CA2B7B6DEF00BDFC13 /* LikeResponseDto.swift */; };
+		BC1243CD2B7B704100BDFC13 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243CC2B7B704100BDFC13 /* PostRepository.swift */; };
+		BC1243D22B7B74C800BDFC13 /* PostRxRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243D12B7B74C800BDFC13 /* PostRxRemoteRepository.swift */; };
+		BC1243D42B7B915B00BDFC13 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243D32B7B915B00BDFC13 /* Decoder.swift */; };
 		BC316B552B793BC50055FC0F /* UserDefaultsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */; };
 		BC316B572B793DF00055FC0F /* MypageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B562B793DF00055FC0F /* MypageRepository.swift */; };
 		BC316B5A2B79451F0055FC0F /* RxAppState in Frameworks */ = {isa = PBXBuildFile; productRef = BC316B592B79451F0055FC0F /* RxAppState */; };
@@ -109,6 +123,16 @@
 		BCF1E59C2B5E8E80000F5960 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF1E59B2B5E8E80000F5960 /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BC1243BE2B7B522000BDFC13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC3CECBC2B4FACC300546377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC3CECC32B4FACC300546377;
+			remoteInfo = "UMC-Kitten-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		BC037B9B2B77A97D0021721C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -134,6 +158,21 @@
 		BC037BAA2B78FD6A0021721C /* UserResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDto.swift; sourceTree = "<group>"; };
 		BC037BAC2B78FD850021721C /* ApiResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseDto.swift; sourceTree = "<group>"; };
 		BC087BEA2B7935B1001E34D4 /* MypageRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageRemoteRepository.swift; sourceTree = "<group>"; };
+		BC1243A52B7B49A900BDFC13 /* PostResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponseDto.swift; sourceTree = "<group>"; };
+		BC1243A72B7B4AC400BDFC13 /* CommentResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentResponseDto.swift; sourceTree = "<group>"; };
+		BC1243A92B7B4B1300BDFC13 /* HashtagResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagResponseDto.swift; sourceTree = "<group>"; };
+		BC1243AB2B7B4B4800BDFC13 /* PostApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApiClient.swift; sourceTree = "<group>"; };
+		BC1243AD2B7B4B9500BDFC13 /* PostTypeDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTypeDto.swift; sourceTree = "<group>"; };
+		BC1243AF2B7B4CCB00BDFC13 /* PostRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRemoteRepository.swift; sourceTree = "<group>"; };
+		BC1243B22B7B4D1800BDFC13 /* PostError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostError.swift; sourceTree = "<group>"; };
+		BC1243B42B7B4E6800BDFC13 /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
+		BC1243BA2B7B522000BDFC13 /* UMC-Kitten-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UMC-Kitten-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1243BC2B7B522000BDFC13 /* UMC_Kitten_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMC_Kitten_iOSTests.swift; sourceTree = "<group>"; };
+		BC1243C52B7B524700BDFC13 /* ApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTest.swift; sourceTree = "<group>"; };
+		BC1243CA2B7B6DEF00BDFC13 /* LikeResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeResponseDto.swift; sourceTree = "<group>"; };
+		BC1243CC2B7B704100BDFC13 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		BC1243D12B7B74C800BDFC13 /* PostRxRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRxRemoteRepository.swift; sourceTree = "<group>"; };
+		BC1243D32B7B915B00BDFC13 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 		BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstant.swift; sourceTree = "<group>"; };
 		BC316B562B793DF00055FC0F /* MypageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageRepository.swift; sourceTree = "<group>"; };
 		BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-Kitten-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +255,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BC1243B72B7B522000BDFC13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC3CECC12B4FACC300546377 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,9 +313,10 @@
 		BC087BE92B79355C001E34D4 /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
-				BC69321C2B768449002C7A9F /* Provider */,
+				BC69321C2B768449002C7A9F /* Config */,
 				BC69320F2B7677DD002C7A9F /* MypageApiClient.swift */,
 				BC037BA42B78DF250021721C /* UserApiClient.swift */,
+				BC1243AB2B7B4B4800BDFC13 /* PostApiClient.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -277,16 +324,65 @@
 		BC087BEC2B793681001E34D4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				BC1243D52B7B915F00BDFC13 /* Config */,
 				BC316B522B793AE20055FC0F /* Protocol */,
 				BC087BEA2B7935B1001E34D4 /* MypageRemoteRepository.swift */,
+				BC1243AF2B7B4CCB00BDFC13 /* PostRemoteRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		BC1243A42B7B498D00BDFC13 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				BC1243A52B7B49A900BDFC13 /* PostResponseDto.swift */,
+				BC1243A72B7B4AC400BDFC13 /* CommentResponseDto.swift */,
+				BC1243A92B7B4B1300BDFC13 /* HashtagResponseDto.swift */,
+				BC1243AD2B7B4B9500BDFC13 /* PostTypeDto.swift */,
+				BC1243CA2B7B6DEF00BDFC13 /* LikeResponseDto.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		BC1243B12B7B4D0D00BDFC13 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				BC1243B22B7B4D1800BDFC13 /* PostError.swift */,
+				BC1243B42B7B4E6800BDFC13 /* CommonError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		BC1243BB2B7B522000BDFC13 /* UMC-Kitten-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC1243BC2B7B522000BDFC13 /* UMC_Kitten_iOSTests.swift */,
+				BC1243C52B7B524700BDFC13 /* ApiTest.swift */,
+			);
+			path = "UMC-Kitten-iOSTests";
+			sourceTree = "<group>";
+		};
+		BC1243D02B7B74B700BDFC13 /* RepositoryRxWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				BC1243D12B7B74C800BDFC13 /* PostRxRemoteRepository.swift */,
+			);
+			path = RepositoryRxWrapper;
+			sourceTree = "<group>";
+		};
+		BC1243D52B7B915F00BDFC13 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				BC1243D32B7B915B00BDFC13 /* Decoder.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		BC316B522B793AE20055FC0F /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				BC316B562B793DF00055FC0F /* MypageRepository.swift */,
+				BC1243CC2B7B704100BDFC13 /* PostRepository.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -303,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				BC3CECC62B4FACC300546377 /* UMC-Kitten-iOS */,
+				BC1243BB2B7B522000BDFC13 /* UMC-Kitten-iOSTests */,
 				BC3CECC52B4FACC300546377 /* Products */,
 				BC037B952B77A2CA0021721C /* Frameworks */,
 			);
@@ -312,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */,
+				BC1243BA2B7B522000BDFC13 /* UMC-Kitten-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -341,6 +439,8 @@
 		BC69320A2B7676CC002C7A9F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BC1243D02B7B74B700BDFC13 /* RepositoryRxWrapper */,
+				BC1243B12B7B4D0D00BDFC13 /* Error */,
 				BC087BEC2B793681001E34D4 /* Repository */,
 				BC087BE92B79355C001E34D4 /* ApiClient */,
 				BC69320C2B7676DC002C7A9F /* Dto */,
@@ -360,6 +460,7 @@
 		BC69320C2B7676DC002C7A9F /* Dto */ = {
 			isa = PBXGroup;
 			children = (
+				BC1243A42B7B498D00BDFC13 /* Post */,
 				BC037BA92B78FCD70021721C /* User */,
 				BC6932192B768392002C7A9F /* Mypage */,
 				BC037BAC2B78FD850021721C /* ApiResponseDto.swift */,
@@ -385,13 +486,13 @@
 			path = Mypage;
 			sourceTree = "<group>";
 		};
-		BC69321C2B768449002C7A9F /* Provider */ = {
+		BC69321C2B768449002C7A9F /* Config */ = {
 			isa = PBXGroup;
 			children = (
 				BC6932212B768718002C7A9F /* Plugin */,
 				BC69321F2B7684C4002C7A9F /* BaseMoyaProvider.swift */,
 			);
-			path = Provider;
+			path = Config;
 			sourceTree = "<group>";
 		};
 		BC6932212B768718002C7A9F /* Plugin */ = {
@@ -706,6 +807,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BC1243B92B7B522000BDFC13 /* UMC-Kitten-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC1243C02B7B522000BDFC13 /* Build configuration list for PBXNativeTarget "UMC-Kitten-iOSTests" */;
+			buildPhases = (
+				BC1243B62B7B522000BDFC13 /* Sources */,
+				BC1243B72B7B522000BDFC13 /* Frameworks */,
+				BC1243B82B7B522000BDFC13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC1243BF2B7B522000BDFC13 /* PBXTargetDependency */,
+			);
+			name = "UMC-Kitten-iOSTests";
+			productName = "UMC-Kitten-iOSTests";
+			productReference = BC1243BA2B7B522000BDFC13 /* UMC-Kitten-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BC3CECC32B4FACC300546377 /* UMC-Kitten-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC3CECD82B4FACC400546377 /* Build configuration list for PBXNativeTarget "UMC-Kitten-iOS" */;
@@ -749,6 +868,10 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					BC1243B92B7B522000BDFC13 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = BC3CECC32B4FACC300546377;
+					};
 					BC3CECC32B4FACC300546377 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -777,11 +900,19 @@
 			projectRoot = "";
 			targets = (
 				BC3CECC32B4FACC300546377 /* UMC-Kitten-iOS */,
+				BC1243B92B7B522000BDFC13 /* UMC-Kitten-iOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BC1243B82B7B522000BDFC13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC3CECC22B4FACC300546377 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -804,6 +935,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BC1243B62B7B522000BDFC13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC1243C62B7B524700BDFC13 /* ApiTest.swift in Sources */,
+				BC1243BD2B7B522000BDFC13 /* UMC_Kitten_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC3CECC02B4FACC300546377 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -811,12 +951,14 @@
 				BC3CECCC2B4FACC300546377 /* ViewController.swift in Sources */,
 				BCF1E5922B5D750E000F5960 /* ToggleMenuRow.swift in Sources */,
 				BCF1E5982B5D7943000F5960 /* TextField.swift in Sources */,
+				BC1243AC2B7B4B4800BDFC13 /* PostApiClient.swift in Sources */,
 				BCF1E5952B5D7792000F5960 /* NicknameSettingViewController.swift in Sources */,
 				BCC107EC2B6A65780043EC7D /* MyInfoImagePickerDelegate.swift in Sources */,
 				BCC107EE2B6A66800043EC7D /* MyPetSettingReactor.swift in Sources */,
 				BC8F50FB2B57947F00F56C90 /* ProfileSection.swift in Sources */,
 				BC037B902B773F340021721C /* KakaoAuthHelper.swift in Sources */,
 				BC9DC6482B722E3A00859EFE /* HomeViewController.swift in Sources */,
+				BC1243B32B7B4D1800BDFC13 /* PostError.swift in Sources */,
 				BCC107D92B68E9610043EC7D /* MyArticlePageTapBar.swift in Sources */,
 				BC69321B2B7683A4002C7A9F /* ChangeNicknameRequestDto.swift in Sources */,
 				BCC107DE2B68FF200043EC7D /* MyArticlePage.swift in Sources */,
@@ -825,15 +967,20 @@
 				BCF1E59C2B5E8E80000F5960 /* UIButton+Extension.swift in Sources */,
 				BCC107CD2B68D5550043EC7D /* PetModel.swift in Sources */,
 				BC037B932B77A0490021721C /* NaverAuthHelper.swift in Sources */,
+				BC1243CB2B7B6DEF00BDFC13 /* LikeResponseDto.swift in Sources */,
 				BCF1E5902B5D5BE3000F5960 /* Observable+Extension.swift in Sources */,
 				BC6E40C22B552A9400BA2CE1 /* MypageReactor.swift in Sources */,
 				BCB6CA3B2B73DA120096DEAD /* TodayFeedSection.swift in Sources */,
 				BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */,
 				BC6932092B765806002C7A9F /* PostModel.swift in Sources */,
+				BC1243CD2B7B704100BDFC13 /* PostRepository.swift in Sources */,
 				BC8F51002B57BA1A00F56C90 /* MypageMenuSection.swift in Sources */,
+				BC1243B02B7B4CCB00BDFC13 /* PostRemoteRepository.swift in Sources */,
 				BC037BA32B78A5580021721C /* Date+Extension.swift in Sources */,
 				BCC107C22B68ACA10043EC7D /* SelectCard.swift in Sources */,
+				BC1243B52B7B4E6800BDFC13 /* CommonError.swift in Sources */,
 				BC9DC6552B723FB700859EFE /* PopularPostSection.swift in Sources */,
+				BC1243AE2B7B4B9500BDFC13 /* PostTypeDto.swift in Sources */,
 				BCC107C52B68C8C20043EC7D /* MyPetCardCell.swift in Sources */,
 				BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */,
 				BC9DC6592B7247CF00859EFE /* UIColor+Extension.swift in Sources */,
@@ -854,9 +1001,11 @@
 				BC3CECCA2B4FACC300546377 /* SceneDelegate.swift in Sources */,
 				BCB6CA3F2B73DEA60096DEAD /* MoreButton.swift in Sources */,
 				BCF1E58E2B5D5852000F5960 /* MyInfoReactor.swift in Sources */,
+				BC1243D22B7B74C800BDFC13 /* PostRxRemoteRepository.swift in Sources */,
 				BCC107BD2B68A1CA0043EC7D /* MyPetSettingViewController.swift in Sources */,
 				BC9DC6532B72377300859EFE /* HomeConstant.swift in Sources */,
 				BCB6CA3D2B73DB3A0096DEAD /* TodayFeedCell.swift in Sources */,
+				BC1243AA2B7B4B1300BDFC13 /* HashtagResponseDto.swift in Sources */,
 				BC037BA02B78A1530021721C /* FeedModel.swift in Sources */,
 				BC8F50FE2B579F7000F56C90 /* UIImageView+Extension.swift in Sources */,
 				BCC107E02B6901A80043EC7D /* MyArticlePageTableViewCell.swift in Sources */,
@@ -865,7 +1014,9 @@
 				BCC107E62B69138E0043EC7D /* MainViewController.swift in Sources */,
 				BC316B572B793DF00055FC0F /* MypageRepository.swift in Sources */,
 				BC6E40CD2B552BC600BA2CE1 /* BaseView.swift in Sources */,
+				BC1243A82B7B4AC400BDFC13 /* CommentResponseDto.swift in Sources */,
 				BCF1E58C2B5D54E3000F5960 /* MyInfoMenuSection.swift in Sources */,
+				BC1243D42B7B915B00BDFC13 /* Decoder.swift in Sources */,
 				BC6E40CA2B552BC600BA2CE1 /* BaseViewController.swift in Sources */,
 				BCC107CF2B68E1390043EC7D /* UIImage+Extension.swift in Sources */,
 				BC037BAB2B78FD6A0021721C /* UserResponseDto.swift in Sources */,
@@ -875,6 +1026,7 @@
 				BC037BA82B78DFCE0021721C /* LoginTestViewController.swift in Sources */,
 				BCC91D7D2B58D77900D02BF0 /* MyPetCard.swift in Sources */,
 				BC037BAD2B78FD850021721C /* ApiResponseDto.swift in Sources */,
+				BC1243A62B7B49A900BDFC13 /* PostResponseDto.swift in Sources */,
 				BCC107E42B690BFF0043EC7D /* BaseTableViewCell.swift in Sources */,
 				BC69321E2B76845E002C7A9F /* AuthTokenPlugin.swift in Sources */,
 				BCC107CA2B68CD120043EC7D /* BaseCollectionView.swift in Sources */,
@@ -885,6 +1037,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC1243BF2B7B522000BDFC13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC3CECC32B4FACC300546377 /* UMC-Kitten-iOS */;
+			targetProxy = BC1243BE2B7B522000BDFC13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BC3CECCD2B4FACC300546377 /* Main.storyboard */ = {
@@ -906,6 +1066,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BC1243C12B7B522000BDFC13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N8MX74Y447;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "doyeon.UMC-Kitten-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UMC-Kitten-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UMC-Kitten-iOS";
+			};
+			name = Debug;
+		};
+		BC1243C22B7B522000BDFC13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N8MX74Y447;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "doyeon.UMC-Kitten-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UMC-Kitten-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UMC-Kitten-iOS";
+			};
+			name = Release;
+		};
 		BC3CECD62B4FACC400546377 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BC6932112B767809002C7A9F /* Config.xcconfig */;
@@ -1098,6 +1294,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BC1243C02B7B522000BDFC13 /* Build configuration list for PBXNativeTarget "UMC-Kitten-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1243C12B7B522000BDFC13 /* Debug */,
+				BC1243C22B7B522000BDFC13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BC3CECBF2B4FACC300546377 /* Build configuration list for PBXProject "UMC-Kitten-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

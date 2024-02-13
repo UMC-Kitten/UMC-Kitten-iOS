@@ -22,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Naver auth setting
         NaverAuthHelper.initializeNaverAuthSdk()
         
+        // Temp token setting
+        UserDefaults.standard.setValue("eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnZW50bGU5ODI4QG5hdmVyLmNvbSIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzA3ODI3OTAxLCJleHAiOjE3MDc4MzE1MDF9.QhM6xkYDjo6_wBivLDs9mJ2Dui9alsP4jVqs6tBadS0I7Tf6XL3J_pqkMETo3OQ-kQz2MkXM2vSDAvmTzmj4oQ", forKey: UserDefaultsConstant.JWT_KEY)
+        
         return true
     }
 
