@@ -11,7 +11,7 @@ struct MypageRequestDto {
     
     struct ChangeNicknameRequestDto: Codable {
         let id: Int64
-        let name: String
+        let nickname: String
     }
     
     struct ChangeHasPetRequestDto: Codable {

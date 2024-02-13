@@ -15,9 +15,10 @@ class MypageRemoteRepository: MypageRepository {
     func getUserInfo(
         completion: @escaping (_ result: UserModel?, _ error: Error?) -> Void
     ) {
-        let userId = Int64(UserDefaults.standard.integer(forKey: UserDefaultsConstant.USER_ID_KEY))
+        let userId = Int64(UserDefaults
+            .standard.integer(forKey: UserDefaultsConstant.USER_ID_KEY))
         
-        client.request(.getUserInfo(id: userId)) { result in
+        client.request(.getUserInfo(id: userId)) { [weak self] result in
             switch result {
             case .success(let response):
                 do {
@@ -28,25 +29,12 @@ class MypageRemoteRepository: MypageRepository {
                     ).result
                     
                     // dto를 도메인 객체로 변환 후 전달
-                    let userModel = UserModel(
-                        id: userId,
-                        nickname: userDto.nickname,
-                        profileImage: userDto.profileImage,
-                        hasPet: userDto.hasPet,
-                        pets: userDto.pets.map {
-                            PetModel(
-                                id: $0.id,
-                                name: $0.name,
-                                species: PetSpeciesType(rawValue: $0.type.rawValue)! ,
-                                gender: PetGenderType(rawValue: $0.gender.rawValue)!,
-                                age: 2)
-                        }
+                    let userModel = self?.convertToDomainModel(
+                        userDto: userDto,
+                        userId: userId
                     )
-                    
                     completion(userModel, nil)
                     
-                } catch let error as DecodingError{
-                    completion(nil, CommonError.jsonDecodingFailed(decodingError: error as DecodingError))
                 } catch let error {
                     completion(nil, CommonError.failed(error: error))
                 }
@@ -57,4 +45,50 @@ class MypageRemoteRepository: MypageRepository {
         }
     }
     
+    func changeUserNickname(
+        nickname: String,
+        completion: @escaping (_ isSuccess: Bool?, _ error: Error?) -> Void
+    ) {
+        let userId = Int64(UserDefaults
+            .standard.integer(forKey: UserDefaultsConstant.USER_ID_KEY))
+        
+        client.request(
+            .changeNickname(
+                dto: MypageRequestDto.ChangeNicknameRequestDto(
+                    id: userId,
+                    nickname: nickname
+                )
+            )
+        ) { result in
+            switch result {
+            case .success(_):
+                print(nickname)
+                completion(true, nil)
+                
+            case .failure(let error):
+                completion(nil, CommonError.failed(error: error))
+            }
+        }
+    }
+    
+    private func convertToDomainModel(
+        userDto: MypageResponseDto.UserResponseDto,
+        userId: Int64
+    ) -> UserModel {
+        return UserModel(
+            id: userId,
+            nickname: userDto.nickname,
+            profileImage: userDto.profileImage,
+            hasPet: userDto.hasPet,
+            pets: userDto.pets.map { petDto in
+                PetModel(
+                    id: petDto.id,
+                    name: petDto.name,
+                    species: PetSpeciesType(rawValue: petDto.type.rawValue)!,
+                    gender: PetGenderType(rawValue: petDto.gender.rawValue)!,
+                    age: 2 // FIXME: 나이가 db에 저장이 안됨
+                )
+            }
+        )
+    }
 }

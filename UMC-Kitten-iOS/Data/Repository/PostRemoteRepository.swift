@@ -41,8 +41,6 @@ class PostRemoteRepository: PostRepository {
                     }
                     completion(postModels, nil)
                     
-                } catch let error as DecodingError{
-                    completion(nil, CommonError.jsonDecodingFailed(decodingError: error as DecodingError))
                 } catch let error {
                     completion(nil, CommonError.failed(error: error))
                 }

@@ -30,5 +30,20 @@ class MypageRxRepository {
             
             return Disposables.create()
         }
+    }    
+    
+    func changeUserNickname(nickname: String) -> Observable<Bool> {
+        return Observable.create { observer in
+            self.repository.changeUserNickname(nickname: nickname) { result, error in
+                if let error = error {
+                    observer.onError(error)
+                } else if let result = result {
+                    observer.onNext(result)
+                    observer.onCompleted()
+                }
+            }
+            
+            return Disposables.create()
+        }
     }
 }

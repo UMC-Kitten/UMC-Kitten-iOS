@@ -49,6 +49,10 @@ extension BaseViewController {
     func pushView(vc: UIViewController, animated: Bool = true) {
         self.navigationController?.pushViewController(vc, animated: animated)
     }
+    
+    func backView(animated: Bool = true) {
+        self.navigationController?.popViewController(animated: animated)
+    }
 }
 
 

@@ -45,6 +45,7 @@
 		BC1243EE2B7BC2BF00BDFC13 /* PetGenderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243ED2B7BC2BF00BDFC13 /* PetGenderType.swift */; };
 		BC1243F12B7BCFE900BDFC13 /* RxSwift+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243F02B7BCFE900BDFC13 /* RxSwift+Extension.swift */; };
 		BC1243F62B7BDA1100BDFC13 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243F52B7BDA1100BDFC13 /* AlertHelper.swift */; };
+		BC1243F82B7BE24C00BDFC13 /* NicknameSettingReacotr.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243F72B7BE24C00BDFC13 /* NicknameSettingReacotr.swift */; };
 		BC316B552B793BC50055FC0F /* UserDefaultsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */; };
 		BC316B572B793DF00055FC0F /* MypageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B562B793DF00055FC0F /* MypageRepository.swift */; };
 		BC316B5A2B79451F0055FC0F /* RxAppState in Frameworks */ = {isa = PBXBuildFile; productRef = BC316B592B79451F0055FC0F /* RxAppState */; };
@@ -186,6 +187,7 @@
 		BC1243ED2B7BC2BF00BDFC13 /* PetGenderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetGenderType.swift; sourceTree = "<group>"; };
 		BC1243F02B7BCFE900BDFC13 /* RxSwift+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extension.swift"; sourceTree = "<group>"; };
 		BC1243F52B7BDA1100BDFC13 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		BC1243F72B7BE24C00BDFC13 /* NicknameSettingReacotr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingReacotr.swift; sourceTree = "<group>"; };
 		BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstant.swift; sourceTree = "<group>"; };
 		BC316B562B793DF00055FC0F /* MypageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageRepository.swift; sourceTree = "<group>"; };
 		BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-Kitten-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -822,6 +824,7 @@
 			isa = PBXGroup;
 			children = (
 				BCF1E5942B5D7792000F5960 /* NicknameSettingViewController.swift */,
+				BC1243F72B7BE24C00BDFC13 /* NicknameSettingReacotr.swift */,
 			);
 			path = NicknameSetting;
 			sourceTree = "<group>";
@@ -1012,6 +1015,7 @@
 				BC1243EE2B7BC2BF00BDFC13 /* PetGenderType.swift in Sources */,
 				BC1243B52B7B4E6800BDFC13 /* CommonError.swift in Sources */,
 				BC9DC6552B723FB700859EFE /* PopularPostSection.swift in Sources */,
+				BC1243F82B7BE24C00BDFC13 /* NicknameSettingReacotr.swift in Sources */,
 				BCC107C52B68C8C20043EC7D /* MyPetCardCell.swift in Sources */,
 				BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */,
 				BC9DC6592B7247CF00859EFE /* UIColor+Extension.swift in Sources */,

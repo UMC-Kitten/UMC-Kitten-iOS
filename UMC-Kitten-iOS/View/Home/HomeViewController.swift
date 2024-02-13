@@ -62,7 +62,7 @@ class HomeViewController: BaseViewController {
         
         contentView.snp.makeConstraints {
             $0.edges.width.equalTo(scrollView)
-//            $0.height.equalTo(1250)
+            //            $0.height.equalTo(1250)
         }
         
         titleLabel.snp.makeConstraints {
@@ -99,14 +99,15 @@ class HomeViewController: BaseViewController {
             .map { $0.registeredPets }
             .bind(to: registeredPetsSection.collectionView.rx.items(
                 cellIdentifier: "cell",
-                cellType: RegisteredPetCell.self)){ (row, pet, cell) in
-                    cell.configure(
-                        petImageName: pet.imageName,
-                        petName: pet.name,
-                        petInfo: "\(pet.species) / \(pet.gender) / \(pet.age)살"
-                    )
-                }
-                .disposed(by: disposeBag)
+                cellType: RegisteredPetCell.self)
+            ){ (row, pet, cell) in
+                cell.configure(
+                    petImageName: pet.imageName,
+                    petName: pet.name,
+                    petInfo: "\(pet.species) / \(pet.gender) / \(pet.age)살"
+                )
+            }
+            .disposed(by: disposeBag)
         
         // 인기 게시글 바인딩
         reactor.state
@@ -115,16 +116,17 @@ class HomeViewController: BaseViewController {
             }
             .bind(to: popularPostSection.collectionView.rx.items(
                 cellIdentifier: "cell",
-                cellType: PopularPostCell.self)){ (row, post, cell) in
-                    cell.configure(
-                        boardTitle: post.boardType.krDescription,
-                        postTitle: post.postTitle,
-                        heartCount: post.likeCount,
-                        commentCount: post.commentCount,
-                        postInfo: "| \(post.date.timeAgoDisplay()) | \(post.writer)"
-                    )
-                }
-                .disposed(by: disposeBag)
+                cellType: PopularPostCell.self)
+            ){ (row, post, cell) in
+                cell.configure(
+                    boardTitle: post.boardType.krDescription,
+                    postTitle: post.postTitle,
+                    heartCount: post.likeCount,
+                    commentCount: post.commentCount,
+                    postInfo: "| \(post.date.timeAgoDisplay()) | \(post.writer)"
+                )
+            }
+            .disposed(by: disposeBag)
         
         // 오늘의 피드 바인딩
         reactor.state
@@ -133,13 +135,14 @@ class HomeViewController: BaseViewController {
             }
             .bind(to: todayFeedSection.collectionView.rx.items(
                 cellIdentifier: "cell",
-                cellType: TodayFeedCell.self)){ (row, post, cell) in
-                    cell.configure(
-                        feedImageName: post.imageUrl ?? "cat-sample",
-                        feedTitle: post.body
-                    )
-                }
-                .disposed(by: disposeBag)
+                cellType: TodayFeedCell.self)
+            ){ (row, post, cell) in
+                cell.configure(
+                    feedImageName: post.imageUrl ?? "cat-sample",
+                    feedTitle: post.body
+                )
+            }
+            .disposed(by: disposeBag)
         
         // - event binding
         // 데이터 로드 시점 바인딩

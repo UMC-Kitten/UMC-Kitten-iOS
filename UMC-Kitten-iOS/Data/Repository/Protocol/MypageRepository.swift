@@ -12,4 +12,9 @@ protocol MypageRepository {
     func getUserInfo(
         completion: @escaping (_ result: UserModel?, _ error: Error?) -> Void
     )
+    
+    func changeUserNickname(
+        nickname: String,
+        completion: @escaping (_ isSuccess: Bool?, _ error: Error?) -> Void
+    ) 
 }
