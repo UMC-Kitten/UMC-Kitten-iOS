@@ -29,11 +29,13 @@ class MypageRemoteRepository: MypageRepository {
                     
                     // dto를 도메인 객체로 변환 후 전달
                     let userModel = UserModel(
+                        id: userId,
                         nickname: userDto.nickname,
                         profileImage: userDto.profileImage,
                         hasPet: userDto.hasPet,
                         pets: userDto.pets.map {
                             PetModel(
+                                id: $0.id,
                                 name: $0.name,
                                 species: PetSpeciesType(rawValue: $0.type.rawValue)! ,
                                 gender: PetGenderType(rawValue: $0.gender.rawValue)!,

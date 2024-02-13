@@ -88,13 +88,15 @@ class MypageViewController: BaseViewController {
     
     override func setBind() {
         
-        // data binding
+        // - data binding
+        // 유저 닉네임 바인딩
         reactor.state
             .map { $0.user?.nickname }
             .distinctUntilChanged()
             .bind(to: profileSection.ownerNameLabel.rx.text)
             .disposed(by: disposeBag)
         
+        // 등록된 반려동물 카드 바인딩
         reactor.state
             .map { $0.user?.pets ?? [] }
             .subscribe(onNext: { [weak self] pets in
@@ -102,12 +104,14 @@ class MypageViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
         
-        // event binding
+        // - action binding
+        // 데이터 로드 시점 바인딩
         rx.viewWillAppear
             .map { _ in .viewWillAppear }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        // 관리 버튼 탭
         profileSection.managementButton.rx.tapGesture()
             .withUnretained(self)
             .skip(1)
@@ -116,6 +120,7 @@ class MypageViewController: BaseViewController {
             }
             .disposed(by: self.disposeBag)
         
+        // 내 정보 메뉴 탭
         mypageMenuSection.myInfoSetting.rx.tapGesture()
             .withUnretained(self)
             .skip(1)
@@ -124,6 +129,7 @@ class MypageViewController: BaseViewController {
             }
             .disposed(by: self.disposeBag)
         
+        // 내 게시글 메뉴 탭
         mypageMenuSection.myArticleSetting.rx.tapGesture()
             .withUnretained(self)
             .skip(1)

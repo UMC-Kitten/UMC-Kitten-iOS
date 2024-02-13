@@ -20,6 +20,7 @@ import Foundation
 //}
 
 struct UserModel {
+    let id: Int64
     let nickname: String
     let profileImage: String?
     let hasPet: Bool

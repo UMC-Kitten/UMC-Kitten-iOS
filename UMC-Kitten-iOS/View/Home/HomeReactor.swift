@@ -47,7 +47,6 @@ extension HomeReactor {
 //                .init(name: "치즈", species: "고양이", gender: "수컷", age: 2),
 //                .init(name: "고등어", species: "고양이", gender: "수컷", age: 4),
             ]))
-
             
             // 인기 게시글 받아오기
             let postObservable = postRepository

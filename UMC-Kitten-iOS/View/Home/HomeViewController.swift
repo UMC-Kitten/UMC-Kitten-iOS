@@ -93,11 +93,10 @@ class HomeViewController: BaseViewController {
     }
     
     override func setBind() {
-        // data binding
+        // - data binding
+        // 내 반려동물 정보 바인딩
         reactor.state
-            .map {
-                $0.registeredPets
-            }
+            .map { $0.registeredPets }
             .bind(to: registeredPetsSection.collectionView.rx.items(
                 cellIdentifier: "cell",
                 cellType: RegisteredPetCell.self)){ (row, pet, cell) in
@@ -109,6 +108,7 @@ class HomeViewController: BaseViewController {
                 }
                 .disposed(by: disposeBag)
         
+        // 인기 게시글 바인딩
         reactor.state
             .map {
                 $0.popularPosts.prefix(HomeConstant.POPULAR_POST_DISPLAY_NUMBER)
@@ -126,6 +126,7 @@ class HomeViewController: BaseViewController {
                 }
                 .disposed(by: disposeBag)
         
+        // 오늘의 피드 바인딩
         reactor.state
             .map {
                 $0.todayFeeds.prefix(HomeConstant.TODAY_FEED_DISPLAY_NUMBER)
@@ -140,7 +141,8 @@ class HomeViewController: BaseViewController {
                 }
                 .disposed(by: disposeBag)
         
-        // event binding
+        // - event binding
+        // 데이터 로드 시점 바인딩
         rx.viewWillAppear
             .map { _ in .viewWillAppear }
             .bind(to: reactor.action)

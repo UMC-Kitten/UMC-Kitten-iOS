@@ -9,6 +9,8 @@ import Foundation
 
 /// 반려동물 정보
 struct PetModel {
+    /// 등록된 고유 아이디
+    let id: Int64
     /// 반려동물 이미지 이름
     let imageName: String = "cat-sample" //FIXME: URL로 변경
     /// 반려동물 이름

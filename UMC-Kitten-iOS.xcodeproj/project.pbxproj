@@ -43,6 +43,8 @@
 		BC1243EA2B7BC14000BDFC13 /* MypageRxRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243E92B7BC14000BDFC13 /* MypageRxRepository.swift */; };
 		BC1243EC2B7BC29D00BDFC13 /* PetSpeciesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243EB2B7BC29D00BDFC13 /* PetSpeciesType.swift */; };
 		BC1243EE2B7BC2BF00BDFC13 /* PetGenderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243ED2B7BC2BF00BDFC13 /* PetGenderType.swift */; };
+		BC1243F12B7BCFE900BDFC13 /* RxSwift+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243F02B7BCFE900BDFC13 /* RxSwift+Extension.swift */; };
+		BC1243F62B7BDA1100BDFC13 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243F52B7BDA1100BDFC13 /* AlertHelper.swift */; };
 		BC316B552B793BC50055FC0F /* UserDefaultsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */; };
 		BC316B572B793DF00055FC0F /* MypageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B562B793DF00055FC0F /* MypageRepository.swift */; };
 		BC316B5A2B79451F0055FC0F /* RxAppState in Frameworks */ = {isa = PBXBuildFile; productRef = BC316B592B79451F0055FC0F /* RxAppState */; };
@@ -182,6 +184,8 @@
 		BC1243E92B7BC14000BDFC13 /* MypageRxRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageRxRepository.swift; sourceTree = "<group>"; };
 		BC1243EB2B7BC29D00BDFC13 /* PetSpeciesType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSpeciesType.swift; sourceTree = "<group>"; };
 		BC1243ED2B7BC2BF00BDFC13 /* PetGenderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetGenderType.swift; sourceTree = "<group>"; };
+		BC1243F02B7BCFE900BDFC13 /* RxSwift+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extension.swift"; sourceTree = "<group>"; };
+		BC1243F52B7BDA1100BDFC13 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstant.swift; sourceTree = "<group>"; };
 		BC316B562B793DF00055FC0F /* MypageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageRepository.swift; sourceTree = "<group>"; };
 		BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-Kitten-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -473,6 +477,7 @@
 			children = (
 				BC037B8F2B773F340021721C /* KakaoAuthHelper.swift */,
 				BC037B922B77A0490021721C /* NaverAuthHelper.swift */,
+				BC1243F52B7BDA1100BDFC13 /* AlertHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -609,6 +614,7 @@
 				BCC107CE2B68E1390043EC7D /* UIImage+Extension.swift */,
 				BC9DC6582B7247CF00859EFE /* UIColor+Extension.swift */,
 				BC037BA22B78A5580021721C /* Date+Extension.swift */,
+				BC1243F02B7BCFE900BDFC13 /* RxSwift+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1016,6 +1022,7 @@
 				BCC107D62B68E7590043EC7D /* PageViewControllerDelegate.swift in Sources */,
 				BCF1E58A2B5D4D8F000F5960 /* ProfileImageSection.swift in Sources */,
 				BC8F51022B57BB2B00F56C90 /* NavigationMenuRow.swift in Sources */,
+				BC1243F12B7BCFE900BDFC13 /* RxSwift+Extension.swift in Sources */,
 				BCC107DC2B68E9830043EC7D /* PageTapBarItem.swift in Sources */,
 				BCF1E5862B5D496E000F5960 /* MyInfoViewController.swift in Sources */,
 				BC1243DE2B7BB85800BDFC13 /* MypageRequestDto.swift in Sources */,
@@ -1050,6 +1057,7 @@
 				BC6E40C02B55291800BA2CE1 /* MypageViewController.swift in Sources */,
 				BCC107C82B68C90A0043EC7D /* MyPetSetting+CollectionViewDelegate.swift in Sources */,
 				BC087BEB2B7935B1001E34D4 /* MypageRemoteRepository.swift in Sources */,
+				BC1243F62B7BDA1100BDFC13 /* AlertHelper.swift in Sources */,
 				BC037BA82B78DFCE0021721C /* LoginTestViewController.swift in Sources */,
 				BCC91D7D2B58D77900D02BF0 /* MyPetCard.swift in Sources */,
 				BC037BAD2B78FD850021721C /* ApiResponseDto.swift in Sources */,

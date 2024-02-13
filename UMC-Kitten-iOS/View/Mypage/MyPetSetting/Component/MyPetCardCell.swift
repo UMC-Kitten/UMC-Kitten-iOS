@@ -10,6 +10,8 @@ import SnapKit
 
 class MyPetCardCell: BaseCollectionViewCell {
     
+    // MARK: Data
+    var petId: Int64 = 0
     private var isOverlayInitialized: Bool = false
     
     // MARK: UI Component
@@ -74,10 +76,12 @@ class MyPetCardCell: BaseCollectionViewCell {
     }
 
     func configure(
+        petId: Int64,
         petImageName: String,
         petName: String,
         petInfo: String
     ) {
+        self.petId = petId
         self.petImageView.image = UIImage(named: petImageName)
         self.petNameLabel.text = petName
         self.petInfoLabel.text = petInfo
