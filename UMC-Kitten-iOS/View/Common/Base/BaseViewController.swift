@@ -49,6 +49,14 @@ extension BaseViewController {
     func pushView(vc: UIViewController, animated: Bool = true) {
         self.navigationController?.pushViewController(vc, animated: animated)
     }
+    
+    func configureNavigationBarTransparentAndTitleless() {
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.topItem?.title = ""
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.standardAppearance.backgroundColor = .white
+        navigationController?.navigationBar.standardAppearance.shadowColor = .clear
+    }
 }
 
 

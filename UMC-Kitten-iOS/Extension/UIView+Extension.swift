@@ -10,6 +10,11 @@ import UIKit
 
 extension UIView {
     
+    convenience init(backgroundColor: UIColor = .white) {
+        self.init()
+        self.backgroundColor = backgroundColor
+    }
+    
     // FIXME: 그림자 레이어랑 코너 레이어랑 분리해야함
     func addShadowWithRoundedCorners(cornerRadius: CGFloat = 10) {
         backgroundColor = .white

@@ -41,9 +41,16 @@ extension UILabel {
         }
     }
     
-    convenience init(staticText: String) {
+    convenience init(
+        staticText: String,
+        textColor: UIColor = .black,
+        fontSize: CGFloat = 16,
+        fontWiehgt: FontWeight = .regular
+    ) {
         self.init()
         self.text = staticText
+        self.textColor = textColor
+        self.setDefaultFont(size: fontSize, weight: fontWiehgt)
     }
     
 }

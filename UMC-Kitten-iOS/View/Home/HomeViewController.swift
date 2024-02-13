@@ -17,11 +17,14 @@ class HomeViewController: BaseViewController {
     private let reactor = HomeReactor()
     
     // MARK: UI Container
-    private let scrollView = UIScrollView()
-    private let contentView = UIView()
+    private let scrollView: BaseScrollView = .init()
     
     // MARK: UI Component
-    private let titleLabel: UILabel = .init(staticText: "나는 집사")
+    private let titleLabel: UILabel = .init(
+        staticText: "나는 집사",
+        fontSize: 24,
+        fontWiehgt: .bold
+    )
     private let registeredPetsSection: RegisteredPetsSection = .init()
     private let popularPostSection: PopularPostSection = .init()
     private let todayFeedSection: TodayFeedSection = .init()
@@ -29,67 +32,31 @@ class HomeViewController: BaseViewController {
     
     // MARK: Set Method
     override func setStyle() {
-        navigationController?.navigationBar.tintColor = .black
-        navigationController?.navigationBar.topItem?.title = ""
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.standardAppearance.backgroundColor = .white
-        navigationController?.navigationBar.standardAppearance.shadowColor = .clear
-        
-        scrollView.backgroundColor = .white
-        scrollView.showsVerticalScrollIndicator = false
-        
-        contentView.backgroundColor = .white
-        
-        titleLabel.setDefaultFont(size: 24, weight: .bold)
+        configureNavigationBarTransparentAndTitleless()
     }
     
-    override func setDelegate() { }
-    
     override func setHierarchy() {
-        view.addSubview(scrollView)
-        
-        scrollView.addSubview(contentView)
-        
-        [titleLabel, registeredPetsSection, popularPostSection,
-         todayFeedSection, homeBottomSection]
-            .forEach { contentView.addSubview($0) }
+        HierarchySupporter.setupScrollView(
+            in: view,
+            scrollView: scrollView,
+            addingSubviews: [titleLabel, registeredPetsSection, popularPostSection,
+                             todayFeedSection, homeBottomSection]
+        )
     }
     
     override func setLayout() {
-        scrollView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        
-        contentView.snp.makeConstraints {
-            $0.edges.width.equalTo(scrollView)
-//            $0.height.equalTo(1250)
-        }
+        LayoutSupporter.layoutScrollView(scrollView)
         
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(-10)
             $0.left.equalToSuperview().offset(20)
         }
         
-        registeredPetsSection.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(10)
-            $0.left.right.equalToSuperview()
-        }
-        
-        popularPostSection.snp.makeConstraints {
-            $0.top.equalTo(registeredPetsSection.snp.bottom).offset(0)
-            $0.left.right.equalToSuperview()
-        }
-        
-        todayFeedSection.snp.makeConstraints {
-            $0.top.equalTo(popularPostSection.snp.bottom).offset(0)
-            $0.left.right.equalToSuperview()
-        }
-        
-        homeBottomSection.snp.makeConstraints {
-            $0.top.equalTo(todayFeedSection.snp.bottom).offset(0)
-            $0.left.right.equalToSuperview()
-            $0.bottom.equalToSuperview()
-        }
+        LayoutSupporter.layoutViewsSequentially(
+            [registeredPetsSection, popularPostSection, todayFeedSection, homeBottomSection],
+            startingBelow: titleLabel,
+            verticalSpacing: 0
+        )
     }
     
     override func setBind() {
@@ -149,4 +116,5 @@ class HomeViewController: BaseViewController {
     }
     
 }
+
 
