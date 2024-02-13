@@ -11,9 +11,14 @@ import ReactorKit
 
 class HomeReactor: Reactor {
     
-    let postRepository: PostRxRemoteRepository
+    private let mypageRepository: MypageRxRepository
+    private let postRepository: PostRxRemoteRepository
     
-    init(postRepository: PostRepository) {
+    init(
+        mypageRepository: MypageRepository,
+        postRepository: PostRepository
+    ) {
+        self.mypageRepository = MypageRxRepository(repository: mypageRepository)
         self.postRepository = PostRxRemoteRepository(repository: postRepository)
     }
     
@@ -42,11 +47,15 @@ extension HomeReactor {
         switch action {
         case .viewWillAppear:
             
-            // 등록된 반려동물 정보 받아오기
-            let petObservable = Observable.just(Mutation.setRegisteredPets(pets: [
-//                .init(name: "치즈", species: "고양이", gender: "수컷", age: 2),
-//                .init(name: "고등어", species: "고양이", gender: "수컷", age: 4),
-            ]))
+            // 유저 정보 가져와서 반려동물 정보 가져오기
+            let petObservable = mypageRepository
+                .getUserInfo()
+                .map { $0.pets }
+                .map { Mutation.setRegisteredPets(pets: $0) }
+                .catch { error in
+                    print("Error loading pets: ", error)
+                    return Observable.empty()
+                }
             
             // 인기 게시글 받아오기
             let postObservable = postRepository

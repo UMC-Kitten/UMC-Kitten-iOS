@@ -14,7 +14,10 @@ import ReactorKit
 class HomeViewController: BaseViewController {
     
     // MARK: Dependency
-    private let reactor = HomeReactor(postRepository: PostRemoteRepository())
+    private let reactor = HomeReactor(
+        mypageRepository: MypageRemoteRepository(),
+        postRepository: PostRemoteRepository()
+    )
     
     // MARK: UI Container
     private let scrollView = UIScrollView()
@@ -104,7 +107,7 @@ class HomeViewController: BaseViewController {
                 cell.configure(
                     petImageName: pet.imageName,
                     petName: pet.name,
-                    petInfo: "\(pet.species) / \(pet.gender) / \(pet.age)살"
+                    petInfo: "\(pet.species.krDescription) / \(pet.gender.krDescription) / \(pet.age)살"
                 )
             }
             .disposed(by: disposeBag)

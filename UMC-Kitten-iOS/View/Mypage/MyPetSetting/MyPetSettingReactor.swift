@@ -11,7 +11,7 @@ import ReactorKit
 
 class MyPetSettingReactor: Reactor {
     
-    let mypageRepository: MypageRxRepository
+    private let mypageRepository: MypageRxRepository
     
     init(mypageRepository: MypageRepository) {
         self.mypageRepository = MypageRxRepository(repository: mypageRepository)
