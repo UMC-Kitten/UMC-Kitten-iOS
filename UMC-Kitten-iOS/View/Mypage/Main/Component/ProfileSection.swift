@@ -21,10 +21,6 @@ class ProfileSection: BaseView {
     
     private let myPetsInfoTitleLabel: UILabel = .init(staticText: "내 반려동물 정보")
     let managementButton: UILabel = .init(staticText: "관리")
-    private let myPetCells: [MyPetCard] = [
-        .init(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷"),
-        .init(petImageName: "cat-sample", petName: "무냥이", petInfo: "고양이/수컷")
-    ]
     
     // MARK: Set Method
     
@@ -56,11 +52,9 @@ class ProfileSection: BaseView {
         
         [myPetsContainer]
             .forEach { myPetsScrollView.addSubview($0) }
-        
-        myPetCells.forEach { myPetsContainer.addArrangedSubview($0) }
     }
     
-    override func setLayout() { 
+    override func setLayout() {
         profileImageView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(20)
             $0.leading.equalToSuperview()
@@ -94,13 +88,31 @@ class ProfileSection: BaseView {
             $0.bottom.equalToSuperview()
         }
         
+    }
+    
+    func configurePets(pets: [PetModel]) {
+        // 배열 속성 지정
         myPetsContainer.snp.makeConstraints {
-            if (myPetCells.count < 3) {
+            if (pets.count < 3) {
                 $0.centerX.equalToSuperview()
             } else {
                 $0.edges.equalToSuperview()
             }
             $0.height.equalToSuperview()
+        }
+        
+        // 이전 값들 지우기
+        myPetsContainer.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        
+        // 새 반려동물 정보 세팅
+        pets.forEach {
+            myPetsContainer.addArrangedSubview(
+                MyPetCard(
+                    petImageName: "cat-sample",
+                    petName: $0.name,
+                    petInfo: "\($0.species.krDescription)/\($0.gender.krDescription)"
+                )
+            )
         }
     }
     

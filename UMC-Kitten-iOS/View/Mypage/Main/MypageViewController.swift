@@ -15,7 +15,7 @@ import ReactorKit
 class MypageViewController: BaseViewController {
     
     // MARK: Dependency
-    private let reactor = MypageReactor()
+    private let reactor = MypageReactor(mypageRepository: MypageRemoteRepository())
     
     // MARK: UI Container
     private let scrollView = UIScrollView()
@@ -66,7 +66,6 @@ class MypageViewController: BaseViewController {
         
         contentView.snp.makeConstraints {
             $0.edges.width.equalTo(scrollView)
-            $0.height.equalTo(900)
         }
         
         profileSection.snp.makeConstraints {
@@ -82,17 +81,37 @@ class MypageViewController: BaseViewController {
         versionLabel.snp.makeConstraints {
             $0.top.equalTo(mypageMenuSection.snp.bottom).offset(30)
             $0.leading.equalToSuperview().inset(20)
+            $0.bottom.equalToSuperview()
         }
         
     }
     
     override func setBind() {
-        profileSection.managementButton.rx.tapGesture()
-            .withUnretained(self)
-            .map { _ in .tapMyPetManagementButton }
-            .bind(to: reactor.action)
-            .disposed(by: self.disposeBag)
         
+        // - data binding
+        // 유저 닉네임 바인딩
+        reactor.state
+            .map { $0.user?.nickname }
+            .distinctUntilChanged()
+            .bind(to: profileSection.ownerNameLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        // 등록된 반려동물 카드 바인딩
+        reactor.state
+            .map { $0.user?.pets ?? [] }
+            .subscribe(onNext: { [weak self] pets in
+                self?.profileSection.configurePets(pets: pets)
+            })
+            .disposed(by: disposeBag)
+        
+        // - action binding
+        // 데이터 로드 시점 바인딩
+        rx.viewWillAppear
+            .map { _ in .viewWillAppear }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        // 관리 버튼 탭
         profileSection.managementButton.rx.tapGesture()
             .withUnretained(self)
             .skip(1)
@@ -101,6 +120,7 @@ class MypageViewController: BaseViewController {
             }
             .disposed(by: self.disposeBag)
         
+        // 내 정보 메뉴 탭
         mypageMenuSection.myInfoSetting.rx.tapGesture()
             .withUnretained(self)
             .skip(1)
@@ -109,6 +129,7 @@ class MypageViewController: BaseViewController {
             }
             .disposed(by: self.disposeBag)
         
+        // 내 게시글 메뉴 탭
         mypageMenuSection.myArticleSetting.rx.tapGesture()
             .withUnretained(self)
             .skip(1)

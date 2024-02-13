@@ -9,8 +9,10 @@ import Foundation
 
 /// 자유게시판 글 정보
 struct PostModel {
-    /// 게시판 이름
-    var boardTitle: String
+    /// 게시판
+    var boardType: BoardType
+    /// 사진
+    var imageUrl: String?
     /// 게시글 제목
     var postTitle: String
     /// 본문

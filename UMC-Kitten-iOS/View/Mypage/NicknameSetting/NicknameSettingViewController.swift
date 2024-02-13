@@ -8,12 +8,20 @@
 import Foundation
 import UIKit
 
+import RxSwift
+
 class NicknameSettingViewController: BaseViewController {
     
+    // MARK: Constant
+    private let TAB_BAR_HEIGHT: CGFloat = 60
+    
+    // MARK: Dependency
+    private let reactor = NicknameSettingReacotr(mypageRepository: MypageRemoteRepository())
+    
+    // MARK: Data
     var keyboardHeight: CGFloat = 0
     
     // MARK: UI Component
-    
     private let nicknameTextField: TextField = .init(
         title: "닉네임",
         placeholder: "변경할 닉네임을 입력해주세요"
@@ -23,7 +31,6 @@ class NicknameSettingViewController: BaseViewController {
     private let confirmButton: UIButton = .init(text: "수정")
     
     // MARK: View Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "닉네임 설정"
@@ -40,7 +47,6 @@ class NicknameSettingViewController: BaseViewController {
     
     
     // MARK: Set Methods
-    
     override func setStyle() {
         noticeBlackLabel.setDefaultFont(size: 12)
         noticeBlackLabel.textColor = .grayScale500
@@ -83,14 +89,51 @@ class NicknameSettingViewController: BaseViewController {
     
     
     override func setBind() {
+        // - data binding
+        reactor.state
+            .map { $0.user?.nickname }
+            .filterNil()
+            .bind(to: nicknameTextField.textField.rx.text)
+            .disposed(by: disposeBag)
+        
+        
+        // - action binding
+        rx.viewWillAppear
+            .map { _ in .viewWillAppear }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        nicknameTextField.textField.rx.text
+            .filterNil()
+            .map {
+                $0.count > 0 ? true : false
+            }
+            .bind(to: confirmButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        confirmButton.rx.tap
+            .withUnretained(self)
+            .map { _ in
+                .tapChangeButton(
+                    nickname: self.nicknameTextField.textField.text ?? ""
+                )
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        confirmButton.rx.tap
+            .withUnretained(self)
+            .subscribe(onNext: { _ in
+                self.backView()
+            })
+            .disposed(by: disposeBag)
 
     }
     
     // MARK: Keyboard setting
-    
     @objc func keyboardWillShow(_ notification: Notification) {
         if let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            keyboardHeight = keyboardFrame.height
+            keyboardHeight = keyboardFrame.height - TAB_BAR_HEIGHT
             updateButtonConstraints()
         }
     }

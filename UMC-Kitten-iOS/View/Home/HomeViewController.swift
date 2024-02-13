@@ -14,7 +14,10 @@ import ReactorKit
 class HomeViewController: BaseViewController {
     
     // MARK: Dependency
-    private let reactor = HomeReactor()
+    private let reactor = HomeReactor(
+        mypageRepository: MypageRemoteRepository(),
+        postRepository: PostRemoteRepository()
+    )
     
     // MARK: UI Container
     private let scrollView = UIScrollView()
@@ -62,7 +65,7 @@ class HomeViewController: BaseViewController {
         
         contentView.snp.makeConstraints {
             $0.edges.width.equalTo(scrollView)
-//            $0.height.equalTo(1250)
+            //            $0.height.equalTo(1250)
         }
         
         titleLabel.snp.makeConstraints {
@@ -93,54 +96,59 @@ class HomeViewController: BaseViewController {
     }
     
     override func setBind() {
-        // data binding
+        // - data binding
+        // 내 반려동물 정보 바인딩
         reactor.state
-            .map {
-                $0.registeredPets
-            }
+            .map { $0.registeredPets }
             .bind(to: registeredPetsSection.collectionView.rx.items(
                 cellIdentifier: "cell",
-                cellType: RegisteredPetCell.self)){ (row, pet, cell) in
-                    cell.configure(
-                        petImageName: pet.imageName,
-                        petName: pet.name,
-                        petInfo: "\(pet.species) / \(pet.gender) / \(pet.age)살"
-                    )
-                }
-                .disposed(by: disposeBag)
+                cellType: RegisteredPetCell.self)
+            ){ (row, pet, cell) in
+                cell.configure(
+                    petImageName: pet.imageName,
+                    petName: pet.name,
+                    petInfo: "\(pet.species.krDescription) / \(pet.gender.krDescription) / \(pet.age)살"
+                )
+            }
+            .disposed(by: disposeBag)
         
+        // 인기 게시글 바인딩
         reactor.state
             .map {
                 $0.popularPosts.prefix(HomeConstant.POPULAR_POST_DISPLAY_NUMBER)
             }
             .bind(to: popularPostSection.collectionView.rx.items(
                 cellIdentifier: "cell",
-                cellType: PopularPostCell.self)){ (row, post, cell) in
-                    cell.configure(
-                        boardTitle: post.boardTitle,
-                        postTitle: post.postTitle,
-                        heartCount: post.likeCount,
-                        commentCount: post.commentCount,
-                        postInfo: "| \(post.date.timeAgoDisplay()) | \(post.writer)"
-                    )
-                }
-                .disposed(by: disposeBag)
+                cellType: PopularPostCell.self)
+            ){ (row, post, cell) in
+                cell.configure(
+                    boardTitle: post.boardType.krDescription,
+                    postTitle: post.postTitle,
+                    heartCount: post.likeCount,
+                    commentCount: post.commentCount,
+                    postInfo: "| \(post.date.timeAgoDisplay()) | \(post.writer)"
+                )
+            }
+            .disposed(by: disposeBag)
         
+        // 오늘의 피드 바인딩
         reactor.state
             .map {
                 $0.todayFeeds.prefix(HomeConstant.TODAY_FEED_DISPLAY_NUMBER)
             }
             .bind(to: todayFeedSection.collectionView.rx.items(
                 cellIdentifier: "cell",
-                cellType: TodayFeedCell.self)){ (row, feed, cell) in
-                    cell.configure(
-                        feedImageName: feed.imageName,
-                        feedTitle: feed.body
-                    )
-                }
-                .disposed(by: disposeBag)
+                cellType: TodayFeedCell.self)
+            ){ (row, post, cell) in
+                cell.configure(
+                    feedImageName: post.imageUrl ?? "cat-sample",
+                    feedTitle: post.body
+                )
+            }
+            .disposed(by: disposeBag)
         
-        // event binding
+        // - event binding
+        // 데이터 로드 시점 바인딩
         rx.viewWillAppear
             .map { _ in .viewWillAppear }
             .bind(to: reactor.action)

@@ -10,6 +10,18 @@ import UIKit
 import ReactorKit
 
 class HomeReactor: Reactor {
+    
+    private let mypageRepository: MypageRxRepository
+    private let postRepository: PostRxRemoteRepository
+    
+    init(
+        mypageRepository: MypageRepository,
+        postRepository: PostRepository
+    ) {
+        self.mypageRepository = MypageRxRepository(repository: mypageRepository)
+        self.postRepository = PostRxRemoteRepository(repository: postRepository)
+    }
+    
     enum Action {
         case viewWillAppear
     }
@@ -17,13 +29,13 @@ class HomeReactor: Reactor {
     enum Mutation {
         case setRegisteredPets(pets: [PetModel])
         case setPopularPosts(posts: [PostModel])
-        case setTodayFeeds(feeds: [FeedModel])
+        case setTodayFeeds(posts: [PostModel])
     }
     
     struct State {
         var registeredPets: [PetModel] = []
         var popularPosts: [PostModel] = []
-        var todayFeeds: [FeedModel] = []
+        var todayFeeds: [PostModel] = []
     }
     
     let initialState: State = State()
@@ -34,24 +46,36 @@ extension HomeReactor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .viewWillAppear:
-            return Observable.of(
-                .setRegisteredPets(pets: [
-                    .init(name: "치즈", species: "고양이", gender: "수컷", age: 2),
-                    .init(name: "고등어", species: "고양이", gender: "수컷", age: 4),
-                ]),
-                .setPopularPosts(posts: [
-                    PostModel(boardTitle: "자유게시판", postTitle: "예시 포스트", body: "예시 포스트 테스트 중입니다", likeCount: 3, commentCount: 3, date: Date.now, writer: "제이지"),
-                    PostModel(boardTitle: "자유게시판", postTitle: "예시 포스트", body: "예시 포스트 테스트 중입니다", likeCount: 3, commentCount: 3, date: Date.now, writer: "제이지"),
-                    PostModel(boardTitle: "자유게시판", postTitle: "예시 포스트", body: "예시 포스트 테스트 중입니다", likeCount: 3, commentCount: 5, date: Date.now, writer: "제이지"),
-                    PostModel(boardTitle: "자유게시판", postTitle: "예시 포스트", body: "예시 포스트 테스트 중입니다", likeCount: 3, commentCount: 3, date: Date.now, writer: "제이지"),
-                ]),
-                .setTodayFeeds(feeds: [
-                    FeedModel(imageName: "cat-sample", body: "오늘 저희 초코 미용했어요", date: Date.now, writer: "나나"),
-                    FeedModel(imageName: "cat-sample", body: "고등어 귀엽죠", date: Date.now, writer: "나나"),
-                    FeedModel(imageName: "cat-sample", body: "오늘 저희 초코 미용했어요", date: Date.now, writer: "나나"),
-                    FeedModel(imageName: "cat-sample", body: "오늘 저희 초코 미용했어요", date: Date.now, writer: "나나"),
-                ])
-            )
+            
+            // 유저 정보 가져와서 반려동물 정보 가져오기
+            let petObservable = mypageRepository
+                .getUserInfo()
+                .map { $0.pets }
+                .map { Mutation.setRegisteredPets(pets: $0) }
+                .catch { error in
+                    print("Error loading pets: ", error)
+                    return Observable.empty()
+                }
+            
+            // 인기 게시글 받아오기
+            let postObservable = postRepository
+                .getAllPostByBoard(baordType: .boast, page: 1) // FIXME: 추후 포스트타입 수정
+                .map { Mutation.setPopularPosts(posts: $0) }
+                .catch { error in
+                    print("Error loading popular posts:", error)
+                    return Observable.empty()
+                }
+            
+            // 오늘의 피드 받아오기
+            let feedObservable = postRepository
+                .getAllPostByBoard(baordType: .boast, page: 1) // FIXME: 추후 포스트타입 수정
+                .map { Mutation.setTodayFeeds(posts: $0) }
+                .catch { error in
+                    print("Error loading popular posts:", error)
+                    return Observable.empty()
+                }
+            
+            return Observable.merge([petObservable, postObservable, feedObservable])
         }
     }
     
@@ -64,10 +88,10 @@ extension HomeReactor {
         case let .setPopularPosts(posts):
             state.popularPosts = posts
             return state
-        case let .setTodayFeeds(feeds):
-            state.todayFeeds = feeds
+        case let .setTodayFeeds(posts):
+            state.todayFeeds = posts
             return state
-        
+            
         }
         
     }

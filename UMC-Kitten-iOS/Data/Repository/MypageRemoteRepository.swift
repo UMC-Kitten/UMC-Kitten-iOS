@@ -12,20 +12,83 @@ class MypageRemoteRepository: MypageRepository {
     
     private let client = BaseMoyaProvider<MypageApiClient>().provider
     
-    func getInfo(completion: @escaping (_ user: Any?, _ error: Any?) -> Void) {
-        let userId = Int64(UserDefaults.standard.integer(forKey: UserDefaultsConstant.USER_ID_KEY))
+    func getUserInfo(
+        completion: @escaping (_ result: UserModel?, _ error: Error?) -> Void
+    ) {
+        let userId = Int64(UserDefaults
+            .standard.integer(forKey: UserDefaultsConstant.USER_ID_KEY))
         
-        client.request(.getInfo(id: userId)) { result in
+        client.request(.getUserInfo(id: userId)) { [weak self] result in
             switch result {
             case .success(let response):
-                // TODO: response.data를 Dto로 변환
-                // TODO: Dto를 도메인 객체로 변환 후 전달
-                print(response)
+                do {
+                    // response를 dto로 변환
+                    let userDto = try response.map(
+                        ApiResponse<MypageResponseDto.UserResponseDto>.self,
+                        using: BaseDecoder()
+                    ).result
+                    
+                    // dto를 도메인 객체로 변환 후 전달
+                    let userModel = self?.convertToDomainModel(
+                        userDto: userDto,
+                        userId: userId
+                    )
+                    completion(userModel, nil)
+                    
+                } catch let error {
+                    completion(nil, CommonError.failed(error: error))
+                }
+                
             case .failure(let error):
-                // TODO: 에러 Enum으로 정의해서 처리
-                print(error)
+                completion(nil, CommonError.failed(error: error))
             }
         }
     }
     
+    func changeUserNickname(
+        nickname: String,
+        completion: @escaping (_ isSuccess: Bool?, _ error: Error?) -> Void
+    ) {
+        let userId = Int64(UserDefaults
+            .standard.integer(forKey: UserDefaultsConstant.USER_ID_KEY))
+        
+        client.request(
+            .changeNickname(
+                dto: MypageRequestDto.ChangeNicknameRequestDto(
+                    id: userId,
+                    nickname: nickname
+                )
+            )
+        ) { result in
+            switch result {
+            case .success(_):
+                print(nickname)
+                completion(true, nil)
+                
+            case .failure(let error):
+                completion(nil, CommonError.failed(error: error))
+            }
+        }
+    }
+    
+    private func convertToDomainModel(
+        userDto: MypageResponseDto.UserResponseDto,
+        userId: Int64
+    ) -> UserModel {
+        return UserModel(
+            id: userId,
+            nickname: userDto.nickname,
+            profileImage: userDto.profileImage,
+            hasPet: userDto.hasPet,
+            pets: userDto.pets.map { petDto in
+                PetModel(
+                    id: petDto.id,
+                    name: petDto.name,
+                    species: PetSpeciesType(rawValue: petDto.type.rawValue)!,
+                    gender: PetGenderType(rawValue: petDto.gender.rawValue)!,
+                    age: 2 // FIXME: 나이가 db에 저장이 안됨
+                )
+            }
+        )
+    }
 }
