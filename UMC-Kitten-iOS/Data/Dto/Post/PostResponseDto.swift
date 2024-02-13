@@ -32,5 +32,4 @@ struct PostResponseDto: Codable {
         var isFirst: Bool
         var isLast: Bool
     }
-    
 }

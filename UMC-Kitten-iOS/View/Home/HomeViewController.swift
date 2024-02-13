@@ -117,7 +117,7 @@ class HomeViewController: BaseViewController {
                 cellIdentifier: "cell",
                 cellType: PopularPostCell.self)){ (row, post, cell) in
                     cell.configure(
-                        boardTitle: post.boardTitle,
+                        boardTitle: post.boardType.krDescription,
                         postTitle: post.postTitle,
                         heartCount: post.likeCount,
                         commentCount: post.commentCount,
@@ -132,10 +132,10 @@ class HomeViewController: BaseViewController {
             }
             .bind(to: todayFeedSection.collectionView.rx.items(
                 cellIdentifier: "cell",
-                cellType: TodayFeedCell.self)){ (row, feed, cell) in
+                cellType: TodayFeedCell.self)){ (row, post, cell) in
                     cell.configure(
-                        feedImageName: feed.imageName,
-                        feedTitle: feed.body
+                        feedImageName: post.imageUrl ?? "cat-sample",
+                        feedTitle: post.body
                     )
                 }
                 .disposed(by: disposeBag)

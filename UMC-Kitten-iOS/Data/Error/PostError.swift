@@ -7,7 +7,9 @@
 
 import Foundation
 
+/// Post API 관련 에러
 enum PostError: Error {
+    /// 올바른 게시판 타입이 아닌 경우
     case postTypeNotFound
 }
 

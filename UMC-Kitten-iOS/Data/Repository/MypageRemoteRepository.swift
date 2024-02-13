@@ -12,18 +12,45 @@ class MypageRemoteRepository: MypageRepository {
     
     private let client = BaseMoyaProvider<MypageApiClient>().provider
     
-    func getInfo(completion: @escaping (_ user: Any?, _ error: Any?) -> Void) {
+    func getUserInfo(
+        completion: @escaping (_ result: UserModel?, _ error: Error?) -> Void
+    ) {
         let userId = Int64(UserDefaults.standard.integer(forKey: UserDefaultsConstant.USER_ID_KEY))
         
-        client.request(.getInfo(id: userId)) { result in
+        client.request(.getUserInfo(id: userId)) { result in
             switch result {
             case .success(let response):
-                // TODO: response.data를 Dto로 변환
-                // TODO: Dto를 도메인 객체로 변환 후 전달
-                print(response)
+                do {
+                    // response를 dto로 변환
+                    let userDto = try response.map(
+                        ApiResponse<MypageResponseDto.UserResponseDto>.self,
+                        using: BaseDecoder()
+                    ).result
+                    
+                    // dto를 도메인 객체로 변환 후 전달
+                    let userModel = UserModel(
+                        nickname: userDto.nickname,
+                        profileImage: userDto.profileImage,
+                        hasPet: userDto.hasPet,
+                        pets: userDto.pets.map {
+                            PetModel(
+                                name: $0.name,
+                                species: PetSpeciesType(rawValue: $0.type.rawValue)! ,
+                                gender: PetGenderType(rawValue: $0.gender.rawValue)!,
+                                age: 2)
+                        }
+                    )
+                    
+                    completion(userModel, nil)
+                    
+                } catch let error as DecodingError{
+                    completion(nil, CommonError.jsonDecodingFailed(decodingError: error as DecodingError))
+                } catch let error {
+                    completion(nil, CommonError.failed(error: error))
+                }
+                
             case .failure(let error):
-                // TODO: 에러 Enum으로 정의해서 처리
-                print(error)
+                completion(nil, CommonError.failed(error: error))
             }
         }
     }

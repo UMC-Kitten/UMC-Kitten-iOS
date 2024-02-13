@@ -49,7 +49,7 @@ class LoginTestViewController: BaseViewController {
                 switch result {
                 case let .success(moyaResponse):
 //                    let data = moyaResponse.data.map(ApiResponse<UserResponseDto>.self)
-                    let data = try? JSONDecoder().decode(ApiResponse<UserResponseDto>.self, from: moyaResponse.data)
+                    let data = try? JSONDecoder().decode(ApiResponse<MypageResponseDto.UserResponseDto>.self, from: moyaResponse.data)
                     let statusCode = moyaResponse.statusCode
                     print("data: \(String(describing: data))")
                     print("statusCode: \(statusCode)")

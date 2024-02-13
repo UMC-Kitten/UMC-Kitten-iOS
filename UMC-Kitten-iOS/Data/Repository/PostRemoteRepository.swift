@@ -13,12 +13,12 @@ class PostRemoteRepository: PostRepository {
     private let client = BaseMoyaProvider<PostApiClient>().provider
     
     func getAllPostByBoard(
-        postType: PostTypeDto,
+        boardType: BoardType,
         page: Int,
         completion: @escaping (_ result: [PostModel]?, _ error: Error?) -> Void
     ) {
         client.request(.getPosts(
-            postType: postType,
+            postType: PostTypeDto(rawValue: boardType.rawValue)!,
             page: page)
         ) { result in
             switch result {
@@ -30,7 +30,7 @@ class PostRemoteRepository: PostRepository {
                     // dto를 도메인 객체로 변환 후 전달
                     let postModels = postsDto.result.postList.map {
                         PostModel(
-                            boardTitle: postType.krDescription ,
+                            boardType: boardType,
                             postTitle: $0.title,
                             body: $0.content,
                             likeCount: $0.likePreviewListDTO.listSize,

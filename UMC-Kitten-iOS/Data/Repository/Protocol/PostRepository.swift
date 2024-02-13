@@ -12,7 +12,7 @@ protocol PostRepository {
     
     /// 게시판 별 게시글 전체 조회
     func getAllPostByBoard(
-        postType: PostTypeDto,
+        boardType: BoardType,
         page: Int,
     completion: @escaping (_ result: [PostModel]?, _ error: Error?) -> Void
     )

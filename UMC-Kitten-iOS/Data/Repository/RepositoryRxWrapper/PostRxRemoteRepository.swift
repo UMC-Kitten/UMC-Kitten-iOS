@@ -11,18 +11,18 @@ import RxSwift
 
 class PostRxRemoteRepository {
     
-    private let postRepository: PostRepository
+    private let repository: PostRepository
     
-    init(postRepository: PostRepository) {
-        self.postRepository = postRepository
+    init(repository: PostRepository) {
+        self.repository = repository
     }
     
     func getAllPostByBoard(
-        postType: PostTypeDto,
+        baordType: BoardType,
         page: Int
     ) -> Observable<[PostModel]> {
         return Observable.create { observer in
-            self.postRepository.getAllPostByBoard(postType: postType, page: page) { result, error in
+            self.repository.getAllPostByBoard(boardType: baordType, page: page) { result, error in
                 if let error = error {
                     observer.onError(error)
                 } else if let result = result {

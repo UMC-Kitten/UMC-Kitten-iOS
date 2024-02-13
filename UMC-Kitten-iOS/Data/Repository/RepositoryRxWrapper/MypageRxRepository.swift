@@ -6,3 +6,29 @@
 //
 
 import Foundation
+
+import RxSwift
+
+class MypageRxRepository {
+    
+    private let repository: MypageRepository
+    
+    init(repository: MypageRepository) {
+        self.repository = repository
+    }
+    
+    func getUserInfo() -> Observable<UserModel> {
+        return Observable.create { observer in
+            self.repository.getUserInfo() { result, error in
+                if let error = error {
+                    observer.onError(error)
+                } else if let result = result {
+                    observer.onNext(result)
+                    observer.onCompleted()
+                }
+            }
+            
+            return Disposables.create()
+        }
+    }
+}

@@ -14,9 +14,9 @@ struct PetModel {
     /// 반려동물 이름
     let name: String
     /// 반려동물 종 - 고양이, 강아지
-    let species: String
+    let species: PetSpeciesType
     /// 반려동물 성별 - 암컷, 수컷
-    let gender: String
+    let gender: PetGenderType
     /// 반려동물 나이
     let age: Int
 }

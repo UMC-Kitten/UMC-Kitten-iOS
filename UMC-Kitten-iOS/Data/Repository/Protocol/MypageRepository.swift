@@ -9,5 +9,7 @@ import Foundation
 
 /// 마이페이지 관련 데이터 동작
 protocol MypageRepository {
-    
+    func getUserInfo(
+        completion: @escaping (_ result: UserModel?, _ error: Error?) -> Void
+    )
 }

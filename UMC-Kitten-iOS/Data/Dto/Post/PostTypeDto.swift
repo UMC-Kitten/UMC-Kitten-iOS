@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum PostTypeDto: String, Codable {
+    case boast = "BOAST"
+    case review = "REVIEW"
+    case free = "FREE"
+}

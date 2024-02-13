@@ -19,4 +19,5 @@ enum PetGenderType: String, Codable {
         case .female:
             return "암컷"
         }
+    }
 }

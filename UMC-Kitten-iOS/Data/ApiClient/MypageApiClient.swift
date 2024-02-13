@@ -10,10 +10,10 @@ import Moya
 
 /// 유저 개인정보 관련 API
 enum MypageApiClient {
-    case getInfo(id: Int64)
-    case changeNickname(dto: ChangeNicknameRequestDto)
-    case changeHasPet(dto: ChangeHasPetRequestDto)
-    case changeProfileImage(dto: ChangeProfileImageRequestDto)
+    case getUserInfo(id: Int64)
+    case changeNickname(dto: MypageRequestDto.ChangeNicknameRequestDto)
+    case changeHasPet(dto: MypageRequestDto.ChangeHasPetRequestDto)
+    case changeProfileImage(dto: MypageRequestDto.ChangeProfileImageRequestDto)
 }
 
 extension MypageApiClient: TargetType {
@@ -36,7 +36,7 @@ extension MypageApiClient: TargetType {
     
     var path: String {
         switch self {
-        case let .getInfo( id):
+        case let .getUserInfo( id):
             return "/info/\(id)"
         case .changeNickname:
             return "/change/nickname"
@@ -49,7 +49,7 @@ extension MypageApiClient: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .getInfo:
+        case .getUserInfo:
             return .get
         case .changeNickname:
             return .post        
@@ -62,7 +62,7 @@ extension MypageApiClient: TargetType {
     
     var task: Task {
         switch self {
-        case .getInfo:
+        case .getUserInfo:
             return .requestPlain
         case let .changeNickname(dto):
             return .requestCustomJSONEncodable(dto, encoder: JSONEncoder())

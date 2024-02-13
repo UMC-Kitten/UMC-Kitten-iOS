@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+struct MypageRequestDto {
+    
+    struct ChangeNicknameRequestDto: Codable {
+        let id: Int64
+        let name: String
+    }
+    
+    struct ChangeHasPetRequestDto: Codable {
+        let id: Int64
+        let hasPet: Bool
+    }
+
+    struct ChangeProfileImageRequestDto: Codable {
+        let id: Int64
+        let profileImage: String
+    }
+    
+}

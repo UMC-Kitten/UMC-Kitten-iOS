@@ -23,15 +23,7 @@ class MyPetSettingReactor: Reactor {
     }
     
     let initialState: State = State(
-        pets: [
-            .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
-            .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
-            .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
-            .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
-            .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
-            .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
-            .init(name: "무냥이", species: "고양이", gender: "수컷", age: 4),
-        ]
+        pets: []
     )
 }
 

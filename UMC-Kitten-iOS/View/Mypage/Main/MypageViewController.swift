@@ -15,7 +15,7 @@ import ReactorKit
 class MypageViewController: BaseViewController {
     
     // MARK: Dependency
-    private let reactor = MypageReactor()
+    private let reactor = MypageReactor(mypageRepository: MypageRemoteRepository())
     
     // MARK: UI Container
     private let scrollView = UIScrollView()
@@ -66,7 +66,6 @@ class MypageViewController: BaseViewController {
         
         contentView.snp.makeConstraints {
             $0.edges.width.equalTo(scrollView)
-            $0.height.equalTo(900)
         }
         
         profileSection.snp.makeConstraints {
@@ -82,16 +81,32 @@ class MypageViewController: BaseViewController {
         versionLabel.snp.makeConstraints {
             $0.top.equalTo(mypageMenuSection.snp.bottom).offset(30)
             $0.leading.equalToSuperview().inset(20)
+            $0.bottom.equalToSuperview()
         }
         
     }
     
     override func setBind() {
-        profileSection.managementButton.rx.tapGesture()
-            .withUnretained(self)
-            .map { _ in .tapMyPetManagementButton }
+        
+        // data binding
+        reactor.state
+            .map { $0.user?.nickname }
+            .distinctUntilChanged()
+            .bind(to: profileSection.ownerNameLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        reactor.state
+            .map { $0.user?.pets ?? [] }
+            .subscribe(onNext: { [weak self] pets in
+                self?.profileSection.configurePets(pets: pets)
+            })
+            .disposed(by: disposeBag)
+        
+        // event binding
+        rx.viewWillAppear
+            .map { _ in .viewWillAppear }
             .bind(to: reactor.action)
-            .disposed(by: self.disposeBag)
+            .disposed(by: disposeBag)
         
         profileSection.managementButton.rx.tapGesture()
             .withUnretained(self)
