@@ -789,7 +789,6 @@
 		BC69320D2B767703002C7A9F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				BC1244D02B7C6A7700BDFC13 /* Health */,
 				BCC107CB2B68D5440043EC7D /* Model */,
 			);
 			path = Domain;
@@ -824,6 +823,7 @@
 		BC6E40BD2B5528EF00BA2CE1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC1244D02B7C6A7700BDFC13 /* Health */,
 				BC1244982B7C649800BDFC13 /* Community */,
 				BC1244362B7C625900BDFC13 /* LandingPage */,
 				BC037BA62B78DFC30021721C /* LoginTest */,
