@@ -31,11 +31,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let homeVC = HomeViewController()
         let homeNavVC = UINavigationController()
         homeNavVC.viewControllers = [homeVC]
+        
         let checkinVC = LoginTestViewController()
-        let communityVC = UIViewController()
+        
+        let communityVC = CommunityViewController()
+        
         let mypageVC = MypageViewController()
         let mypageNavVC = UINavigationController()
         mypageNavVC.viewControllers = [mypageVC]
+        
         let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
         guard let landingVC = storyboard.instantiateViewController(withIdentifier: "WELCOME")
                 as? WelcomeViewController else { return }

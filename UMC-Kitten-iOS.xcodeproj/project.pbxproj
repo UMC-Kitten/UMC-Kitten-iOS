@@ -66,6 +66,28 @@
 		BC1244952B7C63CE00BDFC13 /* OwnerSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244842B7C63CE00BDFC13 /* OwnerSelectViewController.swift */; };
 		BC1244962B7C63CE00BDFC13 /* PetInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1244862B7C63CE00BDFC13 /* PetInformation.storyboard */; };
 		BC1244972B7C63CE00BDFC13 /* PetInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244872B7C63CE00BDFC13 /* PetInformationViewController.swift */; };
+		BC1244A32B7C654B00BDFC13 /* CommunityPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12449A2B7C654B00BDFC13 /* CommunityPostView.swift */; };
+		BC1244A42B7C654B00BDFC13 /* FreeBoardDetailCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12449C2B7C654B00BDFC13 /* FreeBoardDetailCommentTableViewCell.swift */; };
+		BC1244A52B7C654B00BDFC13 /* FreeBoardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12449D2B7C654B00BDFC13 /* FreeBoardDetailView.swift */; };
+		BC1244A62B7C654B00BDFC13 /* FreeBoardDetailContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12449E2B7C654B00BDFC13 /* FreeBoardDetailContentTableViewCell.swift */; };
+		BC1244A72B7C654B00BDFC13 /* FreeBoardDetailNestedCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12449F2B7C654B00BDFC13 /* FreeBoardDetailNestedCommentTableViewCell.swift */; };
+		BC1244A82B7C654B00BDFC13 /* FreeBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244A12B7C654B00BDFC13 /* FreeBoardTableViewCell.swift */; };
+		BC1244A92B7C654B00BDFC13 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244A22B7C654B00BDFC13 /* CommunityView.swift */; };
+		BC1244AD2B7C655300BDFC13 /* CommunityPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244AA2B7C655300BDFC13 /* CommunityPostViewController.swift */; };
+		BC1244AE2B7C655300BDFC13 /* FreeBoardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244AB2B7C655300BDFC13 /* FreeBoardDetailViewController.swift */; };
+		BC1244AF2B7C655300BDFC13 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244AC2B7C655300BDFC13 /* CommunityViewController.swift */; };
+		BC1244CF2B7C698B00BDFC13 /* ImageSlideshow in Frameworks */ = {isa = PBXBuildFile; productRef = BC1244CE2B7C698B00BDFC13 /* ImageSlideshow */; };
+		BC1244E02B7C6A7700BDFC13 /* HealthBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244D12B7C6A7700BDFC13 /* HealthBookViewController.swift */; };
+		BC1244E12B7C6A7700BDFC13 /* SlidingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244D22B7C6A7700BDFC13 /* SlidingBar.swift */; };
+		BC1244E22B7C6A7700BDFC13 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1244D42B7C6A7700BDFC13 /* FeedTableViewCell.xib */; };
+		BC1244E32B7C6A7700BDFC13 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244D52B7C6A7700BDFC13 /* FeedTableViewCell.swift */; };
+		BC1244E42B7C6A7700BDFC13 /* datePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244D72B7C6A7700BDFC13 /* datePicker.swift */; };
+		BC1244E52B7C6A7700BDFC13 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244D82B7C6A7700BDFC13 /* AddViewController.swift */; };
+		BC1244E62B7C6A7700BDFC13 /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1244D92B7C6A7700BDFC13 /* Add.storyboard */; };
+		BC1244E72B7C6A7700BDFC13 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244DB2B7C6A7700BDFC13 /* BottomSheetViewController.swift */; };
+		BC1244E82B7C6A7700BDFC13 /* HealthBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1244DC2B7C6A7700BDFC13 /* HealthBook.storyboard */; };
+		BC1244E92B7C6A7700BDFC13 /* Needle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244DE2B7C6A7700BDFC13 /* Needle.swift */; };
+		BC1244EA2B7C6A7700BDFC13 /* NeedleTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244DF2B7C6A7700BDFC13 /* NeedleTwo.swift */; };
 		BC316B552B793BC50055FC0F /* UserDefaultsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */; };
 		BC316B572B793DF00055FC0F /* MypageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B562B793DF00055FC0F /* MypageRepository.swift */; };
 		BC316B5A2B79451F0055FC0F /* RxAppState in Frameworks */ = {isa = PBXBuildFile; productRef = BC316B592B79451F0055FC0F /* RxAppState */; };
@@ -228,6 +250,27 @@
 		BC1244842B7C63CE00BDFC13 /* OwnerSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerSelectViewController.swift; sourceTree = "<group>"; };
 		BC1244862B7C63CE00BDFC13 /* PetInformation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PetInformation.storyboard; sourceTree = "<group>"; };
 		BC1244872B7C63CE00BDFC13 /* PetInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetInformationViewController.swift; sourceTree = "<group>"; };
+		BC12449A2B7C654B00BDFC13 /* CommunityPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityPostView.swift; sourceTree = "<group>"; };
+		BC12449C2B7C654B00BDFC13 /* FreeBoardDetailCommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeBoardDetailCommentTableViewCell.swift; sourceTree = "<group>"; };
+		BC12449D2B7C654B00BDFC13 /* FreeBoardDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeBoardDetailView.swift; sourceTree = "<group>"; };
+		BC12449E2B7C654B00BDFC13 /* FreeBoardDetailContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeBoardDetailContentTableViewCell.swift; sourceTree = "<group>"; };
+		BC12449F2B7C654B00BDFC13 /* FreeBoardDetailNestedCommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeBoardDetailNestedCommentTableViewCell.swift; sourceTree = "<group>"; };
+		BC1244A12B7C654B00BDFC13 /* FreeBoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeBoardTableViewCell.swift; sourceTree = "<group>"; };
+		BC1244A22B7C654B00BDFC13 /* CommunityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		BC1244AA2B7C655300BDFC13 /* CommunityPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityPostViewController.swift; sourceTree = "<group>"; };
+		BC1244AB2B7C655300BDFC13 /* FreeBoardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeBoardDetailViewController.swift; sourceTree = "<group>"; };
+		BC1244AC2B7C655300BDFC13 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		BC1244D12B7C6A7700BDFC13 /* HealthBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthBookViewController.swift; sourceTree = "<group>"; };
+		BC1244D22B7C6A7700BDFC13 /* SlidingBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingBar.swift; sourceTree = "<group>"; };
+		BC1244D42B7C6A7700BDFC13 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		BC1244D52B7C6A7700BDFC13 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		BC1244D72B7C6A7700BDFC13 /* datePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = datePicker.swift; sourceTree = "<group>"; };
+		BC1244D82B7C6A7700BDFC13 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		BC1244D92B7C6A7700BDFC13 /* Add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
+		BC1244DB2B7C6A7700BDFC13 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		BC1244DC2B7C6A7700BDFC13 /* HealthBook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HealthBook.storyboard; sourceTree = "<group>"; };
+		BC1244DE2B7C6A7700BDFC13 /* Needle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Needle.swift; sourceTree = "<group>"; };
+		BC1244DF2B7C6A7700BDFC13 /* NeedleTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleTwo.swift; sourceTree = "<group>"; };
 		BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstant.swift; sourceTree = "<group>"; };
 		BC316B562B793DF00055FC0F /* MypageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageRepository.swift; sourceTree = "<group>"; };
 		BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-Kitten-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,6 +367,7 @@
 				BC6932142B7679B6002C7A9F /* Moya in Frameworks */,
 				BC316B5A2B79451F0055FC0F /* RxAppState in Frameworks */,
 				BC037B8D2B773D6A0021721C /* KakaoSDKCommon in Frameworks */,
+				BC1244CF2B7C698B00BDFC13 /* ImageSlideshow in Frameworks */,
 				BC6E40D42B552C7500BA2CE1 /* RxCocoa in Frameworks */,
 				BC6E40DC2B552C7500BA2CE1 /* RxSwift in Frameworks */,
 				BC6E40E52B552CB400BA2CE1 /* SnapKit in Frameworks */,
@@ -560,6 +604,98 @@
 			path = PetInformation;
 			sourceTree = "<group>";
 		};
+		BC1244982B7C649800BDFC13 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				BC1244AA2B7C655300BDFC13 /* CommunityPostViewController.swift */,
+				BC1244AC2B7C655300BDFC13 /* CommunityViewController.swift */,
+				BC1244AB2B7C655300BDFC13 /* FreeBoardDetailViewController.swift */,
+				BC1244A02B7C654B00BDFC13 /* Community */,
+				BC1244992B7C654B00BDFC13 /* CommunityPost */,
+				BC12449B2B7C654B00BDFC13 /* FreeBoardDetail */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		BC1244992B7C654B00BDFC13 /* CommunityPost */ = {
+			isa = PBXGroup;
+			children = (
+				BC12449A2B7C654B00BDFC13 /* CommunityPostView.swift */,
+			);
+			path = CommunityPost;
+			sourceTree = "<group>";
+		};
+		BC12449B2B7C654B00BDFC13 /* FreeBoardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BC12449C2B7C654B00BDFC13 /* FreeBoardDetailCommentTableViewCell.swift */,
+				BC12449D2B7C654B00BDFC13 /* FreeBoardDetailView.swift */,
+				BC12449E2B7C654B00BDFC13 /* FreeBoardDetailContentTableViewCell.swift */,
+				BC12449F2B7C654B00BDFC13 /* FreeBoardDetailNestedCommentTableViewCell.swift */,
+			);
+			path = FreeBoardDetail;
+			sourceTree = "<group>";
+		};
+		BC1244A02B7C654B00BDFC13 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				BC1244A12B7C654B00BDFC13 /* FreeBoardTableViewCell.swift */,
+				BC1244A22B7C654B00BDFC13 /* CommunityView.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		BC1244D02B7C6A7700BDFC13 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				BC1244D12B7C6A7700BDFC13 /* HealthBookViewController.swift */,
+				BC1244D22B7C6A7700BDFC13 /* SlidingBar.swift */,
+				BC1244D32B7C6A7700BDFC13 /* Cell */,
+				BC1244D62B7C6A7700BDFC13 /* Add */,
+				BC1244DA2B7C6A7700BDFC13 /* 123 */,
+				BC1244DC2B7C6A7700BDFC13 /* HealthBook.storyboard */,
+				BC1244DD2B7C6A7700BDFC13 /* HealthTableView */,
+			);
+			name = Health;
+			path = "UMC-Kitten-iOS/View/Health";
+			sourceTree = SOURCE_ROOT;
+		};
+		BC1244D32B7C6A7700BDFC13 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BC1244D42B7C6A7700BDFC13 /* FeedTableViewCell.xib */,
+				BC1244D52B7C6A7700BDFC13 /* FeedTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BC1244D62B7C6A7700BDFC13 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				BC1244D72B7C6A7700BDFC13 /* datePicker.swift */,
+				BC1244D82B7C6A7700BDFC13 /* AddViewController.swift */,
+				BC1244D92B7C6A7700BDFC13 /* Add.storyboard */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		BC1244DA2B7C6A7700BDFC13 /* 123 */ = {
+			isa = PBXGroup;
+			children = (
+				BC1244DB2B7C6A7700BDFC13 /* BottomSheetViewController.swift */,
+			);
+			path = 123;
+			sourceTree = "<group>";
+		};
+		BC1244DD2B7C6A7700BDFC13 /* HealthTableView */ = {
+			isa = PBXGroup;
+			children = (
+				BC1244DE2B7C6A7700BDFC13 /* Needle.swift */,
+				BC1244DF2B7C6A7700BDFC13 /* NeedleTwo.swift */,
+			);
+			path = HealthTableView;
+			sourceTree = "<group>";
+		};
 		BC316B522B793AE20055FC0F /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,6 +791,7 @@
 		BC69320D2B767703002C7A9F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BC1244D02B7C6A7700BDFC13 /* Health */,
 				BCC107CB2B68D5440043EC7D /* Model */,
 			);
 			path = Domain;
@@ -689,6 +826,7 @@
 		BC6E40BD2B5528EF00BA2CE1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC1244982B7C649800BDFC13 /* Community */,
 				BC1244362B7C625900BDFC13 /* LandingPage */,
 				BC037BA62B78DFC30021721C /* LoginTest */,
 				BCF1E5872B5D4D60000F5960 /* Common */,
@@ -1043,6 +1181,7 @@
 				BC037B8A2B773D6A0021721C /* KakaoSDKCertCore */,
 				BC037B8C2B773D6A0021721C /* KakaoSDKCommon */,
 				BC316B592B79451F0055FC0F /* RxAppState */,
+				BC1244CE2B7C698B00BDFC13 /* ImageSlideshow */,
 			);
 			productName = "UMC-Kitten-iOS";
 			productReference = BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */;
@@ -1084,6 +1223,7 @@
 				BC6932122B7679B6002C7A9F /* XCRemoteSwiftPackageReference "Moya" */,
 				BC037B832B773D6A0021721C /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				BC316B582B79451F0055FC0F /* XCRemoteSwiftPackageReference "RxAppState" */,
+				BC1244CD2B7C661C00BDFC13 /* XCRemoteSwiftPackageReference "ImageSlideshow" */,
 			);
 			productRefGroup = BC3CECC52B4FACC300546377 /* Products */;
 			projectDirPath = "";
@@ -1118,6 +1258,7 @@
 				BC1244922B7C63CE00BDFC13 /* SignUpProfileImage.storyboard in Resources */,
 				BC12446D2B7C639C00BDFC13 /* TermsOfUse.storyboard in Resources */,
 				BC93BA362B56CEDE00775C5F /* Pretendard-Light.otf in Resources */,
+				BC1244E62B7C6A7700BDFC13 /* Add.storyboard in Resources */,
 				BC12448F2B7C63CE00BDFC13 /* SignUp.storyboard in Resources */,
 				BC93BA372B56CEDE00775C5F /* Pretendard-Medium.otf in Resources */,
 				BC12448B2B7C63CE00BDFC13 /* StartScreen.storyboard in Resources */,
@@ -1126,6 +1267,8 @@
 				BC93BA3A2B56CEDE00775C5F /* Pretendard-Thin.otf in Resources */,
 				BC1244942B7C63CE00BDFC13 /* OwnerSelect.storyboard in Resources */,
 				BC3CECD42B4FACC400546377 /* LaunchScreen.storyboard in Resources */,
+				BC1244E22B7C6A7700BDFC13 /* FeedTableViewCell.xib in Resources */,
+				BC1244E82B7C6A7700BDFC13 /* HealthBook.storyboard in Resources */,
 				BC3CECD12B4FACC400546377 /* Assets.xcassets in Resources */,
 				BC3CECCF2B4FACC300546377 /* Main.storyboard in Resources */,
 			);
@@ -1152,12 +1295,14 @@
 				BCF1E5982B5D7943000F5960 /* TextField.swift in Sources */,
 				BC1243AC2B7B4B4800BDFC13 /* PostApiClient.swift in Sources */,
 				BCF1E5952B5D7792000F5960 /* NicknameSettingViewController.swift in Sources */,
+				BC1244E72B7C6A7700BDFC13 /* BottomSheetViewController.swift in Sources */,
 				BCC107EC2B6A65780043EC7D /* MyInfoImagePickerDelegate.swift in Sources */,
 				BCC107EE2B6A66800043EC7D /* MyPetSettingReactor.swift in Sources */,
 				BC8F50FB2B57947F00F56C90 /* ProfileSection.swift in Sources */,
 				BC037B902B773F340021721C /* KakaoAuthHelper.swift in Sources */,
 				BC9DC6482B722E3A00859EFE /* HomeViewController.swift in Sources */,
 				BC1243B32B7B4D1800BDFC13 /* PostError.swift in Sources */,
+				BC1244E52B7C6A7700BDFC13 /* AddViewController.swift in Sources */,
 				BCC107D92B68E9610043EC7D /* MyArticlePageTapBar.swift in Sources */,
 				BCC107DE2B68FF200043EC7D /* MyArticlePage.swift in Sources */,
 				BCC107D22B68E3630043EC7D /* MyArticleSettingViewController.swift in Sources */,
@@ -1165,10 +1310,12 @@
 				BC1243E12B7BB89000BDFC13 /* MypageResponseDto.swift in Sources */,
 				BCC107CD2B68D5550043EC7D /* PetModel.swift in Sources */,
 				BC037B932B77A0490021721C /* NaverAuthHelper.swift in Sources */,
+				BC1244A72B7C654B00BDFC13 /* FreeBoardDetailNestedCommentTableViewCell.swift in Sources */,
 				BC1243CB2B7B6DEF00BDFC13 /* LikeResponseDto.swift in Sources */,
 				BCF1E5902B5D5BE3000F5960 /* Observable+Extension.swift in Sources */,
 				BC1243E52B7BBA7A00BDFC13 /* PostTypeDto.swift in Sources */,
 				BC6E40C22B552A9400BA2CE1 /* MypageReactor.swift in Sources */,
+				BC1244EA2B7C6A7700BDFC13 /* NeedleTwo.swift in Sources */,
 				BC1244672B7C625A00BDFC13 /* WelcomeViewController.swift in Sources */,
 				BCB6CA3B2B73DA120096DEAD /* TodayFeedSection.swift in Sources */,
 				BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */,
@@ -1179,8 +1326,11 @@
 				BC1243B02B7B4CCB00BDFC13 /* PostRemoteRepository.swift in Sources */,
 				BC037BA32B78A5580021721C /* Date+Extension.swift in Sources */,
 				BCC107C22B68ACA10043EC7D /* SelectCard.swift in Sources */,
+				BC1244A52B7C654B00BDFC13 /* FreeBoardDetailView.swift in Sources */,
+				BC1244A92B7C654B00BDFC13 /* CommunityView.swift in Sources */,
 				BC1243EE2B7BC2BF00BDFC13 /* PetGenderType.swift in Sources */,
 				BC1243B52B7B4E6800BDFC13 /* CommonError.swift in Sources */,
+				BC1244E92B7C6A7700BDFC13 /* Needle.swift in Sources */,
 				BC9DC6552B723FB700859EFE /* PopularPostSection.swift in Sources */,
 				BC1243F82B7BE24C00BDFC13 /* NicknameSettingReacotr.swift in Sources */,
 				BCC107C52B68C8C20043EC7D /* MyPetCardCell.swift in Sources */,
@@ -1190,13 +1340,17 @@
 				BC1243D72B7BB14800BDFC13 /* UserModel.swift in Sources */,
 				BC12448A2B7C63CE00BDFC13 /* StartScreenViewController.swift in Sources */,
 				BC9DC6572B72408900859EFE /* PopularPostCell.swift in Sources */,
+				BC1244AD2B7C655300BDFC13 /* CommunityPostViewController.swift in Sources */,
 				BC316B552B793BC50055FC0F /* UserDefaultsConstant.swift in Sources */,
 				BC6E40CC2B552BC600BA2CE1 /* BaseCollectionViewCell.swift in Sources */,
 				BCC107D62B68E7590043EC7D /* PageViewControllerDelegate.swift in Sources */,
 				BCF1E58A2B5D4D8F000F5960 /* ProfileImageSection.swift in Sources */,
+				BC1244E42B7C6A7700BDFC13 /* datePicker.swift in Sources */,
 				BC8F51022B57BB2B00F56C90 /* NavigationMenuRow.swift in Sources */,
+				BC1244E02B7C6A7700BDFC13 /* HealthBookViewController.swift in Sources */,
 				BC1243F12B7BCFE900BDFC13 /* RxSwift+Extension.swift in Sources */,
 				BCC107DC2B68E9830043EC7D /* PageTapBarItem.swift in Sources */,
+				BC1244A62B7C654B00BDFC13 /* FreeBoardDetailContentTableViewCell.swift in Sources */,
 				BCF1E5862B5D496E000F5960 /* MyInfoViewController.swift in Sources */,
 				BC1243DE2B7BB85800BDFC13 /* MypageRequestDto.swift in Sources */,
 				BC1243EA2B7BC14000BDFC13 /* MypageRxRepository.swift in Sources */,
@@ -1209,14 +1363,17 @@
 				BC3CECCA2B4FACC300546377 /* SceneDelegate.swift in Sources */,
 				BC12446E2B7C639C00BDFC13 /* TermsOfUseViewController.swift in Sources */,
 				BCB6CA3F2B73DEA60096DEAD /* MoreButton.swift in Sources */,
+				BC1244E12B7C6A7700BDFC13 /* SlidingBar.swift in Sources */,
 				BCF1E58E2B5D5852000F5960 /* MyInfoReactor.swift in Sources */,
 				BC1243D22B7B74C800BDFC13 /* PostRxRemoteRepository.swift in Sources */,
 				BCC107BD2B68A1CA0043EC7D /* MyPetSettingViewController.swift in Sources */,
+				BC1244A82B7C654B00BDFC13 /* FreeBoardTableViewCell.swift in Sources */,
 				BC9DC6532B72377300859EFE /* HomeConstant.swift in Sources */,
 				BCB6CA3D2B73DB3A0096DEAD /* TodayFeedCell.swift in Sources */,
 				BC1244892B7C63CE00BDFC13 /* CheckBox.swift in Sources */,
 				BC1243AA2B7B4B1300BDFC13 /* HashtagResponseDto.swift in Sources */,
 				BC037BA02B78A1530021721C /* FeedModel.swift in Sources */,
+				BC1244AF2B7C655300BDFC13 /* CommunityViewController.swift in Sources */,
 				BC8F50FE2B579F7000F56C90 /* UIImageView+Extension.swift in Sources */,
 				BCC107E02B6901A80043EC7D /* MyArticlePageTableViewCell.swift in Sources */,
 				BC9DC64C2B722FD400859EFE /* RegisteredPetsSection.swift in Sources */,
@@ -1232,6 +1389,7 @@
 				BCC107CF2B68E1390043EC7D /* UIImage+Extension.swift in Sources */,
 				BC6E40C02B55291800BA2CE1 /* MypageViewController.swift in Sources */,
 				BCC107C82B68C90A0043EC7D /* MyPetSetting+CollectionViewDelegate.swift in Sources */,
+				BC1244E32B7C6A7700BDFC13 /* FeedTableViewCell.swift in Sources */,
 				BC087BEB2B7935B1001E34D4 /* MypageRemoteRepository.swift in Sources */,
 				BC1243F62B7BDA1100BDFC13 /* AlertHelper.swift in Sources */,
 				BC037BA82B78DFCE0021721C /* LoginTestViewController.swift in Sources */,
@@ -1246,9 +1404,12 @@
 				BC1244952B7C63CE00BDFC13 /* OwnerSelectViewController.swift in Sources */,
 				BC9DC6502B72359C00859EFE /* HomeReactor.swift in Sources */,
 				BC037BA52B78DF250021721C /* UserApiClient.swift in Sources */,
+				BC1244A32B7C654B00BDFC13 /* CommunityPostView.swift in Sources */,
 				BCB6CA412B73E2300096DEAD /* HomeBottomSection.swift in Sources */,
+				BC1244AE2B7C655300BDFC13 /* FreeBoardDetailViewController.swift in Sources */,
 				BC1244932B7C63CE00BDFC13 /* SignUpProfileImageViewController.swift in Sources */,
 				BC12448D2B7C63CE00BDFC13 /* PetSelectViewController.swift in Sources */,
+				BC1244A42B7C654B00BDFC13 /* FreeBoardDetailCommentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1548,6 +1709,14 @@
 				minimumVersion = 2.20.0;
 			};
 		};
+		BC1244CD2B7C661C00BDFC13 /* XCRemoteSwiftPackageReference "ImageSlideshow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zvonicek/ImageSlideshow.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.2;
+			};
+		};
 		BC316B582B79451F0055FC0F /* XCRemoteSwiftPackageReference "RxAppState" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pixeldock/RxAppState.git";
@@ -1623,6 +1792,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BC037B832B773D6A0021721C /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDKCommon;
+		};
+		BC1244CE2B7C698B00BDFC13 /* ImageSlideshow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC1244CD2B7C661C00BDFC13 /* XCRemoteSwiftPackageReference "ImageSlideshow" */;
+			productName = ImageSlideshow;
 		};
 		BC316B592B79451F0055FC0F /* RxAppState */ = {
 			isa = XCSwiftPackageProductDependency;
