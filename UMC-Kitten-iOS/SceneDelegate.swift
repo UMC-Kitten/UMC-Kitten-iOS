@@ -36,15 +36,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let mypageVC = MypageViewController()
         let mypageNavVC = UINavigationController()
         mypageNavVC.viewControllers = [mypageVC]
+        let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
+        guard let landingVC = storyboard.instantiateViewController(withIdentifier: "WELCOME")
+                as? WelcomeViewController else { return }
+        let landingNavVC = UINavigationController()
+        landingNavVC.viewControllers = [landingVC]
+        
         
         // (2) Tab Bar 이름 설정
         homeVC.title = "홈"
         checkinVC.title = "체크인"
         communityVC.title = "커뮤니티"
         mypageVC.title = "마이페이지"
+        landingVC.title = "랜딩임시"
         
         // (3) Tab Bar로 사용하기 위한 뷰 컨트롤러들 설정
-        tabBarVC.setViewControllers([homeNavVC, checkinVC, communityVC, mypageNavVC], animated: false)
+        tabBarVC.setViewControllers([homeNavVC, checkinVC, communityVC, mypageNavVC, landingNavVC], animated: false)
         tabBarVC.modalPresentationStyle = .fullScreen
         tabBarVC.tabBar.backgroundColor = .white
         tabBarVC.tabBar.tintColor = .main
