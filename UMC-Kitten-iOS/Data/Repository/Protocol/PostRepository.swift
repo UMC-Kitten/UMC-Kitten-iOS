@@ -16,5 +16,15 @@ protocol PostRepository {
         page: Int,
     completion: @escaping (_ result: [PostModel]?, _ error: Error?) -> Void
     )
+    
+    /// 인기 게시글 조회
+    func getPopularPost(
+        completion: @escaping (_ result: [PostModel]?, _ error: Error?) -> Void
+    )
+    
+    /// 오늘의 피드 조회
+    func getTodayFeed(
+        completion: @escaping (_ result: [PostModel]?, _ error: Error?) -> Void
+    )
 }
 

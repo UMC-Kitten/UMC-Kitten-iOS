@@ -14,7 +14,7 @@ import RxCocoa
 class MyPetSettingViewController: BaseViewController {
     
     // MARK: Dependency
-    let reactor = MyPetSettingReactor(mypageRepository: MypageRemoteRepository())
+    let reactor = MyPetSettingReactor(petRepository: PetRemoteRepository())
     
     // MARK: UI Component
     private let collectionView: BaseCollectionView = .init()

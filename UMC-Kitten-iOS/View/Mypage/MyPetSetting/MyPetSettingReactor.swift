@@ -11,10 +11,10 @@ import ReactorKit
 
 class MyPetSettingReactor: Reactor {
     
-    private let mypageRepository: MypageRxRepository
+    private let petRepository: PetRxRepository
     
-    init(mypageRepository: MypageRepository) {
-        self.mypageRepository = MypageRxRepository(repository: mypageRepository)
+    init(petRepository: PetRepository) {
+        self.petRepository = PetRxRepository(repository: petRepository)
     }
     
     enum Action {
@@ -44,9 +44,8 @@ extension MyPetSettingReactor {
         switch action {
         case .viewWillAppear:
             // 유저 정보 가져와서 반려동물 정보 가져오기
-            let userObservable = mypageRepository
-                .getUserInfo()
-                .map { $0.pets }
+            let userObservable = petRepository
+                .getRegisteredPets()
                 .map { Mutation.setPets($0) }
                 .catch { error in
                     print("Error loading pets: ", error)
@@ -66,9 +65,14 @@ extension MyPetSettingReactor {
             
             return .empty()
             
-        case let .deletePet(petId):
-            // TODO: 서버에 반영
-            return .just(.deletePet(petId))
+        case let .deletePet(petId):            
+            return petRepository
+                .deletePet(petId: petId)
+                .map { _ in Mutation.deletePet(petId) }
+                .catch { error in
+                    print("Error loading pets: ", error)
+                    return Observable.empty()
+                }
         }
     }
     

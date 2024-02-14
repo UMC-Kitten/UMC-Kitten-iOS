@@ -15,7 +15,7 @@ class HomeViewController: BaseViewController {
     
     // MARK: Dependency
     private let reactor = HomeReactor(
-        mypageRepository: MypageRemoteRepository(),
+        petRepository: PetRemoteRepository(),
         postRepository: PostRemoteRepository()
     )
     
