@@ -10,6 +10,9 @@ import SnapKit
 
 class OwnerSettingViewController: BaseViewController {
     
+    // MARK: Dependency
+    private let reactor = OwnerSettingReactor(mypageRepository: MypageRemoteRepository())
+    
     // MARK: UI Component
     private let titleLabel: UILabel = .init()
     private let stackView: UIStackView = .init()
@@ -24,8 +27,6 @@ class OwnerSettingViewController: BaseViewController {
             description: "아직 키우고 \n있지는 않아요"
         ),
     ]
-    
-    private var isSelected: Bool = true
     
     // MARK: Set Method
     override func setStyle() {
@@ -65,30 +66,48 @@ class OwnerSettingViewController: BaseViewController {
     }
     
     override func setBind() {
+        // - data binding
+        reactor.state
+            .map { $0.hasPet }
+            .distinctUntilChanged()
+            .debug()
+            .subscribe(onNext: {
+                if($0 == true){
+                    self.selectCards[0].configureUISelect()
+                    self.selectCards[1].configureUIDeselect()
+                } else {
+                    self.selectCards[1].configureUISelect()
+                    self.selectCards[0].configureUIDeselect()
+                }
+            })
+            .disposed(by: disposeBag)
         
-        // FIXME: 내부 함수로 분리
-        // 첫번째꺼가 선택된 액션
+        // - action binding
+        // 데이터 로드 시점 바인딩
+        rx.viewWillAppear
+            .map { _ in .viewWillAppear }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        // "반려동물을 키우고 있어요" 선택
         selectCards[0].rx.tapGesture()
-            .subscribe { _ in
-                self.isSelected = true
-                self.isSelected = false
-                
-                self.selectCards[0].configureUISelect()
-                self.selectCards[1].configureUIDeselect()
-                
-            }
+            .dropFirst()
+            .withUnretained(self)
+            .map { _ in self.reactor.currentState.hasPet }
+            .filter { $0 != true } // 값이 변경될 때만 실행
+            .map { _ in .changeHasPet(true) }
+            .bind(to: reactor.action )
             .disposed(by: disposeBag)
         
+        // "아직 키우고 있지는 않아요" 선택
         selectCards[1].rx.tapGesture()
-            .subscribe { _ in
-                self.isSelected = true
-                self.isSelected = false
-                
-                self.selectCards[1].configureUISelect()
-                self.selectCards[0].configureUIDeselect()
-            }
+            .dropFirst()
+            .withUnretained(self)
+            .map { _ in self.reactor.currentState.hasPet }
+            .filter { $0 != false } // 값이 변경될 때만 실행
+            .map { _ in .changeHasPet(false) }
+            .bind(to: reactor.action )
             .disposed(by: disposeBag)
-        
     }
     
 }

@@ -62,7 +62,31 @@ class MypageRemoteRepository: MypageRepository {
         ) { result in
             switch result {
             case .success(_):
-                print(nickname)
+                completion(true, nil)
+                
+            case .failure(let error):
+                completion(nil, CommonError.failed(error: error))
+            }
+        }
+    }
+    
+    func changeHasPet(
+        hasPet: Bool,
+        completion: @escaping (_ isSuccess: Bool?, _ error: Error?) -> Void
+    ) {
+        let userId = Int64(UserDefaults
+            .standard.integer(forKey: UserDefaultsConstant.USER_ID_KEY))
+        
+        client.request(
+            .changeHasPet(
+                dto: MypageRequestDto.ChangeHasPetRequestDto(
+                    id: userId,
+                    hasPet: hasPet
+                )
+            )
+        ) { result in
+            switch result {
+            case .success(_):
                 completion(true, nil)
                 
             case .failure(let error):

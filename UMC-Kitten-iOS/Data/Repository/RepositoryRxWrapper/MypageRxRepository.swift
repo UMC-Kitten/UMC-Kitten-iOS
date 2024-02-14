@@ -46,4 +46,19 @@ class MypageRxRepository {
             return Disposables.create()
         }
     }
+    
+    func changeHasPet(hasPet: Bool) -> Observable<Bool> {
+        return Observable.create { observer in
+            self.repository.changeHasPet(hasPet: hasPet) { result, error in
+                if let error = error {
+                    observer.onError(error)
+                } else if let result = result {
+                    observer.onNext(result)
+                    observer.onCompleted()
+                }
+            }
+            
+            return Disposables.create()
+        }
+    }
 }
