@@ -38,10 +38,14 @@ extension NicknameSettingReacotr {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .viewWillAppear:
+            LoadingIndicatorHelper.startLoading()
             // 유저 정보 가져오기
             let userObservable = mypageRepository
                 .getUserInfo()
                 .map { Mutation.setUser($0) }
+                .do(onCompleted: {
+                    LoadingIndicatorHelper.endLoading()
+                })
 
             return Observable.merge([userObservable])
             

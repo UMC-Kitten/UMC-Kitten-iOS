@@ -94,6 +94,8 @@
 		BC1244FA2B7CBF2D00BDFC13 /* PetRxRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244F92B7CBF2D00BDFC13 /* PetRxRepository.swift */; };
 		BC1244FC2B7CC1DA00BDFC13 /* OwnerSettingReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244FB2B7CC1DA00BDFC13 /* OwnerSettingReactor.swift */; };
 		BC1244FE2B7CCCC800BDFC13 /* LoadingIndicatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244FD2B7CCCC800BDFC13 /* LoadingIndicatorHelper.swift */; };
+		BC1245002B7CE24D00BDFC13 /* MyPetAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244FF2B7CE24D00BDFC13 /* MyPetAddCell.swift */; };
+		BC1245032B7CE3FB00BDFC13 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = BC1245022B7CE3FB00BDFC13 /* RxDataSources */; };
 		BC316B552B793BC50055FC0F /* UserDefaultsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */; };
 		BC316B572B793DF00055FC0F /* MypageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC316B562B793DF00055FC0F /* MypageRepository.swift */; };
 		BC316B5A2B79451F0055FC0F /* RxAppState in Frameworks */ = {isa = PBXBuildFile; productRef = BC316B592B79451F0055FC0F /* RxAppState */; };
@@ -147,7 +149,7 @@
 		BCC107BD2B68A1CA0043EC7D /* MyPetSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107BC2B68A1CA0043EC7D /* MyPetSettingViewController.swift */; };
 		BCC107BF2B68A9CD0043EC7D /* OwnerSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107BE2B68A9CD0043EC7D /* OwnerSettingViewController.swift */; };
 		BCC107C22B68ACA10043EC7D /* SelectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107C12B68ACA10043EC7D /* SelectCard.swift */; };
-		BCC107C52B68C8C20043EC7D /* MyPetCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107C42B68C8C20043EC7D /* MyPetCardCell.swift */; };
+		BCC107C52B68C8C20043EC7D /* MyPetInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107C42B68C8C20043EC7D /* MyPetInfoCell.swift */; };
 		BCC107C82B68C90A0043EC7D /* MyPetSetting+CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107C72B68C90A0043EC7D /* MyPetSetting+CollectionViewDelegate.swift */; };
 		BCC107CA2B68CD120043EC7D /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107C92B68CD120043EC7D /* BaseCollectionView.swift */; };
 		BCC107CD2B68D5550043EC7D /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC107CC2B68D5550043EC7D /* PetModel.swift */; };
@@ -283,6 +285,7 @@
 		BC1244F92B7CBF2D00BDFC13 /* PetRxRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetRxRepository.swift; sourceTree = "<group>"; };
 		BC1244FB2B7CC1DA00BDFC13 /* OwnerSettingReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSettingReactor.swift; sourceTree = "<group>"; };
 		BC1244FD2B7CCCC800BDFC13 /* LoadingIndicatorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorHelper.swift; sourceTree = "<group>"; };
+		BC1244FF2B7CE24D00BDFC13 /* MyPetAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetAddCell.swift; sourceTree = "<group>"; };
 		BC316B542B793BC50055FC0F /* UserDefaultsConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstant.swift; sourceTree = "<group>"; };
 		BC316B562B793DF00055FC0F /* MypageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageRepository.swift; sourceTree = "<group>"; };
 		BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-Kitten-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,7 +335,7 @@
 		BCC107BC2B68A1CA0043EC7D /* MyPetSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetSettingViewController.swift; sourceTree = "<group>"; };
 		BCC107BE2B68A9CD0043EC7D /* OwnerSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSettingViewController.swift; sourceTree = "<group>"; };
 		BCC107C12B68ACA10043EC7D /* SelectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCard.swift; sourceTree = "<group>"; };
-		BCC107C42B68C8C20043EC7D /* MyPetCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetCardCell.swift; sourceTree = "<group>"; };
+		BCC107C42B68C8C20043EC7D /* MyPetInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetInfoCell.swift; sourceTree = "<group>"; };
 		BCC107C72B68C90A0043EC7D /* MyPetSetting+CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyPetSetting+CollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		BCC107C92B68CD120043EC7D /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		BCC107CC2B68D5550043EC7D /* PetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
@@ -378,6 +381,7 @@
 				BC037B852B773D6A0021721C /* KakaoSDK in Frameworks */,
 				BC6E40BC2B5528A900BA2CE1 /* ReactorKit in Frameworks */,
 				BC6932142B7679B6002C7A9F /* Moya in Frameworks */,
+				BC1245032B7CE3FB00BDFC13 /* RxDataSources in Frameworks */,
 				BC316B5A2B79451F0055FC0F /* RxAppState in Frameworks */,
 				BC037B8D2B773D6A0021721C /* KakaoSDKCommon in Frameworks */,
 				BC1244CF2B7C698B00BDFC13 /* ImageSlideshow in Frameworks */,
@@ -1004,7 +1008,8 @@
 		BCC107C32B68C89C0043EC7D /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				BCC107C42B68C8C20043EC7D /* MyPetCardCell.swift */,
+				BCC107C42B68C8C20043EC7D /* MyPetInfoCell.swift */,
+				BC1244FF2B7CE24D00BDFC13 /* MyPetAddCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1209,6 +1214,7 @@
 				BC037B8C2B773D6A0021721C /* KakaoSDKCommon */,
 				BC316B592B79451F0055FC0F /* RxAppState */,
 				BC1244CE2B7C698B00BDFC13 /* ImageSlideshow */,
+				BC1245022B7CE3FB00BDFC13 /* RxDataSources */,
 			);
 			productName = "UMC-Kitten-iOS";
 			productReference = BC3CECC42B4FACC300546377 /* UMC-Kitten-iOS.app */;
@@ -1251,6 +1257,7 @@
 				BC037B832B773D6A0021721C /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				BC316B582B79451F0055FC0F /* XCRemoteSwiftPackageReference "RxAppState" */,
 				BC1244CD2B7C661C00BDFC13 /* XCRemoteSwiftPackageReference "ImageSlideshow" */,
+				BC1245012B7CE3B100BDFC13 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = BC3CECC52B4FACC300546377 /* Products */;
 			projectDirPath = "";
@@ -1365,7 +1372,7 @@
 				BC9DC6552B723FB700859EFE /* PopularPostSection.swift in Sources */,
 				BC1244F62B7CBCED00BDFC13 /* PetRemoteRepository.swift in Sources */,
 				BC1243F82B7BE24C00BDFC13 /* NicknameSettingReacotr.swift in Sources */,
-				BCC107C52B68C8C20043EC7D /* MyPetCardCell.swift in Sources */,
+				BCC107C52B68C8C20043EC7D /* MyPetInfoCell.swift in Sources */,
 				BC12448E2B7C63CE00BDFC13 /* SignUpViewController.swift in Sources */,
 				BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */,
 				BC9DC6592B7247CF00859EFE /* UIColor+Extension.swift in Sources */,
@@ -1418,6 +1425,7 @@
 				BC1243A82B7B4AC400BDFC13 /* CommentResponseDto.swift in Sources */,
 				BC1244F42B7CBC9100BDFC13 /* PetResponseDto.swift in Sources */,
 				BCF1E58C2B5D54E3000F5960 /* MyInfoMenuSection.swift in Sources */,
+				BC1245002B7CE24D00BDFC13 /* MyPetAddCell.swift in Sources */,
 				BC1243D42B7B915B00BDFC13 /* Decoder.swift in Sources */,
 				BC6E40CA2B552BC600BA2CE1 /* BaseViewController.swift in Sources */,
 				BCC107CF2B68E1390043EC7D /* UIImage+Extension.swift in Sources */,
@@ -1751,6 +1759,14 @@
 				minimumVersion = 1.9.2;
 			};
 		};
+		BC1245012B7CE3B100BDFC13 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
 		BC316B582B79451F0055FC0F /* XCRemoteSwiftPackageReference "RxAppState" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pixeldock/RxAppState.git";
@@ -1831,6 +1847,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BC1244CD2B7C661C00BDFC13 /* XCRemoteSwiftPackageReference "ImageSlideshow" */;
 			productName = ImageSlideshow;
+		};
+		BC1245022B7CE3FB00BDFC13 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC1245012B7CE3B100BDFC13 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
 		};
 		BC316B592B79451F0055FC0F /* RxAppState */ = {
 			isa = XCSwiftPackageProductDependency;

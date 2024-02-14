@@ -62,12 +62,12 @@ class ProfileSection: BaseView {
         }
         
         ownerNameLabel.snp.makeConstraints {
-            $0.top.equalTo(profileImageView.snp.top).offset(5)
+            $0.top.equalTo(profileImageView.snp.top).offset(8)
             $0.left.equalTo(profileImageView.snp.right).offset(12)
         }
         
         ownerRoleLabel.snp.makeConstraints {
-            $0.top.equalTo(ownerNameLabel.snp.bottom).offset(5)
+            $0.top.equalTo(ownerNameLabel.snp.bottom)
             $0.left.equalTo(ownerNameLabel.snp.left)
         }
         

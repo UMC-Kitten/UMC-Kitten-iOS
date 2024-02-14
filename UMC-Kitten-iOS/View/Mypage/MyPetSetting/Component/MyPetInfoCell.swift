@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MyPetCardCell: BaseCollectionViewCell {
+class MyPetInfoCell: BaseCollectionViewCell {
     
     // MARK: Data
     var petId: Int64 = 0
