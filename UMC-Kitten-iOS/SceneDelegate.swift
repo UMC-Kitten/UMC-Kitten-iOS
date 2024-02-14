@@ -23,12 +23,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // (1) VC 생성
         // let exampleVC = ExampleViewController()
+        let communityViewController = UINavigationController(rootViewController: CommunityViewController())
         
         // (2) Tab Bar 이름 설정
         // exampleVC.title = "커뮤니티"
+        communityViewController.title = "커뮤니티"
         
         // (3) Tab Bar로 사용하기 위한 뷰 컨트롤러들 설정
         // tabBarVC.setViewControllers([exampleVC, vc2, vc3, vc4, vc5], animated: false)
+        tabBarVC.setViewControllers([communityViewController], animated: false)
         tabBarVC.modalPresentationStyle = .fullScreen
         tabBarVC.tabBar.backgroundColor = .white
         
@@ -36,9 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let items = tabBarVC.tabBar.items else { return }
         // items[0].image = UIImage(systemName: "trash")
         // items[1].image = UIImage(systemName: "folder")
-        // items[2].image = UIImage(systemName: "paperplane")
-        // items[3].image = UIImage(systemName: "doc")
-        // items[4].image = UIImage(systemName: "note")
+        items[0].image = UIImage(systemName: "trash")
         
         // 기본 루트뷰를 탭바컨트롤러로 설정
         window?.rootViewController = tabBarVC
