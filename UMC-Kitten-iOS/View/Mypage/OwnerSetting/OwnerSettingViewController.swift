@@ -16,17 +16,16 @@ class OwnerSettingViewController: BaseViewController {
     // MARK: UI Component
     private let titleLabel: UILabel = .init()
     private let stackView: UIStackView = .init()
-    private let selectCards: [SelectCard] = [
-        .init(
+    private let ownerSelection = Selection(items: [
+        Selection.Item(contentView: SelectCard(
             selectImageName: "dogncat-white",
             deselectImageName: "dogncat-black",
-            description: "반려동물을 \n키우고 있어요"),
-        .init(
+            description: "반려동물을 \n키우고 있어요")),
+        Selection.Item(contentView: SelectCard(
             selectImageName: "owner-white",
             deselectImageName: "owner-black",
-            description: "아직 키우고 \n있지는 않아요"
-        ),
-    ]
+            description: "아직 키우고 \n있지는 않아요"))
+    ])
     
     // MARK: Set Method
     override func setStyle() {
@@ -44,11 +43,8 @@ class OwnerSettingViewController: BaseViewController {
     override func setDelegate() { }
     
     override func setHierarchy() {
-        [titleLabel, stackView]
+        [titleLabel, ownerSelection]
             .forEach { view.addSubview($0) }
-        
-        selectCards
-            .forEach{ stackView.addArrangedSubview($0) }
         
     }
     
@@ -58,27 +54,24 @@ class OwnerSettingViewController: BaseViewController {
             $0.leading.equalToSuperview().inset(20)
         }
         
-        stackView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(20)
+        ownerSelection.snp.makeConstraints {
+            $0.left.right.equalToSuperview().inset(20)
             $0.centerY.equalToSuperview()
             $0.height.equalTo(220)
         }
+        
+        
     }
     
     override func setBind() {
         // - data binding
         reactor.state
-            .map { $0.hasPet }
+            .dropFirst()
+            .take(2)
+            .map { $0.hasPet ? 0 : 1 }
             .distinctUntilChanged()
-            .debug()
-            .subscribe(onNext: {
-                if($0 == true){
-                    self.selectCards[0].configureUISelect()
-                    self.selectCards[1].configureUIDeselect()
-                } else {
-                    self.selectCards[1].configureUISelect()
-                    self.selectCards[0].configureUIDeselect()
-                }
+            .subscribe(onNext: { [weak self] in
+                self?.ownerSelection.setDefaultSelectedIndex($0)
             })
             .disposed(by: disposeBag)
         
@@ -89,23 +82,11 @@ class OwnerSettingViewController: BaseViewController {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
-        // "반려동물을 키우고 있어요" 선택
-        selectCards[0].rx.tapGesture()
+        ownerSelection.onChange
             .dropFirst()
-            .withUnretained(self)
-            .map { _ in self.reactor.currentState.hasPet }
-            .filter { $0 != true } // 값이 변경될 때만 실행
-            .map { _ in .changeHasPet(true) }
-            .bind(to: reactor.action )
-            .disposed(by: disposeBag)
-        
-        // "아직 키우고 있지는 않아요" 선택
-        selectCards[1].rx.tapGesture()
-            .dropFirst()
-            .withUnretained(self)
-            .map { _ in self.reactor.currentState.hasPet }
-            .filter { $0 != false } // 값이 변경될 때만 실행
-            .map { _ in .changeHasPet(false) }
+            .distinctUntilChanged()
+            .map { $0 == 0 ? true : false}
+            .map { .changeHasPet($0) }
             .bind(to: reactor.action )
             .disposed(by: disposeBag)
     }

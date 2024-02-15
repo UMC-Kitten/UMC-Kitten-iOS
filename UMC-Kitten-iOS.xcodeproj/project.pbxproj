@@ -19,6 +19,7 @@
 		BC037BA52B78DF250021721C /* UserApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BA42B78DF250021721C /* UserApiClient.swift */; };
 		BC037BA82B78DFCE0021721C /* LoginTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BA72B78DFCE0021721C /* LoginTestViewController.swift */; };
 		BC037BAD2B78FD850021721C /* ApiResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BAC2B78FD850021721C /* ApiResponseDto.swift */; };
+		BC0460CB2B7E3E7000C3B70A /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0460CA2B7E3E7000C3B70A /* Selection.swift */; };
 		BC087BEB2B7935B1001E34D4 /* MypageRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC087BEA2B7935B1001E34D4 /* MypageRemoteRepository.swift */; };
 		BC1243A62B7B49A900BDFC13 /* PostResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243A52B7B49A900BDFC13 /* PostResponseDto.swift */; };
 		BC1243A82B7B4AC400BDFC13 /* CommentResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243A72B7B4AC400BDFC13 /* CommentResponseDto.swift */; };
@@ -210,6 +211,7 @@
 		BC037BA42B78DF250021721C /* UserApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiClient.swift; sourceTree = "<group>"; };
 		BC037BA72B78DFCE0021721C /* LoginTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestViewController.swift; sourceTree = "<group>"; };
 		BC037BAC2B78FD850021721C /* ApiResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseDto.swift; sourceTree = "<group>"; };
+		BC0460CA2B7E3E7000C3B70A /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		BC087BEA2B7935B1001E34D4 /* MypageRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageRemoteRepository.swift; sourceTree = "<group>"; };
 		BC1243A52B7B49A900BDFC13 /* PostResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponseDto.swift; sourceTree = "<group>"; };
 		BC1243A72B7B4AC400BDFC13 /* CommentResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentResponseDto.swift; sourceTree = "<group>"; };
@@ -909,6 +911,7 @@
 				BCF1E5912B5D750E000F5960 /* ToggleMenuRow.swift */,
 				BCF1E5972B5D7943000F5960 /* TextField.swift */,
 				BCB6CA3E2B73DEA60096DEAD /* MoreButton.swift */,
+				BC0460CA2B7E3E7000C3B70A /* Selection.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -1432,6 +1435,7 @@
 				BC6E40C02B55291800BA2CE1 /* MypageViewController.swift in Sources */,
 				BCC107C82B68C90A0043EC7D /* MyPetSetting+CollectionViewDelegate.swift in Sources */,
 				BC1244E32B7C6A7700BDFC13 /* FeedTableViewCell.swift in Sources */,
+				BC0460CB2B7E3E7000C3B70A /* Selection.swift in Sources */,
 				BC087BEB2B7935B1001E34D4 /* MypageRemoteRepository.swift in Sources */,
 				BC1243F62B7BDA1100BDFC13 /* AlertHelper.swift in Sources */,
 				BC037BA82B78DFCE0021721C /* LoginTestViewController.swift in Sources */,
