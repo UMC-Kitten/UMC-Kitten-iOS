@@ -9,6 +9,10 @@ import UIKit
 
 class ProfileSection: BaseView {
     
+    // MARK: Constant
+    private let PAGE_PADDING: CGFloat = 15
+    private let PET_CELL_SPACING: CGFloat = 16
+    
     // MARK: UI Container
     private let myPetsScrollView: UIScrollView = .init()
     private let myPetsContainer: UIStackView = .init()
@@ -41,7 +45,7 @@ class ProfileSection: BaseView {
         myPetsScrollView.showsHorizontalScrollIndicator = false
         
         myPetsContainer.axis = .horizontal
-        myPetsContainer.spacing = 16
+        myPetsContainer.spacing = PET_CELL_SPACING
         
     }
     
@@ -105,10 +109,11 @@ class ProfileSection: BaseView {
             )
         }
         
-        // 카드 배열 속성 지정 (3개 이하는 가운데 정렬, 이상은 좌우 스크롤)
+        // 카드 배열 속성 지정 (셀들이 디바이스 너비보다 커지면 스크롤, 작으면 가운데 정렬)
+        let isCenter = (UIScreen.main.bounds.width - PAGE_PADDING * 2) > ((MyPetCard.CELL_WIDTH + PET_CELL_SPACING) * CGFloat(pets.count))
         myPetsContainer.snp.removeConstraints()
         myPetsContainer.snp.makeConstraints {
-            if (pets.count < 3) {
+            if (isCenter) {
                 $0.centerX.equalToSuperview()
             } else {
                 $0.left.right.equalToSuperview()
