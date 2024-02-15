@@ -20,6 +20,8 @@
 		BC037BA82B78DFCE0021721C /* LoginTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BA72B78DFCE0021721C /* LoginTestViewController.swift */; };
 		BC037BAD2B78FD850021721C /* ApiResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC037BAC2B78FD850021721C /* ApiResponseDto.swift */; };
 		BC0460CB2B7E3E7000C3B70A /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0460CA2B7E3E7000C3B70A /* Selection.swift */; };
+		BC0460CD2B7E650400C3B70A /* MyArticleSettingReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0460CC2B7E650400C3B70A /* MyArticleSettingReactor.swift */; };
+		BC0460CF2B7E68AF00C3B70A /* FreeBoardMyArticlePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0460CE2B7E68AF00C3B70A /* FreeBoardMyArticlePage.swift */; };
 		BC087BEB2B7935B1001E34D4 /* MypageRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC087BEA2B7935B1001E34D4 /* MypageRemoteRepository.swift */; };
 		BC1243A62B7B49A900BDFC13 /* PostResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243A52B7B49A900BDFC13 /* PostResponseDto.swift */; };
 		BC1243A82B7B4AC400BDFC13 /* CommentResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243A72B7B4AC400BDFC13 /* CommentResponseDto.swift */; };
@@ -212,6 +214,8 @@
 		BC037BA72B78DFCE0021721C /* LoginTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestViewController.swift; sourceTree = "<group>"; };
 		BC037BAC2B78FD850021721C /* ApiResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseDto.swift; sourceTree = "<group>"; };
 		BC0460CA2B7E3E7000C3B70A /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
+		BC0460CC2B7E650400C3B70A /* MyArticleSettingReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArticleSettingReactor.swift; sourceTree = "<group>"; };
+		BC0460CE2B7E68AF00C3B70A /* FreeBoardMyArticlePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardMyArticlePage.swift; sourceTree = "<group>"; };
 		BC087BEA2B7935B1001E34D4 /* MypageRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageRemoteRepository.swift; sourceTree = "<group>"; };
 		BC1243A52B7B49A900BDFC13 /* PostResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponseDto.swift; sourceTree = "<group>"; };
 		BC1243A72B7B4AC400BDFC13 /* CommentResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentResponseDto.swift; sourceTree = "<group>"; };
@@ -1046,6 +1050,7 @@
 				BCC107D72B68E8B70043EC7D /* Component */,
 				BCC107D42B68E7450043EC7D /* Delegate */,
 				BCC107D12B68E3630043EC7D /* MyArticleSettingViewController.swift */,
+				BC0460CC2B7E650400C3B70A /* MyArticleSettingReactor.swift */,
 			);
 			path = MyArticleSetting;
 			sourceTree = "<group>";
@@ -1062,6 +1067,7 @@
 			isa = PBXGroup;
 			children = (
 				BCC107D82B68E9610043EC7D /* MyArticlePageTapBar.swift */,
+				BC0460CE2B7E68AF00C3B70A /* FreeBoardMyArticlePage.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1328,6 +1334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC3CECCC2B4FACC300546377 /* ViewController.swift in Sources */,
+				BC0460CF2B7E68AF00C3B70A /* FreeBoardMyArticlePage.swift in Sources */,
 				BCF1E5922B5D750E000F5960 /* ToggleMenuRow.swift in Sources */,
 				BCF1E5982B5D7943000F5960 /* TextField.swift in Sources */,
 				BC1243AC2B7B4B4800BDFC13 /* PostApiClient.swift in Sources */,
@@ -1449,6 +1456,7 @@
 				BCC107CA2B68CD120043EC7D /* BaseCollectionView.swift in Sources */,
 				BC1244952B7C63CE00BDFC13 /* OwnerSelectViewController.swift in Sources */,
 				BC9DC6502B72359C00859EFE /* HomeReactor.swift in Sources */,
+				BC0460CD2B7E650400C3B70A /* MyArticleSettingReactor.swift in Sources */,
 				BC037BA52B78DF250021721C /* UserApiClient.swift in Sources */,
 				BC1244A32B7C654B00BDFC13 /* CommunityPostView.swift in Sources */,
 				BCB6CA412B73E2300096DEAD /* HomeBottomSection.swift in Sources */,

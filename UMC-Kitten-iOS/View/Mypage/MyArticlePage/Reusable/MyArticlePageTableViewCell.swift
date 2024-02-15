@@ -16,14 +16,14 @@ class MyArticlePageTableViewCell: BaseTableViewCell {
     let reactionStackView: UIStackView = .init()
     
     // MARK: UI Component
-    let userProfileImage: UIImageView = .init(imageName: "cat-sample")
-    let userNickname: UILabel = .init(staticText: "고먐미")
-    let detailIcon: UIImageView = .init(imageName: "detail-icon")
-    let articleBody: UILabel = .init(staticText: "예시 본문입니다")
-    let likeIcon: UIImageView = .init(imageName: "like-icon")
-    let reactionCenterLine: UIView = .init()
-    let chatIcon: UIImageView = .init(imageName: "chat-icon")
-    let bottomLine: UIView = .init()
+    private let userProfileImage: UIImageView = .init(imageName: "cat-sample")
+    private let userNickname: UILabel = .init(staticText: "고먐미")
+    private let detailIcon: UIImageView = .init(imageName: "detail-icon")
+    private let articleBody: UILabel = .init(staticText: "예시 본문입니다")
+    private let likeIcon: UIImageView = .init(imageName: "like-icon")
+    private let reactionCenterLine: UIView = .init()
+    private let chatIcon: UIImageView = .init(imageName: "chat-icon")
+    private let bottomLine: UIView = .init()
     
     // MARK: Initialization
     
@@ -108,6 +108,16 @@ class MyArticlePageTableViewCell: BaseTableViewCell {
             $0.bottom.equalToSuperview()
             $0.height.equalTo(1)
         }
+    }
+    
+    func configure(
+        userProfileImage: String = "cat-sample",
+        userNickname: String,
+        content: String
+    ) {
+        self.userProfileImage.image = UIImage(named: userProfileImage)
+        self.userNickname.text = userNickname
+        self.articleBody.text = content
     }
 }
 

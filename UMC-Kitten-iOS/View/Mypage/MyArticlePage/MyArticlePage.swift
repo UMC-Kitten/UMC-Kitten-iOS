@@ -10,7 +10,7 @@ import UIKit
 class MyArticlePage: BaseViewController {
     
     // MARK: UI Component
-    private var tableView: UITableView = .init()
+    var tableView: UITableView = .init()
     
     // MARK: Set Method
     override func setStyle() {
@@ -20,8 +20,6 @@ class MyArticlePage: BaseViewController {
     }
     
     override func setDelegate() {
-        tableView.delegate = self
-        tableView.dataSource = self
         tableView.register(MyArticlePageTableViewCell.self, forCellReuseIdentifier: "cell")
     }
     

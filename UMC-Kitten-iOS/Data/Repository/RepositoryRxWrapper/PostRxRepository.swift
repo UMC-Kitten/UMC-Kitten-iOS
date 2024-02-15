@@ -18,11 +18,11 @@ class PostRxRepository {
     }
     
     func getAllPostByBoard(
-        baordType: BoardType,
+        boardType: BoardType,
         page: Int
     ) -> Observable<[PostModel]> {
         return Observable.create { observer in
-            self.repository.getAllPostByBoard(boardType: baordType, page: page) { result, error in
+            self.repository.getAllPostByBoard(boardType: boardType, page: page) { result, error in
                 if let error = error {
                     observer.onError(error)
                 } else if let result = result {
