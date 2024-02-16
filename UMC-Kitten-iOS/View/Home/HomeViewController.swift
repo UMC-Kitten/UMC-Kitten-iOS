@@ -147,11 +147,23 @@ class HomeViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
-        // - event binding
+        // - action binding
         // 데이터 로드 시점 바인딩
         rx.viewWillAppear
             .map { _ in .viewWillAppear }
             .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        popularPostSection.moreButton.rx.tapGesture()
+            .subscribe(onNext: {_ in 
+                print("더보기 이동")
+            })
+            .disposed(by: disposeBag)
+        
+        todayFeedSection.moreButton.rx.tapGesture()
+            .subscribe(onNext: {_ in
+                print("더보기 이동")
+            })
             .disposed(by: disposeBag)
         
     }

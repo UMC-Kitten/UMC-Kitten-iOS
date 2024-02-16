@@ -16,7 +16,7 @@ class TodayFeedSection: BaseView {
     
     // MARK: UI Component
     private let sectionTitle: UILabel = .init(staticText: "오늘의 피드")
-    private let moreButton: MoreButton = .init()
+    let moreButton: MoreButton = .init()
     let collectionView: BaseCollectionView = .init()
     private let selectionLine: UIView = .init()
     

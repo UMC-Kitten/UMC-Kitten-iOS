@@ -16,7 +16,7 @@ class PopularPostSection: BaseView {
     
     // MARK: UI Component
     private let sectionTitle: UILabel = .init(staticText: "인기 게시글")
-    private let moreButton: MoreButton = .init()
+    let moreButton: MoreButton = .init()
     let collectionView: BaseCollectionView = .init()
     private let selectionLine: UIView = .init()
     

@@ -14,7 +14,7 @@ class OwnerSettingViewController: BaseViewController {
     private let reactor = OwnerSettingReactor(mypageRepository: MypageRemoteRepository())
     
     // MARK: UI Component
-    private let titleLabel: UILabel = .init()
+    private let titleLabel: UILabel = .init(staticText: "나는 반려인으로 \n지금 어떤 상황에 해당되나요?")
     private let stackView: UIStackView = .init()
     private let ownerSelection = Selection(items: [
         Selection.Item(contentView: SelectCard(
@@ -35,7 +35,6 @@ class OwnerSettingViewController: BaseViewController {
         stackView.distribution = .fillEqually
         stackView.spacing = 16
         
-        titleLabel.text = "나는 반려인으로 \n지금 어떤 상황에 해당되나요?"
         titleLabel.numberOfLines = 2
         titleLabel.setDefaultFont(size: 24, weight: .regular)
     }
