@@ -1,18 +1,19 @@
 //
-//  ViewController.swift
+//  WelcomeViewController.swift
 //  UMC-Kitten-iOS
 //
-//  Created by DOYEON LEE on 1/11/24.
+//  Created by Jongkwon on 1/30/24.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class WelcomeViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
-    }
-
+        }
+    
+    
 }
-
