@@ -33,4 +33,20 @@ extension UIImageView {
         overlayLayer.addSublayer(gradientLayer)
         self.layer.addSublayer(overlayLayer)
     }
+    
+    /// URL로부터 이미지를 가져와서 설정합니다.
+    func setImage(from url: String) {
+        guard let convertUrl = URL(string: url) else { return }
+        
+        URLSession.shared.dataTask(with: convertUrl) { data, response, error in
+            guard let data = data, let image = UIImage(data: data) else {
+                print("Failed to load image from URL: \(url)")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.image = image
+            }
+        }.resume()
+    }
 }

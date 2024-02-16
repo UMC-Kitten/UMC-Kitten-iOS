@@ -25,4 +25,10 @@ protocol MypageRepository {
         hasPet: Bool,
         completion: @escaping (_ isSuccess: Bool?, _ error: Error?) -> Void
     )
+    
+    /// 프로필 이미지 변경
+    func changeProfileImage(
+        image: Data,
+        completion: @escaping (_ isSuccess: Bool?, _ error: Error?) -> Void
+    )
 }

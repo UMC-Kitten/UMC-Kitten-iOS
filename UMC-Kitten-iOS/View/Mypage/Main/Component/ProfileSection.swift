@@ -19,7 +19,7 @@ class ProfileSection: BaseView {
     
     // MARK: UI Component
     
-    let profileImageView: UIImageView = .init(imageName: "cat-sample")
+    let profileImageView: UIImageView = .init()
     let ownerNameLabel: UILabel = .init(staticText: "임시 닉네임")
     private let ownerRoleLabel: UILabel = .init(staticText: "반려인")
     

@@ -13,7 +13,7 @@ enum MypageApiClient {
     case getUserInfo(id: Int64)
     case changeNickname(dto: MypageRequestDto.ChangeNicknameRequestDto)
     case changeHasPet(dto: MypageRequestDto.ChangeHasPetRequestDto)
-    case changeProfileImage(dto: MypageRequestDto.ChangeProfileImageRequestDto)
+    case changeProfileImage(id: Int64, profileImage: Data)
 }
 
 extension MypageApiClient: TargetType {
@@ -36,7 +36,7 @@ extension MypageApiClient: TargetType {
     
     var path: String {
         switch self {
-        case let .getUserInfo( id):
+        case let .getUserInfo(id):
             return "/info/\(id)"
         case .changeNickname:
             return "/change/nickname"
@@ -52,7 +52,7 @@ extension MypageApiClient: TargetType {
         case .getUserInfo:
             return .get
         case .changeNickname:
-            return .post        
+            return .post
         case .changeHasPet:
             return .post
         case .changeProfileImage:
@@ -68,13 +68,21 @@ extension MypageApiClient: TargetType {
             return .requestCustomJSONEncodable(dto, encoder: JSONEncoder())
         case let .changeHasPet(dto):
             return .requestCustomJSONEncodable(dto, encoder: JSONEncoder())
-        case let .changeProfileImage(dto):
-            return .requestCustomJSONEncodable(dto, encoder: JSONEncoder())
+        case let .changeProfileImage(id, image):
+            let formData: [MultipartFormData] = [MultipartFormData(provider: .data(image), name: "file", fileName: "profile_image.jpg", mimeType: "image/jpeg"), ]
+            return .uploadCompositeMultipart(formData, urlParameters: ["id": "\(id)"])
+            //            return .requestCustomJSONEncodable(dto, encoder: JSONEncoder())
         }
     }
     
     var headers: [String : String]? {
-        return ["Content-type": "application/json"]
+        switch self {
+        case .changeProfileImage:
+            return ["Content-type": "multipart/form-data"]
+        default:
+            return ["Content-type": "application/json"]
+        }
+        
     }
     
     var sampleData: Data {

@@ -95,6 +95,27 @@ class MypageRemoteRepository: MypageRepository {
         }
     }
     
+    func changeProfileImage(
+        image: Data,
+        completion: @escaping (_ isSuccess: Bool?, _ error: Error?) -> Void
+    ) {
+        let userId = Int64(UserDefaults
+            .standard.integer(forKey: UserDefaultsConstant.USER_ID_KEY))
+        
+        client.request(
+            .changeProfileImage(id: userId, profileImage: image)
+        ) { result in
+            switch result {
+            case .success(_):
+                completion(true, nil)
+                
+            case .failure(let error):
+                completion(nil, CommonError.failed(error: error))
+            }
+        }
+    }
+    
+    
     private func convertToDomainModel(
         userDto: MypageResponseDto.UserResponseDto,
         userId: Int64
