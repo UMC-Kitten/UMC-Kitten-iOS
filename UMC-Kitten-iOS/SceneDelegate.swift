@@ -32,7 +32,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let homeNavVC = UINavigationController()
         homeNavVC.viewControllers = [homeVC]
         
-        let checkinVC = LoginTestViewController()
+//        let checkinVC = LoginTestViewController()
+        let checkinStoryboard = UIStoryboard(name: "HealthBook", bundle: nil)
+        guard let checkinVC = checkinStoryboard.instantiateViewController(withIdentifier: "HEALTHBOOK")
+                as? HealthBookViewController
+        else { fatalError("Unable to instantiate HealthBookViewController from the checkinStoryboard with identifier 'HEALTHBOOK'") }
         
         let communityVC = CommunityViewController()
         
@@ -40,9 +44,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let mypageNavVC = UINavigationController()
         mypageNavVC.viewControllers = [mypageVC]
         
-        let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
-        guard let landingVC = storyboard.instantiateViewController(withIdentifier: "WELCOME")
-                as? WelcomeViewController else { return }
+        let landingStoryboard = UIStoryboard(name: "PetInformation", bundle: nil) // 임시
+        guard let landingVC = landingStoryboard.instantiateViewController(withIdentifier: "PETINFORMATION")
+                as? PetInformationViewController
+        else { fatalError("Unable to instantiate WelcomeViewController from the landingStoryboard with identifier 'WELCOME'.") }
         let landingNavVC = UINavigationController()
         landingNavVC.viewControllers = [landingVC]
         

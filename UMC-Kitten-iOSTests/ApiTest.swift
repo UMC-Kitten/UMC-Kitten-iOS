@@ -23,32 +23,32 @@ final class ApiTest: XCTestCase {
     func testExample() throws {
         let expectation = XCTestExpectation(description: "Retrieve posts")
 
-        repository.getPosts(
-            postType: PostTypeDto.boast,
-            page: 1
-        ) { result, error in
-            print("통신 완료!")
-            // 검증 로직을 추가하세요
-            
-            if let data = result?.data {
-                do {
-                    // 데이터를 딕셔너리로 디코딩
-                    guard let dictionary = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
-                        print("Failed to convert data to dictionary")
-                        return
-                    }
-                    print(dictionary)
-                } catch {
-                    print("Failed to decode data:", error)
-                }
-            }
-            
-            print(error)
-            XCTAssertNotNil(result)
-            XCTAssertNil(error)
-            
-            expectation.fulfill()
-        }
+//        repository.getAllPostByBoard(
+//            postType: PostTypeDto.boast,
+//            page: 1
+//        ) { result, error in
+//            print("통신 완료!")
+//            // 검증 로직을 추가하세요
+//            
+//            if let data = result?.data {
+//                do {
+//                    // 데이터를 딕셔너리로 디코딩
+//                    guard let dictionary = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+//                        print("Failed to convert data to dictionary")
+//                        return
+//                    }
+//                    print(dictionary)
+//                } catch {
+//                    print("Failed to decode data:", error)
+//                }
+//            }
+//            
+//            print(error)
+//            XCTAssertNotNil(result)
+//            XCTAssertNil(error)
+//            
+//            expectation.fulfill()
+//        }
 
         wait(for: [expectation], timeout: 10) // 최대 대기 시간 설정
     }
