@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class SelectCard: BaseView {
+class SelectCard: BaseView, SelectionItemProtocol {
     
     private var selectImage: UIImage = .init()
     private var deselectImage: UIImage = .init()
@@ -77,13 +77,13 @@ class SelectCard: BaseView {
         }
     }
     
-    func configureUISelect() {
+    func configureSelectUI() {
         self.imageView.image = selectImage
         self.descriptionLabel.textColor = .white
         self.backgroundColor = .main
     }
     
-    func configureUIDeselect() {
+    func configureDeselectUI() {
         self.imageView.image = deselectImage
         self.descriptionLabel.textColor = .black
         self.backgroundColor = .white

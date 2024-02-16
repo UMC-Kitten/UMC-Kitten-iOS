@@ -29,12 +29,6 @@ final class AlertHelper {
         rootController().present(alert, animated: true)
     }
     
-//    static func showAlertWithChoice(title: String = "알림", message: String?, action: UIAlertAction) {
-//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//
-//        alert.addAction(.init(title: "취소", style: .cancel))
-//
-//    }
     
     private static func rootController() -> UIViewController {
         guard let screen = UIApplication.shared.connectedScenes.first as? UIWindowScene else {

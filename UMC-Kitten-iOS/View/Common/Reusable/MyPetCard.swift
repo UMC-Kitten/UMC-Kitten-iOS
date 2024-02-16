@@ -12,6 +12,10 @@ import SnapKit
 
 class MyPetCard: BaseView {
     
+    // MARK: Constant
+    static let CELL_WIDTH: CGFloat = 100
+    static let CELL_HEIGHT: CGFloat = 120
+    
     // MARK: UI Component
     
     private let petImageView: UIImageView = .init(imageName: "cat-sample") // FIXME: loading 이미지로 바꾸기
@@ -51,8 +55,8 @@ class MyPetCard: BaseView {
     override func setLayout() {
         
         self.snp.makeConstraints {
-            $0.width.equalTo(100)
-            $0.height.equalTo(120)
+            $0.width.equalTo(MyPetCard.CELL_WIDTH)
+            $0.height.equalTo(MyPetCard.CELL_HEIGHT)
         }
         
         petImageView.snp.makeConstraints {

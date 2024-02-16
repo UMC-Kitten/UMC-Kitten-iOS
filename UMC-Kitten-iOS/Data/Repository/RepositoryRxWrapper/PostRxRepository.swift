@@ -1,40 +1,28 @@
 //
-//  MypageRxRepository.swift
+//  PostRxRemoteRepository.swift
 //  UMC-Kitten-iOS
 //
-//  Created by DOYEON LEE on 2/14/24.
+//  Created by DOYEON LEE on 2/13/24.
 //
 
 import Foundation
 
 import RxSwift
 
-class MypageRxRepository {
+class PostRxRepository {
     
-    private let repository: MypageRepository
+    private let repository: PostRepository
     
-    init(repository: MypageRepository) {
+    init(repository: PostRepository) {
         self.repository = repository
     }
     
-    func getUserInfo() -> Observable<UserModel> {
+    func getAllPostByBoard(
+        boardType: BoardType,
+        page: Int
+    ) -> Observable<[PostModel]> {
         return Observable.create { observer in
-            self.repository.getUserInfo() { result, error in
-                if let error = error {
-                    observer.onError(error)
-                } else if let result = result {
-                    observer.onNext(result)
-                    observer.onCompleted()
-                }
-            }
-            
-            return Disposables.create()
-        }
-    }    
-    
-    func changeUserNickname(nickname: String) -> Observable<Bool> {
-        return Observable.create { observer in
-            self.repository.changeUserNickname(nickname: nickname) { result, error in
+            self.repository.getAllPostByBoard(boardType: boardType, page: page) { result, error in
                 if let error = error {
                     observer.onError(error)
                 } else if let result = result {
@@ -47,9 +35,24 @@ class MypageRxRepository {
         }
     }
     
-    func changeHasPet(hasPet: Bool) -> Observable<Bool> {
+    func getPopularPost() -> Observable<[PostModel]> {
         return Observable.create { observer in
-            self.repository.changeHasPet(hasPet: hasPet) { result, error in
+            self.repository.getPopularPost() { result, error in
+                if let error = error {
+                    observer.onError(error)
+                } else if let result = result {
+                    observer.onNext(result)
+                    observer.onCompleted()
+                }
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func getTodayFeed() -> Observable<[PostModel]> {
+        return Observable.create { observer in
+            self.repository.getTodayFeed() { result, error in
                 if let error = error {
                     observer.onError(error)
                 } else if let result = result {

@@ -10,22 +10,22 @@ import SnapKit
 
 class OwnerSettingViewController: BaseViewController {
     
+    // MARK: Dependency
+    private let reactor = OwnerSettingReactor(mypageRepository: MypageRemoteRepository())
+    
     // MARK: UI Component
-    private let titleLabel: UILabel = .init()
+    private let titleLabel: UILabel = .init(staticText: "나는 반려인으로 \n지금 어떤 상황에 해당되나요?")
     private let stackView: UIStackView = .init()
-    private let selectCards: [SelectCard] = [
-        .init(
+    private let ownerSelection = Selection(items: [
+        Selection.Item(contentView: SelectCard(
             selectImageName: "dogncat-white",
             deselectImageName: "dogncat-black",
-            description: "반려동물을 \n키우고 있어요"),
-        .init(
+            description: "반려동물을 \n키우고 있어요")),
+        Selection.Item(contentView: SelectCard(
             selectImageName: "owner-white",
             deselectImageName: "owner-black",
-            description: "아직 키우고 \n있지는 않아요"
-        ),
-    ]
-    
-    private var isSelected: Bool = true
+            description: "아직 키우고 \n있지는 않아요"))
+    ])
     
     // MARK: Set Method
     override func setStyle() {
@@ -35,7 +35,6 @@ class OwnerSettingViewController: BaseViewController {
         stackView.distribution = .fillEqually
         stackView.spacing = 16
         
-        titleLabel.text = "나는 반려인으로 \n지금 어떤 상황에 해당되나요?"
         titleLabel.numberOfLines = 2
         titleLabel.setDefaultFont(size: 24, weight: .regular)
     }
@@ -43,11 +42,8 @@ class OwnerSettingViewController: BaseViewController {
     override func setDelegate() { }
     
     override func setHierarchy() {
-        [titleLabel, stackView]
+        [titleLabel, ownerSelection]
             .forEach { view.addSubview($0) }
-        
-        selectCards
-            .forEach{ stackView.addArrangedSubview($0) }
         
     }
     
@@ -57,38 +53,41 @@ class OwnerSettingViewController: BaseViewController {
             $0.leading.equalToSuperview().inset(20)
         }
         
-        stackView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(20)
+        ownerSelection.snp.makeConstraints {
+            $0.left.right.equalToSuperview().inset(20)
             $0.centerY.equalToSuperview()
             $0.height.equalTo(220)
         }
+        
+        
     }
     
     override func setBind() {
-        
-        // FIXME: 내부 함수로 분리
-        // 첫번째꺼가 선택된 액션
-        selectCards[0].rx.tapGesture()
-            .subscribe { _ in
-                self.isSelected = true
-                self.isSelected = false
-                
-                self.selectCards[0].configureUISelect()
-                self.selectCards[1].configureUIDeselect()
-                
-            }
+        // - data binding
+        reactor.state
+            .dropFirst()
+            .take(2)
+            .map { $0.hasPet ? 0 : 1 }
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] in
+                self?.ownerSelection.setDefaultSelectedIndex($0)
+            })
             .disposed(by: disposeBag)
         
-        selectCards[1].rx.tapGesture()
-            .subscribe { _ in
-                self.isSelected = true
-                self.isSelected = false
-                
-                self.selectCards[1].configureUISelect()
-                self.selectCards[0].configureUIDeselect()
-            }
+        // - action binding
+        // 데이터 로드 시점 바인딩
+        rx.viewWillAppear
+            .map { _ in .viewWillAppear }
+            .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        ownerSelection.onChange
+            .dropFirst()
+            .distinctUntilChanged()
+            .map { $0 == 0 ? true : false}
+            .map { .changeHasPet($0) }
+            .bind(to: reactor.action )
+            .disposed(by: disposeBag)
     }
     
 }

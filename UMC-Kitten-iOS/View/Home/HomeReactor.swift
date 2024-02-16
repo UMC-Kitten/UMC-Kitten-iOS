@@ -11,15 +11,15 @@ import ReactorKit
 
 class HomeReactor: Reactor {
     
-    private let mypageRepository: MypageRxRepository
-    private let postRepository: PostRxRemoteRepository
+    private let petRepository: PetRxRepository
+    private let postRepository: PostRxRepository
     
     init(
-        mypageRepository: MypageRepository,
+        petRepository: PetRepository,
         postRepository: PostRepository
     ) {
-        self.mypageRepository = MypageRxRepository(repository: mypageRepository)
-        self.postRepository = PostRxRemoteRepository(repository: postRepository)
+        self.petRepository = PetRxRepository(repository: petRepository)
+        self.postRepository = PostRxRepository(repository: postRepository)
     }
     
     enum Action {
@@ -48,9 +48,8 @@ extension HomeReactor {
         case .viewWillAppear:
             
             // 유저 정보 가져와서 반려동물 정보 가져오기
-            let petObservable = mypageRepository
-                .getUserInfo()
-                .map { $0.pets }
+            let petObservable = petRepository
+                .getRegisteredPets()
                 .map { Mutation.setRegisteredPets(pets: $0) }
                 .catch { error in
                     print("Error loading pets: ", error)
@@ -59,7 +58,7 @@ extension HomeReactor {
             
             // 인기 게시글 받아오기
             let postObservable = postRepository
-                .getAllPostByBoard(baordType: .boast, page: 1) // FIXME: 추후 포스트타입 수정
+                .getPopularPost()
                 .map { Mutation.setPopularPosts(posts: $0) }
                 .catch { error in
                     print("Error loading popular posts:", error)
@@ -68,10 +67,10 @@ extension HomeReactor {
             
             // 오늘의 피드 받아오기
             let feedObservable = postRepository
-                .getAllPostByBoard(baordType: .boast, page: 1) // FIXME: 추후 포스트타입 수정
+                .getTodayFeed()
                 .map { Mutation.setTodayFeeds(posts: $0) }
                 .catch { error in
-                    print("Error loading popular posts:", error)
+                    print("Error loading today feed:", error)
                     return Observable.empty()
                 }
             

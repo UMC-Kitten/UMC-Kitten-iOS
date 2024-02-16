@@ -9,6 +9,10 @@ import UIKit
 
 class ProfileSection: BaseView {
     
+    // MARK: Constant
+    private let PAGE_PADDING: CGFloat = 15
+    private let PET_CELL_SPACING: CGFloat = 16
+    
     // MARK: UI Container
     private let myPetsScrollView: UIScrollView = .init()
     private let myPetsContainer: UIStackView = .init()
@@ -41,7 +45,7 @@ class ProfileSection: BaseView {
         myPetsScrollView.showsHorizontalScrollIndicator = false
         
         myPetsContainer.axis = .horizontal
-        myPetsContainer.spacing = 16
+        myPetsContainer.spacing = PET_CELL_SPACING
         
     }
     
@@ -57,33 +61,33 @@ class ProfileSection: BaseView {
     override func setLayout() {
         profileImageView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(20)
-            $0.leading.equalToSuperview()
+            $0.left.equalToSuperview()
             $0.size.equalTo(60)
         }
         
         ownerNameLabel.snp.makeConstraints {
-            $0.top.equalTo(profileImageView.snp.top).offset(5)
-            $0.leading.equalTo(profileImageView.snp.trailing).offset(12)
+            $0.top.equalTo(profileImageView.snp.top).offset(8)
+            $0.left.equalTo(profileImageView.snp.right).offset(12)
         }
         
         ownerRoleLabel.snp.makeConstraints {
-            $0.top.equalTo(ownerNameLabel.snp.bottom).offset(5)
-            $0.leading.equalTo(ownerNameLabel.snp.leading)
+            $0.top.equalTo(ownerNameLabel.snp.bottom)
+            $0.left.equalTo(ownerNameLabel.snp.left)
         }
         
         myPetsInfoTitleLabel.snp.makeConstraints {
             $0.top.equalTo(profileImageView.snp.bottom).offset(20)
-            $0.leading.equalToSuperview()
+            $0.left.equalToSuperview()
         }
         
         managementButton.snp.makeConstraints {
             $0.top.equalTo(profileImageView.snp.bottom).offset(20)
-            $0.trailing.equalToSuperview()
+            $0.right.equalToSuperview()
         }
         
         myPetsScrollView.snp.makeConstraints {
             $0.top.equalTo(myPetsInfoTitleLabel.snp.bottom).offset(15)
-            $0.leading.trailing.equalToSuperview()
+            $0.left.right.equalToSuperview()
             $0.height.equalTo(120) // MyPetCell's height is 120
             $0.bottom.equalToSuperview()
         }
@@ -91,16 +95,6 @@ class ProfileSection: BaseView {
     }
     
     func configurePets(pets: [PetModel]) {
-        // 배열 속성 지정
-        myPetsContainer.snp.makeConstraints {
-            if (pets.count < 3) {
-                $0.centerX.equalToSuperview()
-            } else {
-                $0.edges.equalToSuperview()
-            }
-            $0.height.equalToSuperview()
-        }
-        
         // 이전 값들 지우기
         myPetsContainer.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
@@ -113,6 +107,19 @@ class ProfileSection: BaseView {
                     petInfo: "\($0.species.krDescription)/\($0.gender.krDescription)"
                 )
             )
+        }
+        
+        // 카드 배열 속성 지정 (셀들이 디바이스 너비보다 커지면 스크롤, 작으면 가운데 정렬)
+        let isCenter = (UIScreen.main.bounds.width - PAGE_PADDING * 2) > ((MyPetCard.CELL_WIDTH + PET_CELL_SPACING) * CGFloat(pets.count))
+        myPetsContainer.snp.removeConstraints()
+        myPetsContainer.snp.makeConstraints {
+            if (isCenter) {
+                $0.centerX.equalToSuperview()
+            } else {
+                $0.left.right.equalToSuperview()
+            }
+            $0.height.equalToSuperview()
+            $0.centerY.equalToSuperview()
         }
     }
     
