@@ -89,6 +89,16 @@ class MypageViewController: BaseViewController {
     override func setBind() {
         
         // - data binding
+        // 유저 프로필 이미지 바인딩
+        reactor.state
+            .map { $0.user?.profileImage }
+            .filterNil()
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] profileImage in
+                self?.profileSection.profileImageView.setImage(from: profileImage)
+            })
+            .disposed(by: disposeBag)
+        
         // 유저 닉네임 바인딩
         reactor.state
             .map { $0.user?.nickname }
@@ -137,6 +147,54 @@ class MypageViewController: BaseViewController {
                 self.pushView(vc: MyArticleSettingViewController())
             }
             .disposed(by: self.disposeBag)
+        
+        // FAQ 메뉴 탭
+        let faqUrl = URL(string: "https://little-pewter-b0f.notion.site/FAQ-c941c491058048cfa81d66960dd9f804?pvs=4")!
+        mypageMenuSection.faq.rx.tapGesture()
+            .withUnretained(self)
+            .skip(1)
+            .subscribe { _ in
+                self.pushWebView(faqUrl)
+            }
+            .disposed(by: self.disposeBag)
+        
+        // 공지사항 메뉴 탭
+        let noticeUrl = URL(string: "https://little-pewter-b0f.notion.site/dae217c2c1b64eb9b9975ffab538d625?pvs=4")!
+        mypageMenuSection.notice.rx.tapGesture()
+            .withUnretained(self)
+            .skip(1)
+            .subscribe { _ in
+                self.pushWebView(noticeUrl)
+            }
+            .disposed(by: self.disposeBag)
+        
+        // 서비스 문의 메뉴 탭
+        let inquiryUrl = URL(string: "https://little-pewter-b0f.notion.site/ed8b776d39ec42e5a85013907b6d0cae?pvs=4")!
+        mypageMenuSection.inquiry.rx.tapGesture()
+            .withUnretained(self)
+            .skip(1)
+            .subscribe { _ in
+                self.pushWebView(inquiryUrl)
+            }
+            .disposed(by: self.disposeBag)
+        
+        // 서비스 이용약관 메뉴 탭
+        let termsUrl = URL(string: "https://little-pewter-b0f.notion.site/73f7d20826f345d09e50ac3f8caa7f1b?pvs=4")!
+        mypageMenuSection.terms.rx.tapGesture()
+            .withUnretained(self)
+            .skip(1)
+            .subscribe { _ in
+                self.pushWebView(termsUrl)
+            }
+            .disposed(by: self.disposeBag)
+        
+        
+    }
+    
+    private func pushWebView(_ url: URL) {
+        let nextVC = WebViewController(url: url)
+        nextVC.hidesBottomBarWhenPushed = true
+        self.pushView(vc: nextVC)
     }
     
 }
