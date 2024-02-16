@@ -13,7 +13,6 @@ class PetInformationViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        requestAddPet()
     }
     
     // TODO: 버튼 탭 이벤트에 이 함수를 넣어주세요
