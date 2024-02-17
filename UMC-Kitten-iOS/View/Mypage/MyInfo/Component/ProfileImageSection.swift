@@ -14,34 +14,33 @@ class ProfileImageSection: BaseView {
     private let profileImageSize: CGFloat = 110
     
     // MARK: UI Component
-    
-    let profileImage: UIImageView = .init(imageName: "cat-sample")
+    let profileImageView: UIImageView = .init()
     let editButton: UIImageView = .init(imageName: "edit-icon")
     
     // MARK: Set Method
-    
     override func setStyle() { 
-        profileImage.layer.cornerRadius = profileImageSize / 2
-        profileImage.layer.masksToBounds = true
-        profileImage.layer.borderWidth = 2.0
-        profileImage.layer.borderColor = UIColor.main.withAlphaComponent(0.1).cgColor
+        profileImageView.layer.cornerRadius = profileImageSize / 2
+        profileImageView.layer.masksToBounds = true
+        profileImageView.layer.borderWidth = 2.0
+        profileImageView.layer.borderColor = UIColor.main.withAlphaComponent(0.1).cgColor
+        profileImageView.contentMode = .scaleAspectFill
     }
     
     override func setHierarchy() { 
-        [profileImage, editButton]
+        [profileImageView, editButton]
             .forEach { self.addSubview($0) }
     }
     
     override func setLayout() { 
-        profileImage.snp.makeConstraints {
+        profileImageView.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.bottom.equalToSuperview().inset(35)
             $0.width.height.equalTo(profileImageSize)
         }
         
         editButton.snp.makeConstraints {
-            $0.top.equalTo(profileImage.snp.bottom).offset(-20)
-            $0.trailing.equalTo(profileImage.snp.trailing).offset(-5)
+            $0.top.equalTo(profileImageView.snp.bottom).offset(-20)
+            $0.trailing.equalTo(profileImageView.snp.trailing).offset(-5)
             $0.width.height.equalTo(30)
         }
     }
