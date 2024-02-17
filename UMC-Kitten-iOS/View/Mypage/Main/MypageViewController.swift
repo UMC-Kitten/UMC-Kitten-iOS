@@ -178,11 +178,4 @@ class MypageViewController: BaseViewController {
         
         
     }
-    
-    private func pushWebView(_ url: URL) {
-        let nextVC = WebViewController(url: url)
-        nextVC.hidesBottomBarWhenPushed = true
-        self.pushView(vc: nextVC)
-    }
-    
 }
