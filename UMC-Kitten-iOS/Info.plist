@@ -4,8 +4,6 @@
 <dict>
 	<key>API_BASE_URL</key>
 	<string>http://$(API_BASE_URL)</string>
-	<key>KAKAO_AUTH_APP_KEY</key>
-	<string>$(KAKAO_AUTH_APP_KEY)</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -29,6 +27,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>KAKAO_AUTH_APP_KEY</key>
+	<string>$(KAKAO_AUTH_APP_KEY)</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>kakaoplus</string>
@@ -37,6 +37,11 @@
 		<string>naversearchapp</string>
 		<string>naversearchthirdlogin</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Pretendard-Black.otf</string>
@@ -68,12 +73,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
 </dict>
 </plist>

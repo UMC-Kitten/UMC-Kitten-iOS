@@ -15,29 +15,40 @@ import NaverThirdPartyLogin
 
 class LoginTestViewController: BaseViewController {
     
+    private let appleAuthService = AppleAuthHelper()
     private let kakaoAuthService = KakaoAuthHelper()
     private let naverAuthService = NaverAuthHelper()
     private let userService = MoyaProvider<UserApiClient>()
     
+    private let appleLoginButton: UIButton = .init(text: "애플 로그인")
     private let kakaoLoginButton: UIButton = .init(text: "카카오 로그인")
     private let naverLoginButton: UIButton = .init(text: "네이버 로그인")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        [kakaoLoginButton, naverLoginButton].forEach { view.addSubview($0) }
+        [appleLoginButton, kakaoLoginButton, naverLoginButton].forEach { view.addSubview($0) }
         
-        kakaoLoginButton.snp.makeConstraints {
-            $0.center.equalToSuperview()
+        appleLoginButton.snp.makeConstraints {
+            $0.center.equalToSuperview().offset(0)
         }
         
-        naverLoginButton.snp.makeConstraints {
+        kakaoLoginButton.snp.makeConstraints {
             $0.center.equalToSuperview().offset(40)
         }
         
+        naverLoginButton.snp.makeConstraints {
+            $0.center.equalToSuperview().offset(80)
+        }
+        
+        appleLoginButton.addTarget(self, action: #selector(appleLoginButtonTapped(_:)), for: .touchUpInside)
         kakaoLoginButton.addTarget(self, action: #selector(kakaoLoginButtonTapped(_:)), for: .touchUpInside)
         naverLoginButton.addTarget(self, action: #selector(naverLoginButtonTapped(_:)), for: .touchUpInside)
         
+    }
+    
+    @objc func appleLoginButtonTapped(_ sender: UIButton) {
+        appleAuthService.startAppleLogin()
     }
     
     @objc func kakaoLoginButtonTapped(_ sender: UIButton) {
