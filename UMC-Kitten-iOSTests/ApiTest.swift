@@ -42,6 +42,7 @@ final class ApiTest: XCTestCase {
 //                    }
 //                }
                 
+                print(result)
                 print(error)
                 XCTAssertNotNil(result)
                 XCTAssertNil(error)

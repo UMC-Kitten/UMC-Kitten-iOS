@@ -7,6 +7,8 @@
 
 import Foundation
 
+import Moya
+
 struct MypageRequestDto {
     
     struct ChangeNicknameRequestDto: Codable {
@@ -18,5 +20,4 @@ struct MypageRequestDto {
         let id: Int64
         let hasPet: Bool
     }
-    
 }

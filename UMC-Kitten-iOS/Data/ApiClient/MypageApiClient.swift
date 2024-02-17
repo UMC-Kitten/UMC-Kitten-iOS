@@ -69,9 +69,8 @@ extension MypageApiClient: TargetType {
         case let .changeHasPet(dto):
             return .requestCustomJSONEncodable(dto, encoder: JSONEncoder())
         case let .changeProfileImage(id, image):
-            let formData: [MultipartFormData] = [MultipartFormData(provider: .data(image), name: "file", fileName: "profile_image.jpg", mimeType: "image/jpeg"), ]
+            let formData: [MultipartFormData] = [MultipartFormData(provider: .data(image), name: "file", fileName: "file", mimeType: "image/jpeg"), ]
             return .uploadCompositeMultipart(formData, urlParameters: ["id": "\(id)"])
-            //            return .requestCustomJSONEncodable(dto, encoder: JSONEncoder())
         }
     }
     

@@ -38,7 +38,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
             webView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             webView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             webView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            webView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            webView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
         // 웹페이지 로드
