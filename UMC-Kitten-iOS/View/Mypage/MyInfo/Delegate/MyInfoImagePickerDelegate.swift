@@ -26,6 +26,7 @@ extension MyInfoViewController: UIImagePickerControllerDelegate, UINavigationCon
             .map { .updateProfileImage($0) }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
+        
         picker.dismiss(animated: true, completion: nil) // picker를 닫아줌
         
     }

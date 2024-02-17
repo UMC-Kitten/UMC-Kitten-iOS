@@ -17,7 +17,7 @@ class MyInfoViewController: BaseViewController{
     
     // MARK: Dependency
     
-    let reactor = MyInfoReactor()
+    let reactor = MyInfoReactor(mypageRepository: MypageRemoteRepository())
     private let imagePicker = UIImagePickerController()
     
     // MARK: UI Component
