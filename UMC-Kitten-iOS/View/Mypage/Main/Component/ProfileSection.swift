@@ -117,7 +117,7 @@ class ProfileSection: BaseView {
         pets.forEach {
             myPetsContainer.addArrangedSubview(
                 MyPetCard(
-                    petImageName: "cat-sample",
+                    petImageName: $0.image,
                     petName: $0.name,
                     petInfo: "\($0.species.krDescription)/\($0.gender.krDescription)"
                 )

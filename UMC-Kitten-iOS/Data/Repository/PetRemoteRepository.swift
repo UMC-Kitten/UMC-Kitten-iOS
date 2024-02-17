@@ -65,6 +65,7 @@ class PetRemoteRepository: PetRepository {
         return petsDto.result.map { petDto in
             PetModel(
                 id: petDto.id,
+                image: petDto.petProfileImage,
                 name: petDto.name,
                 species: PetSpeciesType(rawValue: petDto.type.rawValue)!,
                 gender: PetGenderType(rawValue: petDto.gender.rawValue)!,

@@ -80,7 +80,7 @@ class MyPetSettingViewController: BaseViewController {
             
             cell.configure(
                 petId: pet.id,
-                petImageName: pet.imageName,
+                petImageName: pet.image,
                 petName: pet.name,
                 petInfo: "\(pet.species.krDescription) / \(pet.gender.krDescription) / \(pet.age)살"
             )

@@ -12,7 +12,7 @@ struct PetModel {
     /// 등록된 고유 아이디
     let id: Int64
     /// 반려동물 이미지 이름
-    let imageName: String = "cat-sample" //FIXME: URL로 변경
+    let image: String
     /// 반려동물 이름
     let name: String
     /// 반려동물 종 - 고양이, 강아지
