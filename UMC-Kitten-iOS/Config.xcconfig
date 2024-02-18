@@ -8,6 +8,6 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-API_BASE_URL=localhost:8080/api/v1
+API_BASE_URL=192.168.45.160:8080/api/v1
 
 KAKAO_AUTH_APP_KEY=285a30d5a95fcb36e240649e8b722479

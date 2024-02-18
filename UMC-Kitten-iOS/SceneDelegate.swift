@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let homeNavVC = UINavigationController()
         homeNavVC.viewControllers = [homeVC]
         
-//        let checkinVC = LoginTestViewController()
+        //        let checkinVC = LoginTestViewController()
         let checkinStoryboard = UIStoryboard(name: "HealthBook", bundle: nil)
         guard let checkinVC = checkinStoryboard.instantiateViewController(withIdentifier: "HEALTHBOOK")
                 as? HealthBookViewController
@@ -46,23 +46,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let mypageNavVC = UINavigationController()
         mypageNavVC.viewControllers = [mypageVC]
         
-        let landingStoryboard = UIStoryboard(name: "PetInformation", bundle: nil) // 임시
-        guard let landingVC = landingStoryboard.instantiateViewController(withIdentifier: "PETINFORMATION")
-                as? PetInformationViewController
-        else { fatalError("Unable to instantiate WelcomeViewController from the landingStoryboard with identifier 'WELCOME'.") }
-        let landingNavVC = UINavigationController()
-        landingNavVC.viewControllers = [landingVC]
-        
         
         // (2) Tab Bar 이름 설정
         homeVC.title = "홈"
         checkinVC.title = "체크인"
         communityVC.title = "커뮤니티"
         mypageVC.title = "마이페이지"
-        landingVC.title = "랜딩임시"
         
         // (3) Tab Bar로 사용하기 위한 뷰 컨트롤러들 설정
-        tabBarVC.setViewControllers([homeNavVC, checkinNavVC, communityVC, mypageNavVC, landingNavVC], animated: false)
+        tabBarVC.setViewControllers([homeNavVC, checkinNavVC, communityVC, mypageNavVC], animated: false)
         tabBarVC.modalPresentationStyle = .fullScreen
         tabBarVC.tabBar.backgroundColor = .white
         tabBarVC.tabBar.tintColor = .main
@@ -77,6 +69,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 기본 루트뷰를 탭바컨트롤러로 설정
         window?.rootViewController = tabBarVC
         window?.makeKeyAndVisible()
+        
+        if (!checkLogin()) {
+            goLanding()
+        }
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -137,9 +133,34 @@ extension SceneDelegate: NaverThirdPartyLoginConnectionDelegate {
         // 액세스 토큰 접근
         let accessToken = instance.accessToken
         let accessTokenExpireDate = instance.accessTokenExpireDate
-        print("Access Token is: \(accessToken), expire: \(accessTokenExpireDate)")
+        print("Naver Access Token is: \(accessToken), expire: \(accessTokenExpireDate)")
         
         // 서버에 로그인 요청
+        if let accessToken = instance.accessToken {
+            MoyaProvider<UserApiClient>().request(.naverLogin(accessToken: accessToken)) { result in
+                switch result {
+                case .success(let response):
+                    do {
+                        let jsonDictionary = try response.mapJSON() as? [String: Any]
+                        print(jsonDictionary)
+                    } catch {
+                        
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    // 토큰 갱신시
+    func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
+        guard let instance = NaverThirdPartyLoginConnection.getSharedInstance() else { return }
+        
+        let accessToken = instance.accessToken
+        let accessTokenExpireDate = instance.accessTokenExpireDate
+        print("Naver Refreshed access token is: \(accessToken), expire: \(accessTokenExpireDate)")
+        
         if let accessToken = instance.accessToken {
             MoyaProvider<UserApiClient>().request(.naverLogin(accessToken: accessToken)) { result in
                 switch result {
@@ -152,17 +173,6 @@ extension SceneDelegate: NaverThirdPartyLoginConnectionDelegate {
         }
     }
     
-    // 토큰 갱신시
-    func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
-        print("refresh token")
-        
-        guard let instance = NaverThirdPartyLoginConnection.getSharedInstance() else { return }
-        
-        let accessToken = instance.accessToken
-        let accessTokenExpireDate = instance.accessTokenExpireDate
-        print("Refreshed access token is: \(accessToken), expire: \(accessTokenExpireDate)")
-    }
-    
     // 로그아웃(토큰 삭제)시
     func oauth20ConnectionDidFinishDeleteToken() {
         print("delete token")
@@ -171,5 +181,25 @@ extension SceneDelegate: NaverThirdPartyLoginConnectionDelegate {
     // Error 발생
     func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
         print("error")
+    }
+}
+
+extension SceneDelegate {
+    func checkLogin() -> Bool {
+        // TODO: 로그인 여부 확인
+        return true
+    }
+    
+    func goLanding() {
+        let landingStoryboard = UIStoryboard(name: "StartScreen", bundle: nil)
+        guard let landingVC = landingStoryboard.instantiateViewController(withIdentifier: "STARTSCREEN")
+                as? StartScreenViewController
+        else { fatalError("Unable to instantiate WelcomeViewController from the landingStoryboard with identifier 'STARTSCREEN'.") }
+        let landingNavVC = UINavigationController()
+        landingNavVC.viewControllers = [landingVC]
+        
+        landingNavVC.modalPresentationStyle = .fullScreen
+        
+        window?.rootViewController?.present(landingNavVC, animated: true, completion: nil)
     }
 }

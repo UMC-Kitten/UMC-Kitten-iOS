@@ -43,7 +43,7 @@ class LoginTestViewController: BaseViewController {
         
         appleLoginButton.addTarget(self, action: #selector(appleLoginButtonTapped(_:)), for: .touchUpInside)
         kakaoLoginButton.addTarget(self, action: #selector(kakaoLoginButtonTapped(_:)), for: .touchUpInside)
-        naverLoginButton.addTarget(self, action: #selector(naverLoginButtonTapped(_:)), for: .touchUpInside)
+//        naverLoginButton.addTarget(self, action: #selector(naverLoginButtonTapped(_:)), for: .touchUpInside)
         
     }
     
@@ -71,11 +71,11 @@ class LoginTestViewController: BaseViewController {
 //        }
     }
     
-    @objc func naverLoginButtonTapped(_ sender: UIButton) {
-        /// 예시 토큰 형태
-        let token = "AAAANn6_WsR4xr2qo6L_ejN3a8x_U_7mOGKaShVUrIrPXa0Wwp6f7VncoKVbMCz5AlaLJKyedREZQqLPbjN-E-Esvlk"
-        // naver app open
-        naverAuthService.openNaverLogin()
-        
-    }
+//    @objc func naverLoginButtonTapped(_ sender: UIButton) {
+//        /// 예시 토큰 형태
+//        let token = "AAAANn6_WsR4xr2qo6L_ejN3a8x_U_7mOGKaShVUrIrPXa0Wwp6f7VncoKVbMCz5AlaLJKyedREZQqLPbjN-E-Esvlk"
+//        // naver app open
+//        NaverAuthService().openNaverLogin()
+//        
+//    }
 }

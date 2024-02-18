@@ -43,13 +43,21 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
     //MARK: - 화면 전환
     @IBAction func nextViewButton(_ sender: UIButton) {
         
-        let storyboard = UIStoryboard(name: "SignUpProfileImage", bundle: nil)
-        let signUpProfileImageViewController = storyboard.instantiateViewController(withIdentifier: "SIGNUPPROFILEIMAGE") as! SignUpProfileImageViewController
-        
-        self.navigationController?.pushViewController(signUpProfileImageViewController, animated: true)
-        
-        let userInfo = UserInfo(name: self.name)
-        self.userInfo?(userInfo)
+        MypageRemoteRepository()
+            .changeUserNickname(nickname: nameTextField.text ?? "userDAXSE183scW") { [weak self] result, error in
+                if let error = error {
+                    print("Landing page change nickname error: \(error)")
+                    return
+                }
+                
+                let storyboard = UIStoryboard(name: "SignUpProfileImage", bundle: nil)
+                let signUpProfileImageViewController = storyboard.instantiateViewController(withIdentifier: "SIGNUPPROFILEIMAGE") as! SignUpProfileImageViewController
+                
+                self?.navigationController?.pushViewController(signUpProfileImageViewController, animated: true)
+                
+//                let userInfo = UserInfo(name: self.name)
+//                self?.userInfo?(userInfo)
+        }
         
     }
     

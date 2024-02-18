@@ -25,7 +25,7 @@ class KakaoAuthHelper {
     /// 카카오톡 로그인을 위해 카카오톡 앱으로 이동합니다.
     ///
     /// - Parameter completion:- 카카오톡 로그인 성공 시 호출될 클로저입니다. 컴플리션으로 토큰 전달합니다.
-    func openKakaoTalkLogin(completion: @escaping (String) -> Void) {
+    static func openKakaoTalkLogin(completion: @escaping (String) -> Void) {
         if (UserApi.isKakaoTalkLoginAvailable()) {
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                 print(oauthToken)

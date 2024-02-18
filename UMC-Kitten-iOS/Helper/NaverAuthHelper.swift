@@ -31,7 +31,7 @@ class NaverAuthHelper{
     /// 네이버 로그인을 위해 네이버앱으로 이동합니다.
     ///
     /// 참고) 로그인 완료 후 처리는 SeneDelegate에서 딥링크로 처리합니다.
-    func openNaverLogin() {
+    static func openNaverLogin() {
         if NaverThirdPartyLoginConnection
             .getSharedInstance()
             .isPossibleToOpenNaverApp() // Naver App이 깔려있는지 확인

@@ -86,10 +86,18 @@ class OwnerSelectViewController: UIViewController {
             
         }
     @IBAction func goNextButton(_ sender: UIButton) {
-        if selectedView == firstView {
-            navigateToFirstView()
-        } else if selectedView == secondView {
-            navigateToSecondView()
+        let hasPet = selectedView === firstView ? true : false
+        MypageRemoteRepository().changeHasPet(hasPet: hasPet) { [weak self] result, error in
+            if let error = error {
+                print("Landing page change has pet error: \(error)")
+                return
+            }
+            
+            if self?.selectedView == self?.firstView {
+                self?.navigateToFirstView()
+            } else if self?.selectedView == self?.secondView {
+                self?.navigateToSecondView()
+            }
         }
     }
     

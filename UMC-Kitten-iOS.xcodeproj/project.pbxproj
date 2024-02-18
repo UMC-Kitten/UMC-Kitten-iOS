@@ -60,7 +60,6 @@
 		BC1244AE2B7C655300BDFC13 /* FreeBoardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244AB2B7C655300BDFC13 /* FreeBoardDetailViewController.swift */; };
 		BC1244AF2B7C655300BDFC13 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244AC2B7C655300BDFC13 /* CommunityViewController.swift */; };
 		BC1244CF2B7C698B00BDFC13 /* ImageSlideshow in Frameworks */ = {isa = PBXBuildFile; productRef = BC1244CE2B7C698B00BDFC13 /* ImageSlideshow */; };
-		BC1244ED2B7C751100BDFC13 /* NaverThirdPartyLogin.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1244EC2B7C751100BDFC13 /* NaverThirdPartyLogin.xcframework */; };
 		BC1244F12B7CBB8800BDFC13 /* PetApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244F02B7CBB8800BDFC13 /* PetApiClient.swift */; };
 		BC1244F42B7CBC9100BDFC13 /* PetResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244F32B7CBC9100BDFC13 /* PetResponseDto.swift */; };
 		BC1244F62B7CBCED00BDFC13 /* PetRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244F52B7CBCED00BDFC13 /* PetRemoteRepository.swift */; };
@@ -122,6 +121,7 @@
 		BC5A85A52B81E914006CA240 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A858E2B81E913006CA240 /* UIView+Extensions.swift */; };
 		BC5A85A62B81E914006CA240 /* SignUpProfileImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85902B81E913006CA240 /* SignUpProfileImage.storyboard */; };
 		BC5A85A72B81E914006CA240 /* SignUpProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85912B81E913006CA240 /* SignUpProfileImageViewController.swift */; };
+		BC5A85AD2B822EB0006CA240 /* NaverThirdPartyLogin.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC5A85AC2B822EB0006CA240 /* NaverThirdPartyLogin.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC6932092B765806002C7A9F /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6932082B765806002C7A9F /* PostModel.swift */; };
 		BC6932102B7677DD002C7A9F /* MypageApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69320F2B7677DD002C7A9F /* MypageApiClient.swift */; };
 		BC6932142B7679B6002C7A9F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = BC6932132B7679B6002C7A9F /* Moya */; };
@@ -213,6 +213,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BC5A85AD2B822EB0006CA240 /* NaverThirdPartyLogin.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +270,6 @@
 		BC1244AA2B7C655300BDFC13 /* CommunityPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityPostViewController.swift; sourceTree = "<group>"; };
 		BC1244AB2B7C655300BDFC13 /* FreeBoardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeBoardDetailViewController.swift; sourceTree = "<group>"; };
 		BC1244AC2B7C655300BDFC13 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
-		BC1244EC2B7C751100BDFC13 /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:N8MX74Y447:DOYEON LEE"; lastKnownFileType = wrapper.xcframework; path = NaverThirdPartyLogin.xcframework; sourceTree = "<group>"; };
 		BC1244F02B7CBB8800BDFC13 /* PetApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetApiClient.swift; sourceTree = "<group>"; };
 		BC1244F32B7CBC9100BDFC13 /* PetResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetResponseDto.swift; sourceTree = "<group>"; };
 		BC1244F52B7CBCED00BDFC13 /* PetRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetRemoteRepository.swift; sourceTree = "<group>"; };
@@ -331,6 +331,7 @@
 		BC5A858E2B81E913006CA240 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		BC5A85902B81E913006CA240 /* SignUpProfileImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpProfileImage.storyboard; sourceTree = "<group>"; };
 		BC5A85912B81E913006CA240 /* SignUpProfileImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpProfileImageViewController.swift; sourceTree = "<group>"; };
+		BC5A85AC2B822EB0006CA240 /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:N8MX74Y447:DOYEON LEE"; lastKnownFileType = wrapper.xcframework; path = NaverThirdPartyLogin.xcframework; sourceTree = "<group>"; };
 		BC6932082B765806002C7A9F /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		BC69320F2B7677DD002C7A9F /* MypageApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageApiClient.swift; sourceTree = "<group>"; };
 		BC6932112B767809002C7A9F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -411,7 +412,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC1244ED2B7C751100BDFC13 /* NaverThirdPartyLogin.xcframework in Frameworks */,
 				BC6E40D82B552C7500BA2CE1 /* RxRelay in Frameworks */,
 				BC037B852B773D6A0021721C /* KakaoSDK in Frameworks */,
 				BC6E40BC2B5528A900BA2CE1 /* ReactorKit in Frameworks */,
@@ -436,7 +436,6 @@
 		BC037B952B77A2CA0021721C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BC1244EC2B7C751100BDFC13 /* NaverThirdPartyLogin.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -613,6 +612,7 @@
 		BC3CECBB2B4FACC300546377 = {
 			isa = PBXGroup;
 			children = (
+				BC5A85AC2B822EB0006CA240 /* NaverThirdPartyLogin.xcframework */,
 				BC3CECC62B4FACC300546377 /* UMC-Kitten-iOS */,
 				BC1243BB2B7B522000BDFC13 /* UMC-Kitten-iOSTests */,
 				BC3CECC52B4FACC300546377 /* Products */,
@@ -1334,7 +1334,6 @@
 				BC316B582B79451F0055FC0F /* XCRemoteSwiftPackageReference "RxAppState" */,
 				BC1244CD2B7C661C00BDFC13 /* XCRemoteSwiftPackageReference "ImageSlideshow" */,
 				BC1245012B7CE3B100BDFC13 /* XCRemoteSwiftPackageReference "RxDataSources" */,
-				B337CDD32B7FEF4000CF6339 /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios" */,
 			);
 			productRefGroup = BC3CECC52B4FACC300546377 /* Products */;
 			projectDirPath = "";
@@ -1742,9 +1741,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "UMC-Kitten-iOS/UMC-Kitten-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BB7N2YGU75;
+				DEVELOPMENT_TEAM = N8MX74Y447;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "UMC-Kitten-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1759,8 +1759,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ryuwon.UMC-Kitten-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ryuwon.UMC-Kitten-iOS2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1778,9 +1779,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "UMC-Kitten-iOS/UMC-Kitten-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BB7N2YGU75;
+				DEVELOPMENT_TEAM = N8MX74Y447;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "UMC-Kitten-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1795,8 +1797,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ryuwon.UMC-Kitten-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ryuwon.UMC-Kitten-iOS2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1841,14 +1844,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B337CDD32B7FEF4000CF6339 /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/naver/naveridlogin-sdk-ios";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		BC037B832B773D6A0021721C /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
