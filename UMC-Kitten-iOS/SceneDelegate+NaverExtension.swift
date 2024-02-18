@@ -27,12 +27,12 @@ extension SceneDelegate: NaverThirdPartyLoginConnectionDelegate {
                 switch result {
                 case .success(let response):
                     do {
-                        let jsonDictionary = try response.mapJSON() as? [String: Any]
-                        print(jsonDictionary)
+                        let responseJson = try response.mapJSON() as! [String: Any]
+                        let result = responseJson["result"] as! [String: Any]
+                        let userId: Int64 = result["id"] as! Int64
+                        UserDefaults.standard.setValue(userId, forKey: UserDefaultsConstant.USER_ID_KEY)
                         DeepLinkHelper.openLoginResume()
-                    } catch {
-                        
-                    }
+                    } catch { }
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
@@ -52,8 +52,13 @@ extension SceneDelegate: NaverThirdPartyLoginConnectionDelegate {
             MoyaProvider<UserApiClient>().request(.naverLogin(accessToken: accessToken)) { result in
                 switch result {
                 case .success(let response):
-                    DeepLinkHelper.openLoginResume()
-                    print(response)
+                    do {
+                        let responseJson = try response.mapJSON() as! [String: Any]
+                        let result = responseJson["result"] as! [String: Any]
+                        let userId: Int64 = result["id"] as! Int64
+                        UserDefaults.standard.setValue(userId, forKey: UserDefaultsConstant.USER_ID_KEY)
+                        DeepLinkHelper.openLoginResume()
+                    } catch { }
                 case .failure(let error):
                     print(error)
                 }

@@ -20,6 +20,9 @@ class TermsOfUseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        proceedButton.isEnabled = false
+        proceedButton.backgroundColor = .grayScale200
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapOne(_:)))
         checkbox1.addGestureRecognizer(tapGesture)
         
@@ -29,11 +32,27 @@ class TermsOfUseViewController: UIViewController {
     
     
     @objc func handleTapOne(_ sender: UITapGestureRecognizer) {
-        print("first tap")
+        checkbox1.checked.toggle()
+        
+        if (checkbox1.checked && checkbox2.checked) {
+            proceedButton.isEnabled = true
+            proceedButton.backgroundColor = .main
+        } else {
+            proceedButton.isEnabled = false
+            proceedButton.backgroundColor = .grayScale200
+        }
     }
     
     @objc func handleTapTwo(_ sender: UITapGestureRecognizer) {
-        print("second tap")
+        checkbox2.checked.toggle()
+        
+        if (checkbox1.checked && checkbox2.checked) {
+            proceedButton.isEnabled = true
+            proceedButton.backgroundColor = .main
+        } else {
+            proceedButton.isEnabled = false
+            proceedButton.backgroundColor = .grayScale200
+        }
     }
     
     

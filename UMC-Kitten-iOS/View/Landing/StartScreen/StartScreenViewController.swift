@@ -55,7 +55,13 @@ class StartScreenViewController: UIViewController {
             MoyaProvider<UserApiClient>().request(.kakaoLogin(accessToken: token)) { result in
                 switch result {
                 case .success(let response):
-                    DeepLinkHelper.openLoginResume()
+                    do {
+                        let responseJson = try response.mapJSON() as! [String: Any]
+                        let result = responseJson["result"] as! [String: Any]
+                        let userId: Int64 = result["id"] as! Int64
+                        UserDefaults.standard.setValue(userId, forKey: UserDefaultsConstant.USER_ID_KEY)
+                        DeepLinkHelper.openLoginResume()
+                    } catch {}
                 case .failure(let error):
                     print(error)
                 }

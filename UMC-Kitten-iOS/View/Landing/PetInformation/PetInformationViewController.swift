@@ -67,6 +67,13 @@ class PetInformationViewController: UIViewController, PetSelectionDelegate, UIIm
         birthDay.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
         
     }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
+    
     @IBAction func touchUpShowActionSheetButton(_ sender: UIButton) {
         popup()
     }
@@ -104,10 +111,12 @@ class PetInformationViewController: UIViewController, PetSelectionDelegate, UIIm
     }
     
     @IBAction func nextButton(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
-        let welcomeViewController = storyboard.instantiateViewController(withIdentifier: "WELCOME") as! WelcomeViewController
+//        let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
+//        let welcomeViewController = storyboard.instantiateViewController(withIdentifier: "WELCOME") as! WelcomeViewController
+//        
+//        self.navigationController?.pushViewController(welcomeViewController, animated: true)
         
-        self.navigationController?.pushViewController(welcomeViewController, animated: true)
+        requestAddPet()
     }
     
     func popup() {
@@ -154,15 +163,22 @@ class PetInformationViewController: UIViewController, PetSelectionDelegate, UIIm
         // 디바이스에 저장된 user id 가져오기
         let userId = Int64(UserDefaults.standard.integer(forKey: UserDefaultsConstant.USER_ID_KEY))
         
+        var baseURLString: String {
+            guard let apiBaseURLString = Bundle.main.object(forInfoDictionaryKey: "API_BASE_URL") as? String else {
+                fatalError("API_BASE_URL is not set in Info.plist")
+            }
+            return apiBaseURLString
+        }
+        
         // API 요청을 보낼 URL
-        let apiUrl = URL(string: "http://localhost:8080/api/v1/\(userId)/pet")! // user id는 path parameter
+        let apiUrl = URL(string: "\(baseURLString)/\(userId)/pet")! // user id는 path parameter
         
         // 요청 바디 생성
         // 이 api가 배열이 루트인 값을 받게 설계되어 있어서 [[String: Any]] 형입니다.
         // 만약 json 형태로 시작한다면 [String: Any] 형으로 쓰시면 됩니다.
         // TODO: IBOutlet으로 받은 값으로 바꿔주세요
         let requestBody: [[String: Any]] = [[
-            "type": selectPet ?? "", // DOG or CAT
+            "type": "CAT", // DOG or CAT
             "name": petName.text ?? "",
             "petProfileImage": "sample.jpg", // 아직 이미지 API 없어서 아무 문자열이나
             "gender": selectGender ?? "", // MALE or FEMALE
@@ -177,9 +193,6 @@ class PetInformationViewController: UIViewController, PetSelectionDelegate, UIIm
             
             // 헤더에 토큰 추가
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-            
-            // 요청 헤더 설정 (예: JSON 형식의 데이터를 전송하는 것을 명시)
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             
             // 요청 바디를 JSON 데이터로 변환
             let jsonData = try JSONSerialization.data(withJSONObject: requestBody, options: [])
@@ -218,13 +231,19 @@ class PetInformationViewController: UIViewController, PetSelectionDelegate, UIIm
                             print("Request state: \(json)")
                             
                             // FIXME: 받은 값을 UI 연결하거나 네비게이션 처리
-                            for petDict in resultArray {
-                                print("Pet ID: \(petDict["id"])")
-                                print("Pet Type: \(petDict["type"])")
-                                print("Pet Name: \(petDict["name"])")
-                                print("Pet Profile Image: \(petDict["petProfileImage"])")
-                                print("Pet Gender: \(petDict["gender"])")
-                                print("Pet Notes: \(petDict["notes"])")
+//                            BaseMoyaProvider<PetApiClient>().provider
+//                                .request(.registerPetImage(petid: json["result"][], profileImage: imageView.image?.jpegData(compressionQuality: 1.0))) {
+//                                    result in
+//                                    switch result {
+//                                    case .success(let response):
+//                                        print("Success: \(response)")
+//                                    case .failure(let error):
+//                                        print("Error: \(error.localizedDescription)")
+//                                    }
+//                                }
+                            
+                            DispatchQueue.main.async {
+                                self.navigationController?.popViewController(animated: true)
                             }
                         }
                     } catch {

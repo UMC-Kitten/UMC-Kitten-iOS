@@ -12,6 +12,7 @@ import Moya
 enum PetApiClient {
     case getRegisteredPets(userId: Int64)
     case deletePet(petId: Int64)
+    case registerPetImage(petid: Int64, profileImage: Data)
 }
 
 extension PetApiClient: TargetType {
@@ -38,24 +39,31 @@ extension PetApiClient: TargetType {
             return "/\(userId)/pets"
         case .deletePet(petId: let petId):
             return "/pet/\(petId)"
+        case .registerPetImage:
+            return "pet/profile-image"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getRegisteredPets(userId: let userId):
+        case .getRegisteredPets:
             return .get
-        case .deletePet(petId: let petId):
+        case .deletePet:
             return .delete
+        case .registerPetImage:
+            return .post
         }
     }
     
     var task: Task {
         switch self {
-        case .getRegisteredPets(userId: let userId):
+        case .getRegisteredPets:
             return .requestPlain
-        case .deletePet(petId: let petId):
+        case .deletePet:
             return .requestPlain
+        case let .registerPetImage(petId, image):
+            let formData: [MultipartFormData] = [MultipartFormData(provider: .data(image), name: "file", fileName: "file", mimeType: "image/jpeg"), ]
+            return .uploadCompositeMultipart(formData, urlParameters: ["id": "\(petId)"])
         }
     }
     

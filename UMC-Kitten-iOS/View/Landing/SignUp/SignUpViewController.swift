@@ -52,6 +52,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
                 
                 let storyboard = UIStoryboard(name: "SignUpProfileImage", bundle: nil)
                 let signUpProfileImageViewController = storyboard.instantiateViewController(withIdentifier: "SIGNUPPROFILEIMAGE") as! SignUpProfileImageViewController
+                signUpProfileImageViewController.userNickname = self?.nameTextField.text
                 
                 self?.navigationController?.pushViewController(signUpProfileImageViewController, animated: true)
                 

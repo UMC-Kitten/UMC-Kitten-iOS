@@ -2,6 +2,8 @@ import UIKit
 
 class SignUpProfileImageViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
+    var userNickname: String?
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var introduceLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -15,6 +17,8 @@ class SignUpProfileImageViewController: UIViewController, UITextFieldDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nameLabel.text = "\(userNickname ?? "")님의 프로필 이미지를\n 등록해주세요"
+        
         self.changeTextSize()
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -24,11 +28,13 @@ class SignUpProfileImageViewController: UIViewController, UITextFieldDelegate, U
         }
     }
     @IBAction func nextButton(_ sender: UIButton) {
+        print(imageView.image)
         if let imageData = imageView.image?.jpegData(compressionQuality: 1.0) {
+            print(imageData)
             MypageRemoteRepository()
                 .changeProfileImage(image: imageData) { [weak self] result, error in
                     if let error = error {
-                        print("Landing page change nickname error: \(error)")
+                        print("Landing page change profile image error: \(error)")
                         return
                     }
                     let storyboard = UIStoryboard(name: "TermsOfUse", bundle: nil)
@@ -52,7 +58,7 @@ class SignUpProfileImageViewController: UIViewController, UITextFieldDelegate, U
         let fontSIze = UIFont.boldSystemFont(ofSize: 24)
         let attributeString = NSMutableAttributedString(string: text)
         
-        attributeString.addAttribute(.font, value: fontSIze, range: (text as NSString).range(of:"닉네임"))
+        attributeString.addAttribute(.font, value: fontSIze, range: (text as NSString).range(of: userNickname ?? ""))
         
         self.nameLabel.attributedText = attributeString
     }
