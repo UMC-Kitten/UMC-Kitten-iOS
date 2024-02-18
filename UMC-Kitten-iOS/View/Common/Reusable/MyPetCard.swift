@@ -18,19 +18,23 @@ class MyPetCard: BaseView {
     
     // MARK: UI Component
     
-    private let petImageView: UIImageView = .init(imageName: "cat-sample") // FIXME: loading 이미지로 바꾸기
+    private let petImageView: UIImageView = .init()
     private let petNameLabel: UILabel = .init()
     private let petInfoLabel: UILabel = .init()
     
     // MARK: Constructor
     
     convenience init(
-        petImageName: String = "cat-sample",
+        petImageName: String,
         petName: String,
         petInfo: String
     ) {
         self.init()
-        self.petImageView.image = UIImage(named: petImageName)
+        ImageProvider.loadImage(petImageName) { image in
+            DispatchQueue.main.async {
+                self.petImageView.image = image
+            }
+        }
         self.petNameLabel.text = petName
         self.petInfoLabel.text = petInfo
     }
@@ -39,6 +43,8 @@ class MyPetCard: BaseView {
     
     override func setStyle() {
         addShadowWithRoundedCorners()
+        
+        petImageView.contentMode = .scaleAspectFill
         
         petNameLabel.setDefaultFont(size: 14, weight: .semiBold)
         petNameLabel.textColor = .white

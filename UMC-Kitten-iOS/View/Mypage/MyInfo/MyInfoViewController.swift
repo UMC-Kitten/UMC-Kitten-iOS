@@ -17,7 +17,7 @@ class MyInfoViewController: BaseViewController{
     
     // MARK: Dependency
     
-    let reactor = MyInfoReactor()
+    let reactor = MyInfoReactor(mypageRepository: MypageRemoteRepository())
     private let imagePicker = UIImagePickerController()
     
     // MARK: UI Component
@@ -75,8 +75,22 @@ class MyInfoViewController: BaseViewController{
     }
     
     override func setBind() {
+        // - data binding
+        // 데이터 로드 시점 바인딩
+        rx.viewWillAppear
+            .map { _ in .viewWillAppear }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        // 프로필 이미지 바인딩
+        reactor.state.map { $0.profileImage }
+            .distinctUntilChanged()
+            .bind(to: profileImageSection.profileImageView.rx.image)
+            .disposed(by: disposeBag)
+        
+        // - action binding
         Observable.merge(
-            profileImageSection.profileImage.rx.tapGesture().map { $0 },
+            profileImageSection.profileImageView.rx.tapGesture().map { $0 },
             profileImageSection.editButton.rx.tapGesture().map { $0 }
         )
         .skip(2)
@@ -101,11 +115,6 @@ class MyInfoViewController: BaseViewController{
                 self.pushView(vc: OwnerSettingViewController())
             }
             .disposed(by: self.disposeBag)
-        
-        reactor.state.map { $0.profileImage }
-            .distinctUntilChanged()
-            .bind(to: profileImageSection.profileImage.rx.image)
-            .disposed(by: disposeBag)
     }
     
     /// 카메라와 앨범 중 선택하는 bottom sheet입니다.

@@ -71,7 +71,11 @@ class RegisteredPetCell: BaseCollectionViewCell {
         petName: String,
         petInfo: String
     ) {
-        self.petImageView.image = UIImage(named: petImageName)
+        ImageProvider.loadImage(petImageName) { image in
+            DispatchQueue.main.async {
+                self.petImageView.image = image
+            }
+        }
         self.petNameLabel.text = petName
         self.petInfoLabel.text = petInfo
     }

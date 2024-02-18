@@ -50,6 +50,13 @@ extension BaseViewController {
         self.navigationController?.pushViewController(vc, animated: animated)
     }
     
+    func pushWebView(_ url: URL) {
+        let nextVC = WebViewController(url: url)
+        nextVC.hidesBottomBarWhenPushed = true
+        self.pushView(vc: nextVC)
+    }
+    
+    
     func backView(animated: Bool = true) {
         self.navigationController?.popViewController(animated: animated)
     }

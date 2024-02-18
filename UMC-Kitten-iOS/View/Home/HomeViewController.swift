@@ -105,7 +105,7 @@ class HomeViewController: BaseViewController {
                 cellType: RegisteredPetCell.self)
             ){ (row, pet, cell) in
                 cell.configure(
-                    petImageName: pet.imageName,
+                    petImageName: pet.image,
                     petName: pet.name,
                     petInfo: "\(pet.species.krDescription) / \(pet.gender.krDescription) / \(pet.age)살"
                 )

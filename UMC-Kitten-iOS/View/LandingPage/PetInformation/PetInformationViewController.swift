@@ -9,10 +9,19 @@ import UIKit
 
 class PetInformationViewController: UIViewController {
     
+    @IBOutlet weak var nameLabel: UITextField!
+    
+    @IBOutlet weak var noteLabel: UITextField!
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func nextButton(_ sender: Any) {
+        requestAddPet()
     }
     
     // TODO: 버튼 탭 이벤트에 이 함수를 넣어주세요
@@ -23,7 +32,7 @@ class PetInformationViewController: UIViewController {
         // 디바이스에 저장된 user id 가져오기
         let userId = Int64(UserDefaults.standard.integer(forKey: UserDefaultsConstant.USER_ID_KEY))
         
-        // API 요청을 보낼 URL
+        // API 요청을 보낼 URL // FIXME: URL 맞게 설정
         let apiUrl = URL(string: "http://localhost:8080/api/v1/\(userId)/pet")! // user id는 path parameter
         
         // 요청 바디 생성
@@ -32,15 +41,15 @@ class PetInformationViewController: UIViewController {
         // TODO: IBOutlet으로 받은 값으로 바꿔주세요
         let requestBody: [[String: Any]] = [[
             "type": "DOG", // DOG or CAT
-            "name": "초코",
+            "name": nameLabel.text,
             "petProfileImage": "sample.jpg", // 아직 이미지 API 없어서 아무 문자열이나
             "gender": "MALE", // MALE or FEMALE
-            "notes": "귀여운 강아지"
+            "notes": noteLabel.text
         ]]
         
         // 요청 생성
         var request = URLRequest(url: apiUrl)
-        request.httpMethod = "POST"
+        request.httpMethod = "POST" // FIXME: 메서드 맞게 설정
         
         do {
             
@@ -88,6 +97,11 @@ class PetInformationViewController: UIViewController {
                             
                             // FIXME: 받은 값을 UI 연결하거나 네비게이션 처리
                             for petDict in resultArray {
+                                DispatchQueue.main.async {
+                                    // 메인 스레드에서 실행되는 코드
+                                    // UI 업데이트 등을 수행합니다.
+                                    self.resultLabel.text = "\(petDict["id"] ?? "실패")"
+                                }
                                 print("Pet ID: \(petDict["id"])")
                                 print("Pet Type: \(petDict["type"])")
                                 print("Pet Name: \(petDict["name"])")

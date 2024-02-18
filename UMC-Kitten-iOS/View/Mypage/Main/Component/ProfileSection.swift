@@ -19,7 +19,7 @@ class ProfileSection: BaseView {
     
     // MARK: UI Component
     
-    let profileImageView: UIImageView = .init(imageName: "cat-sample")
+    private let profileImageView: UIImageView = .init()
     let ownerNameLabel: UILabel = .init(staticText: "임시 닉네임")
     private let ownerRoleLabel: UILabel = .init(staticText: "반려인")
     
@@ -94,7 +94,22 @@ class ProfileSection: BaseView {
         
     }
     
-    func configurePets(pets: [PetModel]) {
+    func configure(
+        profileImage: String,
+        nickname: String,
+        pets: [PetModel]
+    ) {
+        ImageProvider.loadImage(profileImage) { image in
+            DispatchQueue.main.async {
+                self.profileImageView.image = image
+            }
+        }
+        ownerNameLabel.text = nickname
+        configurePets(pets: pets)
+    }
+    
+    
+    private func configurePets(pets: [PetModel]) {
         // 이전 값들 지우기
         myPetsContainer.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
@@ -102,7 +117,7 @@ class ProfileSection: BaseView {
         pets.forEach {
             myPetsContainer.addArrangedSubview(
                 MyPetCard(
-                    petImageName: "cat-sample",
+                    petImageName: $0.image,
                     petName: $0.name,
                     petInfo: "\($0.species.krDescription)/\($0.gender.krDescription)"
                 )

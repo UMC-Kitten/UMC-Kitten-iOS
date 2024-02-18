@@ -83,24 +83,22 @@ class MypageViewController: BaseViewController {
             $0.leading.equalToSuperview().inset(20)
             $0.bottom.equalToSuperview()
         }
-        
     }
     
     override func setBind() {
         
         // - data binding
-        // 유저 닉네임 바인딩
+        // 프로필 부분 바인딩
         reactor.state
-            .map { $0.user?.nickname }
-            .distinctUntilChanged()
-            .bind(to: profileSection.ownerNameLabel.rx.text)
-            .disposed(by: disposeBag)
-        
-        // 등록된 반려동물 카드 바인딩
-        reactor.state
-            .map { $0.user?.pets ?? [] }
-            .subscribe(onNext: { [weak self] pets in
-                self?.profileSection.configurePets(pets: pets)
+            .map { $0.user }
+            .filterNil()
+            .withUnretained(self)
+            .subscribe(onNext: { (self, userModel) in
+                self.profileSection.configure(
+                    profileImage: userModel.profileImage ?? "",
+                    nickname: userModel.nickname,
+                    pets: userModel.pets
+                )
             })
             .disposed(by: disposeBag)
         
@@ -113,8 +111,8 @@ class MypageViewController: BaseViewController {
         
         // 관리 버튼 탭
         profileSection.managementButton.rx.tapGesture()
+            .dropFirst()
             .withUnretained(self)
-            .skip(1)
             .subscribe { _ in
                 self.pushView(vc: MyPetSettingViewController())
             }
@@ -122,8 +120,8 @@ class MypageViewController: BaseViewController {
         
         // 내 정보 메뉴 탭
         mypageMenuSection.myInfoSetting.rx.tapGesture()
+            .dropFirst()
             .withUnretained(self)
-            .skip(1)
             .subscribe { _ in
                 self.pushView(vc: MyInfoViewController())
             }
@@ -131,12 +129,53 @@ class MypageViewController: BaseViewController {
         
         // 내 게시글 메뉴 탭
         mypageMenuSection.myArticleSetting.rx.tapGesture()
+            .dropFirst()
             .withUnretained(self)
-            .skip(1)
             .subscribe { _ in
                 self.pushView(vc: MyArticleSettingViewController())
             }
             .disposed(by: self.disposeBag)
+        
+        // FAQ 메뉴 탭
+        let faqUrl = URL(string: "https://little-pewter-b0f.notion.site/FAQ-c941c491058048cfa81d66960dd9f804?pvs=4")!
+        mypageMenuSection.faq.rx.tapGesture()
+            .dropFirst()
+            .withUnretained(self)
+            .subscribe { _ in
+                self.pushWebView(faqUrl)
+            }
+            .disposed(by: self.disposeBag)
+        
+        // 공지사항 메뉴 탭
+        let noticeUrl = URL(string: "https://little-pewter-b0f.notion.site/dae217c2c1b64eb9b9975ffab538d625?pvs=4")!
+        mypageMenuSection.notice.rx.tapGesture()
+            .dropFirst()
+            .withUnretained(self)
+            .subscribe { _ in
+                self.pushWebView(noticeUrl)
+            }
+            .disposed(by: self.disposeBag)
+        
+        // 서비스 문의 메뉴 탭
+        let inquiryUrl = URL(string: "https://little-pewter-b0f.notion.site/ed8b776d39ec42e5a85013907b6d0cae?pvs=4")!
+        mypageMenuSection.inquiry.rx.tapGesture()
+            .dropFirst()
+            .withUnretained(self)
+            .subscribe { _ in
+                self.pushWebView(inquiryUrl)
+            }
+            .disposed(by: self.disposeBag)
+        
+        // 서비스 이용약관 메뉴 탭
+        let termsUrl = URL(string: "https://little-pewter-b0f.notion.site/73f7d20826f345d09e50ac3f8caa7f1b?pvs=4")!
+        mypageMenuSection.terms.rx.tapGesture()
+            .dropFirst()
+            .withUnretained(self)
+            .subscribe { _ in
+                self.pushWebView(termsUrl)
+            }
+            .disposed(by: self.disposeBag)
+        
+        
     }
-    
 }

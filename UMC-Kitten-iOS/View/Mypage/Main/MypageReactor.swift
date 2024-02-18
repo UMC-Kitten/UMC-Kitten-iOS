@@ -37,7 +37,6 @@ extension MypageReactor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .viewWillAppear:
-            
             // 유저 정보 가져오기
             let userObservable = mypageRepository
                 .getUserInfo()
@@ -46,7 +45,6 @@ extension MypageReactor {
                     print("Error loading user info: ", error)
                     return Observable.empty()
                 }
-
 
             return Observable.merge([userObservable])
         }
