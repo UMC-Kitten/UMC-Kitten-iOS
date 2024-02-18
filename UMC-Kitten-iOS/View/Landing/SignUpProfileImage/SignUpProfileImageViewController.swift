@@ -24,10 +24,19 @@ class SignUpProfileImageViewController: UIViewController, UITextFieldDelegate, U
         }
     }
     @IBAction func nextButton(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "TermsOfUse", bundle: nil)
-        let termsOfUseViewController = storyboard.instantiateViewController(withIdentifier: "TERMSOFUSE") as! TermsOfUseViewController
-        
-        self.navigationController?.pushViewController(termsOfUseViewController, animated: true)
+        if let imageData = imageView.image?.jpegData(compressionQuality: 1.0) {
+            MypageRemoteRepository()
+                .changeProfileImage(image: imageData) { [weak self] result, error in
+                    if let error = error {
+                        print("Landing page change nickname error: \(error)")
+                        return
+                    }
+                    let storyboard = UIStoryboard(name: "TermsOfUse", bundle: nil)
+                    let termsOfUseViewController = storyboard.instantiateViewController(withIdentifier: "TERMSOFUSE") as! TermsOfUseViewController
+                    
+                    self?.navigationController?.pushViewController(termsOfUseViewController, animated: true)
+                }
+        }
     }
     
     

@@ -55,15 +55,6 @@
       }
     },
     {
-      "identity" : "naveridlogin-sdk-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/naver/naveridlogin-sdk-ios",
-      "state" : {
-        "branch" : "master",
-        "revision" : "981b05ba3f3cec33937b2e796a29880cd049318c"
-      }
-    },
-    {
       "identity" : "reactiveswift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ReactiveCocoa/ReactiveSwift.git",

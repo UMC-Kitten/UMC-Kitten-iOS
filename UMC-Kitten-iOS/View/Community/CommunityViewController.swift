@@ -17,6 +17,9 @@ final class CommunityViewController: UIViewController {
     var tapLeadingArray: [Double] = [] // 왼쪽으로부터 거리
     var tapSpacingWidth: Double = 0.0 // 간격
     
+    // MARK: - 데이터
+    var posts: [PostModel] = []
+    
     // MARK: - 라이프 사이클
     override func loadView() {
         view = communityView
@@ -27,6 +30,8 @@ final class CommunityViewController: UIViewController {
         
         setTableView()
         setAddTarget()
+        
+        fetchPosts()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -117,6 +122,15 @@ final class CommunityViewController: UIViewController {
             return 30.0 + (tapSpacingWidth * Double(num))
         }
     }
+    
+    func fetchPosts() {
+        PostRemoteRepository()
+            .getAllPostByBoard(boardType: .free, page: 0) { [weak self] result, error in
+                if let result = result {
+                    self?.posts = result
+                }
+            }
+    }
 }
 
 extension CommunityViewController: UITableViewDelegate {
@@ -129,18 +143,20 @@ extension CommunityViewController: UITableViewDelegate {
 
 extension CommunityViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FreeBoardTableViewCell", for: indexPath) as! FreeBoardTableViewCell
         
-        cell.titleLabel.text = "제목입니다."
-        cell.contentLabel.text = "내용입니다."
-        cell.heartCountLabel.text = "999"
-        cell.commentCountLabel.text = "999"
-        cell.uploadDateLabel.text = "|   01/25 "
-        cell.userNameLabel.text = "|   나는 집사"
+        
+        
+        cell.titleLabel.text = posts[indexPath.row].postTitle
+        cell.contentLabel.text = posts[indexPath.row].body
+        cell.heartCountLabel.text = "\(posts[indexPath.row].likeCount)"
+        cell.commentCountLabel.text = "\(posts[indexPath.row].commentCount)"
+        cell.uploadDateLabel.text = posts[indexPath.row].date.timeAgoDisplay()
+        cell.userNameLabel.text = posts[indexPath.row].writer
         
         cell.selectionStyle = .none
         
