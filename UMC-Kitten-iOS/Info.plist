@@ -26,6 +26,16 @@
 				<string>naverq4yYq9GqZvWRQnbf8S1h</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>kitten</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kitten</string>
+			</array>
+		</dict>
 	</array>
 	<key>KAKAO_AUTH_APP_KEY</key>
 	<string>$(KAKAO_AUTH_APP_KEY)</string>

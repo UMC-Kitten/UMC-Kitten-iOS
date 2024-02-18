@@ -49,6 +49,8 @@ class OwnerSelectViewController: UIViewController {
         
         nextButton.layer.cornerRadius = 5
         
+        selectedView = firstView
+        
         }
 
     
@@ -102,6 +104,7 @@ class OwnerSelectViewController: UIViewController {
     }
     
     func navigateToFirstView() {
+        print("왜앙댐")
         let storyboard = UIStoryboard(name: "PetSelect", bundle: nil)
         let petSelectViewController = storyboard.instantiateViewController(withIdentifier: "PETSELECT") as! PetSelectViewController
         

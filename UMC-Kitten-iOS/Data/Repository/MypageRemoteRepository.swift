@@ -33,6 +33,8 @@ class MypageRemoteRepository: MypageRepository {
                         userDto: userDto,
                         userId: userId
                     )
+                    
+                    print(userModel)
                     completion(userModel, nil)
                     
                 } catch let error {

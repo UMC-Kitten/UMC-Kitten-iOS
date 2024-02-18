@@ -25,7 +25,6 @@ class MyPetSettingViewController: BaseViewController {
         self.title = "내 반려동물 관리"
         
         collectionView.delegate = self
-        //        collectionView.dataSource = self
         collectionView.register(MyPetInfoCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.register(MyPetAddCell.self, forCellWithReuseIdentifier: "addCell")
     }
@@ -88,6 +87,7 @@ class MyPetSettingViewController: BaseViewController {
             
         case .addPet:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "addCell", for: indexPath) as! MyPetAddCell
+            cell.parentViewController = self
             return cell
         }
     })

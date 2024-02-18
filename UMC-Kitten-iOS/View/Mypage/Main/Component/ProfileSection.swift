@@ -33,7 +33,6 @@ class ProfileSection: BaseView {
         profileImageView.layer.masksToBounds = true
         
         ownerNameLabel.setDefaultFont(size: 20, weight: .semiBold)
-        
         ownerRoleLabel.setDefaultFont(size: 14)
         
         myPetsInfoTitleLabel.setDefaultFont(size: 14)

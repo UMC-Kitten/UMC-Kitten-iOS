@@ -15,7 +15,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -118,6 +117,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     .getSharedInstance()
                     .receiveAccessToken(url)
             }
+            
+            // 소셜 로그인 후 로그인 재개 시 (deeplink: "kitten://login/resume")
+            if url.absoluteString.hasPrefix("kitten") && url.host == "login" && url.path == "/resume" {
+                let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+                guard let vc = storyboard.instantiateViewController(withIdentifier: "SIGNUP")
+                        as? SignUpViewController
+                else { fatalError("Unable to instantiate WelcomeViewController from the landingStoryboard with identifier 'SIGNUP'.") }
+                let navVC = UINavigationController()
+                navVC.viewControllers = [vc]
+                navVC.modalPresentationStyle = .fullScreen
+                
+                window?.rootViewController?.dismiss(animated: false)
+                window?.rootViewController?.present(navVC, animated: true, completion: nil)
+            }
         }
     }
 }
@@ -135,9 +148,12 @@ extension SceneDelegate {
         else { fatalError("Unable to instantiate WelcomeViewController from the landingStoryboard with identifier 'STARTSCREEN'.") }
         let landingNavVC = UINavigationController()
         landingNavVC.viewControllers = [landingVC]
-        
         landingNavVC.modalPresentationStyle = .fullScreen
         
         window?.rootViewController?.present(landingNavVC, animated: true, completion: nil)
     }
+}
+
+extension SceneDelegate {
+    
 }

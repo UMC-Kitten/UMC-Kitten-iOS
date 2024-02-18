@@ -16,7 +16,7 @@ class StartScreenViewController: UIViewController {
     let kakaoLoginButton: UIImageView = .init(imageName: "kakao-login-button")
     let naverLoginButton: UIImageView = .init(imageName: "naver-login-button")
     let appleLoginButton: UIImageView = .init(imageName: "apple-login-button")
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,12 +51,17 @@ class StartScreenViewController: UIViewController {
     }
     
     @objc func goKakaoLogin(_ sender: UIView) {
-        print("kakao")
         KakaoAuthHelper.openKakaoTalkLogin() { token in
-            MoyaProvider<UserApiClient>().request(.naverLogin(accessToken: token)) { result in
+            MoyaProvider<UserApiClient>().request(.kakaoLogin(accessToken: token)) { result in
                 switch result {
                 case .success(let response):
-                    print(response)
+                    do {
+                        let responseJson = try response.mapJSON() as! [String: Any]
+                        let result = responseJson["result"] as! [String: Any]
+                        let userId: Int64 = result["id"] as! Int64
+                        UserDefaults.standard.setValue(userId, forKey: UserDefaultsConstant.USER_ID_KEY)
+                        DeepLinkHelper.openLoginResume()
+                    } catch {}
                 case .failure(let error):
                     print(error)
                 }
