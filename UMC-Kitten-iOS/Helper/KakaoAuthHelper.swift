@@ -28,7 +28,6 @@ class KakaoAuthHelper {
     static func openKakaoTalkLogin(completion: @escaping (String) -> Void) {
         if (UserApi.isKakaoTalkLoginAvailable()) {
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-                print(oauthToken)
                 if let error = error {
                     print("kakao login error: \(error)")
                 }

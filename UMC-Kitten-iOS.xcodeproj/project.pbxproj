@@ -152,6 +152,7 @@
 		BC93BA3A2B56CEDE00775C5F /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BC93BA2B2B56CD8C00775C5F /* Pretendard-Thin.otf */; };
 		BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94315F2B56DB4400273DD7 /* UILabel+Extension.swift */; };
 		BC99D0B32B82368800DB0FDA /* PostRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99D0B22B82368800DB0FDA /* PostRequestDto.swift */; };
+		BC99D0B52B8243CC00DB0FDA /* SceneDelegate+NaverExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99D0B42B8243CC00DB0FDA /* SceneDelegate+NaverExtension.swift */; };
 		BC9DC6482B722E3A00859EFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6472B722E3A00859EFE /* HomeViewController.swift */; };
 		BC9DC64C2B722FD400859EFE /* RegisteredPetsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64B2B722FD400859EFE /* RegisteredPetsSection.swift */; };
 		BC9DC64E2B7231C000859EFE /* RegisteredPetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64D2B7231C000859EFE /* RegisteredPetCell.swift */; };
@@ -358,6 +359,7 @@
 		BC93BA312B56CD8C00775C5F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		BC94315F2B56DB4400273DD7 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		BC99D0B22B82368800DB0FDA /* PostRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestDto.swift; sourceTree = "<group>"; };
+		BC99D0B42B8243CC00DB0FDA /* SceneDelegate+NaverExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+NaverExtension.swift"; sourceTree = "<group>"; };
 		BC9DC6472B722E3A00859EFE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC9DC64B2B722FD400859EFE /* RegisteredPetsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsSection.swift; sourceTree = "<group>"; };
 		BC9DC64D2B7231C000859EFE /* RegisteredPetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetCell.swift; sourceTree = "<group>"; };
@@ -638,6 +640,7 @@
 				B337CDD62B808EA600CF6339 /* UMC-Kitten-iOS.entitlements */,
 				BC3CECC72B4FACC300546377 /* AppDelegate.swift */,
 				BC3CECC92B4FACC300546377 /* SceneDelegate.swift */,
+				BC99D0B42B8243CC00DB0FDA /* SceneDelegate+NaverExtension.swift */,
 				BC3CECCB2B4FACC300546377 /* ViewController.swift */,
 				BC69320B2B7676D7002C7A9F /* Helper */,
 				BC69320A2B7676CC002C7A9F /* Data */,
@@ -1439,6 +1442,7 @@
 				BC1243E52B7BBA7A00BDFC13 /* PostTypeDto.swift in Sources */,
 				BC6E40C22B552A9400BA2CE1 /* MypageReactor.swift in Sources */,
 				BC5A85662B81DCBA006CA240 /* datePicker.swift in Sources */,
+				BC99D0B52B8243CC00DB0FDA /* SceneDelegate+NaverExtension.swift in Sources */,
 				BCB6CA3B2B73DA120096DEAD /* TodayFeedSection.swift in Sources */,
 				BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */,
 				BC6932092B765806002C7A9F /* PostModel.swift in Sources */,

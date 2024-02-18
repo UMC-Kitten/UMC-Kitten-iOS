@@ -8,6 +8,7 @@
 import UIKit
 
 import SnapKit
+import Moya
 
 class StartScreenViewController: UIViewController {
     
@@ -51,8 +52,15 @@ class StartScreenViewController: UIViewController {
     
     @objc func goKakaoLogin(_ sender: UIView) {
         print("kakao")
-        KakaoAuthHelper.openKakaoTalkLogin() { _ in
-            // TODO:
+        KakaoAuthHelper.openKakaoTalkLogin() { token in
+            MoyaProvider<UserApiClient>().request(.naverLogin(accessToken: token)) { result in
+                switch result {
+                case .success(let response):
+                    print(response)
+                case .failure(let error):
+                    print(error)
+                }
+            }
         }
     }
     
