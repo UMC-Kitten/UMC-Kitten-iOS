@@ -8,7 +8,7 @@
 import Foundation
 
 /// 자유게시판 글 정보
-struct PostModel {
+struct PostModel: Codable {
     /// 게시판
     var boardType: BoardType
     /// 사진

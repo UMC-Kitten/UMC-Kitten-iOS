@@ -42,17 +42,10 @@ final class CommunityView: UIView {
         return button
     }()
     
-    let fourthTapButton: UIButton = {
-        let button = UIButton(type: .custom)
-        button.setTitle("입양/실종", for: .normal)
-        button.setTitleColor(UIColor(red: 0.596, green: 0.596, blue: 0.62, alpha: 1), for: .normal)
-        return button
-    }()
-    
     lazy var tapStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [firstTapButton, secondTapButton, thirdTapButton, fourthTapButton])
+        let stackView = UIStackView(arrangedSubviews: [firstTapButton, secondTapButton, thirdTapButton])
         stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .fillEqually
         stackView.alignment = .center
         return stackView
     }()
