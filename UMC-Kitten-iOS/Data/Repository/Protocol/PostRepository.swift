@@ -26,5 +26,17 @@ protocol PostRepository {
     func getTodayFeed(
         completion: @escaping (_ result: [PostModel]?, _ error: Error?) -> Void
     )
+    
+    /// 게시글 등록
+    func addPost(
+        post: PostModel,
+        completion: @escaping (_ result: PostModel?, _ error: Error?) -> Void
+    )
+    
+    /// 게시글 삭제
+    func deletePost(
+        postId: Int64,
+        completion: @escaping (_ result: Bool?, _ error: Error?) -> Void
+    )
 }
 

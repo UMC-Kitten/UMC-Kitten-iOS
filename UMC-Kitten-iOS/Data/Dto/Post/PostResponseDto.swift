@@ -17,6 +17,7 @@ struct PostResponseDto: Codable {
     struct PostPreviewDto: Codable {
         var title: String
         var content: String
+        var postType: PostTypeDto
         var writerNickName: String
         var createdAt: Date
         var commentPreviewListDTO: CommentResponseDto.CommentPreviewListDto
