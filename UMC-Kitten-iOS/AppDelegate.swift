@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Temp token setting
         UserDefaults.standard.setValue("eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJcYmRvODM0M0BuYXZlci5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImlhdCI6MTcwODA4NjQ3OSwiZXhwIjoxNzA4MTcyODc5fQ.SetOfFzZSHxyrF78OG7UU0L9wWHS-4JYFmZ_j9cC9f_ZcpBsJb_b0oFBJXJlSjpJhpOEvnlM7u2XgmGYKzyOEg", forKey: UserDefaultsConstant.JWT_KEY)
-        UserDefaults.standard.setValue("1", forKey: UserDefaultsConstant.USER_ID_KEY)
+        UserDefaults.standard.setValue("0", forKey: UserDefaultsConstant.USER_ID_KEY)
 //        UserDefaults.standard.removeObject(forKey: UserDefaultsConstant.USER_ID_KEY)
         
         return true

@@ -153,6 +153,7 @@
 		BC99D0B32B82368800DB0FDA /* PostRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99D0B22B82368800DB0FDA /* PostRequestDto.swift */; };
 		BC99D0B52B8243CC00DB0FDA /* SceneDelegate+NaverExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99D0B42B8243CC00DB0FDA /* SceneDelegate+NaverExtension.swift */; };
 		BC99D0BB2B824E8E00DB0FDA /* NaverThirdPartyLogin.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC99D0BA2B824E8E00DB0FDA /* NaverThirdPartyLogin.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC99D0BE2B82648100DB0FDA /* DeepLinkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99D0BD2B82648100DB0FDA /* DeepLinkHelper.swift */; };
 		BC9DC6482B722E3A00859EFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6472B722E3A00859EFE /* HomeViewController.swift */; };
 		BC9DC64C2B722FD400859EFE /* RegisteredPetsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64B2B722FD400859EFE /* RegisteredPetsSection.swift */; };
 		BC9DC64E2B7231C000859EFE /* RegisteredPetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64D2B7231C000859EFE /* RegisteredPetCell.swift */; };
@@ -360,6 +361,7 @@
 		BC99D0B22B82368800DB0FDA /* PostRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestDto.swift; sourceTree = "<group>"; };
 		BC99D0B42B8243CC00DB0FDA /* SceneDelegate+NaverExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+NaverExtension.swift"; sourceTree = "<group>"; };
 		BC99D0BA2B824E8E00DB0FDA /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:N8MX74Y447:DOYEON LEE"; lastKnownFileType = wrapper.xcframework; path = NaverThirdPartyLogin.xcframework; sourceTree = "<group>"; };
+		BC99D0BD2B82648100DB0FDA /* DeepLinkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHelper.swift; sourceTree = "<group>"; };
 		BC9DC6472B722E3A00859EFE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC9DC64B2B722FD400859EFE /* RegisteredPetsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsSection.swift; sourceTree = "<group>"; };
 		BC9DC64D2B7231C000859EFE /* RegisteredPetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetCell.swift; sourceTree = "<group>"; };
@@ -879,6 +881,7 @@
 				BC1243F52B7BDA1100BDFC13 /* AlertHelper.swift */,
 				BC1244FD2B7CCCC800BDFC13 /* LoadingIndicatorHelper.swift */,
 				BC11F7212B8083D40069739D /* ImageProvider.swift */,
+				BC99D0BD2B82648100DB0FDA /* DeepLinkHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1549,6 +1552,7 @@
 				BC037BA52B78DF250021721C /* UserApiClient.swift in Sources */,
 				BC5A85672B81DCBA006CA240 /* NeedleSearchViewController.swift in Sources */,
 				BC5A855B2B81DCBA006CA240 /* Needle.swift in Sources */,
+				BC99D0BE2B82648100DB0FDA /* DeepLinkHelper.swift in Sources */,
 				BC1244A32B7C654B00BDFC13 /* CommunityPostView.swift in Sources */,
 				BCB6CA412B73E2300096DEAD /* HomeBottomSection.swift in Sources */,
 				BC1244AE2B7C655300BDFC13 /* FreeBoardDetailViewController.swift in Sources */,

@@ -35,10 +35,10 @@ extension UserApiClient: TargetType {
     
     var path: String {
         switch self {
-        case let .kakaoLogin(accessToken):
-            return "/kakao?accessToken=\(accessToken)"
-        case let .naverLogin(accessToken):
-            return "/naver?accessToken=\(accessToken)"
+        case .kakaoLogin:
+            return "/kakao"
+        case .naverLogin:
+            return "/naver"
         }
     }
     
@@ -51,8 +51,16 @@ extension UserApiClient: TargetType {
     
     var task: Task {
         switch self {
-        case .kakaoLogin, .naverLogin:
-            return .requestPlain
+        case let .kakaoLogin(accessToken):
+            return .requestParameters(
+                parameters: ["accessToken": accessToken],
+                encoding: URLEncoding.queryString
+            )
+        case let .naverLogin(accessToken):
+            return .requestParameters(
+                parameters: ["accessToken": accessToken],
+                encoding: URLEncoding.queryString
+            )
         }
     }
     

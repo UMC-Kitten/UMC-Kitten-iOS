@@ -20,6 +20,8 @@ class AppleAuthHelper: NSObject, ASAuthorizationControllerDelegate, ASAuthorizat
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
+        
+        print("start apple login")
     }
 
     // 로그인 성공 시 호출되는 메서드
@@ -43,6 +45,7 @@ class AppleAuthHelper: NSObject, ASAuthorizationControllerDelegate, ASAuthorizat
 
     // 로그인 실패 시 호출되는 메서드
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("apple error: \(error)")
         // 에러 처리
     }
 

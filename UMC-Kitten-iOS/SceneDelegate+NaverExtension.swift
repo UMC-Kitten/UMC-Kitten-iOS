@@ -29,6 +29,7 @@ extension SceneDelegate: NaverThirdPartyLoginConnectionDelegate {
                     do {
                         let jsonDictionary = try response.mapJSON() as? [String: Any]
                         print(jsonDictionary)
+                        DeepLinkHelper.openLoginResume()
                     } catch {
                         
                     }
@@ -51,6 +52,7 @@ extension SceneDelegate: NaverThirdPartyLoginConnectionDelegate {
             MoyaProvider<UserApiClient>().request(.naverLogin(accessToken: accessToken)) { result in
                 switch result {
                 case .success(let response):
+                    DeepLinkHelper.openLoginResume()
                     print(response)
                 case .failure(let error):
                     print(error)
