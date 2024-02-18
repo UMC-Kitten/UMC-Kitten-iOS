@@ -95,8 +95,7 @@ class PageCollectionViewFlowLayout: UICollectionViewFlowLayout {
         // Update offset by using item size + spacing
         let updatedOffset = (itemSize.width + minimumInteritemSpacing) * CGFloat(currentPage)
         previousOffset = updatedOffset
-        
-        print(updatedOffset)
+    
 
         return CGPoint(x: updatedOffset, y: proposedContentOffset.y)
     }
