@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -121,7 +121,6 @@
 		BC5A85A52B81E914006CA240 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A858E2B81E913006CA240 /* UIView+Extensions.swift */; };
 		BC5A85A62B81E914006CA240 /* SignUpProfileImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85902B81E913006CA240 /* SignUpProfileImage.storyboard */; };
 		BC5A85A72B81E914006CA240 /* SignUpProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85912B81E913006CA240 /* SignUpProfileImageViewController.swift */; };
-		BC5A85AD2B822EB0006CA240 /* NaverThirdPartyLogin.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC5A85AC2B822EB0006CA240 /* NaverThirdPartyLogin.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC6932092B765806002C7A9F /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6932082B765806002C7A9F /* PostModel.swift */; };
 		BC6932102B7677DD002C7A9F /* MypageApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69320F2B7677DD002C7A9F /* MypageApiClient.swift */; };
 		BC6932142B7679B6002C7A9F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = BC6932132B7679B6002C7A9F /* Moya */; };
@@ -215,7 +214,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BC5A85AD2B822EB0006CA240 /* NaverThirdPartyLogin.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,7 +331,6 @@
 		BC5A858E2B81E913006CA240 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		BC5A85902B81E913006CA240 /* SignUpProfileImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpProfileImage.storyboard; sourceTree = "<group>"; };
 		BC5A85912B81E913006CA240 /* SignUpProfileImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpProfileImageViewController.swift; sourceTree = "<group>"; };
-		BC5A85AC2B822EB0006CA240 /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:N8MX74Y447:DOYEON LEE"; lastKnownFileType = wrapper.xcframework; path = NaverThirdPartyLogin.xcframework; sourceTree = "<group>"; };
 		BC6932082B765806002C7A9F /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		BC69320F2B7677DD002C7A9F /* MypageApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageApiClient.swift; sourceTree = "<group>"; };
 		BC6932112B767809002C7A9F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -360,6 +357,7 @@
 		BC94315F2B56DB4400273DD7 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		BC99D0B22B82368800DB0FDA /* PostRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestDto.swift; sourceTree = "<group>"; };
 		BC99D0B42B8243CC00DB0FDA /* SceneDelegate+NaverExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+NaverExtension.swift"; sourceTree = "<group>"; };
+		BC99D0B82B82495C00DB0FDA /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NaverThirdPartyLogin.xcframework; sourceTree = "<group>"; };
 		BC9DC6472B722E3A00859EFE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC9DC64B2B722FD400859EFE /* RegisteredPetsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsSection.swift; sourceTree = "<group>"; };
 		BC9DC64D2B7231C000859EFE /* RegisteredPetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetCell.swift; sourceTree = "<group>"; };
@@ -617,7 +615,7 @@
 		BC3CECBB2B4FACC300546377 = {
 			isa = PBXGroup;
 			children = (
-				BC5A85AC2B822EB0006CA240 /* NaverThirdPartyLogin.xcframework */,
+				BC99D0B82B82495C00DB0FDA /* NaverThirdPartyLogin.xcframework */,
 				BC3CECC62B4FACC300546377 /* UMC-Kitten-iOS */,
 				BC1243BB2B7B522000BDFC13 /* UMC-Kitten-iOSTests */,
 				BC3CECC52B4FACC300546377 /* Products */,

@@ -149,8 +149,6 @@ extension CommunityViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FreeBoardTableViewCell", for: indexPath) as! FreeBoardTableViewCell
         
-        
-        
         cell.titleLabel.text = posts[indexPath.row].postTitle
         cell.contentLabel.text = posts[indexPath.row].body
         cell.heartCountLabel.text = "\(posts[indexPath.row].likeCount)"
