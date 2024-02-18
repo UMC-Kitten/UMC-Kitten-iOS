@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -152,6 +152,7 @@
 		BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94315F2B56DB4400273DD7 /* UILabel+Extension.swift */; };
 		BC99D0B32B82368800DB0FDA /* PostRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99D0B22B82368800DB0FDA /* PostRequestDto.swift */; };
 		BC99D0B52B8243CC00DB0FDA /* SceneDelegate+NaverExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99D0B42B8243CC00DB0FDA /* SceneDelegate+NaverExtension.swift */; };
+		BC99D0BB2B824E8E00DB0FDA /* NaverThirdPartyLogin.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC99D0BA2B824E8E00DB0FDA /* NaverThirdPartyLogin.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC9DC6482B722E3A00859EFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC6472B722E3A00859EFE /* HomeViewController.swift */; };
 		BC9DC64C2B722FD400859EFE /* RegisteredPetsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64B2B722FD400859EFE /* RegisteredPetsSection.swift */; };
 		BC9DC64E2B7231C000859EFE /* RegisteredPetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DC64D2B7231C000859EFE /* RegisteredPetCell.swift */; };
@@ -214,6 +215,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BC99D0BB2B824E8E00DB0FDA /* NaverThirdPartyLogin.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +359,7 @@
 		BC94315F2B56DB4400273DD7 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		BC99D0B22B82368800DB0FDA /* PostRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestDto.swift; sourceTree = "<group>"; };
 		BC99D0B42B8243CC00DB0FDA /* SceneDelegate+NaverExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+NaverExtension.swift"; sourceTree = "<group>"; };
-		BC99D0B82B82495C00DB0FDA /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NaverThirdPartyLogin.xcframework; sourceTree = "<group>"; };
+		BC99D0BA2B824E8E00DB0FDA /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:N8MX74Y447:DOYEON LEE"; lastKnownFileType = wrapper.xcframework; path = NaverThirdPartyLogin.xcframework; sourceTree = "<group>"; };
 		BC9DC6472B722E3A00859EFE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC9DC64B2B722FD400859EFE /* RegisteredPetsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsSection.swift; sourceTree = "<group>"; };
 		BC9DC64D2B7231C000859EFE /* RegisteredPetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetCell.swift; sourceTree = "<group>"; };
@@ -615,7 +617,7 @@
 		BC3CECBB2B4FACC300546377 = {
 			isa = PBXGroup;
 			children = (
-				BC99D0B82B82495C00DB0FDA /* NaverThirdPartyLogin.xcframework */,
+				BC99D0BA2B824E8E00DB0FDA /* NaverThirdPartyLogin.xcframework */,
 				BC3CECC62B4FACC300546377 /* UMC-Kitten-iOS */,
 				BC1243BB2B7B522000BDFC13 /* UMC-Kitten-iOSTests */,
 				BC3CECC52B4FACC300546377 /* Products */,
