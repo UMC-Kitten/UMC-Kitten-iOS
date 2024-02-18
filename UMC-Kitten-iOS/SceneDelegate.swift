@@ -37,6 +37,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let checkinVC = checkinStoryboard.instantiateViewController(withIdentifier: "HEALTHBOOK")
                 as? HealthBookViewController
         else { fatalError("Unable to instantiate HealthBookViewController from the checkinStoryboard with identifier 'HEALTHBOOK'") }
+        let checkinNavVC = UINavigationController()
+        checkinNavVC.viewControllers = [checkinVC]
         
         let communityVC = CommunityViewController()
         
@@ -60,7 +62,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         landingVC.title = "랜딩임시"
         
         // (3) Tab Bar로 사용하기 위한 뷰 컨트롤러들 설정
-        tabBarVC.setViewControllers([homeNavVC, checkinVC, communityVC, mypageNavVC, landingNavVC], animated: false)
+        tabBarVC.setViewControllers([homeNavVC, checkinNavVC, communityVC, mypageNavVC, landingNavVC], animated: false)
         tabBarVC.modalPresentationStyle = .fullScreen
         tabBarVC.tabBar.backgroundColor = .white
         tabBarVC.tabBar.tintColor = .main

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Needle Search View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="NEEDLESEARCH" id="Y6W-OH-hqX" customClass="NeedleSearchViewController" customModule="UMC_Kitten_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예방접종" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsU-hc-iG1">
+                                <rect key="frame" x="167" y="20" width="59" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCp-Df-qRG">
+                                <rect key="frame" x="323" y="15.333333333333336" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="nlV-Bc-46I"/>
+                                    <constraint firstAttribute="height" constant="30" id="uIw-fI-qgC"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGray4Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="코로나 장염" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8G-7I-TaI">
+                                <rect key="frame" x="33" y="170.66666666666666" width="78" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="켄넬코프" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyV-of-7dr">
+                                <rect key="frame" x="33" y="321.33333333333331" width="59" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="백혈병" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTm-zA-NA4">
+                                <rect key="frame" x="33" y="396.66666666666669" width="44.333333333333343" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="광견병" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsy-Mw-JWw">
+                                <rect key="frame" x="33" y="472" width="44.333333333333343" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="crI-Pe-qGW">
+                                <rect key="frame" x="33" y="80.666666666666671" width="327" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9j-TA-tb3">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="9e2-Vt-pxZ"/>
+                                            <constraint firstAttribute="width" constant="85" id="pdb-J3-8FD"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="1차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppm-MO-F0n">
+                                        <rect key="frame" x="121" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="K05-0x-nqG"/>
+                                            <constraint firstAttribute="height" constant="35" id="m9h-zy-Z4N"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="2차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxc-1O-4pp">
+                                        <rect key="frame" x="242" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="F0f-Es-wv8"/>
+                                            <constraint firstAttribute="height" constant="35" id="qaR-M0-7Ku"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="3차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인플루엔자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqj-yU-KH5">
+                                <rect key="frame" x="33.000000000000007" y="246.00000000000003" width="73.666666666666686" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="종합백신" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mok-5K-eom">
+                                <rect key="frame" x="33" y="50.333333333333336" width="59" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="ApB-m1-S7k">
+                                <rect key="frame" x="33" y="125.66666666666669" width="327" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I66-ih-CHP">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="6yb-o5-SXD"/>
+                                            <constraint firstAttribute="height" constant="35" id="uh3-F5-Q9w"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="4차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Giq-JL-2EN">
+                                        <rect key="frame" x="121" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="4RM-2f-AbR"/>
+                                            <constraint firstAttribute="height" constant="35" id="XDe-Ty-AKw"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="5차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBv-HT-5j1">
+                                        <rect key="frame" x="242" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="hP0-Xi-w8f"/>
+                                            <constraint firstAttribute="width" constant="85" id="jNk-TF-SKy"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="추가" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="Btm-je-Rlh">
+                                <rect key="frame" x="33" y="201" width="327" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkF-bb-hHo">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="8Qr-9g-OzD"/>
+                                            <constraint firstAttribute="width" constant="85" id="XUG-MH-hsU"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="1차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pxd-Ft-LNg">
+                                        <rect key="frame" x="121" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="DyU-am-ad9"/>
+                                            <constraint firstAttribute="width" constant="85" id="pbu-bg-RgS"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="2차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzJ-gm-NyI">
+                                        <rect key="frame" x="242" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="EfZ-o1-xqU"/>
+                                            <constraint firstAttribute="height" constant="35" id="gbv-Sk-SVb"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="추가" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="gwB-I4-V7s">
+                                <rect key="frame" x="33" y="276.33333333333331" width="327" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQP-iB-Ig2">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="0q5-sm-vx8"/>
+                                            <constraint firstAttribute="height" constant="35" id="6J5-i2-yWv"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="1차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnv-v4-Rt9">
+                                        <rect key="frame" x="121" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="1cr-DA-mbW"/>
+                                            <constraint firstAttribute="height" constant="35" id="Edb-0q-ZBP"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="2차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3Y-jd-NAD">
+                                        <rect key="frame" x="242" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="hKk-Ip-ZhF"/>
+                                            <constraint firstAttribute="width" constant="85" id="xiY-De-gwd"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="추가" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="wfc-s5-CBl">
+                                <rect key="frame" x="33" y="351.66666666666669" width="327" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtP-hc-bpw">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="LXn-vf-NUC"/>
+                                            <constraint firstAttribute="width" constant="85" id="RC9-tH-iLQ"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="1차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU4-ac-43Z">
+                                        <rect key="frame" x="121" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="226-RS-GhR"/>
+                                            <constraint firstAttribute="width" constant="85" id="ons-PG-qet"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="2차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD8-3C-9bZ">
+                                        <rect key="frame" x="242" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="CS6-Au-9fo"/>
+                                            <constraint firstAttribute="height" constant="35" id="ZQL-Od-GT6"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="추가" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="03p-Jz-Xjl">
+                                <rect key="frame" x="33" y="427" width="327" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ih0-dL-Q42">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="P3t-55-TcZ"/>
+                                            <constraint firstAttribute="height" constant="35" id="we0-wF-9wr"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="1차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hde-Tm-pWJ">
+                                        <rect key="frame" x="121" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="B1u-dh-Glo"/>
+                                            <constraint firstAttribute="height" constant="35" id="lOl-8t-sxG"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="2차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyl-kN-ZdK">
+                                        <rect key="frame" x="242" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="eRO-Gd-AcR"/>
+                                            <constraint firstAttribute="width" constant="85" id="vhc-QF-VOI"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="추가" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="aH9-5F-38G">
+                                <rect key="frame" x="33" y="502.33333333333326" width="206" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EL-ZD-r1I">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="I3q-QL-jgt"/>
+                                            <constraint firstAttribute="height" constant="35" id="rA2-bc-c4Z"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="1차" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZ4-9d-Yk6">
+                                        <rect key="frame" x="121" y="0.0" width="85" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="4kY-lv-ZXK"/>
+                                            <constraint firstAttribute="width" constant="85" id="p0z-j1-0Wh"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="추가" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="systemGray2Color"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ApB-m1-S7k" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="1Xr-w9-W8T"/>
+                            <constraint firstItem="03p-Jz-Xjl" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="33H-kH-5iK"/>
+                            <constraint firstItem="jsU-hc-iG1" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="423-ws-h0A"/>
+                            <constraint firstItem="aH9-5F-38G" firstAttribute="top" secondItem="tsy-Mw-JWw" secondAttribute="bottom" constant="10" id="57d-hS-Yub"/>
+                            <constraint firstItem="f8G-7I-TaI" firstAttribute="leading" secondItem="mok-5K-eom" secondAttribute="leading" id="6C9-2n-4Pn"/>
+                            <constraint firstItem="tsy-Mw-JWw" firstAttribute="leading" secondItem="mok-5K-eom" secondAttribute="leading" id="9GR-gx-7JO"/>
+                            <constraint firstItem="kqj-yU-KH5" firstAttribute="top" secondItem="Btm-je-Rlh" secondAttribute="bottom" constant="10" id="9M3-4U-BM5"/>
+                            <constraint firstItem="f8G-7I-TaI" firstAttribute="top" secondItem="ApB-m1-S7k" secondAttribute="bottom" constant="10" id="9ri-eT-lTH"/>
+                            <constraint firstItem="jsU-hc-iG1" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="20" id="BGp-Nf-U0Q"/>
+                            <constraint firstItem="wfc-s5-CBl" firstAttribute="top" secondItem="NyV-of-7dr" secondAttribute="bottom" constant="10" id="Bcl-uh-i4s"/>
+                            <constraint firstItem="Btm-je-Rlh" firstAttribute="top" secondItem="f8G-7I-TaI" secondAttribute="bottom" constant="10" id="FAg-Jy-ckn"/>
+                            <constraint firstAttribute="trailing" secondItem="fCp-Df-qRG" secondAttribute="trailing" constant="40" id="GLQ-yB-PHk"/>
+                            <constraint firstItem="kqj-yU-KH5" firstAttribute="leading" secondItem="mok-5K-eom" secondAttribute="leading" id="HGs-Xn-LTG"/>
+                            <constraint firstItem="fCp-Df-qRG" firstAttribute="centerY" secondItem="jsU-hc-iG1" secondAttribute="centerY" id="Ih7-Wj-64X"/>
+                            <constraint firstItem="crI-Pe-qGW" firstAttribute="top" secondItem="mok-5K-eom" secondAttribute="bottom" constant="10" id="M17-Ne-LCm"/>
+                            <constraint firstItem="mok-5K-eom" firstAttribute="leading" secondItem="crI-Pe-qGW" secondAttribute="leading" id="Xp2-Fa-OBX"/>
+                            <constraint firstItem="mok-5K-eom" firstAttribute="top" secondItem="jsU-hc-iG1" secondAttribute="bottom" constant="10" id="YmO-yd-W7n"/>
+                            <constraint firstItem="sTm-zA-NA4" firstAttribute="leading" secondItem="mok-5K-eom" secondAttribute="leading" id="b0U-uW-Ond"/>
+                            <constraint firstItem="wfc-s5-CBl" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="dLF-Im-oM7"/>
+                            <constraint firstItem="sTm-zA-NA4" firstAttribute="top" secondItem="wfc-s5-CBl" secondAttribute="bottom" constant="10" id="k3v-Zt-HcE"/>
+                            <constraint firstItem="03p-Jz-Xjl" firstAttribute="top" secondItem="sTm-zA-NA4" secondAttribute="bottom" constant="10" id="k9z-dz-bk0"/>
+                            <constraint firstItem="crI-Pe-qGW" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="kTt-gh-0xb"/>
+                            <constraint firstItem="NyV-of-7dr" firstAttribute="top" secondItem="gwB-I4-V7s" secondAttribute="bottom" constant="10" id="mjE-Rz-fL4"/>
+                            <constraint firstItem="gwB-I4-V7s" firstAttribute="top" secondItem="kqj-yU-KH5" secondAttribute="bottom" constant="10" id="pwi-WE-zTb"/>
+                            <constraint firstItem="aH9-5F-38G" firstAttribute="leading" secondItem="03p-Jz-Xjl" secondAttribute="leading" id="qYB-mB-gag"/>
+                            <constraint firstItem="Btm-je-Rlh" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="r7h-a8-qmX"/>
+                            <constraint firstItem="gwB-I4-V7s" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="rkg-Pd-Kfp"/>
+                            <constraint firstItem="NyV-of-7dr" firstAttribute="leading" secondItem="mok-5K-eom" secondAttribute="leading" id="tkQ-2w-Bgs"/>
+                            <constraint firstItem="tsy-Mw-JWw" firstAttribute="top" secondItem="03p-Jz-Xjl" secondAttribute="bottom" constant="10" id="v2P-uI-Clw"/>
+                            <constraint firstItem="ApB-m1-S7k" firstAttribute="top" secondItem="crI-Pe-qGW" secondAttribute="bottom" constant="10" id="wLs-2h-wcB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

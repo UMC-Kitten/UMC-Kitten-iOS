@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pet Type Select View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PETTYPESELECT" id="Y6W-OH-hqX" customClass="PetTypeSelectViewController" customModule="UMC_Kitten_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELE-zI-r2v">
+                                <rect key="frame" x="36.666666666666657" y="753" width="320" height="55"/>
+                                <color key="backgroundColor" name="appButtonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="deC-7V-Rn0"/>
+                                    <constraint firstAttribute="width" constant="320" id="eln-jv-lbG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="ijL-Y2-pFJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="wbZ-9h-sAY"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <connections>
+                                    <action selector="nextViewButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AaK-lb-ryU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내 반려동물은 무슨 종인가요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiR-oz-HC4">
+                                <rect key="frame" x="22" y="191" width="136" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpp-uK-X3F">
+                                <rect key="frame" x="224.66666666666663" y="353.66666666666669" width="140" height="170.00000000000006"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고양이" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvx-0S-CZM">
+                                        <rect key="frame" x="47.666666666666657" y="133" width="45" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iro-3C-fJu">
+                                        <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Bur-No-OEp"/>
+                                            <constraint firstAttribute="width" constant="100" id="eXr-iT-nIg"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="appButtonColor"/>
+                                <constraints>
+                                    <constraint firstItem="iro-3C-fJu" firstAttribute="centerX" secondItem="qpp-uK-X3F" secondAttribute="centerX" id="MXK-f2-1sQ"/>
+                                    <constraint firstAttribute="width" constant="140" id="SE7-Ph-DK4"/>
+                                    <constraint firstItem="Dvx-0S-CZM" firstAttribute="centerX" secondItem="qpp-uK-X3F" secondAttribute="centerX" id="bJ2-eF-Adc"/>
+                                    <constraint firstItem="iro-3C-fJu" firstAttribute="top" secondItem="qpp-uK-X3F" secondAttribute="top" constant="20" id="jIx-Sc-Tkk"/>
+                                    <constraint firstItem="Dvx-0S-CZM" firstAttribute="top" secondItem="iro-3C-fJu" secondAttribute="bottom" constant="13" id="vn3-a7-bO4"/>
+                                    <constraint firstAttribute="height" constant="170" id="xL9-BN-G4f"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqR-gb-mf9">
+                                <rect key="frame" x="28.333333333333329" y="353.66666666666669" width="140" height="170.00000000000006"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ooI-Kg-IAG">
+                                        <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3jR-2x-doJ"/>
+                                            <constraint firstAttribute="width" constant="100" id="KbV-kN-NLe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강아지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMN-h9-8zE">
+                                        <rect key="frame" x="47.333333333333343" y="133" width="45" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="appButtonColor"/>
+                                <constraints>
+                                    <constraint firstItem="bMN-h9-8zE" firstAttribute="centerX" secondItem="ooI-Kg-IAG" secondAttribute="centerX" id="Foc-AD-OJk"/>
+                                    <constraint firstAttribute="width" constant="140" id="LAt-Wh-Rav"/>
+                                    <constraint firstItem="ooI-Kg-IAG" firstAttribute="centerX" secondItem="bqR-gb-mf9" secondAttribute="centerX" id="RGR-a8-dAh"/>
+                                    <constraint firstItem="bMN-h9-8zE" firstAttribute="top" secondItem="ooI-Kg-IAG" secondAttribute="bottom" constant="13" id="cnT-fZ-Xem"/>
+                                    <constraint firstAttribute="height" constant="170" id="oaQ-6J-Z0u"/>
+                                    <constraint firstItem="ooI-Kg-IAG" firstAttribute="top" secondItem="bqR-gb-mf9" secondAttribute="top" constant="20" id="vCB-R8-pzy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ELE-zI-r2v" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="4VQ-Vv-LiQ"/>
+                            <constraint firstItem="bqR-gb-mf9" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="6sD-le-pYs"/>
+                            <constraint firstItem="qpp-uK-X3F" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="7CI-HD-7nH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ELE-zI-r2v" secondAttribute="bottom" constant="10" id="ZfN-Aq-FFh"/>
+                            <constraint firstItem="qpp-uK-X3F" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" multiplier="1.5" id="gaj-XY-qQ7"/>
+                            <constraint firstItem="bqR-gb-mf9" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" multiplier="0.5" id="vgh-fq-r1p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DD8-Pf-abf"/>
+                    <connections>
+                        <outlet property="firstView" destination="bqR-gb-mf9" id="h8T-21-7zr"/>
+                        <outlet property="labelOne" destination="bMN-h9-8zE" id="GsF-1N-8FW"/>
+                        <outlet property="labelTwo" destination="Dvx-0S-CZM" id="Ys2-Q1-lrl"/>
+                        <outlet property="nextButton" destination="ELE-zI-r2v" id="HLp-gu-zSK"/>
+                        <outlet property="petImageOne" destination="ooI-Kg-IAG" id="Kpa-X2-X23"/>
+                        <outlet property="petImageTwo" destination="iro-3C-fJu" id="7NI-jp-RQ5"/>
+                        <outlet property="secondView" destination="qpp-uK-X3F" id="tZT-38-Eu2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999.23664122137404" y="-9.1549295774647899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="appButtonColor">
+            <color red="0.80000000000000004" green="0.83529411764705885" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

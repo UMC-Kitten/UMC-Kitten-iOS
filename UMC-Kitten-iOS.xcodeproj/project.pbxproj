@@ -7,27 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98A91B542B81BF2200CCD3BA /* HealthBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91B392B81BF2200CCD3BA /* HealthBookViewController.swift */; };
-		98A91B552B81BF2200CCD3BA /* Needle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91B3C2B81BF2200CCD3BA /* Needle.swift */; };
-		98A91B562B81BF2200CCD3BA /* NeedleTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91B3D2B81BF2200CCD3BA /* NeedleTwo.swift */; };
-		98A91B572B81BF2200CCD3BA /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91B3E2B81BF2200CCD3BA /* AddViewController.swift */; };
-		98A91B582B81BF2200CCD3BA /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A91B3F2B81BF2200CCD3BA /* Add.storyboard */; };
-		98A91B592B81BF2200CCD3BA /* AddTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A91B402B81BF2200CCD3BA /* AddTwo.storyboard */; };
-		98A91B5A2B81BF2200CCD3BA /* HospitalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98A91B422B81BF2200CCD3BA /* HospitalTableViewCell.xib */; };
-		98A91B5B2B81BF2200CCD3BA /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91B432B81BF2200CCD3BA /* HospitalTableViewCell.swift */; };
-		98A91B5C2B81BF2200CCD3BA /* AddThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A91B442B81BF2200CCD3BA /* AddThree.storyboard */; };
-		98A91B5D2B81BF2200CCD3BA /* AddTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91B452B81BF2200CCD3BA /* AddTwoViewController.swift */; };
-		98A91B5E2B81BF2200CCD3BA /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98A91B472B81BF2200CCD3BA /* FeedTableViewCell.xib */; };
-		98A91B5F2B81BF2200CCD3BA /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91B482B81BF2200CCD3BA /* FeedTableViewCell.swift */; };
-		98A91B602B81BF2200CCD3BA /* datePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91B4A2B81BF2200CCD3BA /* datePicker.swift */; };
-		98A91B612B81BF2200CCD3BA /* NeedleSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91B4B2B81BF2200CCD3BA /* NeedleSearchViewController.swift */; };
-		98A91B622B81BF2200CCD3BA /* NeedleSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A91B4C2B81BF2200CCD3BA /* NeedleSearch.storyboard */; };
-		98A91B632B81BF2200CCD3BA /* HospitalSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91B4D2B81BF2200CCD3BA /* HospitalSearchViewController.swift */; };
-		98A91B642B81BF2200CCD3BA /* HospitalSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A91B4E2B81BF2200CCD3BA /* HospitalSearch.storyboard */; };
-		98A91B652B81BF2200CCD3BA /* AddThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91B4F2B81BF2200CCD3BA /* AddThreeViewController.swift */; };
-		98A91B662B81BF2200CCD3BA /* HealthBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A91B502B81BF2200CCD3BA /* HealthBook.storyboard */; };
-		98A91B672B81BF2200CCD3BA /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91B522B81BF2200CCD3BA /* NextViewController.swift */; };
-		98A91B682B81BF2200CCD3BA /* Next.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A91B532B81BF2200CCD3BA /* Next.storyboard */; };
 		B337CDD52B7FF03700CF6339 /* AppleAuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337CDD42B7FF03700CF6339 /* AppleAuthHelper.swift */; };
 		BC037B852B773D6A0021721C /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BC037B842B773D6A0021721C /* KakaoSDK */; };
 		BC037B872B773D6A0021721C /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BC037B862B773D6A0021721C /* KakaoSDKAuth */; };
@@ -70,26 +49,6 @@
 		BC1243F12B7BCFE900BDFC13 /* RxSwift+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243F02B7BCFE900BDFC13 /* RxSwift+Extension.swift */; };
 		BC1243F62B7BDA1100BDFC13 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243F52B7BDA1100BDFC13 /* AlertHelper.swift */; };
 		BC1243F82B7BE24C00BDFC13 /* NicknameSettingReacotr.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1243F72B7BE24C00BDFC13 /* NicknameSettingReacotr.swift */; };
-		BC1244662B7C625A00BDFC13 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1244512B7C625A00BDFC13 /* Welcome.storyboard */; };
-		BC1244672B7C625A00BDFC13 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244522B7C625A00BDFC13 /* WelcomeViewController.swift */; };
-		BC12446D2B7C639C00BDFC13 /* TermsOfUse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC12446B2B7C639C00BDFC13 /* TermsOfUse.storyboard */; };
-		BC12446E2B7C639C00BDFC13 /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12446C2B7C639C00BDFC13 /* TermsOfUseViewController.swift */; };
-		BC1244882B7C63CE00BDFC13 /* imageChangingCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244712B7C63CE00BDFC13 /* imageChangingCheckBox.swift */; };
-		BC1244892B7C63CE00BDFC13 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244722B7C63CE00BDFC13 /* CheckBox.swift */; };
-		BC12448A2B7C63CE00BDFC13 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244742B7C63CE00BDFC13 /* StartScreenViewController.swift */; };
-		BC12448B2B7C63CE00BDFC13 /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1244752B7C63CE00BDFC13 /* StartScreen.storyboard */; };
-		BC12448C2B7C63CE00BDFC13 /* PetSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1244772B7C63CE00BDFC13 /* PetSelect.storyboard */; };
-		BC12448D2B7C63CE00BDFC13 /* PetSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244782B7C63CE00BDFC13 /* PetSelectViewController.swift */; };
-		BC12448E2B7C63CE00BDFC13 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12447A2B7C63CE00BDFC13 /* SignUpViewController.swift */; };
-		BC12448F2B7C63CE00BDFC13 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC12447B2B7C63CE00BDFC13 /* SignUp.storyboard */; };
-		BC1244902B7C63CE00BDFC13 /* PetTypeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12447D2B7C63CE00BDFC13 /* PetTypeSelectViewController.swift */; };
-		BC1244912B7C63CE00BDFC13 /* PetTypeSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC12447E2B7C63CE00BDFC13 /* PetTypeSelect.storyboard */; };
-		BC1244922B7C63CE00BDFC13 /* SignUpProfileImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1244802B7C63CE00BDFC13 /* SignUpProfileImage.storyboard */; };
-		BC1244932B7C63CE00BDFC13 /* SignUpProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244812B7C63CE00BDFC13 /* SignUpProfileImageViewController.swift */; };
-		BC1244942B7C63CE00BDFC13 /* OwnerSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1244832B7C63CE00BDFC13 /* OwnerSelect.storyboard */; };
-		BC1244952B7C63CE00BDFC13 /* OwnerSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244842B7C63CE00BDFC13 /* OwnerSelectViewController.swift */; };
-		BC1244962B7C63CE00BDFC13 /* PetInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1244862B7C63CE00BDFC13 /* PetInformation.storyboard */; };
-		BC1244972B7C63CE00BDFC13 /* PetInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1244872B7C63CE00BDFC13 /* PetInformationViewController.swift */; };
 		BC1244A32B7C654B00BDFC13 /* CommunityPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12449A2B7C654B00BDFC13 /* CommunityPostView.swift */; };
 		BC1244A42B7C654B00BDFC13 /* FreeBoardDetailCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12449C2B7C654B00BDFC13 /* FreeBoardDetailCommentTableViewCell.swift */; };
 		BC1244A52B7C654B00BDFC13 /* FreeBoardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12449D2B7C654B00BDFC13 /* FreeBoardDetailView.swift */; };
@@ -120,6 +79,49 @@
 		BC3CECCF2B4FACC300546377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3CECCD2B4FACC300546377 /* Main.storyboard */; };
 		BC3CECD12B4FACC400546377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC3CECD02B4FACC400546377 /* Assets.xcassets */; };
 		BC3CECD42B4FACC400546377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3CECD22B4FACC400546377 /* LaunchScreen.storyboard */; };
+		BC5A855A2B81DCBA006CA240 /* HealthBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A853F2B81DCBA006CA240 /* HealthBookViewController.swift */; };
+		BC5A855B2B81DCBA006CA240 /* Needle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85422B81DCBA006CA240 /* Needle.swift */; };
+		BC5A855C2B81DCBA006CA240 /* NeedleTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85432B81DCBA006CA240 /* NeedleTwo.swift */; };
+		BC5A855D2B81DCBA006CA240 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85442B81DCBA006CA240 /* AddViewController.swift */; };
+		BC5A855E2B81DCBA006CA240 /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85452B81DCBA006CA240 /* Add.storyboard */; };
+		BC5A855F2B81DCBA006CA240 /* AddTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85462B81DCBA006CA240 /* AddTwo.storyboard */; };
+		BC5A85602B81DCBA006CA240 /* HospitalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85482B81DCBA006CA240 /* HospitalTableViewCell.xib */; };
+		BC5A85612B81DCBA006CA240 /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85492B81DCBA006CA240 /* HospitalTableViewCell.swift */; };
+		BC5A85622B81DCBA006CA240 /* AddThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A854A2B81DCBA006CA240 /* AddThree.storyboard */; };
+		BC5A85632B81DCBA006CA240 /* AddTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A854B2B81DCBA006CA240 /* AddTwoViewController.swift */; };
+		BC5A85642B81DCBA006CA240 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5A854D2B81DCBA006CA240 /* FeedTableViewCell.xib */; };
+		BC5A85652B81DCBA006CA240 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A854E2B81DCBA006CA240 /* FeedTableViewCell.swift */; };
+		BC5A85662B81DCBA006CA240 /* datePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85502B81DCBA006CA240 /* datePicker.swift */; };
+		BC5A85672B81DCBA006CA240 /* NeedleSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85512B81DCBA006CA240 /* NeedleSearchViewController.swift */; };
+		BC5A85682B81DCBA006CA240 /* NeedleSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85522B81DCBA006CA240 /* NeedleSearch.storyboard */; };
+		BC5A85692B81DCBA006CA240 /* HospitalSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85532B81DCBA006CA240 /* HospitalSearchViewController.swift */; };
+		BC5A856A2B81DCBA006CA240 /* HospitalSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85542B81DCBA006CA240 /* HospitalSearch.storyboard */; };
+		BC5A856B2B81DCBA006CA240 /* AddThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85552B81DCBA006CA240 /* AddThreeViewController.swift */; };
+		BC5A856C2B81DCBA006CA240 /* HealthBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85562B81DCBA006CA240 /* HealthBook.storyboard */; };
+		BC5A856D2B81DCBA006CA240 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85582B81DCBA006CA240 /* NextViewController.swift */; };
+		BC5A856E2B81DCBA006CA240 /* Next.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85592B81DCBA006CA240 /* Next.storyboard */; };
+		BC5A85922B81E913006CA240 /* PetSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85712B81E913006CA240 /* PetSelect.storyboard */; };
+		BC5A85932B81E913006CA240 /* PetSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85722B81E913006CA240 /* PetSelectViewController.swift */; };
+		BC5A85942B81E913006CA240 /* PetInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85742B81E913006CA240 /* PetInformation.storyboard */; };
+		BC5A85952B81E913006CA240 /* PetInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85752B81E913006CA240 /* PetInformationViewController.swift */; };
+		BC5A85962B81E913006CA240 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85772B81E913006CA240 /* StartScreenViewController.swift */; };
+		BC5A85972B81E913006CA240 /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85782B81E913006CA240 /* StartScreen.storyboard */; };
+		BC5A85982B81E913006CA240 /* PetTypeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A857A2B81E913006CA240 /* PetTypeSelectViewController.swift */; };
+		BC5A85992B81E913006CA240 /* PetTypeSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A857B2B81E913006CA240 /* PetTypeSelect.storyboard */; };
+		BC5A859A2B81E913006CA240 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A857D2B81E913006CA240 /* SignUpViewController.swift */; };
+		BC5A859B2B81E913006CA240 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A857E2B81E913006CA240 /* SignUp.storyboard */; };
+		BC5A859C2B81E914006CA240 /* imageChangingCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85812B81E913006CA240 /* imageChangingCheckBox.swift */; };
+		BC5A859D2B81E914006CA240 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85822B81E913006CA240 /* CheckBox.swift */; };
+		BC5A859E2B81E914006CA240 /* TermsOfUse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85842B81E913006CA240 /* TermsOfUse.storyboard */; };
+		BC5A859F2B81E914006CA240 /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85852B81E913006CA240 /* TermsOfUseViewController.swift */; };
+		BC5A85A02B81E914006CA240 /* OwnerSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85872B81E913006CA240 /* OwnerSelect.storyboard */; };
+		BC5A85A12B81E914006CA240 /* OwnerSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85882B81E913006CA240 /* OwnerSelectViewController.swift */; };
+		BC5A85A22B81E914006CA240 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A858A2B81E913006CA240 /* Welcome.storyboard */; };
+		BC5A85A32B81E914006CA240 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A858B2B81E913006CA240 /* WelcomeViewController.swift */; };
+		BC5A85A42B81E914006CA240 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A858D2B81E913006CA240 /* UserInfo.swift */; };
+		BC5A85A52B81E914006CA240 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A858E2B81E913006CA240 /* UIView+Extensions.swift */; };
+		BC5A85A62B81E914006CA240 /* SignUpProfileImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A85902B81E913006CA240 /* SignUpProfileImage.storyboard */; };
+		BC5A85A72B81E914006CA240 /* SignUpProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A85912B81E913006CA240 /* SignUpProfileImageViewController.swift */; };
 		BC6932092B765806002C7A9F /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6932082B765806002C7A9F /* PostModel.swift */; };
 		BC6932102B7677DD002C7A9F /* MypageApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69320F2B7677DD002C7A9F /* MypageApiClient.swift */; };
 		BC6932142B7679B6002C7A9F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = BC6932132B7679B6002C7A9F /* Moya */; };
@@ -218,27 +220,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		98A91B392B81BF2200CCD3BA /* HealthBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthBookViewController.swift; sourceTree = "<group>"; };
-		98A91B3C2B81BF2200CCD3BA /* Needle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Needle.swift; sourceTree = "<group>"; };
-		98A91B3D2B81BF2200CCD3BA /* NeedleTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleTwo.swift; sourceTree = "<group>"; };
-		98A91B3E2B81BF2200CCD3BA /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		98A91B3F2B81BF2200CCD3BA /* Add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
-		98A91B402B81BF2200CCD3BA /* AddTwo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTwo.storyboard; sourceTree = "<group>"; };
-		98A91B422B81BF2200CCD3BA /* HospitalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalTableViewCell.xib; sourceTree = "<group>"; };
-		98A91B432B81BF2200CCD3BA /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
-		98A91B442B81BF2200CCD3BA /* AddThree.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddThree.storyboard; sourceTree = "<group>"; };
-		98A91B452B81BF2200CCD3BA /* AddTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTwoViewController.swift; sourceTree = "<group>"; };
-		98A91B472B81BF2200CCD3BA /* FeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
-		98A91B482B81BF2200CCD3BA /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
-		98A91B4A2B81BF2200CCD3BA /* datePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = datePicker.swift; sourceTree = "<group>"; };
-		98A91B4B2B81BF2200CCD3BA /* NeedleSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleSearchViewController.swift; sourceTree = "<group>"; };
-		98A91B4C2B81BF2200CCD3BA /* NeedleSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NeedleSearch.storyboard; sourceTree = "<group>"; };
-		98A91B4D2B81BF2200CCD3BA /* HospitalSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalSearchViewController.swift; sourceTree = "<group>"; };
-		98A91B4E2B81BF2200CCD3BA /* HospitalSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HospitalSearch.storyboard; sourceTree = "<group>"; };
-		98A91B4F2B81BF2200CCD3BA /* AddThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddThreeViewController.swift; sourceTree = "<group>"; };
-		98A91B502B81BF2200CCD3BA /* HealthBook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HealthBook.storyboard; sourceTree = "<group>"; };
-		98A91B522B81BF2200CCD3BA /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
-		98A91B532B81BF2200CCD3BA /* Next.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Next.storyboard; sourceTree = "<group>"; };
 		B337CDD42B7FF03700CF6339 /* AppleAuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthHelper.swift; sourceTree = "<group>"; };
 		B337CDD62B808EA600CF6339 /* UMC-Kitten-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UMC-Kitten-iOS.entitlements"; sourceTree = "<group>"; };
 		BC037B8F2B773F340021721C /* KakaoAuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthHelper.swift; sourceTree = "<group>"; };
@@ -278,26 +259,6 @@
 		BC1243F02B7BCFE900BDFC13 /* RxSwift+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extension.swift"; sourceTree = "<group>"; };
 		BC1243F52B7BDA1100BDFC13 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		BC1243F72B7BE24C00BDFC13 /* NicknameSettingReacotr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingReacotr.swift; sourceTree = "<group>"; };
-		BC1244512B7C625A00BDFC13 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
-		BC1244522B7C625A00BDFC13 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		BC12446B2B7C639C00BDFC13 /* TermsOfUse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TermsOfUse.storyboard; sourceTree = "<group>"; };
-		BC12446C2B7C639C00BDFC13 /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
-		BC1244712B7C63CE00BDFC13 /* imageChangingCheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageChangingCheckBox.swift; sourceTree = "<group>"; };
-		BC1244722B7C63CE00BDFC13 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
-		BC1244742B7C63CE00BDFC13 /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
-		BC1244752B7C63CE00BDFC13 /* StartScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
-		BC1244772B7C63CE00BDFC13 /* PetSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PetSelect.storyboard; sourceTree = "<group>"; };
-		BC1244782B7C63CE00BDFC13 /* PetSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSelectViewController.swift; sourceTree = "<group>"; };
-		BC12447A2B7C63CE00BDFC13 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		BC12447B2B7C63CE00BDFC13 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
-		BC12447D2B7C63CE00BDFC13 /* PetTypeSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTypeSelectViewController.swift; sourceTree = "<group>"; };
-		BC12447E2B7C63CE00BDFC13 /* PetTypeSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PetTypeSelect.storyboard; sourceTree = "<group>"; };
-		BC1244802B7C63CE00BDFC13 /* SignUpProfileImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpProfileImage.storyboard; sourceTree = "<group>"; };
-		BC1244812B7C63CE00BDFC13 /* SignUpProfileImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpProfileImageViewController.swift; sourceTree = "<group>"; };
-		BC1244832B7C63CE00BDFC13 /* OwnerSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OwnerSelect.storyboard; sourceTree = "<group>"; };
-		BC1244842B7C63CE00BDFC13 /* OwnerSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerSelectViewController.swift; sourceTree = "<group>"; };
-		BC1244862B7C63CE00BDFC13 /* PetInformation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PetInformation.storyboard; sourceTree = "<group>"; };
-		BC1244872B7C63CE00BDFC13 /* PetInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetInformationViewController.swift; sourceTree = "<group>"; };
 		BC12449A2B7C654B00BDFC13 /* CommunityPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityPostView.swift; sourceTree = "<group>"; };
 		BC12449C2B7C654B00BDFC13 /* FreeBoardDetailCommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeBoardDetailCommentTableViewCell.swift; sourceTree = "<group>"; };
 		BC12449D2B7C654B00BDFC13 /* FreeBoardDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeBoardDetailView.swift; sourceTree = "<group>"; };
@@ -327,6 +288,49 @@
 		BC3CECD02B4FACC400546377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC3CECD32B4FACC400546377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC3CECD52B4FACC400546377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC5A853F2B81DCBA006CA240 /* HealthBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthBookViewController.swift; sourceTree = "<group>"; };
+		BC5A85422B81DCBA006CA240 /* Needle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Needle.swift; sourceTree = "<group>"; };
+		BC5A85432B81DCBA006CA240 /* NeedleTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleTwo.swift; sourceTree = "<group>"; };
+		BC5A85442B81DCBA006CA240 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		BC5A85452B81DCBA006CA240 /* Add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
+		BC5A85462B81DCBA006CA240 /* AddTwo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTwo.storyboard; sourceTree = "<group>"; };
+		BC5A85482B81DCBA006CA240 /* HospitalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalTableViewCell.xib; sourceTree = "<group>"; };
+		BC5A85492B81DCBA006CA240 /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
+		BC5A854A2B81DCBA006CA240 /* AddThree.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddThree.storyboard; sourceTree = "<group>"; };
+		BC5A854B2B81DCBA006CA240 /* AddTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTwoViewController.swift; sourceTree = "<group>"; };
+		BC5A854D2B81DCBA006CA240 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		BC5A854E2B81DCBA006CA240 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		BC5A85502B81DCBA006CA240 /* datePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = datePicker.swift; sourceTree = "<group>"; };
+		BC5A85512B81DCBA006CA240 /* NeedleSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleSearchViewController.swift; sourceTree = "<group>"; };
+		BC5A85522B81DCBA006CA240 /* NeedleSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NeedleSearch.storyboard; sourceTree = "<group>"; };
+		BC5A85532B81DCBA006CA240 /* HospitalSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalSearchViewController.swift; sourceTree = "<group>"; };
+		BC5A85542B81DCBA006CA240 /* HospitalSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HospitalSearch.storyboard; sourceTree = "<group>"; };
+		BC5A85552B81DCBA006CA240 /* AddThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddThreeViewController.swift; sourceTree = "<group>"; };
+		BC5A85562B81DCBA006CA240 /* HealthBook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HealthBook.storyboard; sourceTree = "<group>"; };
+		BC5A85582B81DCBA006CA240 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		BC5A85592B81DCBA006CA240 /* Next.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Next.storyboard; sourceTree = "<group>"; };
+		BC5A85712B81E913006CA240 /* PetSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PetSelect.storyboard; sourceTree = "<group>"; };
+		BC5A85722B81E913006CA240 /* PetSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSelectViewController.swift; sourceTree = "<group>"; };
+		BC5A85742B81E913006CA240 /* PetInformation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PetInformation.storyboard; sourceTree = "<group>"; };
+		BC5A85752B81E913006CA240 /* PetInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetInformationViewController.swift; sourceTree = "<group>"; };
+		BC5A85772B81E913006CA240 /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		BC5A85782B81E913006CA240 /* StartScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
+		BC5A857A2B81E913006CA240 /* PetTypeSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTypeSelectViewController.swift; sourceTree = "<group>"; };
+		BC5A857B2B81E913006CA240 /* PetTypeSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PetTypeSelect.storyboard; sourceTree = "<group>"; };
+		BC5A857D2B81E913006CA240 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BC5A857E2B81E913006CA240 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		BC5A85812B81E913006CA240 /* imageChangingCheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageChangingCheckBox.swift; sourceTree = "<group>"; };
+		BC5A85822B81E913006CA240 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		BC5A85842B81E913006CA240 /* TermsOfUse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TermsOfUse.storyboard; sourceTree = "<group>"; };
+		BC5A85852B81E913006CA240 /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
+		BC5A85872B81E913006CA240 /* OwnerSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OwnerSelect.storyboard; sourceTree = "<group>"; };
+		BC5A85882B81E913006CA240 /* OwnerSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerSelectViewController.swift; sourceTree = "<group>"; };
+		BC5A858A2B81E913006CA240 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		BC5A858B2B81E913006CA240 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		BC5A858D2B81E913006CA240 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		BC5A858E2B81E913006CA240 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		BC5A85902B81E913006CA240 /* SignUpProfileImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpProfileImage.storyboard; sourceTree = "<group>"; };
+		BC5A85912B81E913006CA240 /* SignUpProfileImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpProfileImageViewController.swift; sourceTree = "<group>"; };
 		BC6932082B765806002C7A9F /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		BC69320F2B7677DD002C7A9F /* MypageApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageApiClient.swift; sourceTree = "<group>"; };
 		BC6932112B767809002C7A9F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -429,83 +433,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		98A91B382B81BF2200CCD3BA /* Health */ = {
-			isa = PBXGroup;
-			children = (
-				98A91B392B81BF2200CCD3BA /* HealthBookViewController.swift */,
-				98A91B3A2B81BF2200CCD3BA /* Add */,
-				98A91B502B81BF2200CCD3BA /* HealthBook.storyboard */,
-				98A91B512B81BF2200CCD3BA /* HealthTableView */,
-			);
-			name = Health;
-			path = "../../../../Desktop/UMC-Kitten-iOS-2nd/UMC-Kitten-iOS/Health";
-			sourceTree = "<group>";
-		};
-		98A91B3A2B81BF2200CCD3BA /* Add */ = {
-			isa = PBXGroup;
-			children = (
-				98A91B3B2B81BF2200CCD3BA /* Buttons */,
-				98A91B3E2B81BF2200CCD3BA /* AddViewController.swift */,
-				98A91B3F2B81BF2200CCD3BA /* Add.storyboard */,
-				98A91B402B81BF2200CCD3BA /* AddTwo.storyboard */,
-				98A91B412B81BF2200CCD3BA /* HospitalTableView */,
-				98A91B442B81BF2200CCD3BA /* AddThree.storyboard */,
-				98A91B452B81BF2200CCD3BA /* AddTwoViewController.swift */,
-				98A91B462B81BF2200CCD3BA /* Cell */,
-				98A91B492B81BF2200CCD3BA /* ButtonActions */,
-				98A91B4F2B81BF2200CCD3BA /* AddThreeViewController.swift */,
-			);
-			path = Add;
-			sourceTree = "<group>";
-		};
-		98A91B3B2B81BF2200CCD3BA /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				98A91B3C2B81BF2200CCD3BA /* Needle.swift */,
-				98A91B3D2B81BF2200CCD3BA /* NeedleTwo.swift */,
-			);
-			path = Buttons;
-			sourceTree = "<group>";
-		};
-		98A91B412B81BF2200CCD3BA /* HospitalTableView */ = {
-			isa = PBXGroup;
-			children = (
-				98A91B422B81BF2200CCD3BA /* HospitalTableViewCell.xib */,
-				98A91B432B81BF2200CCD3BA /* HospitalTableViewCell.swift */,
-			);
-			path = HospitalTableView;
-			sourceTree = "<group>";
-		};
-		98A91B462B81BF2200CCD3BA /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				98A91B472B81BF2200CCD3BA /* FeedTableViewCell.xib */,
-				98A91B482B81BF2200CCD3BA /* FeedTableViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		98A91B492B81BF2200CCD3BA /* ButtonActions */ = {
-			isa = PBXGroup;
-			children = (
-				98A91B4A2B81BF2200CCD3BA /* datePicker.swift */,
-				98A91B4B2B81BF2200CCD3BA /* NeedleSearchViewController.swift */,
-				98A91B4C2B81BF2200CCD3BA /* NeedleSearch.storyboard */,
-				98A91B4D2B81BF2200CCD3BA /* HospitalSearchViewController.swift */,
-				98A91B4E2B81BF2200CCD3BA /* HospitalSearch.storyboard */,
-			);
-			path = ButtonActions;
-			sourceTree = "<group>";
-		};
-		98A91B512B81BF2200CCD3BA /* HealthTableView */ = {
-			isa = PBXGroup;
-			children = (
-				98A91B522B81BF2200CCD3BA /* NextViewController.swift */,
-				98A91B532B81BF2200CCD3BA /* Next.storyboard */,
-			);
-			path = HealthTableView;
-			sourceTree = "<group>";
-		};
 		BC037B952B77A2CA0021721C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -614,121 +541,6 @@
 				BC1243A92B7B4B1300BDFC13 /* HashtagResponseDto.swift */,
 			);
 			path = Hashtag;
-			sourceTree = "<group>";
-		};
-		BC1244362B7C625900BDFC13 /* LandingPage */ = {
-			isa = PBXGroup;
-			children = (
-				BC12446F2B7C63CE00BDFC13 /* CheckBox */,
-				BC1244822B7C63CE00BDFC13 /* OwnerSelect */,
-				BC1244852B7C63CE00BDFC13 /* PetInformation */,
-				BC1244762B7C63CE00BDFC13 /* PetSelect */,
-				BC12447C2B7C63CE00BDFC13 /* PetTypeSelect */,
-				BC1244792B7C63CE00BDFC13 /* SignUp */,
-				BC12447F2B7C63CE00BDFC13 /* SignUpProfileImage */,
-				BC1244732B7C63CE00BDFC13 /* StartScreen */,
-				BC12446A2B7C639C00BDFC13 /* TermsOfUse */,
-				BC1244502B7C625A00BDFC13 /* Welcome */,
-			);
-			path = LandingPage;
-			sourceTree = "<group>";
-		};
-		BC1244502B7C625A00BDFC13 /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				BC1244512B7C625A00BDFC13 /* Welcome.storyboard */,
-				BC1244522B7C625A00BDFC13 /* WelcomeViewController.swift */,
-			);
-			path = Welcome;
-			sourceTree = "<group>";
-		};
-		BC12446A2B7C639C00BDFC13 /* TermsOfUse */ = {
-			isa = PBXGroup;
-			children = (
-				BC12446B2B7C639C00BDFC13 /* TermsOfUse.storyboard */,
-				BC12446C2B7C639C00BDFC13 /* TermsOfUseViewController.swift */,
-			);
-			path = TermsOfUse;
-			sourceTree = "<group>";
-		};
-		BC12446F2B7C63CE00BDFC13 /* CheckBox */ = {
-			isa = PBXGroup;
-			children = (
-				BC1244702B7C63CE00BDFC13 /* imageChangingCheckBox */,
-				BC1244722B7C63CE00BDFC13 /* CheckBox.swift */,
-			);
-			path = CheckBox;
-			sourceTree = "<group>";
-		};
-		BC1244702B7C63CE00BDFC13 /* imageChangingCheckBox */ = {
-			isa = PBXGroup;
-			children = (
-				BC1244712B7C63CE00BDFC13 /* imageChangingCheckBox.swift */,
-			);
-			path = imageChangingCheckBox;
-			sourceTree = "<group>";
-		};
-		BC1244732B7C63CE00BDFC13 /* StartScreen */ = {
-			isa = PBXGroup;
-			children = (
-				BC1244742B7C63CE00BDFC13 /* StartScreenViewController.swift */,
-				BC1244752B7C63CE00BDFC13 /* StartScreen.storyboard */,
-			);
-			path = StartScreen;
-			sourceTree = "<group>";
-		};
-		BC1244762B7C63CE00BDFC13 /* PetSelect */ = {
-			isa = PBXGroup;
-			children = (
-				BC1244772B7C63CE00BDFC13 /* PetSelect.storyboard */,
-				BC1244782B7C63CE00BDFC13 /* PetSelectViewController.swift */,
-			);
-			path = PetSelect;
-			sourceTree = "<group>";
-		};
-		BC1244792B7C63CE00BDFC13 /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				BC12447A2B7C63CE00BDFC13 /* SignUpViewController.swift */,
-				BC12447B2B7C63CE00BDFC13 /* SignUp.storyboard */,
-			);
-			path = SignUp;
-			sourceTree = "<group>";
-		};
-		BC12447C2B7C63CE00BDFC13 /* PetTypeSelect */ = {
-			isa = PBXGroup;
-			children = (
-				BC12447D2B7C63CE00BDFC13 /* PetTypeSelectViewController.swift */,
-				BC12447E2B7C63CE00BDFC13 /* PetTypeSelect.storyboard */,
-			);
-			path = PetTypeSelect;
-			sourceTree = "<group>";
-		};
-		BC12447F2B7C63CE00BDFC13 /* SignUpProfileImage */ = {
-			isa = PBXGroup;
-			children = (
-				BC1244802B7C63CE00BDFC13 /* SignUpProfileImage.storyboard */,
-				BC1244812B7C63CE00BDFC13 /* SignUpProfileImageViewController.swift */,
-			);
-			path = SignUpProfileImage;
-			sourceTree = "<group>";
-		};
-		BC1244822B7C63CE00BDFC13 /* OwnerSelect */ = {
-			isa = PBXGroup;
-			children = (
-				BC1244832B7C63CE00BDFC13 /* OwnerSelect.storyboard */,
-				BC1244842B7C63CE00BDFC13 /* OwnerSelectViewController.swift */,
-			);
-			path = OwnerSelect;
-			sourceTree = "<group>";
-		};
-		BC1244852B7C63CE00BDFC13 /* PetInformation */ = {
-			isa = PBXGroup;
-			children = (
-				BC1244862B7C63CE00BDFC13 /* PetInformation.storyboard */,
-				BC1244872B7C63CE00BDFC13 /* PetInformationViewController.swift */,
-			);
-			path = PetInformation;
 			sourceTree = "<group>";
 		};
 		BC1244982B7C649800BDFC13 /* Community */ = {
@@ -840,6 +652,207 @@
 			path = "UMC-Kitten-iOS";
 			sourceTree = "<group>";
 		};
+		BC5A853E2B81DCBA006CA240 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A853F2B81DCBA006CA240 /* HealthBookViewController.swift */,
+				BC5A85402B81DCBA006CA240 /* Add */,
+				BC5A85562B81DCBA006CA240 /* HealthBook.storyboard */,
+				BC5A85572B81DCBA006CA240 /* HealthTableView */,
+			);
+			path = Health;
+			sourceTree = "<group>";
+		};
+		BC5A85402B81DCBA006CA240 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85412B81DCBA006CA240 /* Buttons */,
+				BC5A85442B81DCBA006CA240 /* AddViewController.swift */,
+				BC5A85452B81DCBA006CA240 /* Add.storyboard */,
+				BC5A85462B81DCBA006CA240 /* AddTwo.storyboard */,
+				BC5A85472B81DCBA006CA240 /* HospitalTableView */,
+				BC5A854A2B81DCBA006CA240 /* AddThree.storyboard */,
+				BC5A854B2B81DCBA006CA240 /* AddTwoViewController.swift */,
+				BC5A854C2B81DCBA006CA240 /* Cell */,
+				BC5A854F2B81DCBA006CA240 /* ButtonActions */,
+				BC5A85552B81DCBA006CA240 /* AddThreeViewController.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		BC5A85412B81DCBA006CA240 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85422B81DCBA006CA240 /* Needle.swift */,
+				BC5A85432B81DCBA006CA240 /* NeedleTwo.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		BC5A85472B81DCBA006CA240 /* HospitalTableView */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85482B81DCBA006CA240 /* HospitalTableViewCell.xib */,
+				BC5A85492B81DCBA006CA240 /* HospitalTableViewCell.swift */,
+			);
+			path = HospitalTableView;
+			sourceTree = "<group>";
+		};
+		BC5A854C2B81DCBA006CA240 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A854D2B81DCBA006CA240 /* FeedTableViewCell.xib */,
+				BC5A854E2B81DCBA006CA240 /* FeedTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BC5A854F2B81DCBA006CA240 /* ButtonActions */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85502B81DCBA006CA240 /* datePicker.swift */,
+				BC5A85512B81DCBA006CA240 /* NeedleSearchViewController.swift */,
+				BC5A85522B81DCBA006CA240 /* NeedleSearch.storyboard */,
+				BC5A85532B81DCBA006CA240 /* HospitalSearchViewController.swift */,
+				BC5A85542B81DCBA006CA240 /* HospitalSearch.storyboard */,
+			);
+			path = ButtonActions;
+			sourceTree = "<group>";
+		};
+		BC5A85572B81DCBA006CA240 /* HealthTableView */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85582B81DCBA006CA240 /* NextViewController.swift */,
+				BC5A85592B81DCBA006CA240 /* Next.storyboard */,
+			);
+			path = HealthTableView;
+			sourceTree = "<group>";
+		};
+		BC5A856F2B81E913006CA240 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85702B81E913006CA240 /* PetSelect */,
+				BC5A85732B81E913006CA240 /* PetInformation */,
+				BC5A85762B81E913006CA240 /* StartScreen */,
+				BC5A85792B81E913006CA240 /* PetTypeSelect */,
+				BC5A857C2B81E913006CA240 /* SignUp */,
+				BC5A857F2B81E913006CA240 /* CheckBox */,
+				BC5A85832B81E913006CA240 /* TermsOfUse */,
+				BC5A85862B81E913006CA240 /* OwnerSelect */,
+				BC5A85892B81E913006CA240 /* Welcome */,
+				BC5A858C2B81E913006CA240 /* UIView+Extentions */,
+				BC5A858F2B81E913006CA240 /* SignUpProfileImage */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		BC5A85702B81E913006CA240 /* PetSelect */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85712B81E913006CA240 /* PetSelect.storyboard */,
+				BC5A85722B81E913006CA240 /* PetSelectViewController.swift */,
+			);
+			path = PetSelect;
+			sourceTree = "<group>";
+		};
+		BC5A85732B81E913006CA240 /* PetInformation */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85742B81E913006CA240 /* PetInformation.storyboard */,
+				BC5A85752B81E913006CA240 /* PetInformationViewController.swift */,
+			);
+			path = PetInformation;
+			sourceTree = "<group>";
+		};
+		BC5A85762B81E913006CA240 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85772B81E913006CA240 /* StartScreenViewController.swift */,
+				BC5A85782B81E913006CA240 /* StartScreen.storyboard */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		BC5A85792B81E913006CA240 /* PetTypeSelect */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A857A2B81E913006CA240 /* PetTypeSelectViewController.swift */,
+				BC5A857B2B81E913006CA240 /* PetTypeSelect.storyboard */,
+			);
+			path = PetTypeSelect;
+			sourceTree = "<group>";
+		};
+		BC5A857C2B81E913006CA240 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A857D2B81E913006CA240 /* SignUpViewController.swift */,
+				BC5A857E2B81E913006CA240 /* SignUp.storyboard */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		BC5A857F2B81E913006CA240 /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85802B81E913006CA240 /* imageChangingCheckBox */,
+			);
+			path = CheckBox;
+			sourceTree = "<group>";
+		};
+		BC5A85802B81E913006CA240 /* imageChangingCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85812B81E913006CA240 /* imageChangingCheckBox.swift */,
+				BC5A85822B81E913006CA240 /* CheckBox.swift */,
+			);
+			path = imageChangingCheckBox;
+			sourceTree = "<group>";
+		};
+		BC5A85832B81E913006CA240 /* TermsOfUse */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85842B81E913006CA240 /* TermsOfUse.storyboard */,
+				BC5A85852B81E913006CA240 /* TermsOfUseViewController.swift */,
+			);
+			path = TermsOfUse;
+			sourceTree = "<group>";
+		};
+		BC5A85862B81E913006CA240 /* OwnerSelect */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85872B81E913006CA240 /* OwnerSelect.storyboard */,
+				BC5A85882B81E913006CA240 /* OwnerSelectViewController.swift */,
+			);
+			path = OwnerSelect;
+			sourceTree = "<group>";
+		};
+		BC5A85892B81E913006CA240 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A858A2B81E913006CA240 /* Welcome.storyboard */,
+				BC5A858B2B81E913006CA240 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		BC5A858C2B81E913006CA240 /* UIView+Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A858D2B81E913006CA240 /* UserInfo.swift */,
+				BC5A858E2B81E913006CA240 /* UIView+Extensions.swift */,
+			);
+			path = "UIView+Extentions";
+			sourceTree = "<group>";
+		};
+		BC5A858F2B81E913006CA240 /* SignUpProfileImage */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A85902B81E913006CA240 /* SignUpProfileImage.storyboard */,
+				BC5A85912B81E913006CA240 /* SignUpProfileImageViewController.swift */,
+			);
+			path = SignUpProfileImage;
+			sourceTree = "<group>";
+		};
 		BC69320A2B7676CC002C7A9F /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -915,9 +928,9 @@
 		BC6E40BD2B5528EF00BA2CE1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				98A91B382B81BF2200CCD3BA /* Health */,
+				BC5A856F2B81E913006CA240 /* Landing */,
+				BC5A853E2B81DCBA006CA240 /* Health */,
 				BC1244982B7C649800BDFC13 /* Community */,
-				BC1244362B7C625900BDFC13 /* LandingPage */,
 				BC037BA62B78DFC30021721C /* LoginTest */,
 				BCF1E5872B5D4D60000F5960 /* Common */,
 				BC9DC6462B722E2B00859EFE /* Home */,
@@ -1346,35 +1359,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC93BA322B56CEDE00775C5F /* Pretendard-Black.otf in Resources */,
-				BC1244962B7C63CE00BDFC13 /* PetInformation.storyboard in Resources */,
-				98A91B642B81BF2200CCD3BA /* HospitalSearch.storyboard in Resources */,
-				98A91B682B81BF2200CCD3BA /* Next.storyboard in Resources */,
+				BC5A856A2B81DCBA006CA240 /* HospitalSearch.storyboard in Resources */,
+				BC5A856E2B81DCBA006CA240 /* Next.storyboard in Resources */,
 				BC93BA332B56CEDE00775C5F /* Pretendard-Bold.otf in Resources */,
+				BC5A85A62B81E914006CA240 /* SignUpProfileImage.storyboard in Resources */,
+				BC5A85A02B81E914006CA240 /* OwnerSelect.storyboard in Resources */,
 				BC93BA342B56CEDE00775C5F /* Pretendard-ExtraBold.otf in Resources */,
-				BC1244662B7C625A00BDFC13 /* Welcome.storyboard in Resources */,
-				BC12448C2B7C63CE00BDFC13 /* PetSelect.storyboard in Resources */,
 				BC93BA352B56CEDE00775C5F /* Pretendard-ExtraLight.otf in Resources */,
-				BC1244912B7C63CE00BDFC13 /* PetTypeSelect.storyboard in Resources */,
-				98A91B592B81BF2200CCD3BA /* AddTwo.storyboard in Resources */,
-				98A91B5E2B81BF2200CCD3BA /* FeedTableViewCell.xib in Resources */,
-				98A91B5A2B81BF2200CCD3BA /* HospitalTableViewCell.xib in Resources */,
-				BC1244922B7C63CE00BDFC13 /* SignUpProfileImage.storyboard in Resources */,
-				BC12446D2B7C639C00BDFC13 /* TermsOfUse.storyboard in Resources */,
+				BC5A85A22B81E914006CA240 /* Welcome.storyboard in Resources */,
+				BC5A855F2B81DCBA006CA240 /* AddTwo.storyboard in Resources */,
+				BC5A85642B81DCBA006CA240 /* FeedTableViewCell.xib in Resources */,
+				BC5A85602B81DCBA006CA240 /* HospitalTableViewCell.xib in Resources */,
 				BC93BA362B56CEDE00775C5F /* Pretendard-Light.otf in Resources */,
-				BC12448F2B7C63CE00BDFC13 /* SignUp.storyboard in Resources */,
-				98A91B582B81BF2200CCD3BA /* Add.storyboard in Resources */,
-				98A91B622B81BF2200CCD3BA /* NeedleSearch.storyboard in Resources */,
-				98A91B662B81BF2200CCD3BA /* HealthBook.storyboard in Resources */,
+				BC5A855E2B81DCBA006CA240 /* Add.storyboard in Resources */,
+				BC5A85972B81E913006CA240 /* StartScreen.storyboard in Resources */,
+				BC5A85682B81DCBA006CA240 /* NeedleSearch.storyboard in Resources */,
+				BC5A856C2B81DCBA006CA240 /* HealthBook.storyboard in Resources */,
 				BC93BA372B56CEDE00775C5F /* Pretendard-Medium.otf in Resources */,
-				BC12448B2B7C63CE00BDFC13 /* StartScreen.storyboard in Resources */,
+				BC5A85922B81E913006CA240 /* PetSelect.storyboard in Resources */,
+				BC5A859E2B81E914006CA240 /* TermsOfUse.storyboard in Resources */,
 				BC93BA382B56CEDE00775C5F /* Pretendard-Regular.otf in Resources */,
 				BC93BA392B56CEDE00775C5F /* Pretendard-SemiBold.otf in Resources */,
+				BC5A85942B81E913006CA240 /* PetInformation.storyboard in Resources */,
 				BC93BA3A2B56CEDE00775C5F /* Pretendard-Thin.otf in Resources */,
-				BC1244942B7C63CE00BDFC13 /* OwnerSelect.storyboard in Resources */,
+				BC5A859B2B81E913006CA240 /* SignUp.storyboard in Resources */,
+				BC5A85992B81E913006CA240 /* PetTypeSelect.storyboard in Resources */,
 				BC3CECD42B4FACC400546377 /* LaunchScreen.storyboard in Resources */,
 				BC3CECD12B4FACC400546377 /* Assets.xcassets in Resources */,
 				BC3CECCF2B4FACC300546377 /* Main.storyboard in Resources */,
-				98A91B5C2B81BF2200CCD3BA /* AddThree.storyboard in Resources */,
+				BC5A85622B81DCBA006CA240 /* AddThree.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1399,6 +1412,7 @@
 				BCF1E5982B5D7943000F5960 /* TextField.swift in Sources */,
 				BC1243AC2B7B4B4800BDFC13 /* PostApiClient.swift in Sources */,
 				BCF1E5952B5D7792000F5960 /* NicknameSettingViewController.swift in Sources */,
+				BC5A85932B81E913006CA240 /* PetSelectViewController.swift in Sources */,
 				BCC107EC2B6A65780043EC7D /* MyInfoImagePickerDelegate.swift in Sources */,
 				BCC107EE2B6A66800043EC7D /* MyPetSettingReactor.swift in Sources */,
 				BC8F50FB2B57947F00F56C90 /* ProfileSection.swift in Sources */,
@@ -1416,63 +1430,69 @@
 				BCC107CD2B68D5550043EC7D /* PetModel.swift in Sources */,
 				BC037B932B77A0490021721C /* NaverAuthHelper.swift in Sources */,
 				BC1244A72B7C654B00BDFC13 /* FreeBoardDetailNestedCommentTableViewCell.swift in Sources */,
+				BC5A859C2B81E914006CA240 /* imageChangingCheckBox.swift in Sources */,
+				BC5A85952B81E913006CA240 /* PetInformationViewController.swift in Sources */,
 				BC1243CB2B7B6DEF00BDFC13 /* LikeResponseDto.swift in Sources */,
 				BCF1E5902B5D5BE3000F5960 /* Observable+Extension.swift in Sources */,
 				BC1243E52B7BBA7A00BDFC13 /* PostTypeDto.swift in Sources */,
 				BC6E40C22B552A9400BA2CE1 /* MypageReactor.swift in Sources */,
-				98A91B602B81BF2200CCD3BA /* datePicker.swift in Sources */,
-				BC1244672B7C625A00BDFC13 /* WelcomeViewController.swift in Sources */,
+				BC5A85662B81DCBA006CA240 /* datePicker.swift in Sources */,
 				BCB6CA3B2B73DA120096DEAD /* TodayFeedSection.swift in Sources */,
 				BCC91D7F2B58EC5700D02BF0 /* UIView+Extension.swift in Sources */,
 				BC6932092B765806002C7A9F /* PostModel.swift in Sources */,
 				BC1243CD2B7B704100BDFC13 /* PostRepository.swift in Sources */,
-				BC1244972B7C63CE00BDFC13 /* PetInformationViewController.swift in Sources */,
-				98A91B572B81BF2200CCD3BA /* AddViewController.swift in Sources */,
+				BC5A855D2B81DCBA006CA240 /* AddViewController.swift in Sources */,
 				BC8F51002B57BA1A00F56C90 /* MypageMenuSection.swift in Sources */,
+				BC5A85A52B81E914006CA240 /* UIView+Extensions.swift in Sources */,
 				BC1243B02B7B4CCB00BDFC13 /* PostRemoteRepository.swift in Sources */,
+				BC5A85962B81E913006CA240 /* StartScreenViewController.swift in Sources */,
 				BC037BA32B78A5580021721C /* Date+Extension.swift in Sources */,
-				98A91B542B81BF2200CCD3BA /* HealthBookViewController.swift in Sources */,
+				BC5A855A2B81DCBA006CA240 /* HealthBookViewController.swift in Sources */,
+				BC5A859A2B81E913006CA240 /* SignUpViewController.swift in Sources */,
 				BC1244F12B7CBB8800BDFC13 /* PetApiClient.swift in Sources */,
 				BCC107C22B68ACA10043EC7D /* SelectCard.swift in Sources */,
 				BC1244A52B7C654B00BDFC13 /* FreeBoardDetailView.swift in Sources */,
 				BC1244A92B7C654B00BDFC13 /* CommunityView.swift in Sources */,
+				BC5A859D2B81E914006CA240 /* CheckBox.swift in Sources */,
 				BC1243EE2B7BC2BF00BDFC13 /* PetGenderType.swift in Sources */,
 				BC1243B52B7B4E6800BDFC13 /* CommonError.swift in Sources */,
+				BC5A85A72B81E914006CA240 /* SignUpProfileImageViewController.swift in Sources */,
 				BC9DC6552B723FB700859EFE /* PopularPostSection.swift in Sources */,
 				BC1244F62B7CBCED00BDFC13 /* PetRemoteRepository.swift in Sources */,
 				BC1243F82B7BE24C00BDFC13 /* NicknameSettingReacotr.swift in Sources */,
 				BCC107C52B68C8C20043EC7D /* MyPetInfoCell.swift in Sources */,
-				BC12448E2B7C63CE00BDFC13 /* SignUpViewController.swift in Sources */,
 				BC9431602B56DB4400273DD7 /* UILabel+Extension.swift in Sources */,
 				BC9DC6592B7247CF00859EFE /* UIColor+Extension.swift in Sources */,
 				BC1243D72B7BB14800BDFC13 /* UserModel.swift in Sources */,
-				BC12448A2B7C63CE00BDFC13 /* StartScreenViewController.swift in Sources */,
-				98A91B5D2B81BF2200CCD3BA /* AddTwoViewController.swift in Sources */,
+				BC5A85632B81DCBA006CA240 /* AddTwoViewController.swift in Sources */,
 				BC9DC6572B72408900859EFE /* PopularPostCell.swift in Sources */,
 				BC1244AD2B7C655300BDFC13 /* CommunityPostViewController.swift in Sources */,
 				BC11F7222B8083D40069739D /* ImageProvider.swift in Sources */,
 				BC316B552B793BC50055FC0F /* UserDefaultsConstant.swift in Sources */,
 				BC6E40CC2B552BC600BA2CE1 /* BaseCollectionViewCell.swift in Sources */,
 				BCC107D62B68E7590043EC7D /* PageViewControllerDelegate.swift in Sources */,
-				98A91B632B81BF2200CCD3BA /* HospitalSearchViewController.swift in Sources */,
+				BC5A85692B81DCBA006CA240 /* HospitalSearchViewController.swift in Sources */,
+				BC5A859F2B81E914006CA240 /* TermsOfUseViewController.swift in Sources */,
 				BCF1E58A2B5D4D8F000F5960 /* ProfileImageSection.swift in Sources */,
 				BC8F51022B57BB2B00F56C90 /* NavigationMenuRow.swift in Sources */,
 				BC1243F12B7BCFE900BDFC13 /* RxSwift+Extension.swift in Sources */,
 				BCC107DC2B68E9830043EC7D /* PageTapBarItem.swift in Sources */,
+				BC5A85982B81E913006CA240 /* PetTypeSelectViewController.swift in Sources */,
 				BC1244A62B7C654B00BDFC13 /* FreeBoardDetailContentTableViewCell.swift in Sources */,
+				BC5A85A12B81E914006CA240 /* OwnerSelectViewController.swift in Sources */,
 				BC1244FA2B7CBF2D00BDFC13 /* PetRxRepository.swift in Sources */,
 				BCF1E5862B5D496E000F5960 /* MyInfoViewController.swift in Sources */,
+				BC5A85A32B81E914006CA240 /* WelcomeViewController.swift in Sources */,
 				BC1243DE2B7BB85800BDFC13 /* MypageRequestDto.swift in Sources */,
 				BC1243EA2B7BC14000BDFC13 /* MypageRxRepository.swift in Sources */,
 				BC6932102B7677DD002C7A9F /* MypageApiClient.swift in Sources */,
 				BC6932202B7684C4002C7A9F /* BaseMoyaProvider.swift in Sources */,
 				BC3CECC82B4FACC300546377 /* AppDelegate.swift in Sources */,
 				BC9DC64E2B7231C000859EFE /* RegisteredPetCell.swift in Sources */,
-				98A91B672B81BF2200CCD3BA /* NextViewController.swift in Sources */,
+				BC5A856D2B81DCBA006CA240 /* NextViewController.swift in Sources */,
 				BC1243EC2B7BC29D00BDFC13 /* PetSpeciesType.swift in Sources */,
 				BCC107E92B6A62150043EC7D /* MyArticlePageTableViewDelegate.swift in Sources */,
 				BC3CECCA2B4FACC300546377 /* SceneDelegate.swift in Sources */,
-				BC12446E2B7C639C00BDFC13 /* TermsOfUseViewController.swift in Sources */,
 				BCB6CA3F2B73DEA60096DEAD /* MoreButton.swift in Sources */,
 				BCF1E58E2B5D5852000F5960 /* MyInfoReactor.swift in Sources */,
 				BC1243D22B7B74C800BDFC13 /* PostRxRepository.swift in Sources */,
@@ -1481,16 +1501,15 @@
 				BC9DC6532B72377300859EFE /* HomeConstant.swift in Sources */,
 				BCB6CA3D2B73DB3A0096DEAD /* TodayFeedCell.swift in Sources */,
 				B337CDD52B7FF03700CF6339 /* AppleAuthHelper.swift in Sources */,
-				BC1244892B7C63CE00BDFC13 /* CheckBox.swift in Sources */,
 				BC1243AA2B7B4B1300BDFC13 /* HashtagResponseDto.swift in Sources */,
 				BC037BA02B78A1530021721C /* FeedModel.swift in Sources */,
 				BC1244AF2B7C655300BDFC13 /* CommunityViewController.swift in Sources */,
 				BC8F50FE2B579F7000F56C90 /* UIImageView+Extension.swift in Sources */,
 				BCC107E02B6901A80043EC7D /* MyArticlePageTableViewCell.swift in Sources */,
 				BC9DC64C2B722FD400859EFE /* RegisteredPetsSection.swift in Sources */,
-				BC1244882B7C63CE00BDFC13 /* imageChangingCheckBox.swift in Sources */,
 				BCC107BF2B68A9CD0043EC7D /* OwnerSettingViewController.swift in Sources */,
 				BCC107E62B69138E0043EC7D /* MainViewController.swift in Sources */,
+				BC5A85A42B81E914006CA240 /* UserInfo.swift in Sources */,
 				BC316B572B793DF00055FC0F /* MypageRepository.swift in Sources */,
 				BC6E40CD2B552BC600BA2CE1 /* BaseView.swift in Sources */,
 				BC1243A82B7B4AC400BDFC13 /* CommentResponseDto.swift in Sources */,
@@ -1498,7 +1517,7 @@
 				BCF1E58C2B5D54E3000F5960 /* MyInfoMenuSection.swift in Sources */,
 				BC1245002B7CE24D00BDFC13 /* MyPetAddCell.swift in Sources */,
 				BC1243D42B7B915B00BDFC13 /* Decoder.swift in Sources */,
-				98A91B652B81BF2200CCD3BA /* AddThreeViewController.swift in Sources */,
+				BC5A856B2B81DCBA006CA240 /* AddThreeViewController.swift in Sources */,
 				BC6E40CA2B552BC600BA2CE1 /* BaseViewController.swift in Sources */,
 				BCC107CF2B68E1390043EC7D /* UIImage+Extension.swift in Sources */,
 				BC6E40C02B55291800BA2CE1 /* MypageViewController.swift in Sources */,
@@ -1507,29 +1526,25 @@
 				BC087BEB2B7935B1001E34D4 /* MypageRemoteRepository.swift in Sources */,
 				BC1243F62B7BDA1100BDFC13 /* AlertHelper.swift in Sources */,
 				BC037BA82B78DFCE0021721C /* LoginTestViewController.swift in Sources */,
-				98A91B5F2B81BF2200CCD3BA /* FeedTableViewCell.swift in Sources */,
+				BC5A85652B81DCBA006CA240 /* FeedTableViewCell.swift in Sources */,
 				BCC91D7D2B58D77900D02BF0 /* MyPetCard.swift in Sources */,
 				BC037BAD2B78FD850021721C /* ApiResponseDto.swift in Sources */,
-				BC1244902B7C63CE00BDFC13 /* PetTypeSelectViewController.swift in Sources */,
 				BC1243E32B7BB90600BDFC13 /* BoardType.swift in Sources */,
 				BC1243A62B7B49A900BDFC13 /* PostResponseDto.swift in Sources */,
-				98A91B5B2B81BF2200CCD3BA /* HospitalTableViewCell.swift in Sources */,
+				BC5A85612B81DCBA006CA240 /* HospitalTableViewCell.swift in Sources */,
 				BCC107E42B690BFF0043EC7D /* BaseTableViewCell.swift in Sources */,
-				98A91B562B81BF2200CCD3BA /* NeedleTwo.swift in Sources */,
+				BC5A855C2B81DCBA006CA240 /* NeedleTwo.swift in Sources */,
 				BC69321E2B76845E002C7A9F /* AuthTokenPlugin.swift in Sources */,
 				BCC107CA2B68CD120043EC7D /* BaseCollectionView.swift in Sources */,
 				BC11F7202B7FAEA60069739D /* WebViewController.swift in Sources */,
-				BC1244952B7C63CE00BDFC13 /* OwnerSelectViewController.swift in Sources */,
 				BC9DC6502B72359C00859EFE /* HomeReactor.swift in Sources */,
 				BC0460CD2B7E650400C3B70A /* MyArticleSettingReactor.swift in Sources */,
 				BC037BA52B78DF250021721C /* UserApiClient.swift in Sources */,
-				98A91B612B81BF2200CCD3BA /* NeedleSearchViewController.swift in Sources */,
-				98A91B552B81BF2200CCD3BA /* Needle.swift in Sources */,
+				BC5A85672B81DCBA006CA240 /* NeedleSearchViewController.swift in Sources */,
+				BC5A855B2B81DCBA006CA240 /* Needle.swift in Sources */,
 				BC1244A32B7C654B00BDFC13 /* CommunityPostView.swift in Sources */,
 				BCB6CA412B73E2300096DEAD /* HomeBottomSection.swift in Sources */,
 				BC1244AE2B7C655300BDFC13 /* FreeBoardDetailViewController.swift in Sources */,
-				BC1244932B7C63CE00BDFC13 /* SignUpProfileImageViewController.swift in Sources */,
-				BC12448D2B7C63CE00BDFC13 /* PetSelectViewController.swift in Sources */,
 				BC1244A42B7C654B00BDFC13 /* FreeBoardDetailCommentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
