@@ -145,7 +145,7 @@ final class FreeBoardTableViewCell: UITableViewCell {
         
         contentImage.snp.makeConstraints {
             $0.top.equalTo(summaryWithoutCommentImageStackView.snp.top)
-            $0.leading.equalTo(summaryWithoutCommentImageStackView.snp.trailing)
+            $0.leading.equalTo(summaryWithoutCommentImageStackView.snp.trailing).offset(10)
             $0.trailing.equalToSuperview().offset(-27)
             $0.bottom.equalTo(summaryWithoutCommentImageStackView.snp.bottom)
             $0.width.equalTo(self.contentImage.snp.height)

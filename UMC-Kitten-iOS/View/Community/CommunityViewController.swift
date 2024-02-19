@@ -6,19 +6,35 @@
 //
 
 import UIKit
+import Moya
 
-final class CommunityViewController: UIViewController {
-    
+final class CommunityViewController: BaseViewController {
     // MARK: - 프로퍼티
+    private let postService = MoyaProvider<PostApiClient>()
     let communityView = CommunityView()
+    var didSetTapConstraints = false
     
-    // 탭 수치 관련
+    /// tab 관련
     var tapWidthArray: [Double] = [] // 넓이
     var tapLeadingArray: [Double] = [] // 왼쪽으로부터 거리
     var tapSpacingWidth: Double = 0.0 // 간격
     
     // MARK: - 데이터
-    var posts: [PostModel] = []
+//    var posts: [BoardType: [PostModel]] = [:]
+    var posts = [PostTypeDto: [PostResponseDto.PostPreviewDto]]()
+    var postList: [PostResponseDto.PostPreviewDto] = []
+    
+    var currentPostType: PostTypeDto = .boast
+//    var currentBoardType: BoardType = .boast
+    
+    // MARK: Set Method
+    override func setStyle() {
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.topItem?.title = ""
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.standardAppearance.backgroundColor = .white
+        navigationController?.navigationBar.standardAppearance.shadowColor = .clear
+    }
     
     // MARK: - 라이프 사이클
     override func loadView() {
@@ -28,60 +44,71 @@ final class CommunityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTableView()
-        setAddTarget()
-        
-        fetchPosts()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        setTapConstraint()
     }
-
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if !didSetTapConstraints {
+            setTapConstraint()
+            didTapTapButton(button: communityView.firstTapButton)
+            didSetTapConstraints = true
+        }
+    }
+    
     // MARK: - 메소드
-    private func setTableView() {
+    override func setDelegate() {
         communityView.tableView.delegate = self
         communityView.tableView.dataSource = self
+    }
+    
+    override func setHierarchy() {
         communityView.tableView.register(FreeBoardTableViewCell.self, forCellReuseIdentifier: "FreeBoardTableViewCell")
     }
     
-    private func setAddTarget() {
+    override func setBind() {
         communityView.firstTapButton.addTarget(self, action: #selector(didTapTapButton), for: .touchUpInside)
         communityView.secondTapButton.addTarget(self, action: #selector(didTapTapButton), for: .touchUpInside)
         communityView.thirdTapButton.addTarget(self, action: #selector(didTapTapButton), for: .touchUpInside)
-        communityView.fourthTapButton.addTarget(self, action: #selector(didTapTapButton), for: .touchUpInside)
         communityView.plusButton.addTarget(self, action: #selector(didTapPlusButton), for: .touchUpInside)
     }
     
     @objc private func didTapTapButton(button: UIButton) {
+        print("Button tapped")
+        let tapButtons = communityView.tapStackView.arrangedSubviews
         let buttonText = button.titleLabel!.text!
+        let buttonWidth = Double(communityView.tapStackView.bounds.width) / Double(tapButtons.count)
         
         switch buttonText {
         case "자랑해요":
-            self.communityView.tapBottomViewWidth?.update(offset: tapWidthArray[0])
+            self.communityView.tapBottomViewWidth?.update(offset: buttonWidth)
             self.communityView.tapBottomViewLeading?.update(offset: tapLeadingArray[0])
             setTapButtonTextColor(0)
+            currentPostType = .boast
         case "리뷰해요":
-            self.communityView.tapBottomViewWidth?.update(offset: tapWidthArray[1])
+            self.communityView.tapBottomViewWidth?.update(offset: buttonWidth)
             self.communityView.tapBottomViewLeading?.update(offset: tapLeadingArray[1])
             setTapButtonTextColor(1)
+            currentPostType = .review
         case "자유게시판":
-            self.communityView.tapBottomViewWidth?.update(offset: tapWidthArray[2])
+            self.communityView.tapBottomViewWidth?.update(offset: buttonWidth)
             self.communityView.tapBottomViewLeading?.update(offset: tapLeadingArray[2])
             setTapButtonTextColor(2)
-        case "입양/실종":
-            self.communityView.tapBottomViewWidth?.update(offset: tapWidthArray[3])
-            self.communityView.tapBottomViewLeading?.update(offset: tapLeadingArray[3])
-            setTapButtonTextColor(3)
+            currentPostType = .free
         default:
             break
         }
         
+        fetchPosts(with: currentPostType)
+        
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
+        communityView.tableView.reloadData()
         
         func setTapButtonTextColor(_ buttonNum: Int) {
             let tapButtons = communityView.tapStackView.arrangedSubviews.map { $0 as! UIButton }
@@ -94,40 +121,48 @@ final class CommunityViewController: UIViewController {
     
     @objc private func didTapPlusButton() {
         let communityPostViewController = CommunityPostViewController()
-        communityPostViewController.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(communityPostViewController, animated: true)
+        pushView(vc: communityPostViewController)
     }
     
     private func setTapConstraint() {
-        tapWidthArray = [communityView.firstTapButton.frame.width,
-                         communityView.secondTapButton.frame.width,
-                         communityView.thirdTapButton.frame.width,
-                         communityView.fourthTapButton.frame.width]
+        let tapButtons = communityView.tapStackView.arrangedSubviews
+        let buttonWidth = Double(communityView.tapStackView.bounds.width) / Double(tapButtons.count)
         
-        tapSpacingWidth = (self.communityView.frame.width
-                                    - tapWidthArray[0]
-                                    - tapWidthArray[1]
-                                    - tapWidthArray[2]
-                                    - tapWidthArray[3] - 60) / 3
-        
-        tapLeadingArray = [baseWidth(0),
-                           baseWidth(1) + tapWidthArray[0],
-                           baseWidth(2) + tapWidthArray[0] + tapWidthArray[1],
-                           baseWidth(3) + tapWidthArray[0] + tapWidthArray[1] + tapWidthArray[2]]
-        
-        self.communityView.tapBottomViewWidth?.update(offset: tapWidthArray[tapWidthArray.startIndex])
-        self.communityView.tapBottomViewLeading?.update(offset: tapLeadingArray[tapLeadingArray.startIndex])
-        
-        func baseWidth(_ num: Int) -> Double {
-            return 30.0 + (tapSpacingWidth * Double(num))
+        tapLeadingArray = []
+        for i in 0..<tapButtons.count {
+            let leading = Double(i) * buttonWidth + 30.0
+            tapLeadingArray.append(leading)
         }
     }
     
-    func fetchPosts() {
-        PostRemoteRepository()
-            .getAllPostByBoard(boardType: .free, page: 0) { [weak self] result, error in
-                if let result = result {
-                    self?.posts = result
+    private func fetchPosts(with type: PostTypeDto) {
+        postService.request(.getPostsByBoard(postType: type, page: 0)) { [weak self] result in
+            switch result {
+                case let .success(moyaResponse):
+                do {
+                    /// date 포맷과 백엔드의 createdAt가 자꾸 충돌 일어나서 변경작업을 수행.
+                    /// 배보다 배꼽이 커진것같다...
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+                    dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+                    
+                    let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                    let data = try decoder.decode(ApiResponse<PostResponseDto.PostPreviewListDto>.self, from: moyaResponse.data)
+                                    
+                    self?.posts[type] = data.result.postList
+                                    
+                    DispatchQueue.main.async {
+                        self?.communityView.tableView.reloadData()
+                    }
+                    
+                } catch {
+                    print("Decoding error: \(error)")
+                }
+                    
+                case let .failure(error):
+                    print("Error: \(error)")
                 }
             }
     }
@@ -136,25 +171,29 @@ final class CommunityViewController: UIViewController {
 extension CommunityViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let freeBoardDetailViewController = FreeBoardDetailViewController()
-        freeBoardDetailViewController.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(freeBoardDetailViewController, animated: true)
+        /// 선택한 게시글의 정보 전달
+        if let postPreviewDto = posts[currentPostType]?[indexPath.row] {
+            freeBoardDetailViewController.post = postPreviewDto
+        }
+        pushView(vc: freeBoardDetailViewController)
     }
 }
 
 extension CommunityViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return posts[currentPostType]?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FreeBoardTableViewCell", for: indexPath) as! FreeBoardTableViewCell
-        
-        cell.titleLabel.text = posts[indexPath.row].postTitle
-        cell.contentLabel.text = posts[indexPath.row].body
-        cell.heartCountLabel.text = "\(posts[indexPath.row].likeCount)"
-        cell.commentCountLabel.text = "\(posts[indexPath.row].commentCount)"
-        cell.uploadDateLabel.text = posts[indexPath.row].date.timeAgoDisplay()
-        cell.userNameLabel.text = posts[indexPath.row].writer
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FreeBoardTableViewCell", for: indexPath) as! FreeBoardTableViewCell
+        if let postPreviewDto = posts[currentPostType]?[indexPath.row] {
+            cell.titleLabel.text = postPreviewDto.title
+            cell.contentLabel.text = postPreviewDto.content
+            cell.heartCountLabel.text = "\(postPreviewDto.likePreviewListDTO.likeList.count)"
+            cell.commentCountLabel.text = "\(postPreviewDto.commentPreviewListDTO.commentList.count)"
+            cell.uploadDateLabel.text = postPreviewDto.createdAt.timeAgoDisplay()
+            cell.userNameLabel.text = postPreviewDto.writerNickName
+        }
         
         cell.selectionStyle = .none
         

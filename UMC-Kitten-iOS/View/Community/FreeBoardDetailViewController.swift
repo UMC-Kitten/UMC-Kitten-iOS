@@ -11,6 +11,7 @@ class FreeBoardDetailViewController: UIViewController {
 
     // MARK: - 프로퍼티
     let freeBoardDetailView = FreeBoardDetailView()
+    var post: PostResponseDto.PostPreviewDto?
     
     // MARK: - 라이프 사이클
     override func loadView() {
@@ -51,45 +52,49 @@ extension FreeBoardDetailViewController: UITableViewDelegate {
 
 extension FreeBoardDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 11
+        return 1 + (post?.commentPreviewListDTO.commentList.count ?? 0)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FreeBoardDetailContentTableViewCell", for: indexPath) as! FreeBoardDetailContentTableViewCell
             
-            cell.nicknameLabel.text = "냥뭉이"
-            cell.uploadDateLabel.text = "20분 전"
-            cell.titleLabel.text = "강아지 목에 이상한 멍울 자국 관련 문의"
-            cell.contentLabel.text = "새해에는 새롭게 출발하는 거야!\n오늘도 냥이와 함께하는 하루일과!"
-            cell.heartCountLabel.text = "20"
-            cell.commentCountLabel.text = "1"
+            cell.nicknameLabel.text = post?.writerNickName
+            cell.uploadDateLabel.text = post?.createdAt.timeAgoDisplay()
+            cell.titleLabel.text = post?.title
+            cell.contentLabel.text = post?.content
+            cell.heartCountLabel.text = "\(post?.likePreviewListDTO.listSize ?? 0)"
+            cell.commentCountLabel.text = "\(post?.commentPreviewListDTO.listSize ?? 0)"
             
             cell.contentCellDelegate = self
-            
-            cell.selectionStyle = .none
-            
-            return cell
-        } else if indexPath.row % 2 == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FreeBoardDetailCommentTableViewCell", for: indexPath) as! FreeBoardDetailCommentTableViewCell
-            
-            cell.userNameLabel.text = "냥뭉이"
-            cell.userCommentLabel.text = "너무 귀여워요!"
-            cell.heartCountLabel.text = "25"
-
             cell.selectionStyle = .none
             
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FreeBoardDetailNestedCommentTableViewCell", for: indexPath) as! FreeBoardDetailNestedCommentTableViewCell
-            
-            cell.userNameLabel.text = "냥뭉이"
-            cell.userCommentLabel.text = "너무 귀여워요!"
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FreeBoardDetailCommentTableViewCell", for: indexPath) as! FreeBoardDetailCommentTableViewCell
+
+            // 댓글 데이터를 가져오기
+            let comment = post?.commentPreviewListDTO.commentList[indexPath.row - 1]
+            /// 댓글 Dto에 참조된 데이터들이 너무 꼬여있어 일부분만 받아서 댓글 닉네임을 따로 뽑진 못했습니다!
+            cell.userNameLabel.text = "회원 \(indexPath.row)"
+            cell.userCommentLabel.text = comment?.content
+            cell.heartCountLabel.text = "0"
+
             cell.selectionStyle = .none
-            
+
             return cell
         }
+        /// 대댓글은 구현 X
+//        else {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "FreeBoardDetailNestedCommentTableViewCell", for: indexPath) as! FreeBoardDetailNestedCommentTableViewCell
+//            
+//            cell.userNameLabel.text = "냥뭉이"
+//            cell.userCommentLabel.text = "너무 귀여워요!"
+//            
+//            cell.selectionStyle = .none
+//            
+//            return cell
+//        }
     }
 }
 

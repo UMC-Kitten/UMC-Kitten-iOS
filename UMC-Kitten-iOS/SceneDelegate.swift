@@ -40,6 +40,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         checkinNavVC.viewControllers = [checkinVC]
         
         let communityVC = CommunityViewController()
+        let communityNavVC = UINavigationController()
+        communityNavVC.viewControllers = [communityVC]
         
         let mypageVC = MypageViewController()
         let mypageNavVC = UINavigationController()
@@ -53,7 +55,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         mypageVC.title = "마이페이지"
         
         // (3) Tab Bar로 사용하기 위한 뷰 컨트롤러들 설정
-        tabBarVC.setViewControllers([homeNavVC, checkinNavVC, communityVC, mypageNavVC], animated: false)
+        tabBarVC.setViewControllers([homeNavVC, checkinNavVC, communityNavVC, mypageNavVC], animated: false)
         tabBarVC.modalPresentationStyle = .fullScreen
         tabBarVC.tabBar.backgroundColor = .white
         tabBarVC.tabBar.tintColor = .main
