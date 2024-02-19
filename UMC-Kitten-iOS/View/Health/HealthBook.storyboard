@@ -61,7 +61,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7Q-ca-3kz">
-                                <rect key="frame" x="328" y="753" width="40" height="40"/>
+                                <rect key="frame" x="328" y="704" width="40" height="40"/>
                                 <color key="backgroundColor" name="appButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dce-Lx-2nH"/>
@@ -80,14 +80,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYB-dD-raM">
-                                <rect key="frame" x="0.0" y="487" width="393" height="1"/>
+                                <rect key="frame" x="0.0" y="438" width="393" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="z3W-G7-pje"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYT-5e-Utz">
-                                <rect key="frame" x="15" y="488" width="363" height="320"/>
+                                <rect key="frame" x="15" y="439" width="363" height="320"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vgu-VW-HsS">
                                         <rect key="frame" x="-13" y="55" width="53.666666666666664" height="34.333333333333343"/>
@@ -125,9 +125,10 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonOne:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TKD-8g-Pw7"/>
+                                                    <action selector="categoryButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jGT-gN-oaq"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URv-Qv-9TX">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URv-Qv-9TX">
                                                 <rect key="frame" x="74" y="0.0" width="85" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="85" id="ILF-AJ-INw"/>
@@ -147,9 +148,10 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonTwo:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ymg-ro-3Ku"/>
+                                                    <action selector="categoryButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="D9L-Lk-IBy"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTO-OW-Dj2">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTO-OW-Dj2">
                                                 <rect key="frame" x="178" y="0.0" width="85" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="85" id="M2y-uk-3zX"/>
@@ -169,9 +171,10 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonThree:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="v2P-F8-B3V"/>
+                                                    <action selector="categoryButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8AI-Dd-SX1"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxJ-px-hMg">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxJ-px-hMg">
                                                 <rect key="frame" x="282" y="0.0" width="55" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="55" id="MYU-O9-xf9"/>
@@ -213,6 +216,33 @@
                                     <constraint firstItem="HyD-O9-UBZ" firstAttribute="top" secondItem="9bv-L0-yRP" secondAttribute="bottom" constant="25" id="xH7-Xg-7jh"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajw-Ni-eB8">
+                                <rect key="frame" x="270" y="161" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="&gt;"/>
+                                <connections>
+                                    <action selector="didTapNextButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1Yk-fI-te2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZk-y0-yE4">
+                                <rect key="frame" x="87" y="161" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="&lt;"/>
+                                <connections>
+                                    <action selector="didTapPreviousButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UIV-FT-eH6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="텍스트" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S62-ty-6nP">
+                                <rect key="frame" x="150" y="168" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -233,7 +263,9 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="H7Q-ca-3kz" secondAttribute="bottom" constant="25" id="vl7-5g-cUl"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="r3p-1B-4qo"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addButton" destination="H7Q-ca-3kz" id="cic-ND-U00"/>
                         <outlet property="button1" destination="CAo-tM-g7v" id="gWt-iU-hd4"/>
@@ -244,6 +276,7 @@
                         <outlet property="catView" destination="Dzl-kp-TZK" id="ir2-4M-mzm"/>
                         <outlet property="dogLabel" destination="bqy-o5-z4v" id="Yq8-Fl-OQ6"/>
                         <outlet property="dogView" destination="YUy-he-CkF" id="ENC-Xe-ecT"/>
+                        <outlet property="label" destination="S62-ty-6nP" id="0wl-Ko-hAd"/>
                         <outlet property="tableView" destination="HyD-O9-UBZ" id="Ktu-hX-u0Z"/>
                     </connections>
                 </viewController>
@@ -280,7 +313,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -4,6 +4,14 @@ class NeedleTwoView : UIView {
     
     let titles = ["종합백신", "광견병", "백혈병"]
 
+    
+    let buttonFillPositions: [String: Int] = [
+        "종합백신": 0,  // 예: "종합백신" 제목에 대해서는 첫 번째 버튼을 채웁니다.
+        "광견병": 2, // "코로나장염"에 대해서는 두 번째 버튼을 채웁니다.
+        "백혈병": 2, // 이와 같이 각 제목에 대한 버튼의 위치를 지정합니다.
+    ]
+    
+    
         override init(frame: CGRect) {
             super.init(frame: frame)
             setupViews()
@@ -40,7 +48,7 @@ class NeedleTwoView : UIView {
             
             
             // 각 항목에 대해 레이블과 수평 스택 뷰를 만듭니다.
-            titles.forEach { title in
+            titles.enumerated().forEach { (index, title) in
                 let label = UILabel()
                 label.text = title
                 label.font = UIFont.systemFont(ofSize: 14)
@@ -51,27 +59,32 @@ class NeedleTwoView : UIView {
                 buttonsStackView.alignment = .center
                 buttonsStackView.spacing = 10
                 
-                // 5개의 버튼을 만듭니다.
-                for _ in 0..<5 {
+                // 5개의 버튼을 만들고, 조건에 따라 특정 버튼에만 색상을 채웁니다.
+                for buttonIndex in 0..<5 {
                     let button = UIButton()
                     button.layer.borderWidth = 1
                     button.layer.borderColor = UIColor.lightGray.cgColor
                     button.layer.cornerRadius = 13
-                    button.backgroundColor = .white
+                    button.backgroundColor = .white // 기본 배경색 설정
+                    
                     // 버튼 크기를 설정합니다.
                     button.widthAnchor.constraint(equalToConstant: 28).isActive = true
                     button.heightAnchor.constraint(equalToConstant: 28).isActive = true
+                    
+                    // 제목에 따른 버튼 위치에만 색상을 채웁니다.
+                    if let fillPosition = buttonFillPositions[title], fillPosition == buttonIndex {
+                        button.backgroundColor = UIColor.appButton // 채워진 상태를 나타내는 색상으로 변경합니다.
+                    }
+                    
                     buttonsStackView.addArrangedSubview(button)
                 }
                 
-                // 레이블과 버튼 스택 뷰를 수직 스택 뷰에 추가합니다.
                 let horizontalStackView = UIStackView(arrangedSubviews: [label, buttonsStackView])
                 horizontalStackView.axis = .horizontal
                 horizontalStackView.distribution = .fill
                 horizontalStackView.alignment = .center
                 horizontalStackView.spacing = 4
                 
-                // 레이블의 너비 제약 조건을 설정합니다.
                 label.widthAnchor.constraint(equalToConstant: 130).isActive = true
                 
                 stackView.addArrangedSubview(horizontalStackView)
