@@ -664,8 +664,8 @@
 			isa = PBXGroup;
 			children = (
 				BC5A853F2B81DCBA006CA240 /* HealthBookViewController.swift */,
-				BC5A85402B81DCBA006CA240 /* Add */,
 				BC5A85562B81DCBA006CA240 /* HealthBook.storyboard */,
+				BC5A85402B81DCBA006CA240 /* Add */,
 				BC5A85572B81DCBA006CA240 /* HealthTableView */,
 			);
 			path = Health;
@@ -677,13 +677,13 @@
 				BC5A85412B81DCBA006CA240 /* Buttons */,
 				BC5A85442B81DCBA006CA240 /* AddViewController.swift */,
 				BC5A85452B81DCBA006CA240 /* Add.storyboard */,
-				BC5A85462B81DCBA006CA240 /* AddTwo.storyboard */,
-				BC5A85472B81DCBA006CA240 /* HospitalTableView */,
-				BC5A854A2B81DCBA006CA240 /* AddThree.storyboard */,
 				BC5A854B2B81DCBA006CA240 /* AddTwoViewController.swift */,
+				BC5A85462B81DCBA006CA240 /* AddTwo.storyboard */,
+				BC5A85552B81DCBA006CA240 /* AddThreeViewController.swift */,
+				BC5A854A2B81DCBA006CA240 /* AddThree.storyboard */,
+				BC5A85472B81DCBA006CA240 /* HospitalTableView */,
 				BC5A854C2B81DCBA006CA240 /* Cell */,
 				BC5A854F2B81DCBA006CA240 /* ButtonActions */,
-				BC5A85552B81DCBA006CA240 /* AddThreeViewController.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -1312,6 +1312,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					"[건강수첩]",
+					"[예방접종]",
+					"[전체]",
+					"[질병]",
+				);
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
