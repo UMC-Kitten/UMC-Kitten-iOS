@@ -1,4 +1,5 @@
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 /*
                 +-------------+
@@ -21,4 +22,26 @@ import ProjectDescription
 // Creates our project using a helper function defined in ProjectDescriptionHelpers
 let project = Project.app(name: "Kitten",
                           platform: .iOS,
-                          additionalTargets: ["KittenUI", "KittenService", "KittenUtil"])
+                          additionalTargets: [
+                            "KittenApp",
+                            "KittenUI",
+                            "KittenService",
+                            "KittenUtil"
+                          ],
+                          dependencies: dependencies)
+
+
+let dependencies: [TargetDependency] = [
+    .external(name: "Moya"),
+    .external(name: "Alamofire"),
+    .external(name: "RxMoya"),
+    .external(name: "SnapKit"),
+    .external(name: "RxSwift"),
+    .external(name: "RxCocoa"),
+    .external(name: "RxGesture"),
+    .external(name: "RxDataSources"),
+    .external(name: "ReactorKit"),
+    .external(name: "KakaoSDKCommon"),
+    .external(name: "KakaoSDKAuth"),
+    .external(name: "KakaoSDKUser"),
+]
