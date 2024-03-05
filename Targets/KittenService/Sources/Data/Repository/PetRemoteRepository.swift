@@ -7,7 +7,10 @@
 
 import Foundation
 
+import KittenUtil
+
 import Moya
+
 
 class PetRemoteRepository: PetRepository {
     

@@ -8,7 +8,7 @@
 import UIKit
 
 import KakaoSDKAuth
-import NaverThirdPartyLogin
+//import NaverThirdPartyLogin
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

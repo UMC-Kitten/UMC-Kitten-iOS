@@ -7,6 +7,8 @@
 
 import Foundation
 
+import KittenUtil
+
 /// 마이페이지 관련 데이터 동작을 서버 API를 이용해 실행
 class MypageRemoteRepository: MypageRepository {
     

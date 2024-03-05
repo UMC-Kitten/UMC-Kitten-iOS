@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct UserDefaultsConstant {
+public struct UserDefaultsConstant {
     /// 사용자 ID를 저장하기 위한 key 값
-    static let USER_ID_KEY: String = "USER_ID"
+    static public let USER_ID_KEY: String = "USER_ID"
     /// 서버에서 생성한 JWT를 저장하기 위한 key 값
-    static let JWT_KEY: String = "JWT"
+    static public let JWT_KEY: String = "JWT"
 }

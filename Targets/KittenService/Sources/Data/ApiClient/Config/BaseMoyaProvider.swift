@@ -8,6 +8,8 @@
 import Foundation
 import Moya
 
+import KittenUtil
+
 /// 요청에 공통적으로 필요한 플러그인을 추가한 MoyaProvider입니다.
 class BaseMoyaProvider<T: TargetType> {
     /// 제네릭으로 MoyaProvider를 생성합니다.
@@ -21,3 +23,4 @@ class BaseMoyaProvider<T: TargetType> {
         return MoyaProvider<T>(plugins: [authPlugin])
     }
 }
+	

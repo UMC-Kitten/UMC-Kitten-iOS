@@ -7,11 +7,13 @@
 
 import UIKit
 
+import KittenService
+
 import RxSwift
 import RxAppState
 import ReactorKit
 
-class HomeViewController: BaseViewController {
+public class HomeViewController: BaseViewController {
     
     // MARK: Dependency
     private let reactor = HomeReactor(

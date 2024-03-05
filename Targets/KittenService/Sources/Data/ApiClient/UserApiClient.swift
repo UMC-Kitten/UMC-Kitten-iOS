@@ -10,21 +10,21 @@ import Foundation
 import Moya
 
 /// 로그인 관련 API
-enum UserApiClient {
+public enum UserApiClient {
     case kakaoLogin(accessToken: String)
     case naverLogin(accessToken: String)
 }
 
 extension UserApiClient: TargetType {
     
-    var baseURLString: String {
+    fileprivate var baseURLString: String {
         guard let apiBaseURLString = Bundle.main.object(forInfoDictionaryKey: "API_BASE_URL") as? String else {
             fatalError("API_BASE_URL is not set in Info.plist")
         }
         return apiBaseURLString
     }
     
-    var baseURL: URL {
+    public var baseURL: URL {
         let urlString = baseURLString + ""
         guard let url = URL(string: urlString) else {
             fatalError("Constructed URL is invalid: \(urlString)")
@@ -33,7 +33,7 @@ extension UserApiClient: TargetType {
         
     }
     
-    var path: String {
+    public var path: String {
         switch self {
         case .kakaoLogin:
             return "/kakao"
@@ -42,14 +42,14 @@ extension UserApiClient: TargetType {
         }
     }
     
-    var method: Moya.Method {
+    public var method: Moya.Method {
         switch self {
         case .kakaoLogin, .naverLogin:
             return .get
         }
     }
     
-    var task: Task {
+    public var task: Task {
         switch self {
         case let .kakaoLogin(accessToken):
             return .requestParameters(
@@ -64,11 +64,11 @@ extension UserApiClient: TargetType {
         }
     }
     
-    var headers: [String : String]? {
+    public var headers: [String : String]? {
         return ["Content-type": "application/json"]
     }
     
-    var sampleData: Data {
+    public var sampleData: Data {
         return Data()
     }
 }

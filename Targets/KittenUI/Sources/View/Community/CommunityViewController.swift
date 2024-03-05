@@ -8,7 +8,7 @@
 import UIKit
 import Moya
 
-final class CommunityViewController: BaseViewController {
+final public class CommunityViewController: BaseViewController {
     // MARK: - 프로퍼티
     private let postService = MoyaProvider<PostApiClient>()
     let communityView = CommunityView()

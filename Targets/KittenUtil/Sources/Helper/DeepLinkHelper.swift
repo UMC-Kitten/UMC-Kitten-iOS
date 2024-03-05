@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-class DeepLinkHelper {
-    static func openLoginResume() {
+public class DeepLinkHelper {
+    static public func openLoginResume() {
         if let url = URL(string: "kitten://login/resume"), UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }

@@ -6,6 +6,9 @@
 //
 
 import Foundation
+
+import KittenUtil
+
 import Moya
 
 class PostRemoteRepository: PostRepository {

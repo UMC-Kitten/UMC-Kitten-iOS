@@ -12,7 +12,7 @@ import RxSwift
 import RxGesture
 import ReactorKit
 
-class MypageViewController: BaseViewController {
+final public class MypageViewController: BaseViewController {
     
     // MARK: Dependency
     private let reactor = MypageReactor(mypageRepository: MypageRemoteRepository())

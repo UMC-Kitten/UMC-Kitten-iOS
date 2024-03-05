@@ -1,6 +1,6 @@
 import UIKit
 
-class HealthBookViewController: UIViewController {
+public class HealthBookViewController: UIViewController {
     
     let customView = NeedleView()
     let customTwoView = NeedleTwoView()

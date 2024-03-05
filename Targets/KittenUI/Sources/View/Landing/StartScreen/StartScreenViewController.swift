@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Moya
 
-class StartScreenViewController: UIViewController {
+final public class StartScreenViewController: UIViewController {
     
     @IBOutlet weak var logoImage: UIImageView!
     let kakaoLoginButton: UIImageView = .init(imageName: "kakao-login-button")

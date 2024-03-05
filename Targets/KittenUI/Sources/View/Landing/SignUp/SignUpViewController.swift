@@ -1,6 +1,6 @@
 import UIKit
 
-class SignUpViewController: UIViewController, UITextFieldDelegate{
+final public class SignUpViewController: UIViewController, UITextFieldDelegate{
     
     var isValidName = false {
         didSet {
