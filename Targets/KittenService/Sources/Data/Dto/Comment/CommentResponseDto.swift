@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct CommentResponseDto: Codable {
+public struct CommentResponseDto: Codable {
     
-    struct CommentPreviewDto: Codable {
-        var content: String
-        var createdAt: Date
+    public struct CommentPreviewDto: Codable {
+        public var content: String
+        public var createdAt: Date
     }
     
-    struct CommentPreviewListDto: Codable {
-        var commentList: [CommentPreviewDto]
-        var listSize: Int
+    public struct CommentPreviewListDto: Codable {
+        public var commentList: [CommentPreviewDto]
+        public var listSize: Int
 //        var totalPage: Int
 //        var totalElements: Int
 //        var isFirst: Bool

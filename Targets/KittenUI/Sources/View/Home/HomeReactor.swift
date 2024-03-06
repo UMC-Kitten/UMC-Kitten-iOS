@@ -7,6 +7,8 @@
 
 import UIKit
 
+import KittenService
+
 import ReactorKit
 
 class HomeReactor: Reactor {

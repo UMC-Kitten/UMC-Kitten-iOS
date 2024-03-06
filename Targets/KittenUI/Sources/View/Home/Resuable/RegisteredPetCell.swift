@@ -8,6 +8,8 @@
 import UIKit
 import SnapKit
 
+import KittenUtil
+
 class RegisteredPetCell: BaseCollectionViewCell {
     
     // MARK: Constant

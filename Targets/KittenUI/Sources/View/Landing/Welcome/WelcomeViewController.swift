@@ -7,6 +7,9 @@
 
 import UIKit
 
+import KittenService
+import KittenUtil
+
 class WelcomeViewController: UIViewController {
     
     let mypageRepository = MypageRemoteRepository()

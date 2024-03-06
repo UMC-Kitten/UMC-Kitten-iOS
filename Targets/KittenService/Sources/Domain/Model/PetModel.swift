@@ -8,17 +8,17 @@
 import Foundation
 
 /// 반려동물 정보
-struct PetModel {
+public struct PetModel {
     /// 등록된 고유 아이디
-    let id: Int64
+    public let id: Int64
     /// 반려동물 이미지 이름
-    let image: String
+    public let image: String
     /// 반려동물 이름
-    let name: String
+    public let name: String
     /// 반려동물 종 - 고양이, 강아지
-    let species: PetSpeciesType
+    public let species: PetSpeciesType
     /// 반려동물 성별 - 암컷, 수컷
-    let gender: PetGenderType
+    public let gender: PetGenderType
     /// 반려동물 나이
-    let age: Int
+    public let age: Int
 }

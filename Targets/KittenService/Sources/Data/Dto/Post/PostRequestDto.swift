@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct PostRequestDto {
-    struct AddPostRequestDto: Codable {
+public struct PostRequestDto {
+    public struct AddPostRequestDto: Codable {
         let title: String
         let content: String
         let postType: PostTypeDto

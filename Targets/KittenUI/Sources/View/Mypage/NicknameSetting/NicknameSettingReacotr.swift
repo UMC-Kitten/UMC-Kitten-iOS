@@ -7,6 +7,9 @@
 
 import Foundation
 
+import KittenService
+import KittenUtil
+
 import ReactorKit
 
 class NicknameSettingReacotr: Reactor {

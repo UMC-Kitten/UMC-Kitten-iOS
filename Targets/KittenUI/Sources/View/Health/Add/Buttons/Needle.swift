@@ -74,7 +74,7 @@ class NeedleView: UIView {
                     
                     // 제목에 따른 버튼 위치에만 색상을 채웁니다.
                     if let fillPosition = buttonFillPositions[title], fillPosition == buttonIndex {
-                        button.backgroundColor = UIColor.appButton // 채워진 상태를 나타내는 색상으로 변경합니다.
+                        button.backgroundColor = UIColor.main // 채워진 상태를 나타내는 색상으로 변경합니다.
                     }
                     
                     buttonsStackView.addArrangedSubview(button)

@@ -9,15 +9,15 @@ import Foundation
 
 import RxSwift
 
-class MypageRxRepository {
+public class MypageRxRepository {
     
     private let repository: MypageRepository
     
-    init(repository: MypageRepository) {
+    public init(repository: MypageRepository) {
         self.repository = repository
     }
     
-    func getUserInfo() -> Observable<UserModel> {
+    public func getUserInfo() -> Observable<UserModel> {
         return Observable.create { observer in
             self.repository.getUserInfo() { result, error in
                 if let error = error {
@@ -32,7 +32,7 @@ class MypageRxRepository {
         }
     }    
     
-    func changeUserNickname(nickname: String) -> Observable<Bool> {
+    public func changeUserNickname(nickname: String) -> Observable<Bool> {
         return Observable.create { observer in
             self.repository.changeUserNickname(nickname: nickname) { result, error in
                 if let error = error {
@@ -47,7 +47,7 @@ class MypageRxRepository {
         }
     }
     
-    func changeHasPet(hasPet: Bool) -> Observable<Bool> {
+    public func changeHasPet(hasPet: Bool) -> Observable<Bool> {
         return Observable.create { observer in
             self.repository.changeHasPet(hasPet: hasPet) { result, error in
                 if let error = error {
@@ -62,7 +62,7 @@ class MypageRxRepository {
         }
     }
     
-    func changeProfileImage(image: Data) -> Observable<Bool> {
+    public func changeProfileImage(image: Data) -> Observable<Bool> {
         return Observable.create { observer in
             self.repository.changeProfileImage(image: image) { result, error in
                 if let error = error {

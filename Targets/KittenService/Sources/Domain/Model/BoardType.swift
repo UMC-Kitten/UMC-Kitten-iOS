@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum BoardType: String, Codable {
+public enum BoardType: String, Codable {
     case boast = "BOAST"
     case review = "REVIEW"
     case free = "FREE"
     
-    var krDescription: String {
+    public var krDescription: String {
         switch self {
         case .boast:
             return "자랑해요"

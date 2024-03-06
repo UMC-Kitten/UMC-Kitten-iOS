@@ -7,6 +7,8 @@
 
 import UIKit
 
+import KittenService
+
 import SnapKit
 
 class PetSelectViewController: UIViewController {

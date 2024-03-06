@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 /// 화면 전체에 로딩 화면을 띄우거나 제거
-final class LoadingIndicatorHelper {
+public final class LoadingIndicatorHelper {
     
-    static func startLoading() {
+    public static func startLoading() {
         // 로딩 뷰 생성
         let loadingView = UIView(frame: rootController().view.bounds)
         loadingView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
@@ -32,7 +32,7 @@ final class LoadingIndicatorHelper {
         }
     }
     
-    static func endLoading() {
+    public static func endLoading() {
         // 메인 스레드에서 로딩 뷰 제거
         DispatchQueue.main.async {
             if let loadingView = rootController().view.viewWithTag(999) {

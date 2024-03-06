@@ -11,12 +11,13 @@ import KittenUtil
 
 import Moya
 
-
-class PetRemoteRepository: PetRepository {
+public class PetRemoteRepository: PetRepository {
     
     private let client = BaseMoyaProvider<PetApiClient>().provider
     
-    func getRegisteredPets(
+    public init() {}
+    
+    public func getRegisteredPets(
         completion: @escaping (_ result: [PetModel]?, _ error: Error?) -> Void
     ) {
         let userId = Int64(UserDefaults
@@ -46,7 +47,7 @@ class PetRemoteRepository: PetRepository {
         }
     }
     
-    func deletePet(
+    public func deletePet(
         petId: Int64,
         completion: @escaping (_ result: Bool?, _ error: Error?) -> Void
     ) {

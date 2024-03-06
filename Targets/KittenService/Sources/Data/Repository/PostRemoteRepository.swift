@@ -11,12 +11,13 @@ import KittenUtil
 
 import Moya
 
-class PostRemoteRepository: PostRepository {
+public class PostRemoteRepository: PostRepository {
     
     private let client = BaseMoyaProvider<PostApiClient>().provider
     
+    public init() {}
     
-    func getPostDetail(
+    public func getPostDetail(
         postId: Int64,
         completion: @escaping (_ result: PostModel?, _ error: Error?) -> Void
     ) {
@@ -42,7 +43,7 @@ class PostRemoteRepository: PostRepository {
         }
     }
     
-    func getAllPostByBoard(
+    public func getAllPostByBoard(
         boardType: BoardType,
         page: Int,
         completion: @escaping (_ result: [PostModel]?, _ error: Error?) -> Void
@@ -71,7 +72,7 @@ class PostRemoteRepository: PostRepository {
         }
     }
     
-    func getPopularPost(
+    public func getPopularPost(
         completion: @escaping (_ result: [PostModel]?, _ error: Error?) -> Void
     ) {
         client.request(.getFreePostByLike(page: 0)
@@ -96,7 +97,7 @@ class PostRemoteRepository: PostRepository {
         }
     }
     
-    func getTodayFeed(
+    public func getTodayFeed(
         completion: @escaping (_ result: [PostModel]?, _ error: Error?) -> Void
     ) {
         client.request(.getBoastPostRecent(page: 0)
@@ -121,7 +122,7 @@ class PostRemoteRepository: PostRepository {
         }
     }
     
-    func addPost(
+    public func addPost(
         post: PostModel,
         completion: @escaping (_ result: PostModel?, _ error: Error?) -> Void
     ) {
@@ -152,7 +153,7 @@ class PostRemoteRepository: PostRepository {
         }
     }
     
-    func deletePost(
+    public func deletePost(
         postId: Int64,
         completion: @escaping (_ result: Bool?, _ error: Error?) -> Void
     ) {

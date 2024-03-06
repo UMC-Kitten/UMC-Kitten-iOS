@@ -7,6 +7,8 @@
 
 import UIKit
 
+import KittenService
+
 import SnapKit
 import ReactorKit
 import RxCocoa

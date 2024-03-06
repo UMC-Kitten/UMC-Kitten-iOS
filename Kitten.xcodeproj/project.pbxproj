@@ -142,7 +142,8 @@
 		B849E45EB0E6BACD7823D48C /* CommunityPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C014C89521D4CA2851CBCB /* CommunityPostViewController.swift */; };
 		B9928CA92A1AD8858072CB68 /* datePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613EE2982A683D0B9DB71175 /* datePicker.swift */; };
 		B9FF4D615C083F3C641D36E5 /* PopularPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F418A17CA9E033DDA600BB /* PopularPostCell.swift */; };
-		BCB354FB2B98BD9800123866 /* TuistAssets+Kitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A41854025401E24FDD4AB9 /* TuistAssets+Kitten.swift */; };
+		BCB354FD2B98C56000123866 /* TuistAssets+Kitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A41854025401E24FDD4AB9 /* TuistAssets+Kitten.swift */; };
+		BCB354FE2B98C56300123866 /* TuistBundle+Kitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBFCD32660B2B0AEAF54043 /* TuistBundle+Kitten.swift */; };
 		BCBEFDF276476F00ED334842 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68D511D0068594500F1ECFD /* Moya.framework */; platformFilter = ios; };
 		BD63499D24D6DE9D092FFA95 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68D511D0068594500F1ECFD /* Moya.framework */; platformFilter = ios; };
 		BE5E757D8100B7E8EAB9CFFB /* HomeConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD4E2C789EC37C81CDF988 /* HomeConstant.swift */; };
@@ -205,6 +206,7 @@
 		F99E9EC751800B0D50DEAB3B /* HealthBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4A081DE6496CB1B7DA26D1 /* HealthBookViewController.swift */; };
 		F9B14D787166F6917DC4B96B /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1C38ABB43C90EDE98E971 /* ImageProvider.swift */; };
 		FE5A0C6DF9B868C8D0B37EFC /* UserDefaultsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC9D5AEB73927DD7E325D9D /* UserDefaultsConstant.swift */; };
+		FE82AAC974834B0F77DE7289 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34918328D973BE31367067BC /* Info.plist */; };
 		FECCE73FBCE94296324B5217 /* PetInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585160D868A9FBCAD26813C /* PetInformationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -410,6 +412,7 @@
 		31D028E55C0C71B07CBFEFA7 /* PageTapBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTapBarItem.swift; sourceTree = "<group>"; };
 		320553D58FD209EB84510405 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		320FB427BE545897C01027E4 /* KittenUtilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KittenUtilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34918328D973BE31367067BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3564DC095D67EBF864F97E8E /* KittenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KittenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3599E71BF2926798C3600E45 /* NeedleTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleTwo.swift; sourceTree = "<group>"; };
 		36FD0E6FEBFA53D4D8AAE9A1 /* TodayFeedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFeedSection.swift; sourceTree = "<group>"; };
@@ -886,6 +889,7 @@
 				FB4A7E7D8055B1964578843E /* Main.storyboard */,
 				ADAB14AF14775FE241B98752 /* Assets.xcassets */,
 				712D3DE6EC2B640A31875FF1 /* Config.xcconfig */,
+				34918328D973BE31367067BC /* Info.plist */,
 				16668FE8259BBADFB6D92142 /* UMC-Kitten-iOS.entitlements */,
 			);
 			path = Resources;
@@ -1792,6 +1796,7 @@
 				C1F3C040EE57AD8BDB116C51 /* LaunchScreen.storyboard in Resources */,
 				329ED71241CDFE60F8738D67 /* Main.storyboard in Resources */,
 				1044E300AB2B4759958199AC /* Config.xcconfig in Resources */,
+				FE82AAC974834B0F77DE7289 /* Info.plist in Resources */,
 				9F695758CEEA2723C7FA3B30 /* UMC-Kitten-iOS.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1888,7 +1893,7 @@
 				D17CC4B54ABAF038AA1E3F2E /* imageChangingCheckBox.swift in Sources */,
 				5521A7BD59872AF60BFC4A14 /* OwnerSelectViewController.swift in Sources */,
 				FECCE73FBCE94296324B5217 /* PetInformationViewController.swift in Sources */,
-				BCB354FB2B98BD9800123866 /* TuistAssets+Kitten.swift in Sources */,
+				BCB354FD2B98C56000123866 /* TuistAssets+Kitten.swift in Sources */,
 				BF342FE2807A83E411326B40 /* PetSelectViewController.swift in Sources */,
 				3361EA3EB502CEBFBB6D079D /* PetTypeSelectViewController.swift in Sources */,
 				C325EA45350E966F1B6FA7FF /* SignUpViewController.swift in Sources */,
@@ -1899,6 +1904,7 @@
 				2B1EC0A5AA56DE1D49041084 /* UserInfo.swift in Sources */,
 				72DFBDA5171CF33E41CD0560 /* WelcomeViewController.swift in Sources */,
 				75EA640E0CABE858F4570DA1 /* LoginTestViewController.swift in Sources */,
+				BCB354FE2B98C56300123866 /* TuistBundle+Kitten.swift in Sources */,
 				AB9A5D6056DA2E1066B9D564 /* MainViewController.swift in Sources */,
 				7897B5C295A61BE126D3E57F /* MypageMenuSection.swift in Sources */,
 				3322E2C43181A39EE8BE898F /* ProfileSection.swift in Sources */,

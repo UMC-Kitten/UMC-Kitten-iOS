@@ -8,10 +8,12 @@
 import Foundation
 import AuthenticationServices
 
-class AppleAuthHelper: NSObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+public class AppleAuthHelper: NSObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    
+    public override init() {}
     
     // 애플 로그인을 시작하는 메서드
-    func startAppleLogin() {
+    public func startAppleLogin() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
@@ -25,7 +27,7 @@ class AppleAuthHelper: NSObject, ASAuthorizationControllerDelegate, ASAuthorizat
     }
 
     // 로그인 성공 시 호출되는 메서드
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+    public func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             // 사용자 정보 처리
             let userIdentifier = appleIDCredential.user
@@ -44,13 +46,13 @@ class AppleAuthHelper: NSObject, ASAuthorizationControllerDelegate, ASAuthorizat
     }
 
     // 로그인 실패 시 호출되는 메서드
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+    public func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         print("apple error: \(error)")
         // 에러 처리
     }
 
     // ASAuthorizationController를 표시할 때, 어떤 window를 사용할지 결정하는 메서드
-    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+    public func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return UIApplication.shared.windows.first { $0.isKeyWindow }!
     }
 }

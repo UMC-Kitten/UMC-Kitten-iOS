@@ -6,6 +6,9 @@
 //
 
 import UIKit
+
+import KittenService
+
 import SnapKit
 
 class OwnerSettingViewController: BaseViewController {

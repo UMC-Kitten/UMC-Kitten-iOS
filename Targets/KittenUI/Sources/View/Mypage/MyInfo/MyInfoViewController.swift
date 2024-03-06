@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+import KittenService
+
 import SnapKit
 import RxSwift
 import RxGesture

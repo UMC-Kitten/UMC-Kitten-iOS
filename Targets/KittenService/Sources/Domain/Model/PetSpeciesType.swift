@@ -8,11 +8,11 @@
 import Foundation
 
 /// 반려동물 종 종류
-enum PetSpeciesType: String, Codable {
+public enum PetSpeciesType: String, Codable {
     case cat = "CAT"
     case dog = "DOG"
     
-    var krDescription: String {
+    public var krDescription: String {
         switch self {
         case .cat:
             return "고양이"

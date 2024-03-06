@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct UserModel {
-    let id: Int64
-    let nickname: String
-    let profileImage: String?
-    let hasPet: Bool
-    let pets: [PetModel]
+public struct UserModel {
+    public let id: Int64
+    public let nickname: String
+    public let profileImage: String?
+    public let hasPet: Bool
+    public let pets: [PetModel]
 }

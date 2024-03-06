@@ -8,11 +8,11 @@
 import Foundation
 
 /// 반려동물 성별 종류
-enum PetGenderType: String, Codable {
+public enum PetGenderType: String, Codable {
     case male = "MALE"
     case female = "FEMALE"
     
-    var krDescription: String {
+    public var krDescription: String {
         switch self {
         case .male:
             return "수컷"

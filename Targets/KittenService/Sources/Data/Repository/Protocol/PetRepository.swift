@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PetRepository {
+public protocol PetRepository {
     /// 등록된 반려동물 조회
     func getRegisteredPets(
         completion: @escaping (_ result: [PetModel]?, _ error: Error?) -> Void

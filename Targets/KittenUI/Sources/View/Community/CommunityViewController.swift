@@ -6,6 +6,9 @@
 //
 
 import UIKit
+
+import KittenService
+
 import Moya
 
 final public class CommunityViewController: BaseViewController {
@@ -37,20 +40,20 @@ final public class CommunityViewController: BaseViewController {
     }
     
     // MARK: - 라이프 사이클
-    override func loadView() {
+    public override func loadView() {
         view = communityView
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
-    override func viewDidLayoutSubviews() {
+    public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         if !didSetTapConstraints {
@@ -169,7 +172,7 @@ final public class CommunityViewController: BaseViewController {
 }
 
 extension CommunityViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let freeBoardDetailViewController = FreeBoardDetailViewController()
         /// 선택한 게시글의 정보 전달
         if let postPreviewDto = posts[currentPostType]?[indexPath.row] {
@@ -180,11 +183,11 @@ extension CommunityViewController: UITableViewDelegate {
 }
 
 extension CommunityViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts[currentPostType]?.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FreeBoardTableViewCell", for: indexPath) as! FreeBoardTableViewCell
         if let postPreviewDto = posts[currentPostType]?[indexPath.row] {
             cell.titleLabel.text = postPreviewDto.title

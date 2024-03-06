@@ -7,30 +7,30 @@
 
 import Foundation
 
-struct PostResponseDto: Codable {
+public struct PostResponseDto: Codable {
     
-    struct JoinPostResultDto: Codable {
-        var postId: Int
-        var createdAt: Date
+    public struct JoinPostResultDto: Codable {
+        public var postId: Int
+        public var createdAt: Date
     }
     
-    struct PostPreviewDto: Codable {
-        var title: String
-        var content: String
-        var postType: PostTypeDto
-        var writerNickName: String
-        var createdAt: Date
-        var commentPreviewListDTO: CommentResponseDto.CommentPreviewListDto
-        var likePreviewListDTO: LikeResponseDto.LikePreviewListDto
-        var hashtagList: [HashtagResponseDto]?
+    public struct PostPreviewDto: Codable {
+        public var title: String
+        public var content: String
+        public var postType: PostTypeDto
+        public var writerNickName: String
+        public var createdAt: Date
+        public var commentPreviewListDTO: CommentResponseDto.CommentPreviewListDto
+        public var likePreviewListDTO: LikeResponseDto.LikePreviewListDto
+        public var hashtagList: [HashtagResponseDto]?
     }
     
-    struct PostPreviewListDto: Codable {
-        var postList: [PostPreviewDto]
-        var listSize: Int
-        var totalPage: Int
-        var totalElements: Int
-        var isFirst: Bool
-        var isLast: Bool
+    public struct PostPreviewListDto: Codable {
+        public var postList: [PostPreviewDto]
+        public var listSize: Int
+        public var totalPage: Int
+        public var totalElements: Int
+        public var isFirst: Bool
+        public var isLast: Bool
     }
 }

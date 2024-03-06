@@ -7,6 +7,8 @@
 
 import UIKit
 
+import KittenService
+
 import SnapKit
 import RxSwift
 import RxGesture
@@ -27,7 +29,7 @@ final public class MypageViewController: BaseViewController {
     private let versionLabel: UILabel = .init(staticText: "앱버전 1.0.0")
     
     // MARK: Constructor
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
          super.viewDidLoad()
      }
     

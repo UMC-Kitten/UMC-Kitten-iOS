@@ -66,10 +66,10 @@ class FreeBoardDetailContentTableViewCell: UITableViewCell {
         return label
     }()
     
-    private let contentImageSlideshow: ImageSlideshow = {
-        let imageSlideshow = ImageSlideshow(frame: .zero)
-        return imageSlideshow
-    }()
+//    private let contentImageSlideshow: ImageSlideshow = {
+//        let imageSlideshow = ImageSlideshow(frame: .zero)
+//        return imageSlideshow
+//    }()
     
     private let heartImage: UIImageView = {
         let image = UIImageView(image: .boardHeart)
@@ -141,7 +141,7 @@ class FreeBoardDetailContentTableViewCell: UITableViewCell {
         self.contentView.addSubview(moreInformationButton)
         self.contentView.addSubview(titleLabel)
         self.contentView.addSubview(contentLabel)
-        self.contentView.addSubview(contentImageSlideshow)
+//        self.contentView.addSubview(contentImageSlideshow)
         self.contentView.addSubview(heartCommentStackView)
         
         userProfileInfoStackView.snp.makeConstraints {

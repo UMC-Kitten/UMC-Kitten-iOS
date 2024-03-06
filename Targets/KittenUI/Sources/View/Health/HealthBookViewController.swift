@@ -55,7 +55,7 @@ public class HealthBookViewController: UIViewController {
     @IBOutlet weak var catView: UIView!
     @IBOutlet weak var catLabel: UILabel!
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         filteredSubtitles = subtitles
@@ -172,7 +172,7 @@ public class HealthBookViewController: UIViewController {
     
     // 첫 번째 UIView를 보여주는 메서드
     private func showFirstView() {
-        dogView.backgroundColor = UIColor.appButton
+        dogView.backgroundColor = UIColor.main
         catView.backgroundColor = .systemGray5
         
         dogView.layer.shadowColor = UIColor.black.cgColor
@@ -192,7 +192,7 @@ public class HealthBookViewController: UIViewController {
     // 두 번째 UIView를 보여주는 메서드
     private func showSecondView() {
         dogView.backgroundColor = .systemGray5
-        catView.backgroundColor = UIColor.appButton
+        catView.backgroundColor = UIColor.main
         
         catView.layer.shadowColor = UIColor.black.cgColor
         catView.layer.shadowOpacity = 0.25
@@ -375,11 +375,11 @@ public class HealthBookViewController: UIViewController {
 }
     
     extension HealthBookViewController: UITableViewDelegate, UITableViewDataSource {
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return filteredSubtitles.count
         }
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath) as? FeedTableViewCell else { return UITableViewCell() }
             
             // 데이터 배열
@@ -396,7 +396,7 @@ public class HealthBookViewController: UIViewController {
             return cell
         }
         
-        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 100
         }
         

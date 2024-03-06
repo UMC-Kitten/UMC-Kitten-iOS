@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 /// 로그인 관련 API
-enum PostApiClient {
+public enum PostApiClient {
     /// 게시글 개별 조회
     case getPostDetail(postId: Int64)
     /// 게시판 별로 전체 조회
@@ -36,7 +36,7 @@ extension PostApiClient: TargetType {
         return apiBaseURLString
     }
     
-    var baseURL: URL {
+    public var baseURL: URL {
         let urlString = baseURLString + "/posts"
         guard let url = URL(string: urlString) else {
             fatalError("Constructed URL is invalid: \(urlString)")
@@ -45,7 +45,7 @@ extension PostApiClient: TargetType {
         
     }
     
-    var path: String {
+    public var path: String {
         switch self {
         case let .getPostDetail(postId):
             return "/board/\(postId)"
@@ -62,7 +62,7 @@ extension PostApiClient: TargetType {
         }
     }
     
-    var method: Moya.Method {
+    public var method: Moya.Method {
         switch self {
         case .getPostDetail, .getPostsByBoard, .getFreePostByLike, .getBoastPostRecent:
             return .get
@@ -73,7 +73,7 @@ extension PostApiClient: TargetType {
         }
     }
     
-    var task: Task {
+    public var task: Task {
         switch self {
         case .getPostDetail:
             return .requestPlain
@@ -99,11 +99,11 @@ extension PostApiClient: TargetType {
         }
     }
     
-    var headers: [String : String]? {
+    public var headers: [String : String]? {
         return ["Content-type": "application/json"]
     }
     
-    var sampleData: Data {
+    public var sampleData: Data {
         return Data()
     }
 }

@@ -7,6 +7,9 @@
 
 import UIKit
 
+import KittenService
+import KittenUtil
+
 import SnapKit
 import Moya
 
@@ -17,7 +20,7 @@ final public class StartScreenViewController: UIViewController {
     let naverLoginButton: UIImageView = .init(imageName: "naver-login-button")
     let appleLoginButton: UIImageView = .init(imageName: "apple-login-button")
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         [kakaoLoginButton, naverLoginButton, appleLoginButton]

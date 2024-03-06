@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+import KittenService
+
 import RxSwift
 
 class NicknameSettingViewController: BaseViewController {

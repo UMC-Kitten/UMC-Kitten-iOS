@@ -7,6 +7,8 @@
 
 import UIKit
 
+import KittenUtil
+
 class PetInformationViewController: UIViewController, PetSelectionDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate  {
     
     var selectPet: String?
@@ -96,7 +98,7 @@ class PetInformationViewController: UIViewController, PetSelectionDelegate, UIIm
     
     // 첫 번째 UIView를 보여주는 메서드
     private func showFirstView() {
-        firstView.backgroundColor = UIColor.appButton
+        firstView.backgroundColor = UIColor.main
         secondView.backgroundColor = .white
         labelOne.textColor = .white
         labelTwo.textColor = .black
@@ -105,7 +107,7 @@ class PetInformationViewController: UIViewController, PetSelectionDelegate, UIIm
     // 두 번째 UIView를 보여주는 메서드
     private func showSecondView() {
         firstView.backgroundColor = .white
-        secondView.backgroundColor = UIColor.appButton
+        secondView.backgroundColor = UIColor.main
         labelOne.textColor = .black
         labelTwo.textColor = .white
     }

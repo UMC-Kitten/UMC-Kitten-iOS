@@ -7,30 +7,30 @@
 
 import Foundation
 
-struct MypageResponseDto {
+public struct MypageResponseDto {
     
-    struct UserResponseDto: Codable {
-        let id: Int64
-        let nickname: String
-        let profileImage: String?
-        let hasPet: Bool
-        let pets: [PetDto]
+    public struct UserResponseDto: Codable {
+        public let id: Int64
+        public let nickname: String
+        public let profileImage: String?
+        public let hasPet: Bool
+        public let pets: [PetDto]
         
-        struct PetDto: Codable {
-            let id: Int64
-            let type: PetTypeDto
-            let name: String
-            let petProfileImage: String
-            let gender: GenderDto
-            let notes: String
+        public struct PetDto: Codable {
+            public let id: Int64
+            public let type: PetTypeDto
+            public let name: String
+            public let petProfileImage: String
+            public let gender: GenderDto
+            public let notes: String
         }
 
-        enum PetTypeDto: String, Codable {
+        public enum PetTypeDto: String, Codable {
             case CAT
             case DOG
         }
 
-        enum GenderDto: String, Codable {
+        public enum GenderDto: String, Codable {
             case MALE
             case FEMALE
         }

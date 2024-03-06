@@ -1,5 +1,7 @@
 import UIKit
 
+import KittenService
+
 final public class SignUpViewController: UIViewController, UITextFieldDelegate{
     
     var isValidName = false {
@@ -20,7 +22,7 @@ final public class SignUpViewController: UIViewController, UITextFieldDelegate{
     }
     
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         nameTextField.delegate = self
@@ -103,7 +105,7 @@ final public class SignUpViewController: UIViewController, UITextFieldDelegate{
      }
      */
     //MARK: - Textfield의 텍스트를 15개로 제한하기
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
         
         guard let range = Range(range, in : currentText) else { return false }
@@ -136,7 +138,7 @@ final public class SignUpViewController: UIViewController, UITextFieldDelegate{
     
     private func validateUserInfo() {
         if isValidName {
-            self.nextButton.backgroundColor = UIColor.appButton
+            self.nextButton.backgroundColor = UIColor.main
             nextButton.isEnabled = true
         } else {
             self.nextButton.backgroundColor = UIColor.lightGray

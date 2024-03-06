@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct ApiResponse<T: Codable>: Codable {
-    let isSuccess: Bool
-    let code: String
-    let message: String
-    let result: T
+public struct ApiResponse<T: Codable>: Codable {
+    public let isSuccess: Bool
+    public let code: String
+    public let message: String
+    public let result: T
 }

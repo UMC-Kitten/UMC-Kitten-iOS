@@ -9,15 +9,15 @@ import Foundation
 
 import RxSwift
 
-class PostRxRepository {
+public class PostRxRepository {
     
     private let repository: PostRepository
     
-    init(repository: PostRepository) {
+    public init(repository: PostRepository) {
         self.repository = repository
     }
     
-    func getAllPostByBoard(
+    public func getAllPostByBoard(
         boardType: BoardType,
         page: Int
     ) -> Observable<[PostModel]> {
@@ -35,7 +35,7 @@ class PostRxRepository {
         }
     }
     
-    func getPopularPost() -> Observable<[PostModel]> {
+    public func getPopularPost() -> Observable<[PostModel]> {
         return Observable.create { observer in
             self.repository.getPopularPost() { result, error in
                 if let error = error {
@@ -50,7 +50,7 @@ class PostRxRepository {
         }
     }
     
-    func getTodayFeed() -> Observable<[PostModel]> {
+    public func getTodayFeed() -> Observable<[PostModel]> {
         return Observable.create { observer in
             self.repository.getTodayFeed() { result, error in
                 if let error = error {

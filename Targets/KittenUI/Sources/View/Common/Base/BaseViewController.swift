@@ -18,10 +18,10 @@ protocol BaseViewControllerProtocol: AnyObject {
     func setBind()
 }
 
-class BaseViewController: UIViewController, BaseViewControllerProtocol {
+public class BaseViewController: UIViewController, BaseViewControllerProtocol {
     var disposeBag = DisposeBag()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white

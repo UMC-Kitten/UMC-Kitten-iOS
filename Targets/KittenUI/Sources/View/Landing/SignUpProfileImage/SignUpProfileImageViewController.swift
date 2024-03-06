@@ -1,5 +1,7 @@
 import UIKit
 
+import KittenService
+
 class SignUpProfileImageViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     var userNickname: String?

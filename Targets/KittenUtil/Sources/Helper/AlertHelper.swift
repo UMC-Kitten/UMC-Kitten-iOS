@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 /// Alert 창을 띄우기
-final class AlertHelper {
-    static func showAlert(title: String = "알림", message: String?, action: UIAlertAction?) {
+public final class AlertHelper {
+    public static func showAlert(title: String = "알림", message: String?, action: UIAlertAction?) {
         
         let alert = UIAlertController(title: title,
                                       message: message,

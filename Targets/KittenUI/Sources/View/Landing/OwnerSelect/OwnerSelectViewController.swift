@@ -7,6 +7,8 @@
 
 import UIKit
 
+import KittenService
+
 class OwnerSelectViewController: UIViewController {
     
     var selectedView: UIView?
@@ -68,7 +70,7 @@ class OwnerSelectViewController: UIViewController {
 
         // 첫 번째 UIView를 보여주는 메서드
         private func showFirstView() {
-            firstView.backgroundColor = UIColor.appButton
+            firstView.backgroundColor = UIColor.main
             secondView.backgroundColor = .white
             petImageOne.image = UIImage(named: "animalWhite")
             petImageTwo.image = UIImage(named: "customPersonBlack")
@@ -80,7 +82,7 @@ class OwnerSelectViewController: UIViewController {
         // 두 번째 UIView를 보여주는 메서드
         private func showSecondView() {
             firstView.backgroundColor = .white
-            secondView.backgroundColor = UIColor.appButton
+            secondView.backgroundColor = UIColor.main
             petImageOne.image = UIImage(named: "animalBlack")
             petImageTwo.image = UIImage(named: "customPersonWhite")
             labelOne.textColor = .black

@@ -7,6 +7,8 @@
 
 import Foundation
 
+import KittenService
+
 import ReactorKit
 
 class MypageReactor: Reactor {

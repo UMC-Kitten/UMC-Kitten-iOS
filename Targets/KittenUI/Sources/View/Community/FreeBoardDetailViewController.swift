@@ -7,6 +7,8 @@
 
 import UIKit
 
+import KittenService
+
 class FreeBoardDetailViewController: UIViewController {
 
     // MARK: - 프로퍼티

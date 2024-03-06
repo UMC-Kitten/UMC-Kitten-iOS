@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct LikeResponseDto: Codable {
+public struct LikeResponseDto: Codable {
 
-    struct LikePreviewDto: Codable {
-        let likeId: Int
-        let userId: Int
-        let createdAt: Date
+    public struct LikePreviewDto: Codable {
+        public let likeId: Int
+        public let userId: Int
+        public let createdAt: Date
     }
 
-    struct LikePreviewListDto: Codable {
-        let likeList: [LikePreviewDto]
-        let listSize: Int
+    public struct LikePreviewListDto: Codable {
+        public let likeList: [LikePreviewDto]
+        public let listSize: Int
     }
 }

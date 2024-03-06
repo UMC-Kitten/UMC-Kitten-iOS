@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HashtagResponseDto: Codable {
-    var id: Int
-    var name: String
+public struct HashtagResponseDto: Codable {
+    public var id: Int
+    public var name: String
 }

@@ -7,6 +7,8 @@
 
 import UIKit
 
+import KittenUtil
+
 import KakaoSDKAuth
 //import NaverThirdPartyLogin
 

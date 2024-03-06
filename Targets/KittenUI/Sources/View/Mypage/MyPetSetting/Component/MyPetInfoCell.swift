@@ -8,6 +8,8 @@
 import UIKit
 import SnapKit
 
+import KittenUtil
+
 class MyPetInfoCell: BaseCollectionViewCell {
     
     // MARK: Data

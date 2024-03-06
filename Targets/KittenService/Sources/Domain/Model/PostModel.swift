@@ -8,21 +8,21 @@
 import Foundation
 
 /// 자유게시판 글 정보
-struct PostModel: Codable {
+public struct PostModel: Codable {
     /// 게시판
-    var boardType: BoardType
+    public var boardType: BoardType
     /// 사진
-    var imageUrl: String?
+    public var imageUrl: String?
     /// 게시글 제목
-    var postTitle: String
+    public var postTitle: String
     /// 본문
-    var body: String
+    public var body: String
     /// 좋아요(하트) 개수
-    var likeCount: Int
+    public var likeCount: Int
     /// 댓글 개수
-    var commentCount: Int
+    public var commentCount: Int
     /// 작성일
-    var date: Date
+    public var date: Date
     /// 작성자
-    var writer: String
+    public var writer: String
 }

@@ -74,7 +74,7 @@ class PetTypeSelectViewController: UIViewController {
     
     // 첫 번째 UIView를 보여주는 메서드
     private func showFirstView() {
-        firstView.backgroundColor = UIColor.appButton
+        firstView.backgroundColor = UIColor.main
         secondView.backgroundColor = .white
         petImageOne.image = UIImage(named: "dogWhite")
         petImageTwo.image = UIImage(named: "catBlack")
@@ -86,7 +86,7 @@ class PetTypeSelectViewController: UIViewController {
     // 두 번째 UIView를 보여주는 메서드
     private func showSecondView() {
         firstView.backgroundColor = .white
-        secondView.backgroundColor = UIColor.appButton
+        secondView.backgroundColor = UIColor.main
         petImageOne.image = UIImage(named: "dogBlack")
         petImageTwo.image = UIImage(named: "CatWhite")
         labelOne.textColor = .black
