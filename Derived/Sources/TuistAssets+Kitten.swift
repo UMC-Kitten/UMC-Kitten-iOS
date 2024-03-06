@@ -3,6 +3,8 @@
 // swiftformat:disable all
 // Generated using tuist — https://github.com/tuist/tuist
 
+import UIKit
+
 #if os(macOS)
   import AppKit
 #elseif os(iOS)
@@ -82,23 +84,33 @@ public final class KittenColors {
 
   #if os(macOS)
   public typealias Color = NSColor
-  #elseif os(iOS) || os(tvOS) || os(watchOS)
+  #elseif os(iOS) || os(tvOS) || os(watchOS) || os(visionOS)
   public typealias Color = UIColor
   #endif
 
-  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *)
+  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, visionOS 1.0, *)
   public private(set) lazy var color: Color = {
     guard let color = Color(asset: self) else {
-      fatalError("Unable to load color asset named \(name).")
+      fatalError("Unable to load color asset named \\(name).")
     }
     return color
   }()
 
   #if canImport(SwiftUI)
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public private(set) lazy var swiftUIColor: SwiftUI.Color = {
-    SwiftUI.Color(asset: self)
-  }()
+  private var _swiftUIColor: Any? = nil
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
+  public private(set) var swiftUIColor: SwiftUI.Color {
+    get {
+      if self._swiftUIColor == nil {
+        self._swiftUIColor = SwiftUI.Color(asset: self)
+      }
+
+      return self._swiftUIColor as! SwiftUI.Color
+    }
+    set {
+      self._swiftUIColor = newValue
+    }
+  }
   #endif
 
   fileprivate init(name: String) {
@@ -107,10 +119,10 @@ public final class KittenColors {
 }
 
 public extension KittenColors.Color {
-  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *)
+  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, visionOS 1.0, *)
   convenience init?(asset: KittenColors) {
     let bundle = KittenResources.bundle
-    #if os(iOS) || os(tvOS)
+    #if os(iOS) || os(tvOS) || os(visionOS)
     self.init(named: asset.name, in: bundle, compatibleWith: nil)
     #elseif os(macOS)
     self.init(named: NSColor.Name(asset.name), bundle: bundle)
@@ -121,8 +133,8 @@ public extension KittenColors.Color {
 }
 
 #if canImport(SwiftUI)
+@available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
 public extension SwiftUI.Color {
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   init(asset: KittenColors) {
     let bundle = KittenResources.bundle
     self.init(asset.name, bundle: bundle)
@@ -135,13 +147,13 @@ public struct KittenImages {
 
   #if os(macOS)
   public typealias Image = NSImage
-  #elseif os(iOS) || os(tvOS) || os(watchOS)
+  #elseif os(iOS) || os(tvOS) || os(watchOS) || os(visionOS)
   public typealias Image = UIImage
   #endif
 
   public var image: Image {
     let bundle = KittenResources.bundle
-    #if os(iOS) || os(tvOS)
+    #if os(iOS) || os(tvOS) || os(visionOS)
     let image = Image(named: name, in: bundle, compatibleWith: nil)
     #elseif os(macOS)
     let image = bundle.image(forResource: NSImage.Name(name))
@@ -149,36 +161,21 @@ public struct KittenImages {
     let image = Image(named: name)
     #endif
     guard let result = image else {
-      fatalError("Unable to load image asset named \(name).")
+      fatalError("Unable to load image asset named \\(name).")
     }
     return result
   }
 
   #if canImport(SwiftUI)
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
   public var swiftUIImage: SwiftUI.Image {
     SwiftUI.Image(asset: self)
   }
   #endif
 }
 
-public extension KittenImages.Image {
-  @available(macOS, deprecated,
-    message: "This initializer is unsafe on macOS, please use the KittenImages.image property")
-  convenience init?(asset: KittenImages) {
-    #if os(iOS) || os(tvOS)
-    let bundle = KittenResources.bundle
-    self.init(named: asset.name, in: bundle, compatibleWith: nil)
-    #elseif os(macOS)
-    self.init(named: NSImage.Name(asset.name))
-    #elseif os(watchOS)
-    self.init(named: asset.name)
-    #endif
-  }
-}
-
 #if canImport(SwiftUI)
-@available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+@available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, visionOS 1.0, *)
 public extension SwiftUI.Image {
   init(asset: KittenImages) {
     let bundle = KittenResources.bundle
@@ -196,6 +193,65 @@ public extension SwiftUI.Image {
   }
 }
 #endif
+
+// MARK: - Extension
+extension UIColor {
+  public static let accentColor = KittenColors(name: "AccentColor").color
+  public static let grayScale100 = KittenColors(name: "grayScale100").color
+  public static let grayScale200 = KittenColors(name: "grayScale200").color
+  public static let grayScale300 = KittenColors(name: "grayScale300").color
+  public static let grayScale400 = KittenColors(name: "grayScale400").color
+  public static let grayScale50 = KittenColors(name: "grayScale50").color
+  public static let grayScale500 = KittenColors(name: "grayScale500").color
+  public static let grayScale600 = KittenColors(name: "grayScale600").color
+  public static let grayScale700 = KittenColors(name: "grayScale700").color
+  public static let grayScale800 = KittenColors(name: "grayScale800").color
+  public static let grayScale900 = KittenColors(name: "grayScale900").color
+  public static let main = KittenColors(name: "main").color
+  public static let secondary = KittenColors(name: "secondary").color
+  public static let appButtonColor = KittenColors(name: "appButtonColor").color
+  public static let selection = KittenColors(name: "selection").color
+}
+
+extension UIImage {
+  public static let commentIconYellow = KittenImages(name: "comment-icon-yellow").image
+  public static let heartIconRed = KittenImages(name: "heart-icon-red").image
+  public static let house = KittenImages(name: "House").image
+  public static let checkinIcon = KittenImages(name: "checkin-icon").image
+  public static let communityIcon = KittenImages(name: "community-icon").image
+  public static let homeIcon = KittenImages(name: "home-icon").image
+  public static let mypageIcon = KittenImages(name: "mypage-icon").image
+  public static let appleLoginButton = KittenImages(name: "apple-login-button").image
+  public static let arrowRightBlack = KittenImages(name: "arrow-right-black").image
+  public static let arrowRightGray = KittenImages(name: "arrow-right-gray").image
+  public static let boardComment = KittenImages(name: "board_comment").image
+  public static let boardHeart = KittenImages(name: "board_heart").image
+  public static let catSample = KittenImages(name: "cat-sample").image
+  public static let chatIcon = KittenImages(name: "chat-icon").image
+  public static let deleteIcon = KittenImages(name: "delete-icon").image
+  public static let detailIcon = KittenImages(name: "detail-icon").image
+  public static let dogncatBlack = KittenImages(name: "dogncat-black").image
+  public static let dogncatWhite = KittenImages(name: "dogncat-white").image
+  public static let editIcon = KittenImages(name: "edit-icon").image
+  public static let kakaoLoginButton = KittenImages(name: "kakao-login-button").image
+  public static let animalBlack = KittenImages(name: "animalBlack").image
+  public static let animalWhite = KittenImages(name: "animalWhite").image
+  public static let catBlack = KittenImages(name: "catBlack").image
+  public static let catWhite = KittenImages(name: "catWhite").image
+  public static let customPersonBlack = KittenImages(name: "customPersonBlack").image
+  public static let customPersonWhite = KittenImages(name: "customPersonWhite").image
+  public static let dogBlack = KittenImages(name: "dogBlack").image
+  public static let dogWhite = KittenImages(name: "dogWhite").image
+  public static let female = KittenImages(name: "female").image
+  public static let male = KittenImages(name: "male").image
+  public static let pawprintBlack = KittenImages(name: "pawprintBlack").image
+  public static let pawprintWhite = KittenImages(name: "pawprintWhite").image
+  public static let likeIcon = KittenImages(name: "like-icon").image
+  public static let naverLoginButton = KittenImages(name: "naver-login-button").image
+  public static let nestedCommentArrow = KittenImages(name: "nested_comment_arrow").image
+  public static let ownerBlack = KittenImages(name: "owner-black").image
+  public static let ownerWhite = KittenImages(name: "owner-white").image
+}
 
 // swiftlint:enable all
 // swiftformat:enable all

@@ -142,6 +142,7 @@
 		B849E45EB0E6BACD7823D48C /* CommunityPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C014C89521D4CA2851CBCB /* CommunityPostViewController.swift */; };
 		B9928CA92A1AD8858072CB68 /* datePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613EE2982A683D0B9DB71175 /* datePicker.swift */; };
 		B9FF4D615C083F3C641D36E5 /* PopularPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F418A17CA9E033DDA600BB /* PopularPostCell.swift */; };
+		BCB354FB2B98BD9800123866 /* TuistAssets+Kitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A41854025401E24FDD4AB9 /* TuistAssets+Kitten.swift */; };
 		BCBEFDF276476F00ED334842 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68D511D0068594500F1ECFD /* Moya.framework */; platformFilter = ios; };
 		BD63499D24D6DE9D092FFA95 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68D511D0068594500F1ECFD /* Moya.framework */; platformFilter = ios; };
 		BE5E757D8100B7E8EAB9CFFB /* HomeConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD4E2C789EC37C81CDF988 /* HomeConstant.swift */; };
@@ -1887,6 +1888,7 @@
 				D17CC4B54ABAF038AA1E3F2E /* imageChangingCheckBox.swift in Sources */,
 				5521A7BD59872AF60BFC4A14 /* OwnerSelectViewController.swift in Sources */,
 				FECCE73FBCE94296324B5217 /* PetInformationViewController.swift in Sources */,
+				BCB354FB2B98BD9800123866 /* TuistAssets+Kitten.swift in Sources */,
 				BF342FE2807A83E411326B40 /* PetSelectViewController.swift in Sources */,
 				3361EA3EB502CEBFBB6D079D /* PetTypeSelectViewController.swift in Sources */,
 				C325EA45350E966F1B6FA7FF /* SignUpViewController.swift in Sources */,

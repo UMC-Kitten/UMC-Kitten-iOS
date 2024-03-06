@@ -9,10 +9,10 @@ import UIKit
 
 import RxSwift
 
-class ImageProvider {
+public class ImageProvider {
 
     /// 콜백 형식으로 이미지 처리
-    static func loadImage(_ source: String, completion: @escaping (UIImage?) -> Void) {
+    public static func loadImage(_ source: String, completion: @escaping (UIImage?) -> Void) {
         loadImageInternal(source) { image, error in
             if let image = image {
                 completion(image)
@@ -24,7 +24,7 @@ class ImageProvider {
     }
     
     /// Rx 형식으로 이미지 처리
-    static func loadImage(_ source: String) -> Observable<UIImage?> {
+    public static func loadImage(_ source: String) -> Observable<UIImage?> {
         return Observable.create { observer in
             loadImageInternal(source) { image, error in
                 if let error = error {

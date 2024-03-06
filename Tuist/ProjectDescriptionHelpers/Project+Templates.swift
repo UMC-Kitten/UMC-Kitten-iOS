@@ -31,8 +31,10 @@ extension Project {
         return Project(
             name: name,
             organizationName: "tuist.io",
-            targets: targets
-            
+            targets: targets,
+            resourceSynthesizers: [
+              .custom(name: "Assets", parser: .assets, extensions: ["xcassets"]),
+            ]
         )
     }
     

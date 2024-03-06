@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+import KittenUtil
+
 import SnapKit
 
 class MyPetCard: BaseView {
