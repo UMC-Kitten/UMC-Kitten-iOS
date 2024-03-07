@@ -1,0 +1,51 @@
+// Colors+Extension.swift
+{% if catalogs %}
+{% set enumName %}{{param.name}}Asset{% endset %}
+{% set arResourceGroupType %}{{param.name}}ARResourceGroup{% endset %}
+{% set colorType %}{{param.name}}Colors{% endset %}
+{% set dataType %}{{param.name}}Data{% endset %}
+{% set imageType %}{{param.name}}Images{% endset %}
+{% set forceNamespaces %}{{param.forceProvidesNamespaces|default:"false"}}{% endset %}
+{% set bundleToken %}{{param.name}}Resources{% endset %}
+{% set accessModifier %}{% if param.publicAccess %}public{% else %}internal{% endif %}{% endset %}
+
+// MARK: - Extension
+extension UIColor {
+{% macro colorBlock assets %}
+  {% for asset in assets %}
+  {% if asset.type == "color" %}
+  {{accessModifier}} static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{colorType}}(name: "{{asset.value}}").color
+  {% elif asset.items and ( forceNamespaces == "true" or asset.isNamespaced == "true" ) %}
+  {{accessModifier}} enum {{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+    {% filter indent:2 %}{% call casesBlock asset.items %}{% endfilter %}
+  }
+  {% elif asset.items %}
+  {% call colorBlock asset.items %}
+  {% endif %}
+  {% endfor %}
+{% endmacro %}
+{% for catalog in catalogs %}
+    {% call colorBlock catalog.assets %}
+{% endfor %}
+}
+
+extension UIImage {
+{% macro colorBlock assets %}
+  {% for asset in assets %}
+  {% if asset.type == "image" %}
+  {{accessModifier}} static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{imageType}}(name: "{{asset.value}}").image
+  {% elif asset.items and ( forceNamespaces == "true" or asset.isNamespaced == "true" ) %}
+  {{accessModifier}} enum {{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+    {% filter indent:2 %}{% call casesBlock asset.items %}{% endfilter %}
+  }
+  {% elif asset.items %}
+  {% call colorBlock asset.items %}
+  {% endif %}
+  {% endfor %}
+{% endmacro %}
+{% for catalog in catalogs %}
+    {% call colorBlock catalog.assets %}
+{% endfor %}
+}
+
+{% endif %}

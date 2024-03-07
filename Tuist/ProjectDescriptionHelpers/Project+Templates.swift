@@ -8,10 +8,16 @@ import ProjectDescription
 
 public struct TargetPakage {
     let name: String
+    let infoPlist: [String: InfoPlist.Value]
     let dependencies: [TargetDependency]
     
-    public init(name: String, dependencies: [TargetDependency]) {
+    public init(
+        name: String,
+        infoPlist: [String: InfoPlist.Value],
+        dependencies: [TargetDependency]
+    ) {
         self.name = name
+        self.infoPlist = infoPlist
         self.dependencies = dependencies
     }
 }
@@ -21,19 +27,31 @@ extension Project {
     public static func app(
         name: String,
         platform: Platform,
+        infoPlist: [String: InfoPlist.Value],
         additionalTargets: [TargetPakage],
         dependencies: [TargetDependency]
     ) -> Project {
         var targets = makeAppTargets(name: name,
                                      platform: platform,
+                                     infoPlist: infoPlist,
                                      dependencies: dependencies)
-        targets += additionalTargets.flatMap({ makeFrameworkTargets(name: $0.name, platform: platform, dependencies: $0.dependencies) })
+        targets += additionalTargets.flatMap({
+            makeFrameworkTargets(
+                name: $0.name,
+                platform: platform,
+                infoPlist: $0.infoPlist,
+                dependencies: $0.dependencies)
+        })
         return Project(
             name: name,
             organizationName: "tuist.io",
+            settings: makeSettings(),
             targets: targets,
+            additionalFiles: [
+                .folderReference(path: .relativeToRoot("Xcconfigs/Config.xcconfig"))
+            ],
             resourceSynthesizers: [
-              .custom(name: "Assets", parser: .assets, extensions: ["xcassets"]),
+                .custom(name: "Assets", parser: .assets, extensions: ["xcassets"]),
             ]
         )
     }
@@ -44,6 +62,7 @@ extension Project {
     private static func makeFrameworkTargets(
         name: String,
         platform: Platform,
+        infoPlist: [String: InfoPlist.Value],
         dependencies: [TargetDependency]
     ) -> [Target]
     {
@@ -52,10 +71,11 @@ extension Project {
                              product: .framework,
                              bundleId: "io.tuist.\(name)",
                              deploymentTarget: .iOS(targetVersion: "16.0", devices: [.iphone]),
-                             infoPlist: .default,
+                             infoPlist: .extendingDefault(with: infoPlist),
                              sources: ["Targets/\(name)/Sources/**"],
-                             resources: [],
-                             dependencies: dependencies)
+                             resources: ["Targets/\(name)/Resources/**"],
+                             dependencies: dependencies,
+                             settings: makeSettings())
         let tests = Target(name: "\(name)Tests",
                            platform: platform,
                            product: .unitTests,
@@ -64,7 +84,8 @@ extension Project {
                            infoPlist: .default,
                            sources: ["Targets/\(name)/Tests/**"],
                            resources: [],
-                           dependencies: [.target(name: name)])
+                           dependencies: [.target(name: name)],
+                           settings: makeSettings())
         return [sources, tests]
     }
     
@@ -72,15 +93,10 @@ extension Project {
     private static func makeAppTargets(
         name: String,
         platform: Platform,
+        infoPlist: [String: InfoPlist.Value],
         dependencies: [TargetDependency]
     ) -> [Target] {
         let platform: Platform = platform
-        let infoPlist: [String: InfoPlist.Value] = [
-            "CFBundleShortVersionString": "1.0",
-            "CFBundleVersion": "1",
-            "UIMainStoryboardFile": "",
-            "UILaunchStoryboardName": "LaunchScreen"
-        ]
         
         let mainTarget = Target(
             name: name,
@@ -91,7 +107,8 @@ extension Project {
             infoPlist: .extendingDefault(with: infoPlist),
             sources: ["Targets/\(name)/Sources/**"],
             resources: ["Targets/\(name)/Resources/**"],
-            dependencies: dependencies
+            dependencies: dependencies,
+            settings: makeSettings()
         )
         
         let testTarget = Target(
@@ -104,9 +121,18 @@ extension Project {
             sources: ["Targets/\(name)/Tests/**"],
             dependencies: [
                 .target(name: "\(name)")
-            ])
+            ],
+            settings: makeSettings()
+        )
         return [mainTarget, testTarget]
     }
+    
+    private static func makeSettings() -> Settings {
+        return .settings(
+            configurations: [
+                .debug(name: "dev", xcconfig: .relativeToRoot("Xcconfigs/Config.xcconfig")),
+                .debug(name: "stage", xcconfig: .relativeToRoot("Xcconfigs/Config.xcconfig")),
+                .release(name: "prod", xcconfig: .relativeToRoot("Xcconfigs/Config.xcconfig"))
+            ])
+    }
 }
-
-

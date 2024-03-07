@@ -18,11 +18,11 @@ public class KakaoAuthHelper {
     
     /// 카카오 SDK 초기 설정
     public static func initializeKakaoAuthSdk() {
-        guard let kakaoAuthAppKey = Bundle.main.object(forInfoDictionaryKey: "KAKAO_AUTH_APP_KEY") as? String else {
-            fatalError("KAKAO_AUTH_APP_KEY is not set in Info.plist")
-        }
-        
-        KakaoSDK.initSDK(appKey: kakaoAuthAppKey)
+//        guard let kakaoAuthAppKey = Bundle.main.object(forInfoDictionaryKey: "KAKAO_AUTH_APP_KEY") as? String else {
+//            fatalError("KAKAO_AUTH_APP_KEY is not set in Info.plist")
+//        }
+//        
+//        KakaoSDK.initSDK(appKey: kakaoAuthAppKey)
     }
     
     /// 카카오톡 로그인을 위해 카카오톡 앱으로 이동합니다.

@@ -11,14 +11,18 @@ import KittenUI
 import KittenUtil
 
 import Moya
-import KakaoSDKAuth
 import NaverThirdPartyLogin
+import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        print(#function)
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
@@ -37,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //        let checkinVC = LoginTestViewController()
         let checkinStoryboard = UIStoryboard(name: "HealthBook", bundle: nil)
         guard let checkinVC = checkinStoryboard.instantiateViewController(withIdentifier: "HEALTHBOOK")
-                as? HealthBookViewController
+                as? UIViewController
         else { fatalError("Unable to instantiate HealthBookViewController from the checkinStoryboard with identifier 'HEALTHBOOK'") }
         let checkinNavVC = UINavigationController()
         checkinNavVC.viewControllers = [checkinVC]
@@ -149,7 +153,7 @@ extension SceneDelegate {
     func goLanding() {
         let landingStoryboard = UIStoryboard(name: "StartScreen", bundle: nil)
         guard let landingVC = landingStoryboard.instantiateViewController(withIdentifier: "STARTSCREEN")
-                as? StartScreenViewController
+                as? UIViewController
         else { fatalError("Unable to instantiate WelcomeViewController from the landingStoryboard with identifier 'STARTSCREEN'.") }
         let landingNavVC = UINavigationController()
         landingNavVC.viewControllers = [landingVC]
@@ -157,8 +161,4 @@ extension SceneDelegate {
         
         window?.rootViewController?.present(landingNavVC, animated: true, completion: nil)
     }
-}
-
-extension SceneDelegate {
-    
 }

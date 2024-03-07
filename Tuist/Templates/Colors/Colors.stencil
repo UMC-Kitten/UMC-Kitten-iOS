@@ -1,6 +1,0 @@
-// Colors+Extension.swift
-extension Colors {
-    {% for asset in assets.colors %}
-    static var {{ asset.name }}: UIColor { UIColor(named: "{{ asset.name }}")! }
-    {% endfor %}
-}
