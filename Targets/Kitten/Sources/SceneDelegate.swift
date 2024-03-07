@@ -130,9 +130,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // 소셜 로그인 후 로그인 재개 시 (deeplink: "kitten://login/resume")
             if url.absoluteString.hasPrefix("kitten") && url.host == "login" && url.path == "/resume" {
                 let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
-                guard let vc = storyboard.instantiateViewController(withIdentifier: "SIGNUP")
-                        as? SignUpViewController
-                else { fatalError("Unable to instantiate WelcomeViewController from the landingStoryboard with identifier 'SIGNUP'.") }
+                let vc = storyboard.instantiateViewController(withIdentifier: "SIGNUP")
+//                guard let vc = storyboard.instantiateViewController(withIdentifier: "SIGNUP")
+//                        as? SignUpViewController
+//                else { fatalError("Unable to instantiate WelcomeViewController from the landingStoryboard with identifier 'SIGNUP'.") }
                 let navVC = UINavigationController()
                 navVC.viewControllers = [vc]
                 navVC.modalPresentationStyle = .fullScreen
@@ -151,14 +152,15 @@ extension SceneDelegate {
     }
     
     func goLanding() {
-        let landingStoryboard = UIStoryboard(name: "StartScreen", bundle: nil)
-        guard let landingVC = landingStoryboard.instantiateViewController(withIdentifier: "STARTSCREEN")
-                as? UIViewController
-        else { fatalError("Unable to instantiate WelcomeViewController from the landingStoryboard with identifier 'STARTSCREEN'.") }
-        let landingNavVC = UINavigationController()
-        landingNavVC.viewControllers = [landingVC]
-        landingNavVC.modalPresentationStyle = .fullScreen
-        
-        window?.rootViewController?.present(landingNavVC, animated: true, completion: nil)
+//        let landingStoryboard = UIStoryboard(name: "StartScreen", bundle: nil)
+//        let landingVC = landingStoryboard.instantiateViewController(withIdentifier: "STARTSCREEN")
+////        guard let landingVC = landingStoryboard.instantiateViewController(withIdentifier: "STARTSCREEN")
+////                as? StartScreenViewController
+////        else { fatalError("Unable to instantiate WelcomeViewController from the landingStoryboard with identifier 'STARTSCREEN'.") }
+//        let landingNavVC = UINavigationController()
+//        landingNavVC.viewControllers = [landingVC]
+//        landingNavVC.modalPresentationStyle = .fullScreen
+//        
+//        window?.rootViewController?.present(landingNavVC, animated: true, completion: nil)
     }
 }
