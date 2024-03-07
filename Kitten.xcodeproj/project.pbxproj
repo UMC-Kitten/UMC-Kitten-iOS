@@ -119,6 +119,7 @@
 		86A42684A87600D08B86BFD6 /* TodayFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E79A8A13910F2722081A49 /* TodayFeedCell.swift */; };
 		898E16813FA98953C685119D /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C448D8F9457E923587B7478E /* ReactorKitRuntime.framework */; platformFilter = ios; };
 		8A3F1DF49A4904D0D9EE75AB /* RegisteredPetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC7DE0F0FBB527F7A29ECC /* RegisteredPetCell.swift */; };
+		8D9C92CBCFA1ADC3E2A9446C /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBFBA92EC53562C81ED93A75 /* Pretendard-Thin.otf */; };
 		91971880AA44CD66EC681D70 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB38C6A3BE7955F2CB0007E4 /* SignUp.storyboard */; };
 		9203EBA39E4373FD72C9D8AB /* HospitalSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68B0A53D72775115DF3A82 /* HospitalSearchViewController.swift */; };
 		933B7FA0EA3F450FB5462A8E /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A6432E1864DC1C274269B /* BaseTableViewCell.swift */; };
@@ -539,6 +540,7 @@
 		BA4238D59D6C666894524776 /* PetInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PetInformation.storyboard; sourceTree = "<group>"; };
 		BB141ED75A2B9DD650E2D4B7 /* LikeResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeResponseDto.swift; sourceTree = "<group>"; };
 		BBBFCD32660B2B0AEAF54043 /* TuistBundle+Kitten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Kitten.swift"; sourceTree = "<group>"; };
+		BBFBA92EC53562C81ED93A75 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		BC9FC895C8C34CF2EEDCA3ED /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		BCC9D5AEB73927DD7E325D9D /* UserDefaultsConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstant.swift; sourceTree = "<group>"; };
 		BCE1F9A5BB30A25708F9609B /* NicknameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingViewController.swift; sourceTree = "<group>"; };
@@ -900,6 +902,7 @@
 				0B35D62AC2FE827ED7678E40 /* Pretendard-Medium.otf */,
 				1618A748503E90E261C1114C /* Pretendard-Regular.otf */,
 				F9EB282004517F0B0601D4B6 /* Pretendard-SemiBold.otf */,
+				BBFBA92EC53562C81ED93A75 /* Pretendard-Thin.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -1914,6 +1917,7 @@
 				E6E7E56061CDB5FF8AC2EE9B /* Pretendard-Medium.otf in Resources */,
 				835B38170527A85AD727EAE5 /* Pretendard-Regular.otf in Resources */,
 				C1433D9536B92393155EF064 /* Pretendard-SemiBold.otf in Resources */,
+				8D9C92CBCFA1ADC3E2A9446C /* Pretendard-Thin.otf in Resources */,
 				9F695758CEEA2723C7FA3B30 /* UMC-Kitten-iOS.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

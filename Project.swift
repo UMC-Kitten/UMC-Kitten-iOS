@@ -17,25 +17,21 @@ import ProjectDescriptionHelpers
  
  */
 
-// MARK: - Project
+// MARK: - Dependencies
 
-let dependencies: [TargetDependency] = [
-    //    .external(name: "Moya"),
-    //    .external(name: "Alamofire"),
-    //    .external(name: "SnapKit"),
-    //    .external(name: "RxSwift"),
-    //    .external(name: "ReactorKit"),
-    //    .external(name: "KakaoSDKCommon"),
-    //    .external(name: "KakaoSDKAuth"),
-    //    .external(name: "KakaoSDKUser"),
-    //    .xcframework(path: "NaverThirdPartyLogin.xcframework"),
+let appTargetDependencies: [TargetDependency] = [
     .target(name: "KittenUI"),
     .target(name: "KittenUtil"),
     .target(name: "KittenService"),
 ]
 
-let infoPlist: [String: InfoPlist.Value] = [
+// MARK: - Info.plist
+
+let baseInfoPlist: [String: InfoPlist.Value] = [
     "API_BASE_URL": "http://$(API_BASE_URL)",
+]
+
+let appTargetInfoPlist: [String: InfoPlist.Value] = [
     "CFBundleURLTypes": [
         [
             "CFBundleTypeRole": "Editor",
@@ -92,17 +88,21 @@ let infoPlist: [String: InfoPlist.Value] = [
     ]
 ]
 
+func makeInfoPlist(_ targetInfoPlist: [String: InfoPlist.Value]) -> [String: InfoPlist.Value] {
+    return baseInfoPlist.merging(targetInfoPlist) { (_, new) in new }
+}
+
+// MARK: - Target
 
 // Creates our project using a helper function defined in ProjectDescriptionHelpers
 let targets = [
     TargetPakage(
         name: "KittenUI",
-        infoPlist: infoPlist,
+        infoPlist: baseInfoPlist,
         dependencies: [
             .target(name: "KittenUtil"),
             .target(name: "KittenService"),
             .external(name: "Moya"),
-            //            .external(name: "Alamofire"),
             .external(name: "SnapKit"),
             .external(name: "RxSwift"),
             .external(name: "RxCocoa"),
@@ -114,16 +114,15 @@ let targets = [
     ),
     TargetPakage(
         name: "KittenService",
-        infoPlist: infoPlist,
+        infoPlist: baseInfoPlist,
         dependencies: [
             .target(name: "KittenUtil"),
             .external(name: "Moya"),
-            //            .external(name: "Alamofire"),
         ]
     ),
     TargetPakage(
         name: "KittenUtil",
-        infoPlist: infoPlist,
+        infoPlist: baseInfoPlist,
         dependencies: [
             .external(name: "RxSwift"),
             .external(name: "KakaoSDKCommon"),
@@ -134,12 +133,13 @@ let targets = [
     ),
 ]
 
+// MARK: - Project
 
 let project = Project.app(
     name: "Kitten",
     platform: .iOS,
-    infoPlist: infoPlist,
+    infoPlist: makeInfoPlist(appTargetInfoPlist),
     additionalTargets: targets,
-    dependencies: dependencies)
+    dependencies: appTargetDependencies)
 
 
