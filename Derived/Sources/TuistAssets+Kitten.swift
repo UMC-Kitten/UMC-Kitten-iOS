@@ -90,10 +90,8 @@ public final class KittenColors {
 
   @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, visionOS 1.0, *)
   public private(set) lazy var color: Color = {
-      print(name)
     guard let color = Color(asset: self) else {
-//      fatalError("Unable to load color asset named \\(name).")
-        return .black
+      fatalError("Unable to load color asset named \\(name).")
     }
     return color
   }()
