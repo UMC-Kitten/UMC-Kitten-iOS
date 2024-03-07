@@ -30,52 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        // Tab Bar 컨트롤러 생성
-        let tabBarVC = UITabBarController()
-        
-        // (1) VC 생성
-        let homeVC = HomeViewController()
-        let homeNavVC = UINavigationController()
-        homeNavVC.viewControllers = [homeVC]
-        
-        //        let checkinVC = LoginTestViewController()
-        let checkinStoryboard = UIStoryboard(name: "HealthBook", bundle: nil)
-        guard let checkinVC = checkinStoryboard.instantiateViewController(withIdentifier: "HEALTHBOOK")
-                as? UIViewController
-        else { fatalError("Unable to instantiate HealthBookViewController from the checkinStoryboard with identifier 'HEALTHBOOK'") }
-        let checkinNavVC = UINavigationController()
-        checkinNavVC.viewControllers = [checkinVC]
-        
-        let communityVC = CommunityViewController()
-        let communityNavVC = UINavigationController()
-        communityNavVC.viewControllers = [communityVC]
-        
-        let mypageVC = MypageViewController()
-        let mypageNavVC = UINavigationController()
-        mypageNavVC.viewControllers = [mypageVC]
-        
-        
-        // (2) Tab Bar 이름 설정
-        homeVC.title = "홈"
-        checkinVC.title = "체크인"
-        communityVC.title = "커뮤니티"
-        mypageVC.title = "마이페이지"
-        
-        // (3) Tab Bar로 사용하기 위한 뷰 컨트롤러들 설정
-        tabBarVC.setViewControllers([homeNavVC, checkinNavVC, communityNavVC, mypageNavVC], animated: false)
-        tabBarVC.modalPresentationStyle = .fullScreen
-        tabBarVC.tabBar.backgroundColor = .white
-        tabBarVC.tabBar.tintColor = .main
-        
-        // (4) Tab Bar 이미지 설정
-        guard let items = tabBarVC.tabBar.items else { return }
-        items[0].image = UIImage(named: "home-icon")
-        items[1].image = UIImage(named: "checkin-icon")
-        items[2].image = UIImage(named: "community-icon")
-        items[3].image = UIImage(named: "mypage-icon")
-        
-        // 기본 루트뷰를 탭바컨트롤러로 설정
-        window?.rootViewController = tabBarVC
+        window?.rootViewController = TabBarController()
         window?.makeKeyAndVisible()
         
         if (!checkLogin()) {
@@ -129,11 +84,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             // 소셜 로그인 후 로그인 재개 시 (deeplink: "kitten://login/resume")
             if url.absoluteString.hasPrefix("kitten") && url.host == "login" && url.path == "/resume" {
-                let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "SIGNUP")
-//                guard let vc = storyboard.instantiateViewController(withIdentifier: "SIGNUP")
-//                        as? SignUpViewController
-//                else { fatalError("Unable to instantiate WelcomeViewController from the landingStoryboard with identifier 'SIGNUP'.") }
+                let vc = MakeStoryboardVC.make("SignUp", "SIGNUP")
                 let navVC = UINavigationController()
                 navVC.viewControllers = [vc]
                 navVC.modalPresentationStyle = .fullScreen
@@ -151,16 +102,12 @@ extension SceneDelegate {
         return userId == 0 ? false : true
     }
     
-    func goLanding() {
-//        let landingStoryboard = UIStoryboard(name: "StartScreen", bundle: nil)
-//        let landingVC = landingStoryboard.instantiateViewController(withIdentifier: "STARTSCREEN")
-////        guard let landingVC = landingStoryboard.instantiateViewController(withIdentifier: "STARTSCREEN")
-////                as? StartScreenViewController
-////        else { fatalError("Unable to instantiate WelcomeViewController from the landingStoryboard with identifier 'STARTSCREEN'.") }
-//        let landingNavVC = UINavigationController()
-//        landingNavVC.viewControllers = [landingVC]
-//        landingNavVC.modalPresentationStyle = .fullScreen
-//        
-//        window?.rootViewController?.present(landingNavVC, animated: true, completion: nil)
+    func goLanding() { 
+        let landingNavVC = UINavigationController()
+        let landingVC = MakeStoryboardVC.make("StartScreen", "STARTSCREEN")
+        landingNavVC.viewControllers = [landingVC]
+        landingNavVC.modalPresentationStyle = .fullScreen
+
+        window?.rootViewController?.present(landingNavVC, animated: true, completion: nil)
     }
 }

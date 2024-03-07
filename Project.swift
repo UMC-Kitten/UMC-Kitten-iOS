@@ -76,7 +76,7 @@ let infoPlist: [String: InfoPlist.Value] = [
         "Pretendard-Thin.otf"
     ],
     "UIApplicationSceneManifest": [
-        "UIApplicationSupportsMultipleScenes": true,
+        "UIApplicationSupportsMultipleScenes": false,
         "UISceneConfigurations": [
             "UIWindowSceneSessionRoleApplication": [
                 [
@@ -85,6 +85,10 @@ let infoPlist: [String: InfoPlist.Value] = [
                 ]
             ]
         ]
+    ],
+    "UILaunchStoryboardName": "LaunchScreen.storyboard",
+    "UISupportedInterfaceOrientations": [
+        "UIInterfaceOrientationPortrait",
     ]
 ]
 

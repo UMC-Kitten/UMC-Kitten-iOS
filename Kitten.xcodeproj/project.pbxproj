@@ -21,7 +21,6 @@
 		0CC83E5B9F0CBB6139E8F96B /* PetSpeciesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C8DA39536C276C1BC1F3D /* PetSpeciesType.swift */; };
 		0FA8AF97015C6BA311C853EB /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5DCB7E6BF9250EE3FF98D7 /* Welcome.storyboard */; };
 		10FDFE7AEEB91BC5D9252777 /* ToggleMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40285CF15819304FEAB0BCA /* ToggleMenuRow.swift */; };
-		1141BF770D180C1AE9EB044F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADAB14AF14775FE241B98752 /* Assets.xcassets */; };
 		12DFB8559B15F7D8719C1FC7 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE52FE74584BC8B500EBB8B9 /* Pretendard-ExtraBold.otf */; };
 		132C5BFAF525B133496FCF4D /* SignUpProfileImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF2F5FD62E2EC28CBF96FC2 /* SignUpProfileImage.storyboard */; };
 		136C7D238F475147F1DA6C02 /* KittenUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB064B727665D86A0F08AB47 /* KittenUI.framework */; platformFilter = ios; };
@@ -43,7 +42,6 @@
 		2709F36735ABF0B9543B7CEC /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D8E8369525D22567027D3 /* AlertHelper.swift */; };
 		2AEAF7F70480E4FF8A2AB854 /* PetInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4238D59D6C666894524776 /* PetInformation.storyboard */; };
 		2B1EC0A5AA56DE1D49041084 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7AFD9BA90A521C11C6660 /* UserInfo.swift */; };
-		2D3A668F9769920C994962BC /* TuistAssets+Kitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A41854025401E24FDD4AB9 /* TuistAssets+Kitten.swift */; };
 		30A926AF1D02713CC7CD5954 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F01A8459EDC9A663E193168 /* TextField.swift */; };
 		3109030287FF3B63695AFC6C /* HospitalSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B266CB2C30CAB9D4AC3C890 /* HospitalSearch.storyboard */; };
 		3132A6B282712F8D2C86BDDE /* NaverAuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09623F9DEDEB671015E701A /* NaverAuthHelper.swift */; };
@@ -124,7 +122,6 @@
 		91971880AA44CD66EC681D70 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB38C6A3BE7955F2CB0007E4 /* SignUp.storyboard */; };
 		9203EBA39E4373FD72C9D8AB /* HospitalSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68B0A53D72775115DF3A82 /* HospitalSearchViewController.swift */; };
 		933B7FA0EA3F450FB5462A8E /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A6432E1864DC1C274269B /* BaseTableViewCell.swift */; };
-		93E8648600CCEE3B1CDFFAC2 /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A77BDF2450B9828371EA84 /* StartScreen.storyboard */; };
 		95E7ECA8846A5130BBE16410 /* MyInfoImagePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D96CD8A2FB88ED2A4B79119 /* MyInfoImagePickerDelegate.swift */; };
 		9705855A846B39D8DC36B132 /* KittenUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9836D7F63838F03480927F /* KittenUtil.framework */; platformFilter = ios; };
 		9C82088EED79BAAE5BBF360E /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88A5DEA6657291EAA227B0C3 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -137,7 +134,6 @@
 		A1C461A7C8F5F03F09C35BE3 /* KittenService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D61FFFC25F500B4EA3F69F1 /* KittenService.framework */; platformFilter = ios; };
 		A6F4A8F633903276CC35E78D /* SceneDelegate+NaverExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDD84F1928D470EA5379DFA /* SceneDelegate+NaverExtension.swift */; };
 		A7C5D4218FD51D6AA25817C4 /* TuistBundle+KittenUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD813CED310006CF230B7D0 /* TuistBundle+KittenUI.swift */; };
-		A7E6097464163C5AB07A67E9 /* HealthBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8782132BBA066B76F60A0E97 /* HealthBook.storyboard */; };
 		A811ADBBF79692F26D8A0CAD /* FreeBoardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFD506DE5816C853A7C6108 /* FreeBoardDetailView.swift */; };
 		AB2D3A6E735EEE7AD34AD1A5 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ED0D494DDDF497191BBE81 /* RxDataSources.framework */; platformFilter = ios; };
 		AB76F01B330AE57F684F132C /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96D74AD4BE7C7C0015E36B1 /* CommonError.swift */; };
@@ -173,17 +169,20 @@
 		C9D9A663BBA5A627DD469D5D /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CB2B2CCD87E5C47DED0C38 /* KakaoSDKUser.framework */; platformFilter = ios; };
 		CA36A133544D2ABCB9F80ED9 /* MypageRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAFD02A16910140F3148D00 /* MypageRequestDto.swift */; };
 		CB11D12FD6FC2D937675F694 /* PostError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABEB117E417692762C15C66 /* PostError.swift */; };
+		CC9A70945529769E16544643 /* HealthBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE32B257C32C23B96E3A25F /* HealthBook.storyboard */; };
 		CD7812E5AD37860691149646 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A5DEA6657291EAA227B0C3 /* RxSwift.framework */; platformFilter = ios; };
 		CFE563E0B3888DEF97799D48 /* FreeBoardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD85E216AFDB6A7EDFCDD0 /* FreeBoardDetailViewController.swift */; };
 		D0EA716B75CB015BAC9B3E4E /* RxAppState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91CF94F6287424A5C069CA6 /* RxAppState.framework */; platformFilter = ios; };
 		D17CC4B54ABAF038AA1E3F2E /* imageChangingCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5968D3152245E3D7D97BA48B /* imageChangingCheckBox.swift */; };
 		D1E4E718463F4A87BFE52DF3 /* MypageRxRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A7ED77AB0286F3A628517A /* MypageRxRepository.swift */; };
 		D291F3EC1F8E16B03342229D /* Needle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F621B53FF4971D0748D8A6 /* Needle.swift */; };
+		D3D079F0EBD5E4DF822C4182 /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F604DAC4B6F05D45A4320D7 /* StartScreen.storyboard */; };
 		D43FA7693F80F49B32F3B18D /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9F5B2864E8885726EB9CDC6 /* Pretendard-Black.otf */; };
 		D5964C3B89D78AFCA9BBCB6E /* NeedleTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599E71BF2926798C3600E45 /* NeedleTwo.swift */; };
 		D7499355529ABBBB22AA4C1F /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE3093BE1F8ED28431436E0 /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7A25168D859DF25A7184AB5 /* PageTapBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D028E55C0C71B07CBFEFA7 /* PageTapBarItem.swift */; };
 		D7A7E4096FF4BAE5F35E4E58 /* KittenUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB064B727665D86A0F08AB47 /* KittenUI.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7DEE1B71A8D461DBD6C7462 /* MakeStoryboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FF57E971E34EE301B9110 /* MakeStoryboardVC.swift */; };
 		DA60FE1C090E9ECF28B65D76 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4AF52BAE5A99C7D027BC3E /* StartScreenViewController.swift */; };
 		DAD7B62001F88A825D20EFC0 /* RxSwift+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77CA19446E561F1E908DDF1 /* RxSwift+Extension.swift */; };
 		DB577A6FCDD54896B3A58879 /* PetResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258669E610DF245FA476D00D /* PetResponseDto.swift */; };
@@ -215,6 +214,7 @@
 		F5A9F1B291009E5EA5F0FB38 /* TuistBundle+Kitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBFCD32660B2B0AEAF54043 /* TuistBundle+Kitten.swift */; };
 		F6BD0BF230C266D4CDA3CFBB /* RegisteredPetsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F29FCD0836E5928C4A647BE /* RegisteredPetsSection.swift */; };
 		F70F7E2ACDF454ADDF3A2B23 /* MypageRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3191DC83AAD73791DA2B3 /* MypageRemoteRepository.swift */; };
+		F856EF5C5041CDC356508599 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F64A705CC1CFBD0E13AE64 /* TabBarController.swift */; };
 		F880887A6A961DE5E3A28411 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15DA0C00FFC729A30831835 /* Decoder.swift */; };
 		F8AA979428ECD2842709B90A /* KittenUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9836D7F63838F03480927F /* KittenUtil.framework */; platformFilter = ios; };
 		F99E9EC751800B0D50DEAB3B /* HealthBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4A081DE6496CB1B7DA26D1 /* HealthBookViewController.swift */; };
@@ -398,6 +398,7 @@
 		03F418A17CA9E033DDA600BB /* PopularPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPostCell.swift; sourceTree = "<group>"; };
 		054C6549388B42BA4E2261CD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		068F041A1A691F9B6CCEDB74 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		072FF57E971E34EE301B9110 /* MakeStoryboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStoryboardVC.swift; sourceTree = "<group>"; };
 		0780CC5BD6162DF7C7D14DEF /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B35D62AC2FE827ED7678E40 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		0B45EBAB1CD9E8D80013C6FA /* Add.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
@@ -419,6 +420,7 @@
 		1C4A3F5E98DD8AE4762D0075 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		1E1C9A0B23E7B41FFCC116ED /* NicknameSettingReacotr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingReacotr.swift; sourceTree = "<group>"; };
 		1F29FCD0836E5928C4A647BE /* RegisteredPetsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredPetsSection.swift; sourceTree = "<group>"; };
+		21F64A705CC1CFBD0E13AE64 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		22BD1A4C2C7CA2196CDC5FDD /* KittenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KittenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		258669E610DF245FA476D00D /* PetResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetResponseDto.swift; sourceTree = "<group>"; };
 		25A388B91D13DE44F1052CBA /* BoardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardType.swift; sourceTree = "<group>"; };
@@ -440,16 +442,17 @@
 		38F381A41E935505CDF1443E /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
 		3B266CB2C30CAB9D4AC3C890 /* HospitalSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HospitalSearch.storyboard; sourceTree = "<group>"; };
 		3BB8CF3D11597ADF93DB9C8E /* MypageReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageReactor.swift; sourceTree = "<group>"; };
+		3F604DAC4B6F05D45A4320D7 /* StartScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
 		40046161C984B247B46DE935 /* KittenService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "KittenService-Info.plist"; sourceTree = "<group>"; };
 		42981F348EF8C17221C742A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42D55F648D5A51A149819F35 /* AddTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTwoViewController.swift; sourceTree = "<group>"; };
 		448B82D236DB1BF6FF3AD2F1 /* Next.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Next.storyboard; sourceTree = "<group>"; };
-		45A41854025401E24FDD4AB9 /* TuistAssets+Kitten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Kitten.swift"; sourceTree = "<group>"; };
 		47916054101EA1823B61CB90 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		47D00549D20A056C98A14556 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		47DB1042EE9F18AB21600F90 /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4E16C862C9A4D89C88F1F3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		4ED8FB75CAB0B7F351167377 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EE32B257C32C23B96E3A25F /* HealthBook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HealthBook.storyboard; sourceTree = "<group>"; };
 		4F01A8459EDC9A663E193168 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		50942A8B69AD0B03F5F0FC96 /* MyArticlePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArticlePage.swift; sourceTree = "<group>"; };
 		515CC9DBFD1B725F426DB1F6 /* AddTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTwo.storyboard; sourceTree = "<group>"; };
@@ -495,7 +498,6 @@
 		8699CE31768A980712AA43B5 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DABBC481C5BE5E545FF7E5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		86F31B7CCE91381B5CF9ACC2 /* MyPetAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetAddCell.swift; sourceTree = "<group>"; };
-		8782132BBA066B76F60A0E97 /* HealthBook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HealthBook.storyboard; sourceTree = "<group>"; };
 		88A5DEA6657291EAA227B0C3 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E7AFD9BA90A521C11C6660 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		8ABEB117E417692762C15C66 /* PostError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostError.swift; sourceTree = "<group>"; };
@@ -509,7 +511,6 @@
 		926CA4B45AB1E70A81A6F8B8 /* MypageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageRepository.swift; sourceTree = "<group>"; };
 		952C8DA39536C276C1BC1F3D /* PetSpeciesType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSpeciesType.swift; sourceTree = "<group>"; };
 		969806D597545B1C8E2DDC49 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
-		96A77BDF2450B9828371EA84 /* StartScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
 		97E0A7F73D754CD2992D1CAE /* HomeReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReactor.swift; sourceTree = "<group>"; };
 		987AA753CF1A7F56736A49B1 /* PostResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponseDto.swift; sourceTree = "<group>"; };
 		98B952A30CA3B6BD61570E49 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
@@ -530,7 +531,6 @@
 		AB4A081DE6496CB1B7DA26D1 /* HealthBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBookViewController.swift; sourceTree = "<group>"; };
 		AC902A7A8B92426EFF885C2E /* HomeBottomSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomSection.swift; sourceTree = "<group>"; };
 		AD3380BCE1954C9034EDE9ED /* PetTypeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTypeSelectViewController.swift; sourceTree = "<group>"; };
-		ADAB14AF14775FE241B98752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF748B3348AC8D0C5FBB97B8 /* Observable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
 		B147516F87CA011E8373DA4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3A8B31D1AAEC6649B0EFE2E /* OwnerSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSettingViewController.swift; sourceTree = "<group>"; };
@@ -737,6 +737,14 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		0A5ED02A621CC09F96A05A9E /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				21F64A705CC1CFBD0E13AE64 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		0B5B3A1C14F6C931504172E0 /* PetInformation */ = {
 			isa = PBXGroup;
 			children = (
@@ -932,9 +940,6 @@
 				389D93384396FF63AFED3206 /* Font */,
 				4ECF8F0570E7225CD74344A0 /* LaunchScreen.storyboard */,
 				FB4A7E7D8055B1964578843E /* Main.storyboard */,
-				ADAB14AF14775FE241B98752 /* Assets.xcassets */,
-				8782132BBA066B76F60A0E97 /* HealthBook.storyboard */,
-				96A77BDF2450B9828371EA84 /* StartScreen.storyboard */,
 				16668FE8259BBADFB6D92142 /* UMC-Kitten-iOS.entitlements */,
 			);
 			path = Resources;
@@ -1034,6 +1039,14 @@
 				47D00549D20A056C98A14556 /* WelcomeViewController.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		61E73F6C9BF5D7A3E1FC67DE /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				072FF57E971E34EE301B9110 /* MakeStoryboardVC.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		62DE7B4C1E36D7B4F58160C8 /* Config */ = {
@@ -1188,6 +1201,8 @@
 			children = (
 				48144476EB2C422F1A2A9E10 /* Base */,
 				F79E364AAA2F725D73969EF3 /* Reusable */,
+				0A5ED02A621CC09F96A05A9E /* TabBar */,
+				61E73F6C9BF5D7A3E1FC67DE /* Util */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1255,7 +1270,6 @@
 		A6F806D93079349A95B8EDCA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				45A41854025401E24FDD4AB9 /* TuistAssets+Kitten.swift */,
 				14DFF3A4B9C85C6C331862EC /* TuistAssets+KittenUI.swift */,
 				BBBFCD32660B2B0AEAF54043 /* TuistBundle+Kitten.swift */,
 				8AD813CED310006CF230B7D0 /* TuistBundle+KittenUI.swift */,
@@ -1372,6 +1386,7 @@
 				D3E9E39945187070CDE5A48B /* AddThree.storyboard */,
 				515CC9DBFD1B725F426DB1F6 /* AddTwo.storyboard */,
 				7EAD9FFDF76D9B5BD83691F5 /* Assets.xcassets */,
+				4EE32B257C32C23B96E3A25F /* HealthBook.storyboard */,
 				3B266CB2C30CAB9D4AC3C890 /* HospitalSearch.storyboard */,
 				5E26A949623093141A223BFD /* NeedleSearch.storyboard */,
 				448B82D236DB1BF6FF3AD2F1 /* Next.storyboard */,
@@ -1381,6 +1396,7 @@
 				EEC20E3C18FF1266BFD4D832 /* PetTypeSelect.storyboard */,
 				FB38C6A3BE7955F2CB0007E4 /* SignUp.storyboard */,
 				0EF2F5FD62E2EC28CBF96FC2 /* SignUpProfileImage.storyboard */,
+				3F604DAC4B6F05D45A4320D7 /* StartScreen.storyboard */,
 				9EA29DBEE2C030BB95635CD0 /* TermsOfUse.storyboard */,
 				EA5DCB7E6BF9250EE3FF98D7 /* Welcome.storyboard */,
 			);
@@ -1854,6 +1870,7 @@
 				BD7F17F5C2EFAC189C1B1077 /* AddThree.storyboard in Resources */,
 				E68077CD0035B8FC06D2B856 /* AddTwo.storyboard in Resources */,
 				A05339A6355A98EAA70DE7A3 /* Assets.xcassets in Resources */,
+				CC9A70945529769E16544643 /* HealthBook.storyboard in Resources */,
 				3109030287FF3B63695AFC6C /* HospitalSearch.storyboard in Resources */,
 				81D65E151AC929576E6DE51E /* NeedleSearch.storyboard in Resources */,
 				3E1B8D62DFFD2DAEA45A0A29 /* Next.storyboard in Resources */,
@@ -1863,6 +1880,7 @@
 				6BFB1595FA82F879776A6142 /* PetTypeSelect.storyboard in Resources */,
 				91971880AA44CD66EC681D70 /* SignUp.storyboard in Resources */,
 				132C5BFAF525B133496FCF4D /* SignUpProfileImage.storyboard in Resources */,
+				D3D079F0EBD5E4DF822C4182 /* StartScreen.storyboard in Resources */,
 				E1564767FE5EC6CC3D569A77 /* TermsOfUse.storyboard in Resources */,
 				0FA8AF97015C6BA311C853EB /* Welcome.storyboard in Resources */,
 			);
@@ -1886,7 +1904,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1141BF770D180C1AE9EB044F /* Assets.xcassets in Resources */,
 				C1F3C040EE57AD8BDB116C51 /* LaunchScreen.storyboard in Resources */,
 				329ED71241CDFE60F8738D67 /* Main.storyboard in Resources */,
 				D43FA7693F80F49B32F3B18D /* Pretendard-Black.otf in Resources */,
@@ -1897,8 +1914,6 @@
 				E6E7E56061CDB5FF8AC2EE9B /* Pretendard-Medium.otf in Resources */,
 				835B38170527A85AD727EAE5 /* Pretendard-Regular.otf in Resources */,
 				C1433D9536B92393155EF064 /* Pretendard-SemiBold.otf in Resources */,
-				A7E6097464163C5AB07A67E9 /* HealthBook.storyboard in Resources */,
-				93E8648600CCEE3B1CDFFAC2 /* StartScreen.storyboard in Resources */,
 				9F695758CEEA2723C7FA3B30 /* UMC-Kitten-iOS.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1961,6 +1976,8 @@
 				30A926AF1D02713CC7CD5954 /* TextField.swift in Sources */,
 				10FDFE7AEEB91BC5D9252777 /* ToggleMenuRow.swift in Sources */,
 				E1F7CCCF69ECE938A7868650 /* WebViewController.swift in Sources */,
+				F856EF5C5041CDC356508599 /* TabBarController.swift in Sources */,
+				D7DEE1B71A8D461DBD6C7462 /* MakeStoryboardVC.swift in Sources */,
 				358E6D5AAD8B82F6BFB6390B /* CommunityView.swift in Sources */,
 				6C64DFE5F10A5A84E4A9D6A8 /* FreeBoardTableViewCell.swift in Sources */,
 				66BDB84BDEB317799BE44CA8 /* CommunityPostView.swift in Sources */,
@@ -2113,7 +2130,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D3A668F9769920C994962BC /* TuistAssets+Kitten.swift in Sources */,
 				F5A9F1B291009E5EA5F0FB38 /* TuistBundle+Kitten.swift in Sources */,
 				269DF0E80139668B16B75DF5 /* AppDelegate.swift in Sources */,
 				A6F4A8F633903276CC35E78D /* SceneDelegate+NaverExtension.swift in Sources */,
