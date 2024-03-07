@@ -42,9 +42,9 @@ public final class TabBarController: UITabBarController {
         
         // (4) Tab Bar 이미지 설정
         guard let items = tabBar.items else { return }
-        items[0].image = UIImage(named: "home-icon")
-        items[1].image = UIImage(named: "checkin-icon")
-        items[2].image = UIImage(named: "community-icon")
-        items[3].image = UIImage(named: "mypage-icon")
+        items[0].image = KittenUIImages(name: "home-icon").image
+        items[1].image = KittenUIImages(name: "checkin-icon").image
+        items[2].image = KittenUIImages(name: "community-icon").image
+        items[3].image = KittenUIImages(name: "mypage-icon").image
     }
 }

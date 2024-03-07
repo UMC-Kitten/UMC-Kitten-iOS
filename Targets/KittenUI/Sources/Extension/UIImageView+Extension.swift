@@ -11,7 +11,7 @@ import UIKit
 extension UIImageView {
     convenience init(imageName: String) {
         self.init()
-        self.image = UIImage(named: imageName)
+        self.image = KittenUIImages(name: imageName).image
         self.contentMode = .scaleAspectFill
         self.clipsToBounds = true
     }

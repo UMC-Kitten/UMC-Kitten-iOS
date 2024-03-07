@@ -99,6 +99,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate {
     func checkLogin() -> Bool {
         let userId = UserDefaults.standard.integer(forKey: UserDefaultsConstant.USER_ID_KEY)
+        return true // FIXME: 
         return userId == 0 ? false : true
     }
     
