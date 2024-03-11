@@ -14,30 +14,21 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D3B419C6069225349F909516"
-               BuildableName = "Kitten.app"
-               BlueprintName = "Kitten"
+               BlueprintIdentifier = "69C1A3241447C50F10BCCAF8"
+               BuildableName = "KittenCommonUI.framework"
+               BlueprintName = "KittenCommonUI"
                ReferencedContainer = "container:Kitten.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "dev"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      disableMainThreadChecker = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E48C07F9CD5566551FA93750"
-               BuildableName = "KittenTests.xctest"
-               BlueprintName = "KittenTests"
-               ReferencedContainer = "container:Kitten.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -50,16 +41,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D3B419C6069225349F909516"
-            BuildableName = "Kitten.app"
-            BlueprintName = "Kitten"
+            BlueprintIdentifier = "69C1A3241447C50F10BCCAF8"
+            BuildableName = "KittenCommonUI.framework"
+            BlueprintName = "KittenCommonUI"
             ReferencedContainer = "container:Kitten.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "prod"
@@ -67,16 +57,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D3B419C6069225349F909516"
-            BuildableName = "Kitten.app"
-            BlueprintName = "Kitten"
+            BlueprintIdentifier = "69C1A3241447C50F10BCCAF8"
+            BuildableName = "KittenCommonUI.framework"
+            BlueprintName = "KittenCommonUI"
             ReferencedContainer = "container:Kitten.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "dev">

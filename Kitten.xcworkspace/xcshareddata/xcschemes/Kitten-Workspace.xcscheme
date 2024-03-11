@@ -98,6 +98,90 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "27E52757113FC8CF7F093497"
+               BuildableName = "KittenAsset.framework"
+               BlueprintName = "KittenAsset"
+               ReferencedContainer = "container:Kitten.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "90970526A2A5BE23C70A6CAE"
+               BuildableName = "KittenAssetTests.xctest"
+               BlueprintName = "KittenAssetTests"
+               ReferencedContainer = "container:Kitten.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "181AA88C73693B140AD4B982"
+               BuildableName = "KittenCodeUI.framework"
+               BlueprintName = "KittenCodeUI"
+               ReferencedContainer = "container:Kitten.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CF167EFA5D7C950F7AF1EB5C"
+               BuildableName = "KittenCodeUITests.xctest"
+               BlueprintName = "KittenCodeUITests"
+               ReferencedContainer = "container:Kitten.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "69C1A3241447C50F10BCCAF8"
+               BuildableName = "KittenCommonUI.framework"
+               BlueprintName = "KittenCommonUI"
+               ReferencedContainer = "container:Kitten.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7F4D7C8026434B9C5D1619E9"
+               BuildableName = "KittenCommonUITests.xctest"
+               BlueprintName = "KittenCommonUITests"
+               ReferencedContainer = "container:Kitten.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F1A723DD2F85D1048023EF0D"
                BuildableName = "KittenService.framework"
                BlueprintName = "KittenService"
@@ -126,37 +210,37 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "90D616D9AEDCA1291FF0ADE5"
+               BuildableName = "KittenStoryboardUI.framework"
+               BlueprintName = "KittenStoryboardUI"
+               ReferencedContainer = "container:Kitten.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "562C0B212A00552DFAA11369"
+               BuildableName = "KittenStoryboardUITests.xctest"
+               BlueprintName = "KittenStoryboardUITests"
+               ReferencedContainer = "container:Kitten.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "E48C07F9CD5566551FA93750"
                BuildableName = "KittenTests.xctest"
                BlueprintName = "KittenTests"
-               ReferencedContainer = "container:Kitten.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D8207F307878B170583F71A9"
-               BuildableName = "KittenUI.framework"
-               BlueprintName = "KittenUI"
-               ReferencedContainer = "container:Kitten.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B81A18640F699F9328B3D44E"
-               BuildableName = "KittenUITests.xctest"
-               BlueprintName = "KittenUITests"
                ReferencedContainer = "container:Kitten.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -368,6 +452,36 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "90970526A2A5BE23C70A6CAE"
+               BuildableName = "KittenAssetTests.xctest"
+               BlueprintName = "KittenAssetTests"
+               ReferencedContainer = "container:Kitten.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CF167EFA5D7C950F7AF1EB5C"
+               BuildableName = "KittenCodeUITests.xctest"
+               BlueprintName = "KittenCodeUITests"
+               ReferencedContainer = "container:Kitten.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7F4D7C8026434B9C5D1619E9"
+               BuildableName = "KittenCommonUITests.xctest"
+               BlueprintName = "KittenCommonUITests"
+               ReferencedContainer = "container:Kitten.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "43DB90678B6BBBD268B082F7"
                BuildableName = "KittenServiceTests.xctest"
                BlueprintName = "KittenServiceTests"
@@ -378,9 +492,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E48C07F9CD5566551FA93750"
-               BuildableName = "KittenTests.xctest"
-               BlueprintName = "KittenTests"
+               BlueprintIdentifier = "562C0B212A00552DFAA11369"
+               BuildableName = "KittenStoryboardUITests.xctest"
+               BlueprintName = "KittenStoryboardUITests"
                ReferencedContainer = "container:Kitten.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -388,9 +502,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B81A18640F699F9328B3D44E"
-               BuildableName = "KittenUITests.xctest"
-               BlueprintName = "KittenUITests"
+               BlueprintIdentifier = "E48C07F9CD5566551FA93750"
+               BuildableName = "KittenTests.xctest"
+               BlueprintName = "KittenTests"
                ReferencedContainer = "container:Kitten.xcodeproj">
             </BuildableReference>
          </TestableReference>
