@@ -7,7 +7,8 @@
 
 import UIKit
 
-import KittenUI
+import KittenCodeUI
+import KittenStoryboardUI
 import KittenUtil
 
 import Moya

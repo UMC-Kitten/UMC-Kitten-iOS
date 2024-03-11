@@ -20,9 +20,10 @@ import ProjectDescriptionHelpers
 // MARK: - Dependencies
 
 let appTargetDependencies: [TargetDependency] = [
-    .target(name: "KittenUI"),
-    .target(name: "KittenUtil"),
+    .target(name: "KittenCodeUI"),
+    .target(name: "KittenStoryboardUI"),
     .target(name: "KittenService"),
+    .target(name: "KittenUtil"),
 ]
 
 // MARK: - Info.plist
@@ -88,7 +89,7 @@ let appTargetInfoPlist: [String: InfoPlist.Value] = [
     ]
 ]
 
-func makeInfoPlist(_ targetInfoPlist: [String: InfoPlist.Value]) -> [String: InfoPlist.Value] {
+func mergeInfoPlist(_ targetInfoPlist: [String: InfoPlist.Value]) -> [String: InfoPlist.Value] {
     return baseInfoPlist.merging(targetInfoPlist) { (_, new) in new }
 }
 
@@ -97,11 +98,14 @@ func makeInfoPlist(_ targetInfoPlist: [String: InfoPlist.Value]) -> [String: Inf
 // Creates our project using a helper function defined in ProjectDescriptionHelpers
 let targets = [
     TargetPakage(
-        name: "KittenUI",
+        name: "KittenCodeUI",
         infoPlist: baseInfoPlist,
         dependencies: [
-            .target(name: "KittenUtil"),
+            .target(name: "KittenCommonUI"),
+            .target(name: "KittenStoryboardUI"),
+            .target(name: "KittenAsset"),
             .target(name: "KittenService"),
+            .target(name: "KittenUtil"),
             .external(name: "Moya"),
             .external(name: "SnapKit"),
             .external(name: "RxSwift"),
@@ -111,6 +115,39 @@ let targets = [
             .external(name: "RxAppState"),
             .external(name: "ReactorKit"),
         ]
+    ),
+    TargetPakage(
+        name: "KittenStoryboardUI",
+        infoPlist: baseInfoPlist,
+        dependencies: [
+            .target(name: "KittenCommonUI"),
+            .target(name: "KittenAsset"),
+            .target(name: "KittenService"),
+            .target(name: "KittenUtil"),
+            .external(name: "Moya"),
+            .external(name: "SnapKit"),
+            .external(name: "RxSwift"),
+            .external(name: "RxCocoa"),
+            .external(name: "RxGesture"),
+            .external(name: "RxDataSources"),
+            .external(name: "RxAppState"),
+            .external(name: "ReactorKit"),
+        ]
+    ),
+    TargetPakage(
+        name: "KittenCommonUI",
+        infoPlist: baseInfoPlist,
+        dependencies: [
+            .target(name: "KittenAsset"),
+            .target(name: "KittenUtil"),
+            .external(name: "RxSwift"),
+            .external(name: "RxCocoa"),
+        ]
+    ),
+    TargetPakage(
+        name: "KittenAsset",
+        infoPlist: baseInfoPlist,
+        dependencies: []
     ),
     TargetPakage(
         name: "KittenService",
@@ -138,7 +175,7 @@ let targets = [
 let project = Project.app(
     name: "Kitten",
     platform: .iOS,
-    infoPlist: makeInfoPlist(appTargetInfoPlist),
+    infoPlist: mergeInfoPlist(appTargetInfoPlist),
     additionalTargets: targets,
     dependencies: appTargetDependencies)
 
