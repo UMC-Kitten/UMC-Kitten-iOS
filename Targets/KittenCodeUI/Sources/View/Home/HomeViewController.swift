@@ -102,6 +102,7 @@ public class HomeViewController: BaseViewController {
         // - data binding
         // 내 반려동물 정보 바인딩
         reactor.state
+            .dropFirst()
             .map { $0.registeredPets }
             .bind(to: registeredPetsSection.collectionView.rx.items(
                 cellIdentifier: "cell",
@@ -117,6 +118,7 @@ public class HomeViewController: BaseViewController {
         
         // 인기 게시글 바인딩
         reactor.state
+            .dropFirst()
             .map {
                 $0.popularPosts.prefix(HomeConstant.POPULAR_POST_DISPLAY_NUMBER)
             }
@@ -136,6 +138,7 @@ public class HomeViewController: BaseViewController {
         
         // 오늘의 피드 바인딩
         reactor.state
+            .dropFirst()
             .map {
                 $0.todayFeeds.prefix(HomeConstant.TODAY_FEED_DISPLAY_NUMBER)
             }
@@ -158,17 +161,18 @@ public class HomeViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         popularPostSection.moreButton.rx.tapGesture()
-            .subscribe(onNext: {_ in 
-                print("더보기 이동")
-            })
-            .disposed(by: disposeBag)
-        
-        todayFeedSection.moreButton.rx.tapGesture()
+            .dropFirst()
             .subscribe(onNext: {_ in
                 print("더보기 이동")
             })
             .disposed(by: disposeBag)
         
+        todayFeedSection.moreButton.rx.tapGesture()
+            .dropFirst()
+            .subscribe(onNext: {_ in
+                print("더보기 이동")
+            })
+            .disposed(by: disposeBag)
     }
     
 }

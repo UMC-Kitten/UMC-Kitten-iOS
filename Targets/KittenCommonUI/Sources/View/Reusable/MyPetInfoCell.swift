@@ -20,7 +20,7 @@ public class MyPetInfoCell: BaseCollectionViewCell {
     private let petImageView: UIImageView = .init(imageName: "cat-sample") // FIXME: loading 이미지로 바꾸기
     private let petNameLabel: UILabel = .init()
     private let petInfoLabel: UILabel = .init()
-    public let deleteButton: UIButton = .init(image: UIImage(named: "delete-icon")!)
+    public let deleteButton: UIButton = .init(imageName: "delete-icon")
     
     // MARK: Set Methods
     public override func setStyle() {

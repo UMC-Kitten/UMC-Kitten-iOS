@@ -8,6 +8,8 @@
 import UIKit
 import RxSwift
 
+import KittenAsset
+
 public class ImageProvider {
 
     /// 콜백 형식으로 이미지 처리
@@ -57,12 +59,7 @@ public class ImageProvider {
                 }
             }.resume()
         } else {
-            if let image = UIImage(named: source) {
-                completion(image, nil)
-            } else {
-                let error = NSError(domain: "ImageLoadingError", code: 0, userInfo: [NSLocalizedDescriptionKey: "No matching asset image found: \(source)"])
-                completion(nil, error)
-            }
+            completion(KittenAssetImages(name: source).image , nil)
         }
     }
     

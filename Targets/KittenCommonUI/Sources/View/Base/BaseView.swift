@@ -19,26 +19,13 @@ protocol BaseViewProtocol {
 open class BaseView: UIView, BaseViewProtocol {
     var disposeBag = DisposeBag()
     
-    required public init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init(frame: CGRect) {
-        print(#function)
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
-//        setStyle()
-//        setHierarchy()
-//        setLayout()
-//        setBind()
-    }
-    
-    public init() {
-        super.init(frame: .zero)
-    }
-    
-    override open func layoutSubviews() {
-        super.layoutSubviews()
         setStyle()
         setHierarchy()
         setLayout()
