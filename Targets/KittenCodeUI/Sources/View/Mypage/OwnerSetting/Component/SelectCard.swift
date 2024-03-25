@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 import KittenCommonUI
+import KittenUtil
 
 public class SelectCard: BaseView, SelectionItemProtocol {
     
@@ -28,15 +29,17 @@ public class SelectCard: BaseView, SelectionItemProtocol {
     ) {
         self.init()
         
-        guard let selectImage = UIImage(named: selectImageName) else {
-            fatalError("Failed to load image for \(selectImageName)")
+        ImageProvider.loadImage(selectImageName) { selectImage in
+            if let selectImage = selectImage {
+                self.selectImage = selectImage
+            }
         }
-        self.selectImage = selectImage
         
-        guard let deselectImage = UIImage(named: deselectImageName) else {
-            fatalError("Failed to load image for \(deselectImageName)")
+        ImageProvider.loadImage(deselectImageName) { deselectImage in
+            if let deselectImage = deselectImage {
+                self.deselectImage = deselectImage
+            }
         }
-        self.deselectImage = deselectImage
         
         self.descriptionLabel.text = description
     }

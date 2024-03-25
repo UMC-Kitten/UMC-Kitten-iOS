@@ -30,7 +30,7 @@ class TodayFeedCell: BaseCollectionViewCell {
     
     override func setHierarchy() {
         [feedImageView, feedTitle]
-            .forEach { addSubview($0)}
+            .forEach { addSubview($0) }
     }
     
     override func setLayout() {

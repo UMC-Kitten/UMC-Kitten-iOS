@@ -61,6 +61,7 @@ class PopularPostSection: BaseView {
         moreButton.snp.makeConstraints {
             $0.centerY.equalTo(sectionTitle.snp.centerY)
             $0.right.equalToSuperview().inset(HomeConstant.HOME_PAGE_PADDING)
+            $0.width.equalTo(50)
         }
         
         collectionView.snp.makeConstraints {

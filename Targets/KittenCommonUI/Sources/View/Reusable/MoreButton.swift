@@ -22,8 +22,9 @@ public class MoreButton: BaseView {
     // MARK: Set Methods
     public override func setStyle() {
         stackView.axis = .horizontal
-        stackView.spacing = 5
+        stackView.spacing = 0
         stackView.alignment = .center
+        stackView.distribution = .fillProportionally
         
         moreLabel.setDefaultFont(size: 14)
         moreLabel.textColor = .grayScale700

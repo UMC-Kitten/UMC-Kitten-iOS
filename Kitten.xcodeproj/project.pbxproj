@@ -152,6 +152,7 @@
 		986EBD06DE3E5D2D451338AB /* TodayFeedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45F4DDA4E44FEA1AA026316 /* TodayFeedSection.swift */; };
 		98A3A674EEC3DE974BEB9D6D /* KittenUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9836D7F63838F03480927F /* KittenUtil.framework */; platformFilter = ios; };
 		9A031ED438F66323AFA4F3A8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CA5B6A5A95C91FCA2DB1B0 /* MainViewController.swift */; };
+		9C05315C6A04C486A4EF1130 /* KittenAsset.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE73577A462C7F40006CA9F /* KittenAsset.framework */; platformFilter = ios; };
 		9C82088EED79BAAE5BBF360E /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88A5DEA6657291EAA227B0C3 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9CA22372732769A78E4FE3C0 /* PetInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67794EF5FCF03FBF2D7BDE5 /* PetInformation.storyboard */; };
 		9CBD9455595EFB06A9E98E68 /* HospitalSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AAD32DC1F718640C790C3EE /* HospitalSearch.storyboard */; };
@@ -408,6 +409,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D3B419C6069225349F909516;
 			remoteInfo = Kitten;
+		};
+		E98743B6DCA8BF0C9F469595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F1D0323FC610C04CC7DEDF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27E52757113FC8CF7F093497;
+			remoteInfo = KittenAsset;
 		};
 		FCB10806AC41955B708524F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -819,6 +827,7 @@
 				B0A302B7F0BFB81516A69931 /* KakaoSDKAuth.framework in Frameworks */,
 				046D7E269CB52EEDC4E3793B /* KakaoSDKCommon.framework in Frameworks */,
 				C9D9A663BBA5A627DD469D5D /* KakaoSDKUser.framework in Frameworks */,
+				9C05315C6A04C486A4EF1130 /* KittenAsset.framework in Frameworks */,
 				CD7812E5AD37860691149646 /* RxSwift.framework in Frameworks */,
 				1EC14A1D0DC97E38B453988C /* NaverThirdPartyLogin.xcframework in Frameworks */,
 			);
@@ -1496,8 +1505,8 @@
 			isa = PBXGroup;
 			children = (
 				E8B65DB2DC6D90CC422B6AB8 /* HomeBottomSection.swift */,
-				59DC445113CB418D4109CACE /* PopularPostSection.swift */,
 				454E2E4FFF74C0057D8AF4E6 /* RegisteredPetsSection.swift */,
+				59DC445113CB418D4109CACE /* PopularPostSection.swift */,
 				E45F4DDA4E44FEA1AA026316 /* TodayFeedSection.swift */,
 			);
 			path = Component;
@@ -2181,6 +2190,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				02698B86037D63F7BB5421DB /* PBXTargetDependency */,
 			);
 			name = KittenUtil;
 			productName = KittenUtil;
@@ -2690,6 +2700,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		02698B86037D63F7BB5421DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KittenAsset;
+			target = 27E52757113FC8CF7F093497 /* KittenAsset */;
+			targetProxy = E98743B6DCA8BF0C9F469595 /* PBXContainerItemProxy */;
+		};
 		0FFB7ACE253A222D1C2F690B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KittenCommonUI;

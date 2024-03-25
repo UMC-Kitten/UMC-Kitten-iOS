@@ -5,8 +5,9 @@
 //  Created by DOYEON LEE on 1/22/24.
 //
 
-import Foundation
 import UIKit
+
+import KittenUtil
 
 public extension UIButton {
     
@@ -31,9 +32,20 @@ public extension UIButton {
         setImage(image, for: .normal)
         setTitle("", for: .normal)
         setTitleColor(.white, for: .normal)
-        titleLabel?.setDefaultFont(size: 16, weight: .bold) // FIXME: 적용 안됨
         tintColor = .clear
-        titleLabel?.textColor = .white
+        layer.cornerRadius = 18
+    }    
+    
+    /// 텍스트 없이 이미지만 있는 버튼을 생성합니다.
+    convenience init(imageName: String) {
+        self.init()
+        configuration = .filled()
+        ImageProvider.loadImage(imageName) { image in
+            self.setImage(image, for: .normal)
+        }
+        setTitle("", for: .normal)
+        setTitleColor(.white, for: .normal)
+        tintColor = .clear
         layer.cornerRadius = 18
     }
 }

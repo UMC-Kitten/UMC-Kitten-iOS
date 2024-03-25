@@ -161,6 +161,7 @@ let targets = [
         name: "KittenUtil",
         infoPlist: baseInfoPlist,
         dependencies: [
+            .target(name: "KittenAsset"),
             .external(name: "RxSwift"),
             .external(name: "KakaoSDKCommon"),
             .external(name: "KakaoSDKAuth"),
